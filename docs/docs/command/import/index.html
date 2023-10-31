@@ -1,0 +1,1109 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.119.0">
+<link rel="alternate" type="text/html" href="/docs/command/import/_print/">
+<link rel="alternate" type="application/rss&#43;xml" href="/docs/command/import/index.xml">
+<meta name="robots" content="index, follow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Import | Ctrl-Q</title>
+<meta name="description" content="Import various information into Qlik Sense
+">
+<meta property="og:title" content="Import" />
+<meta property="og:description" content="Import various information into Qlik Sense
+" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/docs/command/import/" /><meta property="og:site_name" content="Ctrl-Q" />
+<meta itemprop="name" content="Import">
+<meta itemprop="description" content="Import various information into Qlik Sense
+"><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Import"/>
+<meta name="twitter:description" content="Import various information into Qlik Sense
+"/>
+
+
+
+
+<link rel="preload" href="/scss/main.min.291c723daa8f2fb6b09f56ac9a2ca71406607a4268e1fe586dddad1a8583b4e7.css" as="style">
+<link href="/scss/main.min.291c723daa8f2fb6b09f56ac9a2ca71406607a4268e1fe586dddad1a8583b4e7.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/css/prism.css"/>
+
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar navbar-dark js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500"><g><path style="fill:#fff" d="M116.8525 421.9722c-5.7041.0-10.3442-4.3127-10.3442-9.6129V88.183c0-5.3002 4.6401-9.6117 10.3442-9.6117H320.858c3.0347.0 9.3959.5498 11.7506 2.6302l.3545.3442 58.905 63.2912c2.3101 2.491 2.9202 8.4928 2.9202 11.3184v256.2039c0 5.3002-4.6407 9.6129-10.3436 9.6129H116.8525z"/><g><g><g><path style="fill:#767676" d="M384.4445 423.2066H116.852c-6.3839.0-11.5786-4.8658-11.5786-10.8474V88.1831c0-5.9804 5.1947-10.8461 11.5786-10.8461h204.0062c.377.0 9.2786.0329 12.568 2.9389l.3947.3833 58.9508 63.337c3.2135 3.4652 3.2514 11.7924 3.2514 12.1593v256.2036C396.0231 418.3408 390.8284 423.2066 384.4445 423.2066zM116.5079 411.9189c.0848.0278.1999.0531.3441.0531h267.5925c.1442.0.2581-.0253.3441-.0531V156.1556c-.0076-.9033-.3593-3.7347-.7034-5.0037l-57.6527-61.9416c-1.4651-.3176-4.4533-.6389-5.5742-.6389H116.852c-.143.0-.2594.024-.3441.0531V411.9189zm267.4533-261.149zM327.0321 89.371v.0013V89.371z"/></g></g></g><g><g><path style="fill:#5b7fc0" d="M189.0874 210.1754l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4473C177.5953 212.627 183.0601 210.1742 189.0874 210.1754zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 234.1722 197.0804 232.033z"/><path style="opacity:.3;fill:#fff" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/><g><defs><path id="SVGID_1_" d="M194.7376 237.6875c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 234.2399 196.1861 236.239 194.7376 237.6875z"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_2_);fill:#fff" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/><path style="opacity:.13;clip-path:url(#SVGID_2_);fill:#020202" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/></g><g><defs><path id="SVGID_3_" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/></defs><clipPath id="SVGID_4_"><use xlink:href="#SVGID_3_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_4_);fill:#5b7fc0" d="M172.6595 215.6045c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8475-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 209.1953 176.6171 211.647 172.6595 215.6045z"/></g></g><rect x="198.8952" y="225.1043" style="fill:#5b7fc0" width="122.6266" height="13.8671"/></g><g><path style="fill:#d95140" d="M189.0874 155.7611l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.0249 2.454-11.4897 6.4116-15.4473C177.5953 158.2128 183.0601 155.7599 189.0874 155.7611zm7.993 21.8577c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.2508 181.7667 197.0816 179.758 197.0804 177.6188z"/><path style="opacity:.3;fill:#fff" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zm7.9941 21.8613c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/><g><defs><path id="SVGID_5_" d="M194.7376 183.2733c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 179.8256 196.1861 181.8248 194.7376 183.2733z"/></defs><clipPath id="SVGID_6_"><use xlink:href="#SVGID_5_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_6_);fill:#fff" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/><path style="opacity:.13;clip-path:url(#SVGID_6_);fill:#020202" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/></g><g><defs><path id="SVGID_7_" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zm7.9941 21.8613c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/></defs><clipPath id="SVGID_8_"><use xlink:href="#SVGID_7_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_8_);fill:#d95140" d="M172.6595 161.1903c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 154.7811 176.6171 157.2327 172.6595 161.1903z"/></g><rect x="198.8952" y="170.69" style="fill:#d95140" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#56a55c" d="M189.5379 264.6147l.0012-.0012c7.7751.0012 15.0294 4.1862 18.932 10.9235 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032-5.8394.0-11.3281-2.2733-15.458-6.4032-4.13-4.13-6.4032-9.6186-6.4056-15.4628.0012-6.0249 2.454-11.4897 6.4116-15.4472C178.0458 267.0663 183.5105 264.6135 189.5379 264.6147zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6538 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.7013 290.6202 197.5321 288.6115 197.5309 286.4723z"/><path style="opacity:.3;fill:#fff" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/><g><defs><path id="SVGID_9_" d="M195.1881 292.1268c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9941 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.5344 288.6792 196.6366 290.6783 195.1881 292.1268z"/></defs><clipPath id="SVGID_10_"><use xlink:href="#SVGID_9_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_10_);fill:#fff" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/><path style="opacity:.13;clip-path:url(#SVGID_10_);fill:#020202" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/></g><g><defs><path id="SVGID_11_" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/></defs><clipPath id="SVGID_12_"><use xlink:href="#SVGID_11_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_12_);fill:#56a55c" d="M173.11 270.0439c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7325-11.1497-10.9151-18.926-10.9151C182.5311 263.6346 177.0676 266.0863 173.11 270.0439z"/></g></g><rect x="199.3456" y="279.5436" style="fill:#56a55c" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#f1bc42" d="M189.0874 318.7208l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3305-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4472C177.5953 321.1724 183.0601 318.7196 189.0874 318.7208zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 342.7176 197.0804 340.5784z"/><path style="opacity:.3;fill:#fff" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/><g><defs><path id="SVGID_13_" d="M194.7376 346.2329c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 342.7853 196.1861 344.7844 194.7376 346.2329z"/></defs><clipPath id="SVGID_14_"><use xlink:href="#SVGID_13_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_14_);fill:#fff" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/><path style="opacity:.13;clip-path:url(#SVGID_14_);fill:#020202" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/></g><g><defs><path id="SVGID_15_" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/></defs><clipPath id="SVGID_16_"><use xlink:href="#SVGID_15_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_16_);fill:#f1bc42" d="M172.6595 324.15c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8474-1.0151-7.6327-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 317.7407 176.6171 320.1924 172.6595 324.15z"/></g></g><rect x="198.8952" y="333.6497" style="fill:#f1bc42" width="122.6266" height="13.8671"/></g></g></svg></span><span class="navbar-brand__name">Ctrl-Q</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="/docs/"><span>Docs</span></a>
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="Search this site…" aria-label="Search this site…" autocomplete="off">
+</div>
+
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            <div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="Search this site…" aria-label="Search this site…" autocomplete="off">
+</div>
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pe-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
+  <a href="/docs/" title="Documentation" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Docs</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsoverview-li">
+  <a href="/docs/overview/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsoverview"><span class="">Overview</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsgetting-started-li">
+  <a href="/docs/getting-started/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsgetting-started"><span class="">Getting Started</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgetting-startedsecurity-li">
+  <a href="/docs/getting-started/security/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsgetting-startedsecurity"><span class="">Security</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgetting-startedqseow-auth-li">
+  <a href="/docs/getting-started/qseow-auth/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsgetting-startedqseow-auth"><span class="">Authentication with Sense</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgetting-startedcolors-formatting-li">
+  <a href="/docs/getting-started/colors-formatting/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsgetting-startedcolors-formatting"><span class="">Colors &amp; formatting</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgetting-starteddry-runs-li">
+  <a href="/docs/getting-started/dry-runs/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsgetting-starteddry-runs"><span class="">Dry runs</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docscommand-li">
+  <a href="/docs/command/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommand"><span class="">Command categories</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandapp-script-li">
+  <a href="/docs/command/app-script/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandapp-script"><span class="">App scripts</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandbookmark-li">
+  <a href="/docs/command/bookmark/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandbookmark"><span class="">Bookmarks</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandcustom-property-li">
+  <a href="/docs/command/custom-property/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandcustom-property"><span class="">Custom properties</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommanddimension-li">
+  <a href="/docs/command/dimension/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommanddimension"><span class="">Dimensions</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandmeasure-li">
+  <a href="/docs/command/measure/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandmeasure"><span class="">Measures</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandscramble-field-li">
+  <a href="/docs/command/scramble-field/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandscramble-field"><span class="">Scramble fields</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandtask-li">
+  <a href="/docs/command/task/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandtask"><span class="">Tasks</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandvariable-li">
+  <a href="/docs/command/variable/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandvariable"><span class="">Variables</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandexport-li">
+  <a href="/docs/command/export/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandexport"><span class="">Export</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docscommandimport-li">
+  <a href="/docs/command/import/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__section" id="m-docscommandimport"><span class="td-sidebar-nav-active-item">Import</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            
+<div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
+<a href="https://github.com/ptarmiganlabs/ctrl-q-docs/tree/main/content/en/docs/command/import/_index.md" class="td-page-meta--view" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines fa-fw"></i> View page source</a>
+  <a href="https://github.com/ptarmiganlabs/ctrl-q-docs/edit/main/content/en/docs/command/import/_index.md" class="td-page-meta--edit" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Edit this page</a>
+  <a href="https://github.com/ptarmiganlabs/ctrl-q-docs/new/main/content/en/docs/command/import/_index.md?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" class="td-page-meta--child" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Create child page</a>
+  <a href="https://github.com/ptarmiganlabs/ctrl-q-docs/issues/new?title=Import" class="td-page-meta--issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create documentation issue</a>
+  <a href="https://github.com/ptarmiganlabs/ctrl-q/issues/new" class="td-page-meta--project-issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create project issue</a>
+  <a id="print" href="/docs/command/import/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
+
+</div>
+
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#import-master-items-from-excel-file">Import master items from Excel file</a>
+      <ul>
+        <li><a href="#how-to-get-correct-color-jsons">How to get correct color JSONs</a></li>
+      </ul>
+    </li>
+    <li><a href="#import-apps-from-qvf-files">Import apps from QVF files</a></li>
+    <li><a href="#import-tasks-from-file">Import tasks from file</a>
+      <ul>
+        <li><a href="#source-file-columns-for-task-defintions">Source file columns for task defintions</a></li>
+        <li><a href="#source-file-columns-for-app-import-definitions">Source file columns for app import definitions</a></li>
+        <li><a href="#example-export-tasks-to-csv-then-import-tasks-from-same-csv">Example: Export tasks to CSV, then import tasks from same CSV</a></li>
+        <li><a href="#example-import-apps-from-qvf-files-and-create-associated-reload-tasks">Example: Import apps from QVF files and create associated reload tasks</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
+            <div class="taxonomy taxonomy-terms-cloud taxo-tags">
+      <h5 class="taxonomy-title">Tags</h5>
+      <ul class="taxonomy-terms">
+        <li><a class="taxonomy-term" href="/tags/app/" data-taxonomy-term="app"><span class="taxonomy-label">app</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/bookmark/" data-taxonomy-term="bookmark"><span class="taxonomy-label">bookmark</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/colors/" data-taxonomy-term="colors"><span class="taxonomy-label">colors</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/custom-property/" data-taxonomy-term="custom-property"><span class="taxonomy-label">custom-property</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/formatting/" data-taxonomy-term="formatting"><span class="taxonomy-label">formatting</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/master-item/" data-taxonomy-term="master-item"><span class="taxonomy-label">master-item</span><span class="taxonomy-count">3</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/script/" data-taxonomy-term="script"><span class="taxonomy-label">script</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/security/" data-taxonomy-term="security"><span class="taxonomy-label">security</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/task/" data-taxonomy-term="task"><span class="taxonomy-label">task</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/variable/" data-taxonomy-term="variable"><span class="taxonomy-label">variable</span><span class="taxonomy-count">1</span></a></li>
+        </ul>
+    </div>
+  
+	
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/docs/">Docs</a></li>
+  <li class="breadcrumb-item">
+    <a href="/docs/command/">Command categories</a></li>
+  <li class="breadcrumb-item active" aria-current="page">
+    Import</li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>Import</h1>
+  <div class="lead">Import various information into Qlik Sense</div>
+	<header class="article-meta">
+		<div class="taxonomy taxonomy-terms-article taxo-tags">
+  <h5 class="taxonomy-title">Tags:</h5>
+  <ul class="taxonomy-terms">
+    <li><a class="taxonomy-term" href="/tags/task/" data-taxonomy-term="task"><span class="taxonomy-label">task</span></a></li>
+    <li><a class="taxonomy-term" href="/tags/app/" data-taxonomy-term="app"><span class="taxonomy-label">app</span></a></li>
+    <li><a class="taxonomy-term" href="/tags/master-item/" data-taxonomy-term="master-item"><span class="taxonomy-label">master-item</span></a></li>
+    </ul>
+</div>
+
+  </header>
+	<!-- 
+
+<div class="pageinfo pageinfo-primary">
+<p>This is a placeholder page that shows you how to use this template site.</p>
+
+</div>
+ -->
+<p><em>Page contents:</em></p>
+<ul>
+<li><a href="#import-master-items-from-excel-file">Import master items from Excel file</a>
+<ul>
+<li><a href="#how-to-get-correct-color-jsons">How to get correct color JSONs</a></li>
+</ul>
+</li>
+<li><a href="#import-apps-from-qvf-files">Import apps from QVF files</a></li>
+<li><a href="#import-tasks-from-file">Import tasks from file</a>
+<ul>
+<li><a href="#source-file-columns-for-task-defintions">Source file columns for task defintions</a></li>
+<li><a href="#source-file-columns-for-app-import-definitions">Source file columns for app import definitions</a></li>
+<li><a href="#example-export-tasks-to-csv-then-import-tasks-from-same-csv">Example: Export tasks to CSV, then import tasks from same CSV</a></li>
+<li><a href="#example-import-apps-from-qvf-files-and-create-associated-reload-tasks">Example: Import apps from QVF files and create associated reload tasks</a>
+<ul>
+<li><a href="#defining-tasks-to-be-created">Defining tasks to be created</a></li>
+<li><a href="#associating-new-tasks-with-imported-and-existing-apps">Associating new tasks with imported and existing apps</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>All example below use Windows Terminal/PowerShell.</p>
+<h2 id="import-master-items-from-excel-file">Import master items from Excel file</h2>
+<p>This command imports dimensions and measures defined in an Excel file into master items in a Sense app.</p>
+<p>Both single and drill-down dimensions can be created (i.e. the same types that can be created using the Sense web UI), as well as measures.<br>
+The same coloring options are available as in the web UI for both dimensions and measures.</p>
+<p>First let&rsquo;s take a look at the command options:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">master-item</span><span style="color:#000">-import</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-help</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Usage: build master-item-import [options]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>create master items based on definitions in a file on disk
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Options:
+</span></span><span style="display:flex;"><span>  --log-level &lt;level&gt;                                          log level (choices: &#34;error&#34;, &#34;warn&#34;, &#34;info&#34;, &#34;verbose&#34;, &#34;debug&#34;, &#34;silly&#34;, default: &#34;info&#34;)
+</span></span><span style="display:flex;"><span>  --host &lt;host&gt;                                                Qlik Sense server IP/FQDN
+</span></span><span style="display:flex;"><span>  --port &lt;port&gt;                                                Qlik Sense server engine port (default: &#34;4747&#34;)
+</span></span><span style="display:flex;"><span>  --schema-version &lt;string&gt;                                    Qlik Sense engine schema version (default: &#34;12.612.0&#34;)
+</span></span><span style="display:flex;"><span>  --app-id &lt;id&gt;                                                Qlik Sense app ID
+</span></span><span style="display:flex;"><span>  --virtual-proxy &lt;prefix&gt;                                     Qlik Sense virtual proxy prefix (default: &#34;&#34;)
+</span></span><span style="display:flex;"><span>  --secure &lt;true|false&gt;                                        connection to Qlik Sense engine is via https (default: true)
+</span></span><span style="display:flex;"><span>  --auth-user-dir &lt;directory&gt;                                  user directory for user to connect with
+</span></span><span style="display:flex;"><span>  --auth-user-id &lt;userid&gt;                                      user ID for user to connect with
+</span></span><span style="display:flex;"><span>  -a, --auth-type &lt;type&gt;                                       authentication type (choices: &#34;cert&#34;, default: &#34;cert&#34;)
+</span></span><span style="display:flex;"><span>  --auth-cert-file &lt;file&gt;                                      Qlik Sense certificate file (exported from QMC) (default: &#34;./cert/client.pem&#34;)
+</span></span><span style="display:flex;"><span>  --auth-cert-key-file &lt;file&gt;                                  Qlik Sense certificate key file (exported from QMC) (default: &#34;./cert/client_key.pem&#34;)
+</span></span><span style="display:flex;"><span>  --auth-root-cert-file &lt;file&gt;                                 Qlik Sense root certificate file (exported from QMC) (default: &#34;./cert/root.pem&#34;)
+</span></span><span style="display:flex;"><span>  -t, --file-type &lt;type&gt;                                       source file type (choices: &#34;excel&#34;, default: &#34;excel&#34;)
+</span></span><span style="display:flex;"><span>  --file &lt;filename&gt;                                            file containing master item definitions
+</span></span><span style="display:flex;"><span>  --sheet &lt;name&gt;                                               name of Excel sheet where dim/measure flag column is found
+</span></span><span style="display:flex;"><span>  --col-ref-by &lt;reftype&gt;                                       how to refer to columns in the source file. Options are by name or by position (zero based) (choices: &#34;name&#34;, &#34;position&#34;,
+</span></span><span style="display:flex;"><span>                                                               default: &#34;name&#34;)
+</span></span><span style="display:flex;"><span>  --col-item-type &lt;column position or name&gt;                    column where dim/measure flag is found. Use &#34;dim-single&#34; in that column to create dimension, &#34;dim-drilldown&#34; for drill-down
+</span></span><span style="display:flex;"><span>                                                               dimension, &#34;measure&#34; for measure (default: &#34;Master item type&#34;)
+</span></span><span style="display:flex;"><span>  --col-master-item-name &lt;column position or name&gt;             column number (zero based) or name to use as master item name (default: &#34;Master item name&#34;)
+</span></span><span style="display:flex;"><span>  --col-master-item-descr &lt;column position or name&gt;            column number (zero based) or name to use as master item description (default: &#34;Description&#34;)
+</span></span><span style="display:flex;"><span>  --col-master-item-label &lt;column position or name&gt;            column number (zero based) or name to use as master item label (default: &#34;Label&#34;)
+</span></span><span style="display:flex;"><span>  --col-master-item-expr &lt;column position or name&gt;             column number (zero based) or name to use as master item expression (default: &#34;Expression&#34;)
+</span></span><span style="display:flex;"><span>  --col-master-item-tag &lt;column position or name&gt;              column number (zero based) or name to use as master item tags (default: &#34;Tag&#34;)
+</span></span><span style="display:flex;"><span>  --col-master-item-color &lt;column position or name&gt;            column number (zero based) or name to use as color for dimensions/measures (default: &#34;Color&#34;)
+</span></span><span style="display:flex;"><span>  --col-master-item-per-value-color &lt;column position or name&gt;  column number (zero based) or name to use as per-value/segment color for dimensions/measures (default: &#34;Per value color&#34;)
+</span></span><span style="display:flex;"><span>  --sleep-between-imports &lt;milliseconds&gt;                       sleep this many milliseconds between imports. Set to 0 to disable (default: 1000)
+</span></span><span style="display:flex;"><span>  --limit-import-count &lt;number&gt;                                import at most x number of master items from the Excel file. Defaults to 0 = no limit (default: 0)
+</span></span><span style="display:flex;"><span>  --dry-run                                                    do a dry run, i.e. do not create or update anything - just show what would be done
+</span></span><span style="display:flex;"><span>  -h, --help                                                   display help for command
+</span></span></code></pre></div><p>There are several options that allow for a great deal of flexibility.<br>
+For example, the <code>--col-ref-by</code> option determines whether the <code>--col-master-item-...</code> options refer to columns by position or name.
+Column names will in most cases be easier to read and understand, but sometimes a zero-based column position might be preferred.</p>
+<p>Similarly those <code>--col-master-item-...</code> options let you use your own column names in the source file.</p>
+<p>By adding the <code>--help</code> option when running Ctrl-Q you get a list of all available options for the <code>master-item-import</code> command.<br>
+<code>--help</code> can be added to any Ctrl-Q command, even if there are already other options on the command line.</p>
+<p>Some other options that might be useful:</p>
+<ul>
+<li><code>--dry-run</code>- Don&rsquo;t actually create or update any master items, just show what would have been done.</li>
+<li><code>--limit-import-count</code> - Only import the first N master items from the file. Useful for testing.</li>
+<li><code>--sleep-between-imports</code> - Pause for N milliseconds between each imported master item. Useful for decreasing the load on the Sense server.</li>
+</ul>
+<p>Notes on using the <code>master-item-import</code> command:</p>
+<ul>
+<li>
+<p>Master items are referred to by name. This means that if a master item in the source file already exists in the target Sense app, the app&rsquo;s master item will be updated.</p>
+</li>
+<li>
+<p>If a master item <em>does not</em> exist in the target app the master item will be created.</p>
+</li>
+<li>
+<p>If a master item <em>does</em>_* exist in the target app its content will be overwritten with the info in the source Excel file.</p>
+</li>
+<li>
+<p>The structure of the Excel file is fairly flexible, but some restrictions apply:</p>
+<ul>
+<li>The columns can be named anything. Use the <code>--col-item-type</code> and <code>--col-master-item-...</code> columns to tell Ctrl-Q which columns contains what data.</li>
+<li>The first row in the Excel sheet must contain column headers if columns are referenced by name.</li>
+</ul>
+</li>
+<li>
+<p>Master item names, descriptions and labels can contain <em>almost</em> any characters and there are some restrictions on the length of these strings.</p>
+<ul>
+<li>See the <a href="https://help.qlik.com/en-US/sense/May2023/Subsystems/Hub/Content/Sense_Hub/Introduction/guidelines-visualizations-fields-naming.htm">Qlik Sense help</a> for details.</li>
+<li>If a master item name or description is too long a warning will be shown and the text will be truncated to the max length allowed by Sense (see the link above).</li>
+<li>If a master item has more than 30 tags a warning will be shown and only the first 30 tags will be used.</li>
+<li>If a master item tag is longer than 31 characters a warning will be shown and the tag will be truncated to 31 characters.</li>
+<li>If a master item expression is too long an error will be shown and Ctrl-Q will exit.
+Notes on the example below:</li>
+</ul>
+</li>
+<li>
+<p>The (intentional) warning for the incorrectly spelled master item type &ldquo;measur&rdquo; (which should have been &ldquo;measure&rdquo;, of course).</p>
+</li>
+</ul>
+<p>Now let&rsquo;s run the command.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">master-item</span><span style="color:#000">-import</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#0000cf;font-weight:bold">192.168</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">100</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">109</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-app-id</span> <span style="color:#000">a3e0f5d2</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">000a</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">464f</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">998d</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">33d333b175d7</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#ce5c00;font-weight:bold">-file</span><span style="color:#000">-type</span> <span style="color:#000">excel</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#ce5c00;font-weight:bold">-file</span> <span style="color:#000;font-weight:bold">./</span><span style="color:#204a87">ctrl-q</span><span style="color:#000">-master-items</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">xlsx</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-sheet</span> <span style="color:#000">Sales</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-col-ref-by</span> <span style="color:#000">name</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-col-item-type</span> <span style="color:#4e9a06">&#34;Master item type&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-col-master-item-name</span> <span style="color:#4e9a06">&#34;Master Item Name&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-col-master-item-descr</span> <span style="color:#000">Description</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-col-master-item-label</span> <span style="color:#000">Label</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-col-master-item-expr</span> <span style="color:#000">Expression</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-col-master-item-tag</span> <span style="color:#000">Tag</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-col-master-item-color</span> <span style="color:#000">Color</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-col-master-item-per-value-color</span> <span style="color:#4e9a06">&#39;Per value color&#39;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2023-09-27T05:45:35.046Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.046Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.046Z info: |
+</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.046Z info: | Version      : 3.13.1
+</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.046Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info: |
+</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info: | Command      : master-item-import
+</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info: |              : create master items based on definitions in a file on disk
+</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info: |
+</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info: |
+</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info:
+</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info: Import master items from definitions in Excel file &#34;./ctrl-q-master-items.xlsx&#34;
+</span></span><span style="display:flex;"><span>2023-09-27T05:45:36.014Z info: (1/12) Updated existing measure &#34;No. of sold units&#34;
+</span></span><span style="display:flex;"><span>2023-09-27T05:45:37.045Z info: (2/12) Updated existing measure &#34;No. of sold units (LY)&#34;
+</span></span><span style="display:flex;"><span>2023-09-27T05:45:38.076Z info: (3/12) Created new measure &#34;Revenue EUR&#34;
+</span></span><span style="display:flex;"><span>2023-09-27T05:45:39.092Z info: (4/12) Updated existing measure &#34;Revenue EUR (LY)&#34;
+</span></span><span style="display:flex;"><span>2023-09-27T05:45:40.128Z info: (5/12) Updated existing measure &#34;Profit EUR&#34;
+</span></span><span style="display:flex;"><span>2023-09-27T05:45:41.141Z warn: (6/12) Found an unknown master item type: &#34;measur&#34;. Ignoring this line in the imported file.
+</span></span><span style="display:flex;"><span>2023-09-27T05:45:42.156Z info: (7/12) Created new measure &#34;Profit EUR (LY)&#34;
+</span></span><span style="display:flex;"><span>2023-09-27T05:45:43.203Z info: (8/12) Created new dimension &#34;Country&#34;
+</span></span><span style="display:flex;"><span>2023-09-27T05:45:44.220Z info: (9/12) Created new dimension &#34;Sales month&#34;
+</span></span><span style="display:flex;"><span>2023-09-27T05:45:45.266Z info: (10/12) Updated existing dimension &#34;Salesperson&#34;
+</span></span><span style="display:flex;"><span>2023-09-27T05:45:46.703Z info: (11/12) Updated existing dimension &#34;Color&#34;
+</span></span><span style="display:flex;"><span>2023-09-27T05:45:47.735Z info: (12/12) Updated existing drill-down dimension &#34;DimDrill&#34;
+</span></span><span style="display:flex;"><span>2023-09-27T05:45:48.751Z info: Imported 12 master items from Excel file ./ctrl-q-master-items.xlsx
+</span></span></code></pre></div><blockquote>
+<p>NOTE: A sample defintions Excel file is <a href="https://github.com/ptarmiganlabs/ctrl-q/blob/main/testdata/ctrl-q-master-items.xlsx?raw=true">available in the GitHub repository</a>. That file contains examples of most combinations of master item types and properties.</p>
+</blockquote>
+<h3 id="how-to-get-correct-color-jsons">How to get correct color JSONs</h3>
+<p>If colors are to be associated with master items, the colors must be specified in JSON format, in the correct columns in the Excel file.</p>
+<p>The easiest way to get the correct JSONs is to create a master item in the Sense web UI, set the master item&rsquo;s color, and then use Ctrl-Q&rsquo;s <code>master-item-dim-get</code> and <code>master-item-measure-get</code> commands to view the master item(s), either as a table or as JSON.<br>
+This will show you what the structure of the JSON looks like, or even provide you with the correct JSON if you entered the desired color info in the Sense web UI.</p>
+<p>Different master item types have different coloring options:</p>
+<ul>
+<li>Drill-down dimensions
+<ul>
+<li>A general dimension color set in the Excel file&rsquo;s column specified by the <code>--col-master-item-color</code> option.</li>
+</ul>
+</li>
+<li>Single dimensions
+<ul>
+<li>A general dimension color set in the Excel file&rsquo;s column specified by the <code>--col-master-item-color</code> option.</li>
+<li>A per-value color that can be used to assign different colors to different values of the dimension. Set in the Excel file&rsquo;s column specified by the <code>--col-master-item-per-value-color</code> option.</li>
+</ul>
+</li>
+<li>Measures
+<ul>
+<li>A general measure color set in the Excel file&rsquo;s column specified by the <code>--col-master-item-color</code> option.</li>
+<li>Segment colors that can be used to assign colors to value ranges of the measure. Set in the Excel file&rsquo;s column specified by the <code>--col-master-item-per-value-color</code> option.</li>
+</ul>
+</li>
+</ul>
+<p>Let&rsquo;s look at some examples.</p>
+<p>Here we want to get the JSON for the color of the master dimension &ldquo;Country&rdquo;.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">master-item</span><span style="color:#000">-dim-get</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#0000cf;font-weight:bold">192.168</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">100</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">109</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-app-id</span> <span style="color:#000">a3e0f5d2</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">000a</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">464f</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">998d</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">33d333b175d7</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-output-format</span> <span style="color:#000">table</span>
+</span></span></code></pre></div><p>The result will be a rather wide table, where the column named <code>Coloring</code> contains the color JSONs.<br>
+The color data for the &ldquo;Country&rdquo; dimension looks like this:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Dimension color:
+</span></span><span style="display:flex;"><span>{&#34;color&#34;:&#34;#bbbbbb&#34;,&#34;index&#34;:-1}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Value colors:
+</span></span><span style="display:flex;"><span>{&#34;colors&#34;:[{&#34;value&#34;:&#34;Afghanistan&#34;,&#34;baseColor&#34;:{&#34;color&#34;:&#34;#8a85c6&#34;,&#34;index&#34;:-1}},{&#34;value&#34;:&#34;Albania&#34;,&#34;ba
+</span></span><span style="display:flex;"><span>seColor&#34;:{&#34;color&#34;:&#34;#aaaaaa&#34;,&#34;index&#34;:-1}},{&#34;value&#34;:&#34;Algeria&#34;,&#34;baseColor&#34;:{&#34;color&#34;:&#34;#a16090&#34;,&#34;index&#34;:9
+</span></span><span style="display:flex;"><span>}}],&#34;nul&#34;:{&#34;color&#34;:&#34;#c8c7a9&#34;,&#34;index&#34;:16},&#34;oth&#34;:{&#34;color&#34;:&#34;#ffec6e&#34;,&#34;index&#34;:-1},&#34;pal&#34;:null,&#34;single&#34;:nu
+</span></span><span style="display:flex;"><span>ll,&#34;usePal&#34;:true,&#34;autoFill&#34;:true}
+</span></span></code></pre></div><p>Let&rsquo;s format those as proper JSONs to make them more readable.<br>
+These JSONs are what would go into the Excel file&rsquo;s <code>Color</code> and <code>Per-value color</code> columns.</p>
+<blockquote>
+<p>NOTE 1: If unsure about what data to put in some field, just use the ones returned by the <code>master-item-dim-get</code> command.<br>
+NOTE 2: The same concept works for drill-down dimensions and measures.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;color&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;#bbbbbb&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">-1</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;colors&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Afghanistan&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;baseColor&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;color&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;#8a85c6&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">-1</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Albania&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;baseColor&#34;</span><span style="color:#000;font-weight:bold">:{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;color&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;#aaaaaa&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;index&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">-1</span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;value&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;Algeria&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;baseColor&#34;</span><span style="color:#000;font-weight:bold">:{</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#204a87;font-weight:bold">&#34;color&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;#a16090&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#204a87;font-weight:bold">&#34;index&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">9</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;nul&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;color&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;#c8c7a9&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">16</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;oth&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;color&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;#ffec6e&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">-1</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;pal&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;single&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#a40000">nu</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">ll</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;usePal&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;autoFill&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h2 id="import-apps-from-qvf-files">Import apps from QVF files</h2>
+<p>.QVF files are Sense apps stored on disk.<br>
+Ctrl-Q&rsquo;s <code>app-import</code> command does bulk import of such QVF files, as well as setting tags and custom properties on the created apps.</p>
+<p>Importing apps defined on the <code>App import</code> sheet of the <code>tasks.xlsx</code> Excel file can be done with a command like this:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">app-import</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#0000cf;font-weight:bold">192.168</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">100</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">109</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-cert</span><span style="color:#ce5c00;font-weight:bold">-file</span> <span style="color:#000;font-weight:bold">./</span><span style="color:#000">cert</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">client</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-cert-key</span><span style="color:#ce5c00;font-weight:bold">-file</span> <span style="color:#000;font-weight:bold">./</span><span style="color:#000">cert</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">client_key</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#ce5c00;font-weight:bold">-file</span><span style="color:#000">-name</span> <span style="color:#000">tasks</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">xlsx</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-sheet-name</span> <span style="color:#4e9a06">&#34;App import&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info: |
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info: | Version      : 3.13.1
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info: |
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info: | Command      : app-import
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info: |              : import apps/upload QVF files on disk to Sense based on definitions in Excel file.
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info: |
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info: |
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info:
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.283Z info: Import apps from definitions in file &#34;tasks.xlsx&#34;
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.378Z info: Successfully retrieved 25 tags from QSEoW
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.424Z info: Successfully retrieved 29 custom properties from QSEoW
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.455Z info: -------------------------------------------------------------------
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.455Z info: Importing apps...
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.455Z info: (1) Importing app &#34;App 3&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 3.qvf&#34;
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:37.437Z info: (1, delete-publish) App &#34;App 3&#34; published to stream &#34;Ctrl-Q demo apps&#34;, the existing app (if one exists) with the same name in this stream has been deleted. Id of published app: 5d3c8750-f09b-464c-a1ae-849fe8b0deb0
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:37.437Z info: (2) Importing app &#34;App 3&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 3.qvf&#34;
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:42.795Z info: (2, publish-replace) App &#34;App 3&#34; published to stream &#34;Ctrl-Q demo apps&#34;, replacing the existing app with the same name. Id of published app: 5d3c8750-f09b-464c-a1ae-849fe8b0deb0
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:42.795Z info: (3) Importing app &#34;App 1&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 1.qvf&#34;
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:46.530Z info: (3, publish-replace) App &#34;App 1&#34; published to stream &#34;Ctrl-Q demo apps&#34;, replacing the existing app with the same name. Id of published app: 88e29ab1-967a-4c03-99d0-b92d631f57aa
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:46.530Z info: (4) Importing app &#34;App 1&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 1.qvf&#34;
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:50.514Z info: (4, publish-another) App &#34;App 1&#34; published to stream &#34;Ctrl-Q demo apps&#34;. Id of published app: d7dc3005-e9bb-408c-b9d8-47997c720ddf
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:50.514Z info: (5) Importing app &#34;App 1&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 1.qvf&#34;
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:54.079Z warn: (5) PUBLISH APP publish-replace: More than one app with the same name &#34;App 1&#34; in the target stream &#34;Ctrl-Q demo apps&#34;. Impossible to know which one to replace. Skipping publishing for this app. The uploaded app is still present in the QMC (id=766c96a8-d8ba-47e6-b4a3-e1935bf12d99).
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:54.079Z error: (5) Failed publishing app &#34;App 1&#34; to stream &#34;Ctrl-Q demo apps&#34;
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:54.094Z info: (6) Importing app &#34;App 2&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 2.qvf&#34;
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:57.579Z warn: Stream &#34;Stream does not exist&#34; does not exist.
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:57.579Z error: (6) Failed publishing app &#34;App 2&#34; to stream &#34;Stream does not exist&#34;. The uploaded app is still present in the QMC (id=5733046b-df34-4989-bd33-56cde5ff779d).
+</span></span><span style="display:flex;"><span>2023-09-27T05:49:57.594Z info: (7) Importing app &#34;App 3&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 3.qvf&#34;
+</span></span><span style="display:flex;"><span>2023-09-27T05:50:02.563Z info: (7, publish-replace) App &#34;App 3&#34; published to stream &#34;Ctrl-Q demo apps&#34;, replacing the existing app with the same name. Id of published app: 5d3c8750-f09b-464c-a1ae-849fe8b0deb0
+</span></span></code></pre></div><blockquote>
+<p>NOTE 1: Qlik Sense implements rate limiting for QVF uploads. This means that if you plan to upload more than 60 QVF files you may be affected by this rate limiting.<br>
+Ctrl-Q detects that it&rsquo;s being rate limited and implements a backoff strategy for retries, waiting longer and longer until it tries again.<br>
+Such retries are clearly shown in the Ctrl-Q logs.</p>
+</blockquote>
+<p>The QMC now shows three new apps:</p>
+<p><img src="/img/ctrl-q-app-import-2.png" alt="Sense apps imported from QVF files" title="Sense apps imported from QVF files"></p>
+<p>The Excel file with definitions on what QVF files should be imported, what the apps should be named etc looks like this:</p>
+<p><img src="/img/ctrl-q-app-import-1.png" alt="QVF app files that should be imported into Qlik Sense" title="QVF app files that should be imported into Qlik Sense"></p>
+<p>The available columns in the Excel file are the same as when importing apps as part of task import.<br>
+The columns are described <a href="#source-file-columns-for-app-import-definitions">here</a>.</p>
+<blockquote>
+<p>NOTE: A sample defintions Excel file is <a href="https://github.com/ptarmiganlabs/ctrl-q/blob/main/testdata/tasks.xlsx?raw=true">available in the GitHub repository</a>.</p>
+</blockquote>
+<p>If a valid app owner is specified in the Excel file it will be applied to the new app.<br>
+Similarly, if an already existing stream name (or ID of an existing stream) is specified in the Excel file, the new app will be published to that stream.</p>
+<h2 id="import-tasks-from-file">Import tasks from file</h2>
+<p>Task definitions can be read from CSV or Excel files.<br>
+The options are as follows:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">task-import</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-help</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Usage: build task-import [options]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>create tasks based on definitions in a file on disk, optionally also importing apps from QVF files.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Options:
+</span></span><span style="display:flex;"><span>  --log-level &lt;level&gt;                log level (choices: &#34;error&#34;, &#34;warn&#34;, &#34;info&#34;, &#34;verbose&#34;, &#34;debug&#34;, &#34;silly&#34;, default: &#34;info&#34;)
+</span></span><span style="display:flex;"><span>  --host &lt;host&gt;                      Qlik Sense server IP/FQDN
+</span></span><span style="display:flex;"><span>  --port &lt;port&gt;                      Qlik Sense server engine port (default: &#34;4242&#34;)
+</span></span><span style="display:flex;"><span>  --schema-version &lt;string&gt;          Qlik Sense engine schema version (default: &#34;12.612.0&#34;)
+</span></span><span style="display:flex;"><span>  --virtual-proxy &lt;prefix&gt;           Qlik Sense virtual proxy prefix (default: &#34;&#34;)
+</span></span><span style="display:flex;"><span>  --secure &lt;true|false&gt;              connection to Qlik Sense engine is via https (default: true)
+</span></span><span style="display:flex;"><span>  --auth-user-dir &lt;directory&gt;        user directory for user to connect with
+</span></span><span style="display:flex;"><span>  --auth-user-id &lt;userid&gt;            user ID for user to connect with
+</span></span><span style="display:flex;"><span>  -a, --auth-type &lt;type&gt;             authentication type (choices: &#34;cert&#34;, default: &#34;cert&#34;)
+</span></span><span style="display:flex;"><span>  --auth-cert-file &lt;file&gt;            Qlik Sense certificate file (exported from QMC) (default: &#34;./cert/client.pem&#34;)
+</span></span><span style="display:flex;"><span>  --auth-cert-key-file &lt;file&gt;        Qlik Sense certificate key file (exported from QMC) (default: &#34;./cert/client_key.pem&#34;)
+</span></span><span style="display:flex;"><span>  --auth-root-cert-file &lt;file&gt;       Qlik Sense root certificate file (exported from QMC) (default: &#34;./cert/root.pem&#34;)
+</span></span><span style="display:flex;"><span>  -t, --file-type &lt;type&gt;             source file type (choices: &#34;excel&#34;, &#34;csv&#34;, default: &#34;excel&#34;)
+</span></span><span style="display:flex;"><span>  --file-name &lt;filename&gt;             file containing task definitions
+</span></span><span style="display:flex;"><span>  --sheet-name &lt;name&gt;                name of Excel sheet where task info is found
+</span></span><span style="display:flex;"><span>  --update-mode &lt;mode&gt;               create new or update existing tasks (choices: &#34;create&#34;, default: &#34;create&#34;)
+</span></span><span style="display:flex;"><span>  --limit-import-count &lt;number&gt;      import at most x number of tasks from the source file. Defaults to 0 = no limit (default: 0)
+</span></span><span style="display:flex;"><span>  --sleep-app-upload &lt;milliseconds&gt;  Wait this long before continuing after each app has been uploaded to Sense. Defaults to 1000 = 1 second (default: 1000)
+</span></span><span style="display:flex;"><span>  --import-app                       import Sense app QVFs from specified directory
+</span></span><span style="display:flex;"><span>  --import-app-sheet-name &lt;name&gt;     name of Excel sheet where app definitions are found
+</span></span><span style="display:flex;"><span>  --dry-run                          do a dry run, i.e. do not create any reload tasks - just show what would be done
+</span></span><span style="display:flex;"><span>  -h, --help                         display help for command
+</span></span></code></pre></div><p>The options are <em>almost</em> the same irrespective of source file type:</p>
+<p>The <code>--sheet-name</code> is only used/valid/relevant when <code>--file-type</code> is set to <code>excel</code>.<br>
+Why? Because there are no sheets/tabs in CSV files.</p>
+<h3 id="source-file-columns-for-task-defintions">Source file columns for task defintions</h3>
+<p>The source file format is quite relaxed, but a few rules apply:</p>
+<ul>
+<li>The first column in the source file <em>must</em> be the task number. This value uniquely identifies each task that should be imported and should be incremented by one for each task.</li>
+<li>All other columns, mandatory and optional, beyond the first one may be placed in any order.
+<ul>
+<li>For mandatory columns the names listed below <em>must</em> be used (but they can be placed in any order in the file, except the first column).</li>
+<li>All mandatory columns must be present in the source file, even if they are not used/empty.
+For example, a task may not have a scheduled trigger, but the schema trigger columns must still be present in the source file.</li>
+</ul>
+</li>
+<li>&ldquo;Counter&rdquo; columns are used to keep together lines that are associated.
+<ul>
+<li>All lines involved in defining a certain task have the same &ldquo;Task counter&rdquo; value.</li>
+<li>All lines involved in defining a certain schema or composite event have the same &ldquo;Event counter&rdquo; value.</li>
+<li>All lines involved in defining a certain composite event rule have the same &ldquo;Rule counter&rdquo; value.</li>
+</ul>
+</li>
+<li>The file format used when <em>exporting</em> task tables to disk is a superset of the format used for task <em>import</em>.
+It&rsquo;s thus a good idea to first do a task export, look at the file format and then adopt as needed before importing.</li>
+</ul>
+<p>The <em>mandatory</em> columns in the task definition file are:</p>
+<table>
+<thead>
+<tr>
+<th>Column name</th>
+<th>Comment</th>
+<th>Description</th>
+<th>Valid values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Task counter</td>
+<td>1</td>
+<td>Counter starting at 1. Increments one step for each task. All rows associated with a specific task should have the same value in this column.</td>
+<td>Integer &gt; 0</td>
+</tr>
+<tr>
+<td>Task type</td>
+<td>1</td>
+<td>Type of task. In the future Ctrl-Q may support more task types.</td>
+<td>Reload</td>
+</tr>
+<tr>
+<td>Task name</td>
+<td>1</td>
+<td>Name of the task that will be created.</td>
+<td>Any string. Emojis allowed.</td>
+</tr>
+<tr>
+<td>Task id</td>
+<td>1</td>
+<td>When creating new tasks a new task ID will always be created. This column is instead used to create task chains: it links a composite trigger in a downstream task with an upstream task via this column&rsquo;s value.</td>
+<td>Any string, but to make it easier to verify task chains it&rsquo;s recommended to use integers in this column.</td>
+</tr>
+<tr>
+<td>Task enabled</td>
+<td>1</td>
+<td>Should the created task be enabled or not.</td>
+<td>1 / 0 / blank. 1=enabled, 0 or blank=disabled</td>
+</tr>
+<tr>
+<td>Task timeout</td>
+<td>1</td>
+<td>Timeout for the created task, i.e. number of seconds the task is allowed to run before it&rsquo;s aborted.</td>
+<td>Seconds</td>
+</tr>
+<tr>
+<td>Task retries</td>
+<td>1</td>
+<td>Number of retries to make if the task execution fails.</td>
+<td>Integer &gt;= 0</td>
+</tr>
+<tr>
+<td>App id</td>
+<td>1</td>
+<td>The Sense app the task should be associated with.</td>
+<td>If a valid GUID is specified it&rsquo;s assumed to be an app id. The task will be associated with that app. If the app id starts with <code>newapp-</code> it is a reference to an app that is imported during the current Ctrl-Q execution. The integer following <code>newapp-</code> is the value in the <code>App counter</code> column in the Excel definitions file.</td>
+</tr>
+<tr>
+<td>Partial reload</td>
+<td>1</td>
+<td>Should the task do a partial or full reload of the app?</td>
+<td>1 / 0 / blank. 1=true, 0 or blank=false</td>
+</tr>
+<tr>
+<td>Manually triggered</td>
+<td>1</td>
+<td>Is the task manually triggered or not?</td>
+<td>1 / 0 / blank. 1=true, 0 or blank=false</td>
+</tr>
+<tr>
+<td>Tags</td>
+<td>1</td>
+<td>Tags to set on the created task.</td>
+<td>Format is &ldquo;tag1 / tag2 / tag with spaces in it&rdquo;, i.e. separate tag names by &ldquo;space-forward slash-space&rdquo;.</td>
+</tr>
+<tr>
+<td>Custom properties</td>
+<td>1</td>
+<td>Custom properties to set on the created task.</td>
+<td>Format is CustPropName1=Value1 / CustPropName2=Value2</td>
+</tr>
+<tr>
+<td>Event counter</td>
+<td>2</td>
+<td>Counter identifying events associated with the task defined in the previous line. One task can have zero or more events associated with it.</td>
+<td>Integer &gt; 0</td>
+</tr>
+<tr>
+<td>Event type</td>
+<td>2</td>
+<td>Which event type does this line specify? Schema events deal with time-based execution of the task. Composite events are used to build task chains.</td>
+<td>Schema / Composite</td>
+</tr>
+<tr>
+<td>Event name</td>
+<td>2</td>
+<td>Name of the event.</td>
+<td>Any string</td>
+</tr>
+<tr>
+<td>Event enabled</td>
+<td>2</td>
+<td>Is event enabled.</td>
+<td>1 / 0 / blank. 1=enabled, 0 or blank=disabled</td>
+</tr>
+<tr>
+<td>Schema increment option</td>
+<td>3</td>
+<td>Type of schema event. For reference only, not used when Sense evaluates schema events (or??).</td>
+<td>once / hourly / daily / weekly / monthly / custom</td>
+</tr>
+<tr>
+<td>Schema increment description</td>
+<td>3</td>
+<td>Structured description of the schema increment option. For reference only, not used when Sense evaluates schema events (or??).</td>
+<td>Integers separated by space, e.g. &ldquo;0 0 1 0&rdquo; for weekly</td>
+</tr>
+<tr>
+<td>Daylight savings time</td>
+<td>3</td>
+<td>Control how the schema event should deal with dayligt savings time.</td>
+<td>ObserveDaylightSavingTime / PermanentStandardTime / PermanentDaylightSavingTime</td>
+</tr>
+<tr>
+<td>Schema start</td>
+<td>3</td>
+<td>First valid time for the schema event. The event will not fire before this moment.</td>
+<td>A valid timestamp string, e.g. 2022-10-19T10:19:30.000</td>
+</tr>
+<tr>
+<td>Schema expiration</td>
+<td>3</td>
+<td>Last valid time for the schema event. The event will not fire after this moment.</td>
+<td>A valid timestamp string or 9999-01-01T00:00:00.000 to signify &ldquo;never&rdquo;</td>
+</tr>
+<tr>
+<td>Schema filter description</td>
+<td>3</td>
+<td>Used to control when a schema event is allower to trigger. More info <a href="https://community.qlik.com/t5/Integration-Extension-APIs/Interval-and-time-explanation-for-creating-a-new-SchemaEvent/m-p/1784892/highlight/true#M13886">here</a>.</td>
+<td>Default: &ldquo;* _ - _ * * *&rdquo;</td>
+</tr>
+<tr>
+<td>Schema time zone</td>
+<td>3</td>
+<td>Time zone the schema event is evaluated in</td>
+<td>E.g. &ldquo;Europe/Paris&rdquo;</td>
+</tr>
+<tr>
+<td>Time contstraint seconds</td>
+<td>4</td>
+<td>Used for composite events. Defines a window in which all dependent tasks have to complete.</td>
+<td>Integer &gt;= 0</td>
+</tr>
+<tr>
+<td>Time contstraint minutes</td>
+<td>4</td>
+<td>Used for composite events. Defines a window in which all dependent tasks have to complete.</td>
+<td>Integer &gt;= 0</td>
+</tr>
+<tr>
+<td>Time contstraint hours</td>
+<td>4</td>
+<td>Used for composite events. Defines a window in which all dependent tasks have to complete.</td>
+<td>Integer &gt;= 0</td>
+</tr>
+<tr>
+<td>Time contstraint days</td>
+<td>4</td>
+<td>Used for composite events. Defines a window in which all dependent tasks have to complete.</td>
+<td>Integer &gt;= 0</td>
+</tr>
+<tr>
+<td>Rule counter</td>
+<td>4</td>
+<td>Counter identifying rules that define upstream task executions the current task is depending on.</td>
+<td>Integer &gt; 0</td>
+</tr>
+<tr>
+<td>Rule state</td>
+<td>4</td>
+<td>Is the rule waiting for success or failure of upstream task?</td>
+<td>TaskSuccessful / TaskFail</td>
+</tr>
+<tr>
+<td>Rule task name</td>
+<td></td>
+<td>Name of the rule</td>
+<td>Any string</td>
+</tr>
+<tr>
+<td>Rule task id</td>
+<td>4</td>
+<td>Reference to the upstream task.</td>
+<td>Any string (if referring to a task within the same file), <strong>or</strong> a valid id of a task that already exists in Sense.<br>Two options exist: If the &ldquo;Rule task id&rdquo; has the same value as the &ldquo;Task id&rdquo; of another task in the source file, those two tasks will be linked via this rule. If the &ldquo;Rule task id&rdquo; refers to an existing task id in Sense, the new rule will link to that existing task.</td>
+</tr>
+</tbody>
+</table>
+<p>Meaning of &ldquo;Comment&rdquo; column above:</p>
+<p>1: These columns are required for all lines where top-level task information is defined.<br>
+2: These columns are required for all lines where general event info (shared for schema and composite events) is defined. There may be zero or more such lines for a specific task.<br>
+3: These columns are required for all lines where schema events info are defined.<br>
+4: These columns are required for all lines where composite events (&ldquo;task chains&rdquo;) are defined.</p>
+<h3 id="source-file-columns-for-app-import-definitions">Source file columns for app import definitions</h3>
+<p>If apps should be imported (by means of the <code>--import-app</code> option) an Excel file must be provided with info about what app QVF files should be imported, as well as details about each app import.<br>
+A sheet name (where the app details are found) in the Excel file must also be specified using the <code>--import-app-sheet-name</code> option.</p>
+<p>The columns (case sensitive!) in the app import definition file are:</p>
+<table>
+<thead>
+<tr>
+<th>Column name</th>
+<th>Description</th>
+<th>Valid values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>App counter</td>
+<td>Counter starting at 1. Increments one step for each app.</td>
+<td>Integer &gt; 0</td>
+</tr>
+<tr>
+<td>App name</td>
+<td>Name of the app that will be created based on the specified QVF file.</td>
+<td>Any string. Emojis allowed.</td>
+</tr>
+<tr>
+<td>QVF directory</td>
+<td>Directory where app QVF files are stored</td>
+<td>Any valid path, absolute or relative.</td>
+</tr>
+<tr>
+<td>QVF name</td>
+<td>Name of QVD file, including extension.</td>
+<td>Any valid file name.</td>
+</tr>
+<tr>
+<td>Exclude data connections</td>
+<td>Should data connections stored in the QVF file be excluded during app import or not.</td>
+<td>true / false</td>
+</tr>
+<tr>
+<td>App tags</td>
+<td>Tags to set on the imported app.</td>
+<td>Format is &ldquo;tag1 / tag2 / tag with spaces in it&rdquo;, i.e. separate tag names by &ldquo;space-forward slash-space&rdquo;.</td>
+</tr>
+<tr>
+<td>App custom properties</td>
+<td>Custom properties to set on the imported app.</td>
+<td>Format is CustPropName1=Value1 / CustPropName2=Value2</td>
+</tr>
+<tr>
+<td>Owner user directory</td>
+<td>If app owner should be set for this app, specify the user directory name here. Both user directory and user id must be correctly defined for the app owner to be updated.</td>
+<td>Any user directory currently defined in the QMC, or <code>Internal</code> for Sense internal accounts.</td>
+</tr>
+<tr>
+<td>Owner user id</td>
+<td>If app owner should be set for this app, specify the user id here. Both user directory and user id must be correctly defined for the app owner to be updated.</td>
+<td>Any user ID defined in the user directory defined in <code>Owner user directory</code> column (above).</td>
+</tr>
+<tr>
+<td>Publish to stream</td>
+<td>If this app should be published, specify stream id or name here. If the id is not associated with a stream or the specified stream name does not exist the app will not be published</td>
+<td>Any existing stream name or id associated with an existing stream.</td>
+</tr>
+<tr>
+<td>Publish options <br>(optional)</td>
+<td>Specify publish options here, for example if an already published app with the same name should be overwritten or not. <br>The default behaviour is <code>publish-replace</code>, which will be used when no &ldquo;Publish options&rdquo; column is present in the Excel sheet or that column exists but is empty.</td>
+<td><code>publish-replace</code>: If there already exists a published app with the same name in the specified stream, replace that app with the new one. <br> <code>publish-another</code>: If there already exists a published app with the same name in the specified stream, publish tnother one. <br><code>delete-publish</code>: First delete an already existing app (if there is one), then publish the new app.</td>
+</tr>
+</tbody>
+</table>
+<p>The publish options are described in more detail <a href="https://github.com/ptarmiganlabs/ctrl-q/discussions/234#discussioncomment-6173760">here</a>.</p>
+<h3 id="example-export-tasks-to-csv-then-import-tasks-from-same-csv">Example: Export tasks to CSV, then import tasks from same CSV</h3>
+<p>This example will</p>
+<ol>
+<li>Export ca 50 tasks to a CSV file</li>
+<li>Import tasks from the just created CSV file</li>
+</ol>
+<p>The CSV file created during the task export will contain some columns that are not needed during task import (last execution timestamp for each task and similar).<br>
+That&rsquo;s fine though, during the task import Ctrl-Q will only look at the required columns and simply disregard all other columns.</p>
+<p>Export tasks to CSV file:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">task-get</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#0000cf;font-weight:bold">192.168</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">100</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">109</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-output-format</span> <span style="color:#000">table</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-output-dest</span> <span style="color:#000">file</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-output</span><span style="color:#ce5c00;font-weight:bold">-file</span><span style="color:#000">-name</span> <span style="color:#000">tasks</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">csv</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-output</span><span style="color:#ce5c00;font-weight:bold">-file</span><span style="color:#000">-format</span> <span style="color:#000">csv</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info: |
+</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info: | Version      : 3.13.2
+</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info: |
+</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info: | Command      : task-get
+</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info: |              : get info about one or more tasks
+</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info: |
+</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info: |
+</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info:
+</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.861Z info: Successfully retrieved 25 tags from QSEoW
+</span></span><span style="display:flex;"><span>2023-10-05T10:02:20.720Z info: ✅ Writing task table to disk file &#34;tasks.csv&#34;.
+</span></span></code></pre></div><p>Now let&rsquo;s import tasks from the <code>tasks.csv</code> file:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">task-import</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#0000cf;font-weight:bold">192.168</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">100</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">109</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-cert</span><span style="color:#ce5c00;font-weight:bold">-file</span> <span style="color:#000;font-weight:bold">./</span><span style="color:#000">cert</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">client</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-cert-key</span><span style="color:#ce5c00;font-weight:bold">-file</span> <span style="color:#000;font-weight:bold">./</span><span style="color:#000">cert</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">client_key</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#ce5c00;font-weight:bold">-file</span><span style="color:#000">-type</span> <span style="color:#000">csv</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#ce5c00;font-weight:bold">-file</span><span style="color:#000">-name</span> <span style="color:#000">tasks</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">csv</span>
+</span></span></code></pre></div><p>It&rsquo;s worth noting that all the created tasks will be linked into the task chains that existed when the tasks where first <em>exported</em> into the CSV file.<br>
+This happens because the composite event rules that were exported into the CSV file (i.e. &ldquo;start the task when task A and task B have successfully finished reloaded&rdquo;) contain task IDs that point to already existing reload tasks in Sense.<br>
+When that&rsquo;s the case the newly created tasks (based on the info in the CSV file) will link to those existing tasks.</p>
+<p>This way a newly created task (based on info in the CSV file) can still be configured to start after some already existing task finish reloading.</p>
+<p>Note how Ctrl-Q first creates the reload tasks and any associated schedule triggers in a first step, then add any composite triggers in the second step.<br>
+This is needed as a composite trigger may refer to an already existing and/or a newly created task (or multiple tasks of course), i.e. all tasks must first be created. Only then is it possible to create composite triggers.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: |
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: | Version      : 3.9.0
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: |
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: | Command      : task-import
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: |              : create tasks based on definitions in a file on disk, optionally also importing apps from QVF files.
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: |
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: |
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info:
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: Import tasks from definitions in file &#34;tasks.csv&#34;
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.924Z info: Successfully retrieved 22 tags from QSEoW
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.939Z info: Successfully retrieved 29 custom properties from QSEoW
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:40.205Z info: CREATE RELOAD TASK IN QSEOW: &#34;Manually triggered reload of Always failing reload (no delay)&#34;, new task id: 85474d7a-6d36-437d-a687-0bb032331cfb. Result: 201/Created.
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:40.268Z info: CREATE RELOAD TASK IN QSEOW: &#34;Manually triggered reload of App1 🏆&#34;, new task id: 253ad3fc-3742-4b27-9cd7-2626c05fe24c. Result: 201/Created.
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:40.392Z info: CREATE RELOAD TASK IN QSEOW: &#34;Manually triggered reload of Butler 7 Slack debug&#34;, new task id: 89f198c9-2ed4-49d8-8195-7fc8c78c33c7. Result: 201/Created.
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:40.502Z info: CREATE RELOAD TASK IN QSEOW: &#34;Manually triggered reload of ButlerTest 1&#34;, new task id: 6a0ffaa9-a94f-49d3-a331-003401936143. Result: 201/Created.
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:40.549Z info: CREATE RELOAD TASK IN QSEOW: &#34;Manually triggered reload of Employee salaries&#34;, new task id: 75b79682-f39c-4ca5-9a83-0eef43b1276d. Result: 201/Created.
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:40.689Z info: CREATE RELOAD TASK IN QSEOW: &#34;Manually triggered reload of HR metrics 2015-2020&#34;, new task id: 62c9e333-c58a-4170-b6e0-c5a2c063c291. Result: 201/Created.
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:40.753Z info: CREATE RELOAD TASK IN QSEOW: &#34;Manually triggered reload of Meetup.com&#34;, new task id: 08d332a7-e6dd-4ed8-a826-61d039089bae. Result: 201/Created.
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:40.815Z info: CREATE RELOAD TASK IN QSEOW: &#34;Manually triggered reload of Minecraft Metrics&#34;, new task id: bf91d219-f2ac-4ad3-b461-4539e73df445. Result: 201/Created.
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:40.924Z info: CREATE RELOAD TASK IN QSEOW: &#34;Manually triggered reload of Performance review&#34;, new task id: f0c0f896-648b-4e86-adcb-1353194caa0c. Result: 201/Created.
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:45.549Z info: -------------------------------------------------------------------
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:45.549Z info: Creating composite events for the just created tasks...
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:45.799Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;App2_composite_1&#34; for task ID 6a0ffaa9-a94f-49d3-a331-003401936143. Result: 201/Created.
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:45.877Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;When HR metrics done&#34; for task ID f0c0f896-648b-4e86-adcb-1353194caa0c. Result: 201/Created.
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:45.986Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;When Operations monitor has reloaded&#34; for task ID 25f0c215-4e05-4e17-b6ee-233922951f6f. Result: 201/Created.
+</span></span><span style="display:flex;"><span>2023-05-09T23:36:46.112Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;When NYT comments done&#34; for task ID 8165d968-b14d-45f4-97b3-5a5ac2aec8a8. Result: 201/Created.
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><h3 id="example-import-apps-from-qvf-files-and-create-associated-reload-tasks">Example: Import apps from QVF files and create associated reload tasks</h3>
+<p>This example will</p>
+<ol>
+<li>Import 3 apps from QVF files. Definitions of which files to import are stored in an Excel file.
+<ol>
+<li>Tags and custom properties will be set for the apps.</li>
+<li>New app owners will be set.</li>
+<li>The apps will be published to streams.</li>
+</ol>
+</li>
+<li>Create reload tasks based on definitions in same Excel file (but on a different sheet).</li>
+<li>The reload tasks will be associated with the previously imported apps.</li>
+<li>The reload tasks will be linked in a task chain.</li>
+<li>Some imported tasks will be triggered by already existing Sense tasks while others will be triggered by newly created tasks.</li>
+<li>There will be a 2 second delay after each QVF file has finished uploading, to reduce load on the Sense server.</li>
+</ol>
+<p>The task import command looks like this in PowerShell:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">task-import</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#0000cf;font-weight:bold">192.168</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">100</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">109</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-cert</span><span style="color:#ce5c00;font-weight:bold">-file</span> <span style="color:#000;font-weight:bold">./</span><span style="color:#000">cert</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">client</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-cert-key</span><span style="color:#ce5c00;font-weight:bold">-file</span> <span style="color:#000;font-weight:bold">./</span><span style="color:#000">cert</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">client_key</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#ce5c00;font-weight:bold">-file</span><span style="color:#000">-type</span> <span style="color:#000">excel</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#ce5c00;font-weight:bold">-file</span><span style="color:#000">-name</span> <span style="color:#000">tasks</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">xlsx</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-sheet-name</span> <span style="color:#4e9a06">&#34;Ctrl-Q task import 1&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-import-app</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-import-app-sheet-name</span> <span style="color:#4e9a06">&#34;App import&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-sleep-app-upload</span> <span style="color:#0000cf;font-weight:bold">2000</span>
+</span></span></code></pre></div><p>Some comments about the above command:</p>
+<ul>
+<li>The certificates used to authenticate with Sense are stored in the <code>cert</code> subdirectory, right under where Ctrl-Q is started from.<br>
+That&rsquo;s the default locataion, meaning that the options <code>--auth-cert-file</code> and <code>--auth-cert-key-file</code> are really not needed in this example.</li>
+<li>The app and task definitions are found in a Excel file (<code>--file-type</code> option) named <code>tasks.xlsx</code>.</li>
+<li>Task definitions are found in the Excel file&rsquo;s sheet named <code>Ctrl-Q task import</code>.</li>
+<li>The <code>--import-app</code> tells Ctrl-Q to import certain apps before tasks defined in the <code>Ctrl-Q task import 1</code> sheet are created. This parameter is optional. If it is <strong>not</strong> included no apps will be imported.</li>
+<li>The <code>--import-app-sheet-name</code> tells Ctrl-Q that a list of apps to be imported (and import parameters for each app) is found the <code>App import</code> sheet of the Excel file.</li>
+</ul>
+<blockquote>
+<p>NOTE 1: A sample defintions Excel file is <a href="https://github.com/ptarmiganlabs/ctrl-q/blob/main/testdata/tasks.xlsx?raw=true">available in the GitHub repository</a>.
+NOTE 2: The structure of the Excel sheet specified by the <code>--import-app-sheet-name</code> is described <a href="#source-file-columns-for-app-import-definitions">above</a>.</p>
+</blockquote>
+<h4 id="defining-tasks-to-be-created">Defining tasks to be created</h4>
+<p>The format is the same as when importing tasks only (and no apps).<br>
+More info <a href="#source-file-columns-for-task-defintions">here</a>.</p>
+<h4 id="associating-new-tasks-with-imported-and-existing-apps">Associating new tasks with imported and existing apps</h4>
+<p>A few special cases apply when tasks are created <strong>and</strong> apps also imported.</p>
+<p>In this situation it&rsquo;s important that tasks can be associated with either the newly imported apps <em>or</em> already existing apps.<br>
+Similarly, for composite task triggers (used to create task chains) it&rsquo;s important that either newly created tasks <em>or</em> already existing tasks can be referenced.</p>
+<p>Let&rsquo;s say the following three QVF files should be imported into Sense.<br>
+Note the <code>App counter</code> column, with values 1, 2 and 3.</p>
+<p><img src="/img/ctrl-q-app-import-1.png" alt="QVF app files that should be imported into Qlik Sense" title="QVF app files that should be imported into Qlik Sense"></p>
+<p>Now let&rsquo;s look at the tasks to be created.
+In the image below the main info (task name etc) for each of the four tasks is shown.<br>
+Note that the <code>Task id</code> column has both proper GUIDs and simple integers in it.<br>
+This will be important when defining composite triggers.</p>
+<p><img src="/img/ctrl-q-task-import-1.png" alt="Reload tasks should be created in Qlik Sense" title="Reload tasks should be created in Qlik Sense"></p>
+<p>Finally let&rsquo;s look at the composite triggers associated with the last of the four tasks.<br>
+That composite trigger relies on two tasks, one that should fail (<code>TaskFail</code>) to trigger the composite trigger and one that should succeed (<code>TaskSuccessful</code>).</p>
+<p>The important part here is the last column, <code>Rule task id</code>:</p>
+<ul>
+<li>If that column contains a valid GUID it is assumed to be a reference to an <em>existing</em> task.</li>
+<li>If the column contains an integer it is assumed to be a reference to a <em>newly created</em> task. <br>
+Which task? The one with the same integer number in the <code>Task id</code> column (see previous paragraph).</li>
+</ul>
+<p>This way it&rsquo;s possible to chain new reload tasks to both already existing tasks and new ones.</p>
+<p><img src="/img/ctrl-q-task-import-2.png" alt="Reload tasks should be created in Qlik Sense" title="Reload tasks should be created in Qlik Sense"></p>
+
+  <div class="section-index">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</div>
+<div class="text-muted mt-5 pt-3 border-top">
+  Last modified October 31, 2023: <a href="https://github.com/ptarmiganlabs/ctrl-q-docs/commit/9b1282bb1a6770704945dca4bd1d8ea2887520a1">first commit (9b1282b)</a>
+</div>
+</div>
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Ptarmigan Labs Newsletter" aria-label="Ptarmigan Labs Newsletter">
+    <a target="_blank" rel="noopener" href="https://ptarmiganlabs.com/#/portal/signup" aria-label="Ptarmigan Labs Newsletter">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="LinkedIn" aria-label="LinkedIn">
+    <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/gorsan/" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-end text-xs-center order-sm-3">
+        
+        
+        
+<ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="GitHub" aria-label="GitHub">
+    <a target="_blank" rel="noopener" href="https://github.com/ptarmiganlabs/ctrl-q" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Get in touch with Ptarmigan Labs" aria-label="Get in touch with Ptarmigan Labs">
+    <a target="_blank" rel="noopener" href="mailto://info@ptarmiganlabs.com" aria-label="Get in touch with Ptarmigan Labs">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="td-footer__copyright-etc col-12 col-sm-4 text-center py-2 order-sm-2">
+        <span>&copy; 2023 Ptarmigan Labs AB All Rights Reserved</span>
+        <span class="ms-1"><a href="https://ptarmiganlabs.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></span>
+        <p class="td-footer__about mt-2"><a href="/about/">About Ctrl-Q</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <script src="/js/main.min.bfefba6b7ccbf88710915ea7a0df9461124cad8959623d18119929418a2da080.js" integrity="sha256-v&#43;&#43;6a3zL&#43;IcQkV6noN&#43;UYRJMrYlZYj0YEZkpQYotoIA=" crossorigin="anonymous"></script>
+<script src='/js/prism.js'></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

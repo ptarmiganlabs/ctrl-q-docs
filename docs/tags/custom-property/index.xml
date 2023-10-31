@@ -1,0 +1,121 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ctrl-Q – custom-property</title>
+    <link>/tags/custom-property/</link>
+    <description>Recent content in custom-property on Ctrl-Q</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="/tags/custom-property/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Custom properties</title>
+      <link>/docs/command/custom-property/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/command/custom-property/</guid>
+      <description>
+        
+        
+        &lt;!-- 
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;This is a placeholder page that shows you how to use this template site.&lt;/p&gt;
+
+&lt;/div&gt;
+ --&gt;
+&lt;p&gt;&lt;em&gt;Page contents:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#set-custom-property-of-reload-task&#34;&gt;Set custom property of reload task&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;set-custom-property-of-reload-task&#34;&gt;Set custom property of reload task&lt;/h2&gt;
+&lt;p&gt;Setting custom properties of reload tasks can be very time consuming if there are lots of tasks and/or custom propertis.&lt;br&gt;
+Ctrl-Q makes it possible to update many takes at once with a single command.&lt;/p&gt;
+&lt;p&gt;Note:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ONE custom property can be updated each time Ctrl-Q is executed.&lt;br&gt;
+If several custom properties should be updated Ctrl-Q must be started several times.&lt;/li&gt;
+&lt;li&gt;The custom property to be updated must exist before Ctrl-Q is executed. Create the custom property in the QMC first.&lt;/li&gt;
+&lt;li&gt;The custom property values to be set must exist before Ctrl-Q is executed. Create the custom property in the QMC first.&lt;/li&gt;
+&lt;li&gt;Task IDs and task tags can be useed to specifiy which tasks&amp;rsquo; custom properties should be updated.
+&lt;ol&gt;
+&lt;li&gt;The &lt;code&gt;--task-id&lt;/code&gt; and &lt;code&gt;--task-tag&lt;/code&gt; options are additive, i.e. the union of tasks matching the task IDs and tags will be updated.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;--update-mode&lt;/code&gt; option controls how custom properties are updated.
+&lt;ol&gt;
+&lt;li&gt;Setting the option to &lt;code&gt;append&lt;/code&gt; will add the specified values to any other values already set for the custom property.&lt;/li&gt;
+&lt;li&gt;Setting the option to &lt;code&gt;replace&lt;/code&gt; will delete any already set values for the custom property and then add the specified values.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In the example below 5 tasks will be updated: 3 based on task IDs and 2 based on the task tag &amp;ldquo;apiCreated&amp;rdquo;.&lt;br&gt;
+The values &amp;ldquo;Finance&amp;rdquo; and &amp;ldquo;Sales&amp;rdquo; will be added to the custom property &amp;ldquo;Department&amp;rdquo;.&lt;br&gt;
+Existing custom property values are preserved (i.e. the new values are appended to any already existing values) by appending new values rather than replacing (&lt;code&gt;--update-mode append&lt;/code&gt; option).&lt;br&gt;
+If a task already has values for this custom property new values will be added without asking first (&lt;code&gt;--overwrite&lt;/code&gt; option)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.\&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;ctrl-q&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;exe&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;task-custom&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-property-set&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-type&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;cert&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-host&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;192.168&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;109&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-cert&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-file&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;./&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;cert&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;client&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;pem&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-cert-key&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-file&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;./&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;cert&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;client_key&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;pem&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-dir&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;LAB&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-id&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;goran&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-task-id&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;82bc3e66-c899&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;4e44&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-b52f&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;552145da5ee0&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;5748afa9&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;3abe&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;43ab-bb1f&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;127c48ced075&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;5520e710&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;91ad&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;41d2-aeb6&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;434cafbf366b&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-task-tag&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;apiCreated&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-custom-property-name&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Department&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-custom-property-value&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Finance&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Sales&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-overwrite&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-update-mode&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;append&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;2023-09-27T05:38:11.695Z info: -----------------------------------------------------------
+2023-09-27T05:38:11.710Z info: | Ctrl-Q
+2023-09-27T05:38:11.710Z info: |
+2023-09-27T05:38:11.710Z info: | Version      : 3.13.1
+2023-09-27T05:38:11.710Z info: | Log level    : info
+2023-09-27T05:38:11.710Z info: |
+2023-09-27T05:38:11.710Z info: | Command      : task-custom-property-set
+2023-09-27T05:38:11.710Z info: |              : update a custom property of one or more tasks
+2023-09-27T05:38:11.710Z info: |
+2023-09-27T05:38:11.710Z info: | Run Ctrl-Q with the &amp;#39;--help&amp;#39; option to see a list of all available options for this command.
+2023-09-27T05:38:11.710Z info: |
+2023-09-27T05:38:11.710Z info: | https://github.com/ptarmiganlabs/ctrl-q
+2023-09-27T05:38:11.725Z info: ----------------------------------------------------------
+2023-09-27T05:38:11.725Z info:
+2023-09-27T05:38:11.929Z info: Number of tasks that will be updated: 5
+2023-09-27T05:38:11.929Z info:
+2023-09-27T05:38:11.944Z info: -----------------------------------------------------------
+2023-09-27T05:38:11.944Z info: Processing task &amp;#34;Reload Operations Monitor&amp;#34; with ID=fbf645f0-0c92-40a4-af9a-6e3eb1d3c35c
+2023-09-27T05:38:11.944Z info: Starting updating custom property &amp;#34;Department&amp;#34; of task &amp;#34;Reload Operations Monitor&amp;#34; with ID=fbf645f0-0c92-40a4-af9a-6e3eb1d3c35c
+2023-09-27T05:38:12.054Z info:    ...Custom property &amp;#34;Department&amp;#34; on task &amp;#34;Reload Operations Monitor&amp;#34; successfully updated.
+2023-09-27T05:38:12.054Z info:
+2023-09-27T05:38:12.054Z info: -----------------------------------------------------------
+2023-09-27T05:38:12.054Z info: Processing task &amp;#34;Reload of Test data - Seattle library checkouts &amp;amp; collection inventory&amp;#34; with ID=5520e710-91ad-41d2-aeb6-434cafbf366b
+2023-09-27T05:38:12.054Z info: Starting updating custom property &amp;#34;Department&amp;#34; of task &amp;#34;Reload of Test data - Seattle library checkouts &amp;amp; collection inventory&amp;#34; with ID=5520e710-91ad-41d2-aeb6-434cafbf366b
+2023-09-27T05:38:12.147Z info:    ...Custom property &amp;#34;Department&amp;#34; on task &amp;#34;Reload of Test data - Seattle library checkouts &amp;amp; collection inventory&amp;#34; successfully updated.
+2023-09-27T05:38:12.147Z info:
+2023-09-27T05:38:12.163Z info: -----------------------------------------------------------
+2023-09-27T05:38:12.163Z info: Processing task &amp;#34;Reload task of App ageing&amp;#34; with ID=5217e6b2-65ce-4535-ad2a-37b62e66d12c
+2023-09-27T05:38:12.163Z info: Starting updating custom property &amp;#34;Department&amp;#34; of task &amp;#34;Reload task of App ageing&amp;#34; with ID=5217e6b2-65ce-4535-ad2a-37b62e66d12c
+2023-09-27T05:38:12.288Z info:    ...Custom property &amp;#34;Department&amp;#34; on task &amp;#34;Reload task of App ageing&amp;#34; successfully updated.
+2023-09-27T05:38:12.288Z info:
+2023-09-27T05:38:12.304Z info: -----------------------------------------------------------
+2023-09-27T05:38:12.304Z info: Processing task &amp;#34;Reload of Test data - Seattle checkouts by title3&amp;#34; with ID=82bc3e66-c899-4e44-b52f-552145da5ee0
+2023-09-27T05:38:12.304Z info: Starting updating custom property &amp;#34;Department&amp;#34; of task &amp;#34;Reload of Test data - Seattle checkouts by title3&amp;#34; with ID=82bc3e66-c899-4e44-b52f-552145da5ee0
+2023-09-27T05:38:12.413Z info:    ...Custom property &amp;#34;Department&amp;#34; on task &amp;#34;Reload of Test data - Seattle checkouts by title3&amp;#34; successfully updated.
+2023-09-27T05:38:12.413Z info:
+2023-09-27T05:38:12.413Z info: -----------------------------------------------------------
+2023-09-27T05:38:12.413Z info: Processing task &amp;#34;Reload task of Lab 1_1&amp;#34; with ID=5748afa9-3abe-43ab-bb1f-127c48ced075
+2023-09-27T05:38:12.413Z info: Starting updating custom property &amp;#34;Department&amp;#34; of task &amp;#34;Reload task of Lab 1_1&amp;#34; with ID=5748afa9-3abe-43ab-bb1f-127c48ced075
+2023-09-27T05:38:12.504Z info:    ...Custom property &amp;#34;Department&amp;#34; on task &amp;#34;Reload task of Lab 1_1&amp;#34; successfully updated.
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,18 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ctrl-Q – Authentication with Sense</title>
+    <link>/docs/getting-started/qseow-auth/</link>
+    <description>Recent content in Authentication with Sense on Ctrl-Q</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="/docs/getting-started/qseow-auth/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

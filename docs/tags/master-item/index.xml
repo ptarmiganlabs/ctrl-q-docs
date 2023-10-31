@@ -1,0 +1,1045 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ctrl-Q – master-item</title>
+    <link>/tags/master-item/</link>
+    <description>Recent content in master-item on Ctrl-Q</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="/tags/master-item/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Dimensions</title>
+      <link>/docs/command/dimension/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/command/dimension/</guid>
+      <description>
+        
+        
+        &lt;!-- 
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;This is a placeholder page that shows you how to use this template site.&lt;/p&gt;
+
+&lt;/div&gt;
+ --&gt;
+&lt;p&gt;&lt;em&gt;Page contents:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#list-master-item-dimensions-in-a-sense-app&#34;&gt;List master item dimensions in a Sense app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#delete-master-item-dimensions-in-a-sense-app&#34;&gt;Delete master item dimensions in a Sense app&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;list-master-item-dimensions-in-a-sense-app&#34;&gt;List master item dimensions in a Sense app&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.\&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;ctrl-q&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;exe&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;master-item&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-dim-get&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-host&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;192.168&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;109&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-dir&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;LAB&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-id&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;goran&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-app-id&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;a3e0f5d2&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;000a&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;464f&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;998d&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;33d333b175d7&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-output-format&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;table&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T18:41:37.347Z info: -----------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T18:41:37.347Z info: | Ctrl-Q
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T18:41:37.347Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T18:41:37.347Z info: | Version      : 3.9.0
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T18:41:37.363Z info: | Log level    : info
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T18:41:37.363Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T18:41:37.363Z info: | Command      : master-item-dim-get
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T18:41:37.363Z info: |              : get info about one or more master dimensions
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T18:41:37.363Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T18:41:37.363Z info: | Run Ctrl-Q with the &amp;#39;--help&amp;#39; option to see a list of all available options for this command.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T18:41:37.363Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T18:41:37.363Z info: | https://github.com/ptarmiganlabs/ctrl-q
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T18:41:37.363Z info: ----------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T18:41:37.363Z info:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T18:41:37.363Z info: Get master dimensions
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T18:41:37.831Z info:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│ Dimensions (5 dimension(s) found in the app)                                                                                                                                                                                                                                                                                                                                                                                                                            │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├──────────────────────────────────────┬───────────┬─────────────────┬────────────────────────────────┬───────────────────────────────┬────────────────────────┬──────────────────┬──────────────────┬─────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────┬──────────┬──────────┬───────────┬──────────────────────────┬──────────────────────────┬──────────────────────────┬───────────┬────────────────┤
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│ Id                                   │ Type      │ Title           │ Description (static)           │ Description (from expression) │ Description expression │ Label expression │ Definition count │ Definition  │ Coloring                                                                                             │ Grouping │ Approved │ Published │ Publish time             │ Created date             │ Modified date            │ Owner     │ Tags           │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├──────────────────────────────────────┼───────────┼─────────────────┼────────────────────────────────┼───────────────────────────────┼────────────────────────┼──────────────────┼──────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────┼──────────┼──────────┼───────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼───────────┼────────────────┤
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│ JDWuPK                               │ dimension │ Dimension 2-3-1 │ Description for 2-3-1          │                               │                        │                  │ 3                │ Dim2        │ Dimension color:                                                                                     │ H        │ false    │ false     │ 1753-01-01T00:00:00.000Z │ 2021-06-07T02:31:02.093Z │ 2021-06-07T02:31:02.093Z │ LAB\goran │ My awesome tag │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │           │                 │                                │                               │                        │                  │                  │ Dim3        │ {&amp;#34;color&amp;#34;:&amp;#34;#ffffff&amp;#34;,&amp;#34;index&amp;#34;:1}                                                                        │          │          │           │                          │                          │                          │           │                │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │           │                 │                                │                               │                        │                  │                  │ Dim1        │                                                                                                      │          │          │           │                          │                          │                          │           │                │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │           │                 │                                │                               │                        │                  │                  │             │                                                                                                      │          │          │           │                          │                          │                          │           │                │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├──────────────────────────────────────┼───────────┼─────────────────┼────────────────────────────────┼───────────────────────────────┼────────────────────────┼──────────────────┼──────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────┼──────────┼──────────┼───────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼───────────┼────────────────┤
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│ b99e54d3-5177-419a-8573-7423175ba6ed │ dimension │ Country         │ Country where a unit was sold. │                               │                        │ =&amp;#39;Country sold&amp;#39;  │ 1                │ Country     │ Dimension color:                                                                                     │ N        │ false    │ false     │ 1753-01-01T00:00:00.000Z │ 2023-02-22T15:34:24.760Z │ 2023-05-09T15:11:34.957Z │ LAB\goran │ Geo, DimCat1   │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │           │                 │                                │                               │                        │                  │                  │             │ {&amp;#34;color&amp;#34;:&amp;#34;#bbbbbb&amp;#34;,&amp;#34;index&amp;#34;:-1}                                                                       │          │          │           │                          │                          │                          │           │                │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │           │                 │                                │                               │                        │                  │                  │             │                                                                                                      │          │          │           │                          │                          │                          │           │                │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │           │                 │                                │                               │                        │                  │                  │             │ Value colors:                                                                                        │          │          │           │                          │                          │                          │           │                │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │           │                 │                                │                               │                        │                  │                  │             │ {&amp;#34;colors&amp;#34;:[{&amp;#34;value&amp;#34;:&amp;#34;Afghanistan&amp;#34;,&amp;#34;baseColor&amp;#34;:{&amp;#34;color&amp;#34;:&amp;#34;#8a85c6&amp;#34;,&amp;#34;index&amp;#34;:-1}},{&amp;#34;value&amp;#34;:&amp;#34;Albania&amp;#34;,&amp;#34;ba │          │          │           │                          │                          │                          │           │                │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │           │                 │                                │                               │                        │                  │                  │             │ seColor&amp;#34;:{&amp;#34;color&amp;#34;:&amp;#34;#aaaaaa&amp;#34;,&amp;#34;index&amp;#34;:-1}},{&amp;#34;value&amp;#34;:&amp;#34;Algeria&amp;#34;,&amp;#34;baseColor&amp;#34;:{&amp;#34;color&amp;#34;:&amp;#34;#a16090&amp;#34;,&amp;#34;index&amp;#34;:9 │          │          │           │                          │                          │                          │           │                │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │           │                 │                                │                               │                        │                  │                  │             │ }}],&amp;#34;nul&amp;#34;:{&amp;#34;color&amp;#34;:&amp;#34;#c8c7a9&amp;#34;,&amp;#34;index&amp;#34;:16},&amp;#34;oth&amp;#34;:{&amp;#34;color&amp;#34;:&amp;#34;#ffec6e&amp;#34;,&amp;#34;index&amp;#34;:-1},&amp;#34;pal&amp;#34;:null,&amp;#34;single&amp;#34;:nu │          │          │           │                          │                          │                          │           │                │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │           │                 │                                │                               │                        │                  │                  │             │ ll,&amp;#34;usePal&amp;#34;:true,&amp;#34;autoFill&amp;#34;:true}                                                                    │          │          │           │                          │                          │                          │           │                │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├──────────────────────────────────────┼───────────┼─────────────────┼────────────────────────────────┼───────────────────────────────┼────────────────────────┼──────────────────┼──────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────┼──────────┼──────────┼───────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼───────────┼────────────────┤
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│ cb922a28-ff2d-4d97-a9fd-5d99eae2a490 │ dimension │ Color           │ Color of sold unit             │                               │                        │ =&amp;#39;Unit color&amp;#39;    │ 1                │ UnitColor   │                                                                                                      │ N        │ false    │ false     │ 1753-01-01T00:00:00.000Z │ 2023-05-09T15:11:34.957Z │ 2023-05-09T15:55:46.963Z │ LAB\goran │ Sales, Color   │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├──────────────────────────────────────┼───────────┼─────────────────┼────────────────────────────────┼───────────────────────────────┼────────────────────────┼──────────────────┼──────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────┼──────────┼──────────┼───────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼───────────┼────────────────┤
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│ 3047e493-f24f-4d31-a0fb-6b797874b049 │ dimension │ Salesperson     │ The person who sold the unit.  │                               │                        │ =&amp;#39;Salesperson&amp;#39;   │ 1                │ Salesperson │ Value colors:                                                                                        │ N        │ false    │ false     │ 1753-01-01T00:00:00.000Z │ 2023-03-08T16:45:26.610Z │ 2023-05-09T15:11:34.957Z │ LAB\goran │ Staff, Sales   │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │           │                 │                                │                               │                        │                  │                  │             │ {&amp;#34;colors&amp;#34;:[{&amp;#34;value&amp;#34;:&amp;#34;Afghanistan&amp;#34;,&amp;#34;baseColor&amp;#34;:{&amp;#34;color&amp;#34;:&amp;#34;#8a85c6&amp;#34;,&amp;#34;index&amp;#34;:-1}},{&amp;#34;value&amp;#34;:&amp;#34;Albania&amp;#34;,&amp;#34;ba │          │          │           │                          │                          │                          │           │                │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │           │                 │                                │                               │                        │                  │                  │             │ seColor&amp;#34;:{&amp;#34;color&amp;#34;:&amp;#34;#aaaaaa&amp;#34;,&amp;#34;index&amp;#34;:-1}},{&amp;#34;value&amp;#34;:&amp;#34;Algeria&amp;#34;,&amp;#34;baseColor&amp;#34;:{&amp;#34;color&amp;#34;:&amp;#34;#a16090&amp;#34;,&amp;#34;index&amp;#34;:9 │          │          │           │                          │                          │                          │           │                │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │           │                 │                                │                               │                        │                  │                  │             │ }}],&amp;#34;nul&amp;#34;:{&amp;#34;color&amp;#34;:&amp;#34;#c8c7a9&amp;#34;,&amp;#34;index&amp;#34;:16},&amp;#34;oth&amp;#34;:{&amp;#34;color&amp;#34;:&amp;#34;#ffec6e&amp;#34;,&amp;#34;index&amp;#34;:-1},&amp;#34;pal&amp;#34;:null,&amp;#34;single&amp;#34;:nu │          │          │           │                          │                          │                          │           │                │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │           │                 │                                │                               │                        │                  │                  │             │ ll,&amp;#34;usePal&amp;#34;:true,&amp;#34;autoFill&amp;#34;:true}                                                                    │          │          │           │                          │                          │                          │           │                │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├──────────────────────────────────────┼───────────┼─────────────────┼────────────────────────────────┼───────────────────────────────┼────────────────────────┼──────────────────┼──────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────┼──────────┼──────────┼───────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼───────────┼────────────────┤
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│ c1364941-df5c-4c45-bbe5-8be9f8398373 │ dimension │ Sales month     │ Date in which a unit was sold. │                               │                        │ =&amp;#39;Sales month&amp;#39;   │ 1                │ Month_Sales │ Dimension color:                                                                                     │ N        │ false    │ false     │ 1753-01-01T00:00:00.000Z │ 2023-03-08T16:45:26.610Z │ 2023-05-09T15:11:34.957Z │ LAB\goran │                │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │           │                 │                                │                               │                        │                  │                  │             │ {&amp;#34;color&amp;#34;:&amp;#34;#bbbbbb&amp;#34;,&amp;#34;index&amp;#34;:-1}                                                                       │          │          │           │                          │                          │                          │           │                │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │           │                 │                                │                               │                        │                  │                  │             │                                                                                                      │          │          │           │                          │                          │                          │           │                │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │           │                 │                                │                               │                        │                  │                  │             │                                                                                                      │          │          │           │                          │                          │                          │           │                │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;└──────────────────────────────────────┴───────────┴─────────────────┴────────────────────────────────┴───────────────────────────────┴────────────────────────┴──────────────────┴──────────────────┴─────────────┴──────────────────────────────────────────────────────────────────────────────────────────────────────┴──────────┴──────────┴───────────┴──────────────────────────┴──────────────────────────┴──────────────────────────┴───────────┴────────────────┘
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;delete-master-item-dimensions-in-a-sense-app&#34;&gt;Delete master item dimensions in a Sense app&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.\&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;ctrl-q&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;exe&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;master-item&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-dim-delete&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-host&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;192.168&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;109&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-dir&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;LAB&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-id&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;goran&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-app-id&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;a3e0f5d2&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;000a&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;464f&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;998d&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;33d333b175d7&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-id-type&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-master-item&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;Country&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;Sales month&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:25:46.852Z info: -----------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:25:46.852Z info: | Ctrl-Q
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:25:46.866Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:25:46.866Z info: | Version      : 3.13.1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:25:46.866Z info: | Log level    : info
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:25:46.866Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:25:46.866Z info: | Command      : master-item-dim-delete
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:25:46.866Z info: |              : delete master dimension(s)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:25:46.866Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:25:46.866Z info: | Run Ctrl-Q with the &amp;#39;--help&amp;#39; option to see a list of all available options for this command.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:25:46.866Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:25:46.866Z info: | https://github.com/ptarmiganlabs/ctrl-q
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:25:46.866Z info: ----------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:25:46.866Z info:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:25:46.881Z info: Delete master dimensions
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:25:47.291Z info: (1/2) Deleted master item dimension &amp;#34;Country&amp;#34;, id=455b434d-6b4f-437f-846e-f72b13426bab in app &amp;#34;a3e0f5d2-000a-464f-998d-33d333b175d7&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:25:47.291Z info: (2/2) Deleted master item dimension &amp;#34;Sales month&amp;#34;, id=98c4424e-3434-4d02-b5be-e163fb554731 in app &amp;#34;a3e0f5d2-000a-464f-998d-33d333b175d7&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Measures</title>
+      <link>/docs/command/measure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/command/measure/</guid>
+      <description>
+        
+        
+        &lt;!-- 
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;This is a placeholder page that shows you how to use this template site.&lt;/p&gt;
+
+&lt;/div&gt;
+ --&gt;
+&lt;p&gt;&lt;em&gt;Page contents:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#list-master-item-measures-in-a-sense-app&#34;&gt;List master item measures in a Sense app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#delete-master-item-measures-in-a-sense-app&#34;&gt;Delete master item measures in a Sense app&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;list-master-item-measures-in-a-sense-app&#34;&gt;List master item measures in a Sense app&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.\&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;ctrl-q&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;exe&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;master-item&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-measure-get&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-host&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;192.168&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;109&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-dir&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;LAB&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-id&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;goran&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-app-id&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;a3e0f5d2&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;000a&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;464f&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;998d&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;33d333b175d7&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-output-format&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;table&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:20:35.083Z info: -----------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:20:35.083Z info: | Ctrl-Q
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:20:35.099Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:20:35.099Z info: | Version      : 3.13.1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:20:35.099Z info: | Log level    : info
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:20:35.099Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:20:35.099Z info: | Command      : master-item-measure-get
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:20:35.099Z info: |              : get info about one or more master measures
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:20:35.099Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:20:35.099Z info: | Run Ctrl-Q with the &amp;#39;--help&amp;#39; option to see a list of all available options for this command.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:20:35.099Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:20:35.099Z info: | https://github.com/ptarmiganlabs/ctrl-q
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:20:35.099Z info: ----------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:20:35.099Z info:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:20:35.099Z info: Get master measures
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:20:35.568Z info:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│ Measures (6 measure(s) found in the app)                                                                                                                                                                                                                                                                                                                                                                                                                                           │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├──────────────────────────────────────┬─────────┬────────────────────────┬───────────────────────────────────────────────────┬──────────────────┬──────────────────┬──────────────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────┬───────────────────────────────────────┬──────────┬──────────┬───────────┬──────────────────────────┬──────────────────────────┬──────────────────────────┬───────────┬───────────┤
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│ Id                                   │ Type    │ Title                  │ Description                                       │ Label            │ Label expression │ Definition           │ Coloring                                                                                             │ Number format                         │ Grouping │ Approved │ Published │ Publish time             │ Created date             │ Modified date            │ Owner     │ Tags      │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├──────────────────────────────────────┼─────────┼────────────────────────┼───────────────────────────────────────────────────┼──────────────────┼──────────────────┼──────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────┼───────────────────────────────────────┼──────────┼──────────┼───────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼───────────┼───────────┤
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│ 0a4151cf-0b3d-423d-84d7-eb18ff4ce07a │ measure │ Profit EUR             │ Profit during selected time period.               │ =&amp;#39;Profit&amp;#39;        │ =&amp;#39;Profit&amp;#39;        │ Sum(Profit)          │                                                                                                      │ {&amp;#34;qType&amp;#34;:&amp;#34;U&amp;#34;,&amp;#34;qnDec&amp;#34;:10,&amp;#34;qUseThou&amp;#34;:0} │ N        │ false    │ false     │ 1753-01-01T00:00:00.000Z │ 2023-05-09T18:48:43.431Z │ 2023-06-05T18:39:32.990Z │ LAB\goran │ Sales     │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├──────────────────────────────────────┼─────────┼────────────────────────┼───────────────────────────────────────────────────┼──────────────────┼──────────────────┼──────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────┼───────────────────────────────────────┼──────────┼──────────┼───────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼───────────┼───────────┤
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│ 21064835-d013-4559-9e59-9a88059ca5a6 │ measure │ Revenue EUR            │ Revenue during selected time period.              │ =&amp;#39;Revenue&amp;#39;       │ =&amp;#39;Revenue&amp;#39;       │ Sum(Revenue)         │ Segment colors:                                                                                      │ {&amp;#34;qType&amp;#34;:&amp;#34;U&amp;#34;,&amp;#34;qnDec&amp;#34;:10,&amp;#34;qUseThou&amp;#34;:0} │ N        │ false    │ false     │ 1753-01-01T00:00:00.000Z │ 2023-06-06T06:03:11.288Z │ 2023-06-06T06:03:11.288Z │ LAB\goran │ Sales     │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │         │                        │                                                   │                  │                  │                      │ {&amp;#34;colors&amp;#34;:[{&amp;#34;color&amp;#34;:&amp;#34;#006580&amp;#34;,&amp;#34;index&amp;#34;:6},{&amp;#34;color&amp;#34;:&amp;#34;#ac4d58&amp;#34;,&amp;#34;index&amp;#34;:10},{&amp;#34;color&amp;#34;:&amp;#34;#4477aa&amp;#34;,&amp;#34;index&amp;#34;:- │                                       │          │          │           │                          │                          │                          │           │           │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │         │                        │                                                   │                  │                  │                      │ 1},{&amp;#34;color&amp;#34;:&amp;#34;#7db8da&amp;#34;,&amp;#34;index&amp;#34;:-1}],&amp;#34;breakTypes&amp;#34;:[true,true,false],&amp;#34;limits&amp;#34;:[0.223,0.491,0.728],&amp;#34;limi │                                       │          │          │           │                          │                          │                          │           │           │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │         │                        │                                                   │                  │                  │                      │ tType&amp;#34;:&amp;#34;percent&amp;#34;}                                                                                    │                                       │          │          │           │                          │                          │                          │           │           │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├──────────────────────────────────────┼─────────┼────────────────────────┼───────────────────────────────────────────────────┼──────────────────┼──────────────────┼──────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────┼───────────────────────────────────────┼──────────┼──────────┼───────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼───────────┼───────────┤
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│ f5149553-a100-4f53-8f46-4c866d2220ba │ measure │ Profit EUR (LY)        │ Profit during last year                           │ =&amp;#39;Profit LY&amp;#39;     │ =&amp;#39;Profit LY&amp;#39;     │ Sum(Profit_LY)       │                                                                                                      │ {&amp;#34;qType&amp;#34;:&amp;#34;U&amp;#34;,&amp;#34;qnDec&amp;#34;:10,&amp;#34;qUseThou&amp;#34;:0} │ N        │ false    │ false     │ 1753-01-01T00:00:00.000Z │ 2023-06-06T06:03:11.288Z │ 2023-06-06T06:03:11.288Z │ LAB\goran │ Sales, LY │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├──────────────────────────────────────┼─────────┼────────────────────────┼───────────────────────────────────────────────────┼──────────────────┼──────────────────┼──────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────┼───────────────────────────────────────┼──────────┼──────────┼───────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼───────────┼───────────┤
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│ 9d563fc2-ad00-41db-ad15-0f80c522686d │ measure │ Revenue EUR (LY)       │ Revenue during last year.                         │ =&amp;#39;Revenue LY&amp;#39;    │ =&amp;#39;Revenue LY&amp;#39;    │ Sum(Revenue_LY)      │                                                                                                      │ {&amp;#34;qType&amp;#34;:&amp;#34;U&amp;#34;,&amp;#34;qnDec&amp;#34;:10,&amp;#34;qUseThou&amp;#34;:0} │ N        │ false    │ false     │ 1753-01-01T00:00:00.000Z │ 2023-05-09T15:18:20.753Z │ 2023-05-09T15:40:12.804Z │ LAB\goran │ Sales, LY │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├──────────────────────────────────────┼─────────┼────────────────────────┼───────────────────────────────────────────────────┼──────────────────┼──────────────────┼──────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────┼───────────────────────────────────────┼──────────┼──────────┼───────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼───────────┼───────────┤
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│ a260c5a2-21e9-4ce5-92d9-c3e7837e51a2 │ measure │ No. of sold units (LY) │ Number of units sold last year.                   │ =&amp;#39;Sold units LY&amp;#39; │ =&amp;#39;Sold units LY&amp;#39; │ Sum(UnitsInOrder_LY) │ Measure color:                                                                                       │ {&amp;#34;qType&amp;#34;:&amp;#34;U&amp;#34;,&amp;#34;qnDec&amp;#34;:10,&amp;#34;qUseThou&amp;#34;:0} │ N        │ false    │ false     │ 1753-01-01T00:00:00.000Z │ 2023-05-09T15:18:20.753Z │ 2023-05-09T15:40:12.804Z │ LAB\goran │ Sales, LY │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │         │                        │                                                   │                  │                  │                      │ {&amp;#34;color&amp;#34;:&amp;#34;#8a85c6&amp;#34;,&amp;#34;index&amp;#34;:8}                                                                        │                                       │          │          │           │                          │                          │                          │           │           │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │         │                        │                                                   │                  │                  │                      │                                                                                                      │                                       │          │          │           │                          │                          │                          │           │           │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │         │                        │                                                   │                  │                  │                      │                                                                                                      │                                       │          │          │           │                          │                          │                          │           │           │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├──────────────────────────────────────┼─────────┼────────────────────────┼───────────────────────────────────────────────────┼──────────────────┼──────────────────┼──────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────┼───────────────────────────────────────┼──────────┼──────────┼───────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼───────────┼───────────┤
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│ 94631826-88b0-4e84-bf71-9667972e8f15 │ measure │ No. of sold units      │ Number of units sold during selected time period. │ =&amp;#39;Sold units&amp;#39;    │ =&amp;#39;Sold units&amp;#39;    │ =Sum(UnitsInOrder)   │ Measure color:                                                                                       │ {&amp;#34;qType&amp;#34;:&amp;#34;U&amp;#34;,&amp;#34;qnDec&amp;#34;:10,&amp;#34;qUseThou&amp;#34;:0} │ N        │ false    │ false     │ 1753-01-01T00:00:00.000Z │ 2023-05-09T18:48:43.431Z │ 2023-06-05T18:39:32.990Z │ LAB\goran │ Sales     │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │         │                        │                                                   │                  │                  │                      │ {&amp;#34;color&amp;#34;:&amp;#34;#8a85c6&amp;#34;,&amp;#34;index&amp;#34;:8}                                                                        │                                       │          │          │           │                          │                          │                          │           │           │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │         │                        │                                                   │                  │                  │                      │                                                                                                      │                                       │          │          │           │                          │                          │                          │           │           │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │         │                        │                                                   │                  │                  │                      │ Segment colors:                                                                                      │                                       │          │          │           │                          │                          │                          │           │           │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │         │                        │                                                   │                  │                  │                      │ {&amp;#34;colors&amp;#34;:[{&amp;#34;color&amp;#34;:&amp;#34;#006580&amp;#34;,&amp;#34;index&amp;#34;:6},{&amp;#34;color&amp;#34;:&amp;#34;#ac4d58&amp;#34;,&amp;#34;index&amp;#34;:10},{&amp;#34;color&amp;#34;:&amp;#34;#4477aa&amp;#34;,&amp;#34;index&amp;#34;:- │                                       │          │          │           │                          │                          │                          │           │           │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │         │                        │                                                   │                  │                  │                      │ 1},{&amp;#34;color&amp;#34;:&amp;#34;#7db8da&amp;#34;,&amp;#34;index&amp;#34;:-1}],&amp;#34;breakTypes&amp;#34;:[true,true,false],&amp;#34;limits&amp;#34;:[0.223,0.491,0.728],&amp;#34;limi │                                       │          │          │           │                          │                          │                          │           │           │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│                                      │         │                        │                                                   │                  │                  │                      │ tType&amp;#34;:&amp;#34;percent&amp;#34;}                                                                                    │                                       │          │          │           │                          │                          │                          │           │           │
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;└──────────────────────────────────────┴─────────┴────────────────────────┴───────────────────────────────────────────────────┴──────────────────┴──────────────────┴──────────────────────┴──────────────────────────────────────────────────────────────────────────────────────────────────────┴───────────────────────────────────────┴──────────┴──────────┴───────────┴──────────────────────────┴──────────────────────────┴──────────────────────────┴───────────┴───────────┘
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;delete-master-item-measures-in-a-sense-app&#34;&gt;Delete master item measures in a Sense app&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.\&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;ctrl-q&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;exe&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;master-item&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-measure-delete&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-host&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;192.168&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;109&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-app-id&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;a3e0f5d2&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;000a&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;464f&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;998d&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;33d333b175d7&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-dir&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;LAB&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-id&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;goran&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-id-type&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-master-item&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;Revenue EUR&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;Profit EUR (LY)&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:21:43.480Z info: -----------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:21:43.496Z info: | Ctrl-Q
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:21:43.496Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:21:43.496Z info: | Version      : 3.13.1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:21:43.512Z info: | Log level    : info
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:21:43.545Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:21:43.552Z info: | Command      : master-item-measure-delete
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:21:43.559Z info: |              : delete master measure(s)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:21:43.559Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:21:43.559Z info: | Run Ctrl-Q with the &amp;#39;--help&amp;#39; option to see a list of all available options for this command.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:21:43.574Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:21:43.574Z info: | https://github.com/ptarmiganlabs/ctrl-q
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:21:43.574Z info: ----------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:21:43.574Z info:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:21:43.590Z info: Delete master measures
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:21:44.058Z info: (1/2) Deleted master item measure &amp;#34;Revenue EUR&amp;#34;, id=21064835-d013-4559-9e59-9a88059ca5a6 in app &amp;#34;a3e0f5d2-000a-464f-998d-33d333b175d7&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T04:21:44.058Z info: (2/2) Deleted master item measure &amp;#34;Profit EUR (LY)&amp;#34;, id=f5149553-a100-4f53-8f46-4c866d2220ba in app &amp;#34;a3e0f5d2-000a-464f-998d-33d333b175d7&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Import</title>
+      <link>/docs/command/import/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/command/import/</guid>
+      <description>
+        
+        
+        &lt;!-- 
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;This is a placeholder page that shows you how to use this template site.&lt;/p&gt;
+
+&lt;/div&gt;
+ --&gt;
+&lt;p&gt;&lt;em&gt;Page contents:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#import-master-items-from-excel-file&#34;&gt;Import master items from Excel file&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#how-to-get-correct-color-jsons&#34;&gt;How to get correct color JSONs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#import-apps-from-qvf-files&#34;&gt;Import apps from QVF files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#import-tasks-from-file&#34;&gt;Import tasks from file&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#source-file-columns-for-task-defintions&#34;&gt;Source file columns for task defintions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#source-file-columns-for-app-import-definitions&#34;&gt;Source file columns for app import definitions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#example-export-tasks-to-csv-then-import-tasks-from-same-csv&#34;&gt;Example: Export tasks to CSV, then import tasks from same CSV&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#example-import-apps-from-qvf-files-and-create-associated-reload-tasks&#34;&gt;Example: Import apps from QVF files and create associated reload tasks&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#defining-tasks-to-be-created&#34;&gt;Defining tasks to be created&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#associating-new-tasks-with-imported-and-existing-apps&#34;&gt;Associating new tasks with imported and existing apps&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;All example below use Windows Terminal/PowerShell.&lt;/p&gt;
+&lt;h2 id=&#34;import-master-items-from-excel-file&#34;&gt;Import master items from Excel file&lt;/h2&gt;
+&lt;p&gt;This command imports dimensions and measures defined in an Excel file into master items in a Sense app.&lt;/p&gt;
+&lt;p&gt;Both single and drill-down dimensions can be created (i.e. the same types that can be created using the Sense web UI), as well as measures.&lt;br&gt;
+The same coloring options are available as in the web UI for both dimensions and measures.&lt;/p&gt;
+&lt;p&gt;First let&amp;rsquo;s take a look at the command options:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.\&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;ctrl-q&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;exe&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;master-item&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-import&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-help&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Usage: build master-item-import [options]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;create master items based on definitions in a file on disk
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Options:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --log-level &amp;lt;level&amp;gt;                                          log level (choices: &amp;#34;error&amp;#34;, &amp;#34;warn&amp;#34;, &amp;#34;info&amp;#34;, &amp;#34;verbose&amp;#34;, &amp;#34;debug&amp;#34;, &amp;#34;silly&amp;#34;, default: &amp;#34;info&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --host &amp;lt;host&amp;gt;                                                Qlik Sense server IP/FQDN
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --port &amp;lt;port&amp;gt;                                                Qlik Sense server engine port (default: &amp;#34;4747&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --schema-version &amp;lt;string&amp;gt;                                    Qlik Sense engine schema version (default: &amp;#34;12.612.0&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --app-id &amp;lt;id&amp;gt;                                                Qlik Sense app ID
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --virtual-proxy &amp;lt;prefix&amp;gt;                                     Qlik Sense virtual proxy prefix (default: &amp;#34;&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --secure &amp;lt;true|false&amp;gt;                                        connection to Qlik Sense engine is via https (default: true)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --auth-user-dir &amp;lt;directory&amp;gt;                                  user directory for user to connect with
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --auth-user-id &amp;lt;userid&amp;gt;                                      user ID for user to connect with
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  -a, --auth-type &amp;lt;type&amp;gt;                                       authentication type (choices: &amp;#34;cert&amp;#34;, default: &amp;#34;cert&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --auth-cert-file &amp;lt;file&amp;gt;                                      Qlik Sense certificate file (exported from QMC) (default: &amp;#34;./cert/client.pem&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --auth-cert-key-file &amp;lt;file&amp;gt;                                  Qlik Sense certificate key file (exported from QMC) (default: &amp;#34;./cert/client_key.pem&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --auth-root-cert-file &amp;lt;file&amp;gt;                                 Qlik Sense root certificate file (exported from QMC) (default: &amp;#34;./cert/root.pem&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  -t, --file-type &amp;lt;type&amp;gt;                                       source file type (choices: &amp;#34;excel&amp;#34;, default: &amp;#34;excel&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --file &amp;lt;filename&amp;gt;                                            file containing master item definitions
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --sheet &amp;lt;name&amp;gt;                                               name of Excel sheet where dim/measure flag column is found
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --col-ref-by &amp;lt;reftype&amp;gt;                                       how to refer to columns in the source file. Options are by name or by position (zero based) (choices: &amp;#34;name&amp;#34;, &amp;#34;position&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                                                               default: &amp;#34;name&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --col-item-type &amp;lt;column position or name&amp;gt;                    column where dim/measure flag is found. Use &amp;#34;dim-single&amp;#34; in that column to create dimension, &amp;#34;dim-drilldown&amp;#34; for drill-down
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                                                               dimension, &amp;#34;measure&amp;#34; for measure (default: &amp;#34;Master item type&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --col-master-item-name &amp;lt;column position or name&amp;gt;             column number (zero based) or name to use as master item name (default: &amp;#34;Master item name&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --col-master-item-descr &amp;lt;column position or name&amp;gt;            column number (zero based) or name to use as master item description (default: &amp;#34;Description&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --col-master-item-label &amp;lt;column position or name&amp;gt;            column number (zero based) or name to use as master item label (default: &amp;#34;Label&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --col-master-item-expr &amp;lt;column position or name&amp;gt;             column number (zero based) or name to use as master item expression (default: &amp;#34;Expression&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --col-master-item-tag &amp;lt;column position or name&amp;gt;              column number (zero based) or name to use as master item tags (default: &amp;#34;Tag&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --col-master-item-color &amp;lt;column position or name&amp;gt;            column number (zero based) or name to use as color for dimensions/measures (default: &amp;#34;Color&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --col-master-item-per-value-color &amp;lt;column position or name&amp;gt;  column number (zero based) or name to use as per-value/segment color for dimensions/measures (default: &amp;#34;Per value color&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --sleep-between-imports &amp;lt;milliseconds&amp;gt;                       sleep this many milliseconds between imports. Set to 0 to disable (default: 1000)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --limit-import-count &amp;lt;number&amp;gt;                                import at most x number of master items from the Excel file. Defaults to 0 = no limit (default: 0)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --dry-run                                                    do a dry run, i.e. do not create or update anything - just show what would be done
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  -h, --help                                                   display help for command
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;There are several options that allow for a great deal of flexibility.&lt;br&gt;
+For example, the &lt;code&gt;--col-ref-by&lt;/code&gt; option determines whether the &lt;code&gt;--col-master-item-...&lt;/code&gt; options refer to columns by position or name.
+Column names will in most cases be easier to read and understand, but sometimes a zero-based column position might be preferred.&lt;/p&gt;
+&lt;p&gt;Similarly those &lt;code&gt;--col-master-item-...&lt;/code&gt; options let you use your own column names in the source file.&lt;/p&gt;
+&lt;p&gt;By adding the &lt;code&gt;--help&lt;/code&gt; option when running Ctrl-Q you get a list of all available options for the &lt;code&gt;master-item-import&lt;/code&gt; command.&lt;br&gt;
+&lt;code&gt;--help&lt;/code&gt; can be added to any Ctrl-Q command, even if there are already other options on the command line.&lt;/p&gt;
+&lt;p&gt;Some other options that might be useful:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--dry-run&lt;/code&gt;- Don&amp;rsquo;t actually create or update any master items, just show what would have been done.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--limit-import-count&lt;/code&gt; - Only import the first N master items from the file. Useful for testing.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--sleep-between-imports&lt;/code&gt; - Pause for N milliseconds between each imported master item. Useful for decreasing the load on the Sense server.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Notes on using the &lt;code&gt;master-item-import&lt;/code&gt; command:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Master items are referred to by name. This means that if a master item in the source file already exists in the target Sense app, the app&amp;rsquo;s master item will be updated.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If a master item &lt;em&gt;does not&lt;/em&gt; exist in the target app the master item will be created.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If a master item &lt;em&gt;does&lt;/em&gt;_* exist in the target app its content will be overwritten with the info in the source Excel file.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The structure of the Excel file is fairly flexible, but some restrictions apply:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The columns can be named anything. Use the &lt;code&gt;--col-item-type&lt;/code&gt; and &lt;code&gt;--col-master-item-...&lt;/code&gt; columns to tell Ctrl-Q which columns contains what data.&lt;/li&gt;
+&lt;li&gt;The first row in the Excel sheet must contain column headers if columns are referenced by name.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Master item names, descriptions and labels can contain &lt;em&gt;almost&lt;/em&gt; any characters and there are some restrictions on the length of these strings.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;See the &lt;a href=&#34;https://help.qlik.com/en-US/sense/May2023/Subsystems/Hub/Content/Sense_Hub/Introduction/guidelines-visualizations-fields-naming.htm&#34;&gt;Qlik Sense help&lt;/a&gt; for details.&lt;/li&gt;
+&lt;li&gt;If a master item name or description is too long a warning will be shown and the text will be truncated to the max length allowed by Sense (see the link above).&lt;/li&gt;
+&lt;li&gt;If a master item has more than 30 tags a warning will be shown and only the first 30 tags will be used.&lt;/li&gt;
+&lt;li&gt;If a master item tag is longer than 31 characters a warning will be shown and the tag will be truncated to 31 characters.&lt;/li&gt;
+&lt;li&gt;If a master item expression is too long an error will be shown and Ctrl-Q will exit.
+Notes on the example below:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The (intentional) warning for the incorrectly spelled master item type &amp;ldquo;measur&amp;rdquo; (which should have been &amp;ldquo;measure&amp;rdquo;, of course).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now let&amp;rsquo;s run the command.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.\&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;ctrl-q&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;exe&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;master-item&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-import&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-host&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;192.168&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;109&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-dir&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;LAB&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-id&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;goran&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-type&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;cert&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-app-id&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;a3e0f5d2&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;000a&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;464f&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;998d&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;33d333b175d7&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-file&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-type&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;excel&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-file&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;./&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;ctrl-q&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-master-items&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;xlsx&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-sheet&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Sales&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-col-ref-by&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-col-item-type&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Master item type&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-col-master-item-name&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Master Item Name&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-col-master-item-descr&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Description&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-col-master-item-label&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Label&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-col-master-item-expr&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Expression&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-col-master-item-tag&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Tag&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-col-master-item-color&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Color&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-col-master-item-per-value-color&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;Per value color&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:35.046Z info: -----------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:35.046Z info: | Ctrl-Q
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:35.046Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:35.046Z info: | Version      : 3.13.1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:35.046Z info: | Log level    : info
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:35.060Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:35.060Z info: | Command      : master-item-import
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:35.060Z info: |              : create master items based on definitions in a file on disk
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:35.060Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:35.060Z info: | Run Ctrl-Q with the &amp;#39;--help&amp;#39; option to see a list of all available options for this command.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:35.060Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:35.060Z info: | https://github.com/ptarmiganlabs/ctrl-q
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:35.060Z info: ----------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:35.060Z info:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:35.060Z info: Import master items from definitions in Excel file &amp;#34;./ctrl-q-master-items.xlsx&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:36.014Z info: (1/12) Updated existing measure &amp;#34;No. of sold units&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:37.045Z info: (2/12) Updated existing measure &amp;#34;No. of sold units (LY)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:38.076Z info: (3/12) Created new measure &amp;#34;Revenue EUR&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:39.092Z info: (4/12) Updated existing measure &amp;#34;Revenue EUR (LY)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:40.128Z info: (5/12) Updated existing measure &amp;#34;Profit EUR&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:41.141Z warn: (6/12) Found an unknown master item type: &amp;#34;measur&amp;#34;. Ignoring this line in the imported file.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:42.156Z info: (7/12) Created new measure &amp;#34;Profit EUR (LY)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:43.203Z info: (8/12) Created new dimension &amp;#34;Country&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:44.220Z info: (9/12) Created new dimension &amp;#34;Sales month&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:45.266Z info: (10/12) Updated existing dimension &amp;#34;Salesperson&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:46.703Z info: (11/12) Updated existing dimension &amp;#34;Color&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:47.735Z info: (12/12) Updated existing drill-down dimension &amp;#34;DimDrill&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:45:48.751Z info: Imported 12 master items from Excel file ./ctrl-q-master-items.xlsx
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;NOTE: A sample defintions Excel file is &lt;a href=&#34;https://github.com/ptarmiganlabs/ctrl-q/blob/main/testdata/ctrl-q-master-items.xlsx?raw=true&#34;&gt;available in the GitHub repository&lt;/a&gt;. That file contains examples of most combinations of master item types and properties.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;how-to-get-correct-color-jsons&#34;&gt;How to get correct color JSONs&lt;/h3&gt;
+&lt;p&gt;If colors are to be associated with master items, the colors must be specified in JSON format, in the correct columns in the Excel file.&lt;/p&gt;
+&lt;p&gt;The easiest way to get the correct JSONs is to create a master item in the Sense web UI, set the master item&amp;rsquo;s color, and then use Ctrl-Q&amp;rsquo;s &lt;code&gt;master-item-dim-get&lt;/code&gt; and &lt;code&gt;master-item-measure-get&lt;/code&gt; commands to view the master item(s), either as a table or as JSON.&lt;br&gt;
+This will show you what the structure of the JSON looks like, or even provide you with the correct JSON if you entered the desired color info in the Sense web UI.&lt;/p&gt;
+&lt;p&gt;Different master item types have different coloring options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Drill-down dimensions
+&lt;ul&gt;
+&lt;li&gt;A general dimension color set in the Excel file&amp;rsquo;s column specified by the &lt;code&gt;--col-master-item-color&lt;/code&gt; option.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Single dimensions
+&lt;ul&gt;
+&lt;li&gt;A general dimension color set in the Excel file&amp;rsquo;s column specified by the &lt;code&gt;--col-master-item-color&lt;/code&gt; option.&lt;/li&gt;
+&lt;li&gt;A per-value color that can be used to assign different colors to different values of the dimension. Set in the Excel file&amp;rsquo;s column specified by the &lt;code&gt;--col-master-item-per-value-color&lt;/code&gt; option.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Measures
+&lt;ul&gt;
+&lt;li&gt;A general measure color set in the Excel file&amp;rsquo;s column specified by the &lt;code&gt;--col-master-item-color&lt;/code&gt; option.&lt;/li&gt;
+&lt;li&gt;Segment colors that can be used to assign colors to value ranges of the measure. Set in the Excel file&amp;rsquo;s column specified by the &lt;code&gt;--col-master-item-per-value-color&lt;/code&gt; option.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let&amp;rsquo;s look at some examples.&lt;/p&gt;
+&lt;p&gt;Here we want to get the JSON for the color of the master dimension &amp;ldquo;Country&amp;rdquo;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.\&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;ctrl-q&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;exe&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;master-item&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-dim-get&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-host&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;192.168&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;109&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-dir&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;LAB&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-id&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;goran&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-app-id&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;a3e0f5d2&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;000a&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;464f&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;998d&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;33d333b175d7&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-output-format&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;table&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The result will be a rather wide table, where the column named &lt;code&gt;Coloring&lt;/code&gt; contains the color JSONs.&lt;br&gt;
+The color data for the &amp;ldquo;Country&amp;rdquo; dimension looks like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Dimension color:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{&amp;#34;color&amp;#34;:&amp;#34;#bbbbbb&amp;#34;,&amp;#34;index&amp;#34;:-1}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Value colors:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{&amp;#34;colors&amp;#34;:[{&amp;#34;value&amp;#34;:&amp;#34;Afghanistan&amp;#34;,&amp;#34;baseColor&amp;#34;:{&amp;#34;color&amp;#34;:&amp;#34;#8a85c6&amp;#34;,&amp;#34;index&amp;#34;:-1}},{&amp;#34;value&amp;#34;:&amp;#34;Albania&amp;#34;,&amp;#34;ba
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;seColor&amp;#34;:{&amp;#34;color&amp;#34;:&amp;#34;#aaaaaa&amp;#34;,&amp;#34;index&amp;#34;:-1}},{&amp;#34;value&amp;#34;:&amp;#34;Algeria&amp;#34;,&amp;#34;baseColor&amp;#34;:{&amp;#34;color&amp;#34;:&amp;#34;#a16090&amp;#34;,&amp;#34;index&amp;#34;:9
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}}],&amp;#34;nul&amp;#34;:{&amp;#34;color&amp;#34;:&amp;#34;#c8c7a9&amp;#34;,&amp;#34;index&amp;#34;:16},&amp;#34;oth&amp;#34;:{&amp;#34;color&amp;#34;:&amp;#34;#ffec6e&amp;#34;,&amp;#34;index&amp;#34;:-1},&amp;#34;pal&amp;#34;:null,&amp;#34;single&amp;#34;:nu
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ll,&amp;#34;usePal&amp;#34;:true,&amp;#34;autoFill&amp;#34;:true}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Let&amp;rsquo;s format those as proper JSONs to make them more readable.&lt;br&gt;
+These JSONs are what would go into the Excel file&amp;rsquo;s &lt;code&gt;Color&lt;/code&gt; and &lt;code&gt;Per-value color&lt;/code&gt; columns.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NOTE 1: If unsure about what data to put in some field, just use the ones returned by the &lt;code&gt;master-item-dim-get&lt;/code&gt; command.&lt;br&gt;
+NOTE 2: The same concept works for drill-down dimensions and measures.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;color&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;#bbbbbb&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;index&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;-1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;colors&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Afghanistan&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;baseColor&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;color&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;#8a85c6&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;index&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;-1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Albania&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;baseColor&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;color&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;#aaaaaa&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;index&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;-1&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Algeria&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;baseColor&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;color&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;#a16090&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;index&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;9&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;nul&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;color&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;#c8c7a9&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;index&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;16&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;oth&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;color&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;#ffec6e&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;index&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;-1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;pal&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;single&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;nu&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a40000&#34;&gt;ll&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;usePal&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;autoFill&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;import-apps-from-qvf-files&#34;&gt;Import apps from QVF files&lt;/h2&gt;
+&lt;p&gt;.QVF files are Sense apps stored on disk.&lt;br&gt;
+Ctrl-Q&amp;rsquo;s &lt;code&gt;app-import&lt;/code&gt; command does bulk import of such QVF files, as well as setting tags and custom properties on the created apps.&lt;/p&gt;
+&lt;p&gt;Importing apps defined on the &lt;code&gt;App import&lt;/code&gt; sheet of the &lt;code&gt;tasks.xlsx&lt;/code&gt; Excel file can be done with a command like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.\&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;ctrl-q&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;exe&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;app-import&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-type&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;cert&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-host&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;192.168&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;109&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-cert&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-file&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;./&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;cert&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;client&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;pem&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-cert-key&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-file&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;./&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;cert&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;client_key&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;pem&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-dir&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;LAB&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-id&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;goran&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-file&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-name&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;tasks&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;xlsx&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-sheet-name&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;App import&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:33.268Z info: -----------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:33.268Z info: | Ctrl-Q
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:33.268Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:33.268Z info: | Version      : 3.13.1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:33.268Z info: | Log level    : info
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:33.268Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:33.268Z info: | Command      : app-import
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:33.268Z info: |              : import apps/upload QVF files on disk to Sense based on definitions in Excel file.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:33.268Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:33.268Z info: | Run Ctrl-Q with the &amp;#39;--help&amp;#39; option to see a list of all available options for this command.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:33.268Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:33.268Z info: | https://github.com/ptarmiganlabs/ctrl-q
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:33.268Z info: ----------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:33.268Z info:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:33.283Z info: Import apps from definitions in file &amp;#34;tasks.xlsx&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:33.378Z info: Successfully retrieved 25 tags from QSEoW
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:33.424Z info: Successfully retrieved 29 custom properties from QSEoW
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:33.455Z info: -------------------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:33.455Z info: Importing apps...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:33.455Z info: (1) Importing app &amp;#34;App 3&amp;#34; from file &amp;#34;C:/tools/ctrl-q/testdata/App import 3.qvf&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:37.437Z info: (1, delete-publish) App &amp;#34;App 3&amp;#34; published to stream &amp;#34;Ctrl-Q demo apps&amp;#34;, the existing app (if one exists) with the same name in this stream has been deleted. Id of published app: 5d3c8750-f09b-464c-a1ae-849fe8b0deb0
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:37.437Z info: (2) Importing app &amp;#34;App 3&amp;#34; from file &amp;#34;C:/tools/ctrl-q/testdata/App import 3.qvf&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:42.795Z info: (2, publish-replace) App &amp;#34;App 3&amp;#34; published to stream &amp;#34;Ctrl-Q demo apps&amp;#34;, replacing the existing app with the same name. Id of published app: 5d3c8750-f09b-464c-a1ae-849fe8b0deb0
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:42.795Z info: (3) Importing app &amp;#34;App 1&amp;#34; from file &amp;#34;C:/tools/ctrl-q/testdata/App import 1.qvf&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:46.530Z info: (3, publish-replace) App &amp;#34;App 1&amp;#34; published to stream &amp;#34;Ctrl-Q demo apps&amp;#34;, replacing the existing app with the same name. Id of published app: 88e29ab1-967a-4c03-99d0-b92d631f57aa
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:46.530Z info: (4) Importing app &amp;#34;App 1&amp;#34; from file &amp;#34;C:/tools/ctrl-q/testdata/App import 1.qvf&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:50.514Z info: (4, publish-another) App &amp;#34;App 1&amp;#34; published to stream &amp;#34;Ctrl-Q demo apps&amp;#34;. Id of published app: d7dc3005-e9bb-408c-b9d8-47997c720ddf
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:50.514Z info: (5) Importing app &amp;#34;App 1&amp;#34; from file &amp;#34;C:/tools/ctrl-q/testdata/App import 1.qvf&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:54.079Z warn: (5) PUBLISH APP publish-replace: More than one app with the same name &amp;#34;App 1&amp;#34; in the target stream &amp;#34;Ctrl-Q demo apps&amp;#34;. Impossible to know which one to replace. Skipping publishing for this app. The uploaded app is still present in the QMC (id=766c96a8-d8ba-47e6-b4a3-e1935bf12d99).
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:54.079Z error: (5) Failed publishing app &amp;#34;App 1&amp;#34; to stream &amp;#34;Ctrl-Q demo apps&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:54.094Z info: (6) Importing app &amp;#34;App 2&amp;#34; from file &amp;#34;C:/tools/ctrl-q/testdata/App import 2.qvf&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:57.579Z warn: Stream &amp;#34;Stream does not exist&amp;#34; does not exist.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:57.579Z error: (6) Failed publishing app &amp;#34;App 2&amp;#34; to stream &amp;#34;Stream does not exist&amp;#34;. The uploaded app is still present in the QMC (id=5733046b-df34-4989-bd33-56cde5ff779d).
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:49:57.594Z info: (7) Importing app &amp;#34;App 3&amp;#34; from file &amp;#34;C:/tools/ctrl-q/testdata/App import 3.qvf&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-09-27T05:50:02.563Z info: (7, publish-replace) App &amp;#34;App 3&amp;#34; published to stream &amp;#34;Ctrl-Q demo apps&amp;#34;, replacing the existing app with the same name. Id of published app: 5d3c8750-f09b-464c-a1ae-849fe8b0deb0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;NOTE 1: Qlik Sense implements rate limiting for QVF uploads. This means that if you plan to upload more than 60 QVF files you may be affected by this rate limiting.&lt;br&gt;
+Ctrl-Q detects that it&amp;rsquo;s being rate limited and implements a backoff strategy for retries, waiting longer and longer until it tries again.&lt;br&gt;
+Such retries are clearly shown in the Ctrl-Q logs.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The QMC now shows three new apps:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ctrl-q-app-import-2.png&#34; alt=&#34;Sense apps imported from QVF files&#34; title=&#34;Sense apps imported from QVF files&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The Excel file with definitions on what QVF files should be imported, what the apps should be named etc looks like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ctrl-q-app-import-1.png&#34; alt=&#34;QVF app files that should be imported into Qlik Sense&#34; title=&#34;QVF app files that should be imported into Qlik Sense&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The available columns in the Excel file are the same as when importing apps as part of task import.&lt;br&gt;
+The columns are described &lt;a href=&#34;#source-file-columns-for-app-import-definitions&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NOTE: A sample defintions Excel file is &lt;a href=&#34;https://github.com/ptarmiganlabs/ctrl-q/blob/main/testdata/tasks.xlsx?raw=true&#34;&gt;available in the GitHub repository&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If a valid app owner is specified in the Excel file it will be applied to the new app.&lt;br&gt;
+Similarly, if an already existing stream name (or ID of an existing stream) is specified in the Excel file, the new app will be published to that stream.&lt;/p&gt;
+&lt;h2 id=&#34;import-tasks-from-file&#34;&gt;Import tasks from file&lt;/h2&gt;
+&lt;p&gt;Task definitions can be read from CSV or Excel files.&lt;br&gt;
+The options are as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.\&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;ctrl-q&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;exe&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;task-import&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-help&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Usage: build task-import [options]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;create tasks based on definitions in a file on disk, optionally also importing apps from QVF files.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Options:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --log-level &amp;lt;level&amp;gt;                log level (choices: &amp;#34;error&amp;#34;, &amp;#34;warn&amp;#34;, &amp;#34;info&amp;#34;, &amp;#34;verbose&amp;#34;, &amp;#34;debug&amp;#34;, &amp;#34;silly&amp;#34;, default: &amp;#34;info&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --host &amp;lt;host&amp;gt;                      Qlik Sense server IP/FQDN
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --port &amp;lt;port&amp;gt;                      Qlik Sense server engine port (default: &amp;#34;4242&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --schema-version &amp;lt;string&amp;gt;          Qlik Sense engine schema version (default: &amp;#34;12.612.0&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --virtual-proxy &amp;lt;prefix&amp;gt;           Qlik Sense virtual proxy prefix (default: &amp;#34;&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --secure &amp;lt;true|false&amp;gt;              connection to Qlik Sense engine is via https (default: true)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --auth-user-dir &amp;lt;directory&amp;gt;        user directory for user to connect with
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --auth-user-id &amp;lt;userid&amp;gt;            user ID for user to connect with
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  -a, --auth-type &amp;lt;type&amp;gt;             authentication type (choices: &amp;#34;cert&amp;#34;, default: &amp;#34;cert&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --auth-cert-file &amp;lt;file&amp;gt;            Qlik Sense certificate file (exported from QMC) (default: &amp;#34;./cert/client.pem&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --auth-cert-key-file &amp;lt;file&amp;gt;        Qlik Sense certificate key file (exported from QMC) (default: &amp;#34;./cert/client_key.pem&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --auth-root-cert-file &amp;lt;file&amp;gt;       Qlik Sense root certificate file (exported from QMC) (default: &amp;#34;./cert/root.pem&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  -t, --file-type &amp;lt;type&amp;gt;             source file type (choices: &amp;#34;excel&amp;#34;, &amp;#34;csv&amp;#34;, default: &amp;#34;excel&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --file-name &amp;lt;filename&amp;gt;             file containing task definitions
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --sheet-name &amp;lt;name&amp;gt;                name of Excel sheet where task info is found
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --update-mode &amp;lt;mode&amp;gt;               create new or update existing tasks (choices: &amp;#34;create&amp;#34;, default: &amp;#34;create&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --limit-import-count &amp;lt;number&amp;gt;      import at most x number of tasks from the source file. Defaults to 0 = no limit (default: 0)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --sleep-app-upload &amp;lt;milliseconds&amp;gt;  Wait this long before continuing after each app has been uploaded to Sense. Defaults to 1000 = 1 second (default: 1000)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --import-app                       import Sense app QVFs from specified directory
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --import-app-sheet-name &amp;lt;name&amp;gt;     name of Excel sheet where app definitions are found
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --dry-run                          do a dry run, i.e. do not create any reload tasks - just show what would be done
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  -h, --help                         display help for command
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The options are &lt;em&gt;almost&lt;/em&gt; the same irrespective of source file type:&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;--sheet-name&lt;/code&gt; is only used/valid/relevant when &lt;code&gt;--file-type&lt;/code&gt; is set to &lt;code&gt;excel&lt;/code&gt;.&lt;br&gt;
+Why? Because there are no sheets/tabs in CSV files.&lt;/p&gt;
+&lt;h3 id=&#34;source-file-columns-for-task-defintions&#34;&gt;Source file columns for task defintions&lt;/h3&gt;
+&lt;p&gt;The source file format is quite relaxed, but a few rules apply:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The first column in the source file &lt;em&gt;must&lt;/em&gt; be the task number. This value uniquely identifies each task that should be imported and should be incremented by one for each task.&lt;/li&gt;
+&lt;li&gt;All other columns, mandatory and optional, beyond the first one may be placed in any order.
+&lt;ul&gt;
+&lt;li&gt;For mandatory columns the names listed below &lt;em&gt;must&lt;/em&gt; be used (but they can be placed in any order in the file, except the first column).&lt;/li&gt;
+&lt;li&gt;All mandatory columns must be present in the source file, even if they are not used/empty.
+For example, a task may not have a scheduled trigger, but the schema trigger columns must still be present in the source file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Counter&amp;rdquo; columns are used to keep together lines that are associated.
+&lt;ul&gt;
+&lt;li&gt;All lines involved in defining a certain task have the same &amp;ldquo;Task counter&amp;rdquo; value.&lt;/li&gt;
+&lt;li&gt;All lines involved in defining a certain schema or composite event have the same &amp;ldquo;Event counter&amp;rdquo; value.&lt;/li&gt;
+&lt;li&gt;All lines involved in defining a certain composite event rule have the same &amp;ldquo;Rule counter&amp;rdquo; value.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The file format used when &lt;em&gt;exporting&lt;/em&gt; task tables to disk is a superset of the format used for task &lt;em&gt;import&lt;/em&gt;.
+It&amp;rsquo;s thus a good idea to first do a task export, look at the file format and then adopt as needed before importing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The &lt;em&gt;mandatory&lt;/em&gt; columns in the task definition file are:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Column name&lt;/th&gt;
+&lt;th&gt;Comment&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Valid values&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Task counter&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Counter starting at 1. Increments one step for each task. All rows associated with a specific task should have the same value in this column.&lt;/td&gt;
+&lt;td&gt;Integer &amp;gt; 0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Task type&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Type of task. In the future Ctrl-Q may support more task types.&lt;/td&gt;
+&lt;td&gt;Reload&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Task name&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Name of the task that will be created.&lt;/td&gt;
+&lt;td&gt;Any string. Emojis allowed.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Task id&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;When creating new tasks a new task ID will always be created. This column is instead used to create task chains: it links a composite trigger in a downstream task with an upstream task via this column&amp;rsquo;s value.&lt;/td&gt;
+&lt;td&gt;Any string, but to make it easier to verify task chains it&amp;rsquo;s recommended to use integers in this column.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Task enabled&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Should the created task be enabled or not.&lt;/td&gt;
+&lt;td&gt;1 / 0 / blank. 1=enabled, 0 or blank=disabled&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Task timeout&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Timeout for the created task, i.e. number of seconds the task is allowed to run before it&amp;rsquo;s aborted.&lt;/td&gt;
+&lt;td&gt;Seconds&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Task retries&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Number of retries to make if the task execution fails.&lt;/td&gt;
+&lt;td&gt;Integer &amp;gt;= 0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;App id&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;The Sense app the task should be associated with.&lt;/td&gt;
+&lt;td&gt;If a valid GUID is specified it&amp;rsquo;s assumed to be an app id. The task will be associated with that app. If the app id starts with &lt;code&gt;newapp-&lt;/code&gt; it is a reference to an app that is imported during the current Ctrl-Q execution. The integer following &lt;code&gt;newapp-&lt;/code&gt; is the value in the &lt;code&gt;App counter&lt;/code&gt; column in the Excel definitions file.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Partial reload&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Should the task do a partial or full reload of the app?&lt;/td&gt;
+&lt;td&gt;1 / 0 / blank. 1=true, 0 or blank=false&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Manually triggered&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Is the task manually triggered or not?&lt;/td&gt;
+&lt;td&gt;1 / 0 / blank. 1=true, 0 or blank=false&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Tags&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Tags to set on the created task.&lt;/td&gt;
+&lt;td&gt;Format is &amp;ldquo;tag1 / tag2 / tag with spaces in it&amp;rdquo;, i.e. separate tag names by &amp;ldquo;space-forward slash-space&amp;rdquo;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Custom properties&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Custom properties to set on the created task.&lt;/td&gt;
+&lt;td&gt;Format is CustPropName1=Value1 / CustPropName2=Value2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Event counter&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;Counter identifying events associated with the task defined in the previous line. One task can have zero or more events associated with it.&lt;/td&gt;
+&lt;td&gt;Integer &amp;gt; 0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Event type&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;Which event type does this line specify? Schema events deal with time-based execution of the task. Composite events are used to build task chains.&lt;/td&gt;
+&lt;td&gt;Schema / Composite&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Event name&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;Name of the event.&lt;/td&gt;
+&lt;td&gt;Any string&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Event enabled&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;Is event enabled.&lt;/td&gt;
+&lt;td&gt;1 / 0 / blank. 1=enabled, 0 or blank=disabled&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Schema increment option&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;Type of schema event. For reference only, not used when Sense evaluates schema events (or??).&lt;/td&gt;
+&lt;td&gt;once / hourly / daily / weekly / monthly / custom&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Schema increment description&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;Structured description of the schema increment option. For reference only, not used when Sense evaluates schema events (or??).&lt;/td&gt;
+&lt;td&gt;Integers separated by space, e.g. &amp;ldquo;0 0 1 0&amp;rdquo; for weekly&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Daylight savings time&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;Control how the schema event should deal with dayligt savings time.&lt;/td&gt;
+&lt;td&gt;ObserveDaylightSavingTime / PermanentStandardTime / PermanentDaylightSavingTime&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Schema start&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;First valid time for the schema event. The event will not fire before this moment.&lt;/td&gt;
+&lt;td&gt;A valid timestamp string, e.g. 2022-10-19T10:19:30.000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Schema expiration&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;Last valid time for the schema event. The event will not fire after this moment.&lt;/td&gt;
+&lt;td&gt;A valid timestamp string or 9999-01-01T00:00:00.000 to signify &amp;ldquo;never&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Schema filter description&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;Used to control when a schema event is allower to trigger. More info &lt;a href=&#34;https://community.qlik.com/t5/Integration-Extension-APIs/Interval-and-time-explanation-for-creating-a-new-SchemaEvent/m-p/1784892/highlight/true#M13886&#34;&gt;here&lt;/a&gt;.&lt;/td&gt;
+&lt;td&gt;Default: &amp;ldquo;* _ - _ * * *&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Schema time zone&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;Time zone the schema event is evaluated in&lt;/td&gt;
+&lt;td&gt;E.g. &amp;ldquo;Europe/Paris&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Time contstraint seconds&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;Used for composite events. Defines a window in which all dependent tasks have to complete.&lt;/td&gt;
+&lt;td&gt;Integer &amp;gt;= 0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Time contstraint minutes&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;Used for composite events. Defines a window in which all dependent tasks have to complete.&lt;/td&gt;
+&lt;td&gt;Integer &amp;gt;= 0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Time contstraint hours&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;Used for composite events. Defines a window in which all dependent tasks have to complete.&lt;/td&gt;
+&lt;td&gt;Integer &amp;gt;= 0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Time contstraint days&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;Used for composite events. Defines a window in which all dependent tasks have to complete.&lt;/td&gt;
+&lt;td&gt;Integer &amp;gt;= 0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Rule counter&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;Counter identifying rules that define upstream task executions the current task is depending on.&lt;/td&gt;
+&lt;td&gt;Integer &amp;gt; 0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Rule state&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;Is the rule waiting for success or failure of upstream task?&lt;/td&gt;
+&lt;td&gt;TaskSuccessful / TaskFail&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Rule task name&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Name of the rule&lt;/td&gt;
+&lt;td&gt;Any string&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Rule task id&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;Reference to the upstream task.&lt;/td&gt;
+&lt;td&gt;Any string (if referring to a task within the same file), &lt;strong&gt;or&lt;/strong&gt; a valid id of a task that already exists in Sense.&lt;br&gt;Two options exist: If the &amp;ldquo;Rule task id&amp;rdquo; has the same value as the &amp;ldquo;Task id&amp;rdquo; of another task in the source file, those two tasks will be linked via this rule. If the &amp;ldquo;Rule task id&amp;rdquo; refers to an existing task id in Sense, the new rule will link to that existing task.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Meaning of &amp;ldquo;Comment&amp;rdquo; column above:&lt;/p&gt;
+&lt;p&gt;1: These columns are required for all lines where top-level task information is defined.&lt;br&gt;
+2: These columns are required for all lines where general event info (shared for schema and composite events) is defined. There may be zero or more such lines for a specific task.&lt;br&gt;
+3: These columns are required for all lines where schema events info are defined.&lt;br&gt;
+4: These columns are required for all lines where composite events (&amp;ldquo;task chains&amp;rdquo;) are defined.&lt;/p&gt;
+&lt;h3 id=&#34;source-file-columns-for-app-import-definitions&#34;&gt;Source file columns for app import definitions&lt;/h3&gt;
+&lt;p&gt;If apps should be imported (by means of the &lt;code&gt;--import-app&lt;/code&gt; option) an Excel file must be provided with info about what app QVF files should be imported, as well as details about each app import.&lt;br&gt;
+A sheet name (where the app details are found) in the Excel file must also be specified using the &lt;code&gt;--import-app-sheet-name&lt;/code&gt; option.&lt;/p&gt;
+&lt;p&gt;The columns (case sensitive!) in the app import definition file are:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Column name&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Valid values&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;App counter&lt;/td&gt;
+&lt;td&gt;Counter starting at 1. Increments one step for each app.&lt;/td&gt;
+&lt;td&gt;Integer &amp;gt; 0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;App name&lt;/td&gt;
+&lt;td&gt;Name of the app that will be created based on the specified QVF file.&lt;/td&gt;
+&lt;td&gt;Any string. Emojis allowed.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QVF directory&lt;/td&gt;
+&lt;td&gt;Directory where app QVF files are stored&lt;/td&gt;
+&lt;td&gt;Any valid path, absolute or relative.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QVF name&lt;/td&gt;
+&lt;td&gt;Name of QVD file, including extension.&lt;/td&gt;
+&lt;td&gt;Any valid file name.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Exclude data connections&lt;/td&gt;
+&lt;td&gt;Should data connections stored in the QVF file be excluded during app import or not.&lt;/td&gt;
+&lt;td&gt;true / false&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;App tags&lt;/td&gt;
+&lt;td&gt;Tags to set on the imported app.&lt;/td&gt;
+&lt;td&gt;Format is &amp;ldquo;tag1 / tag2 / tag with spaces in it&amp;rdquo;, i.e. separate tag names by &amp;ldquo;space-forward slash-space&amp;rdquo;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;App custom properties&lt;/td&gt;
+&lt;td&gt;Custom properties to set on the imported app.&lt;/td&gt;
+&lt;td&gt;Format is CustPropName1=Value1 / CustPropName2=Value2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Owner user directory&lt;/td&gt;
+&lt;td&gt;If app owner should be set for this app, specify the user directory name here. Both user directory and user id must be correctly defined for the app owner to be updated.&lt;/td&gt;
+&lt;td&gt;Any user directory currently defined in the QMC, or &lt;code&gt;Internal&lt;/code&gt; for Sense internal accounts.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Owner user id&lt;/td&gt;
+&lt;td&gt;If app owner should be set for this app, specify the user id here. Both user directory and user id must be correctly defined for the app owner to be updated.&lt;/td&gt;
+&lt;td&gt;Any user ID defined in the user directory defined in &lt;code&gt;Owner user directory&lt;/code&gt; column (above).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Publish to stream&lt;/td&gt;
+&lt;td&gt;If this app should be published, specify stream id or name here. If the id is not associated with a stream or the specified stream name does not exist the app will not be published&lt;/td&gt;
+&lt;td&gt;Any existing stream name or id associated with an existing stream.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Publish options &lt;br&gt;(optional)&lt;/td&gt;
+&lt;td&gt;Specify publish options here, for example if an already published app with the same name should be overwritten or not. &lt;br&gt;The default behaviour is &lt;code&gt;publish-replace&lt;/code&gt;, which will be used when no &amp;ldquo;Publish options&amp;rdquo; column is present in the Excel sheet or that column exists but is empty.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;publish-replace&lt;/code&gt;: If there already exists a published app with the same name in the specified stream, replace that app with the new one. &lt;br&gt; &lt;code&gt;publish-another&lt;/code&gt;: If there already exists a published app with the same name in the specified stream, publish tnother one. &lt;br&gt;&lt;code&gt;delete-publish&lt;/code&gt;: First delete an already existing app (if there is one), then publish the new app.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The publish options are described in more detail &lt;a href=&#34;https://github.com/ptarmiganlabs/ctrl-q/discussions/234#discussioncomment-6173760&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;example-export-tasks-to-csv-then-import-tasks-from-same-csv&#34;&gt;Example: Export tasks to CSV, then import tasks from same CSV&lt;/h3&gt;
+&lt;p&gt;This example will&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Export ca 50 tasks to a CSV file&lt;/li&gt;
+&lt;li&gt;Import tasks from the just created CSV file&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The CSV file created during the task export will contain some columns that are not needed during task import (last execution timestamp for each task and similar).&lt;br&gt;
+That&amp;rsquo;s fine though, during the task import Ctrl-Q will only look at the required columns and simply disregard all other columns.&lt;/p&gt;
+&lt;p&gt;Export tasks to CSV file:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.\&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;ctrl-q&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;exe&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;task-get&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-type&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;cert&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-host&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;192.168&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;109&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-dir&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;LAB&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-id&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;goran&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-output-format&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;table&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-output-dest&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;file&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-output&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-file&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-name&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;tasks&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;csv&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-output&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-file&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-format&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;csv&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-10-05T10:02:18.657Z info: -----------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-10-05T10:02:18.657Z info: | Ctrl-Q
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-10-05T10:02:18.657Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-10-05T10:02:18.657Z info: | Version      : 3.13.2
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-10-05T10:02:18.657Z info: | Log level    : info
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-10-05T10:02:18.657Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-10-05T10:02:18.657Z info: | Command      : task-get
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-10-05T10:02:18.657Z info: |              : get info about one or more tasks
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-10-05T10:02:18.657Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-10-05T10:02:18.657Z info: | Run Ctrl-Q with the &amp;#39;--help&amp;#39; option to see a list of all available options for this command.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-10-05T10:02:18.657Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-10-05T10:02:18.657Z info: | https://github.com/ptarmiganlabs/ctrl-q
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-10-05T10:02:18.657Z info: ----------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-10-05T10:02:18.657Z info:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-10-05T10:02:18.861Z info: Successfully retrieved 25 tags from QSEoW
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-10-05T10:02:20.720Z info: ✅ Writing task table to disk file &amp;#34;tasks.csv&amp;#34;.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now let&amp;rsquo;s import tasks from the &lt;code&gt;tasks.csv&lt;/code&gt; file:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.\&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;ctrl-q&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;exe&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;task-import&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-type&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;cert&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-host&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;192.168&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;109&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-cert&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-file&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;./&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;cert&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;client&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;pem&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-cert-key&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-file&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;./&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;cert&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;client_key&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;pem&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-dir&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;LAB&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-id&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;goran&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-file&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-type&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;csv&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-file&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-name&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;tasks&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;csv&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;It&amp;rsquo;s worth noting that all the created tasks will be linked into the task chains that existed when the tasks where first &lt;em&gt;exported&lt;/em&gt; into the CSV file.&lt;br&gt;
+This happens because the composite event rules that were exported into the CSV file (i.e. &amp;ldquo;start the task when task A and task B have successfully finished reloaded&amp;rdquo;) contain task IDs that point to already existing reload tasks in Sense.&lt;br&gt;
+When that&amp;rsquo;s the case the newly created tasks (based on the info in the CSV file) will link to those existing tasks.&lt;/p&gt;
+&lt;p&gt;This way a newly created task (based on info in the CSV file) can still be configured to start after some already existing task finish reloading.&lt;/p&gt;
+&lt;p&gt;Note how Ctrl-Q first creates the reload tasks and any associated schedule triggers in a first step, then add any composite triggers in the second step.&lt;br&gt;
+This is needed as a composite trigger may refer to an already existing and/or a newly created task (or multiple tasks of course), i.e. all tasks must first be created. Only then is it possible to create composite triggers.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:39.861Z info: -----------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:39.861Z info: | Ctrl-Q
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:39.861Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:39.861Z info: | Version      : 3.9.0
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:39.861Z info: | Log level    : info
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:39.861Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:39.861Z info: | Command      : task-import
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:39.861Z info: |              : create tasks based on definitions in a file on disk, optionally also importing apps from QVF files.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:39.861Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:39.861Z info: | Run Ctrl-Q with the &amp;#39;--help&amp;#39; option to see a list of all available options for this command.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:39.861Z info: |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:39.861Z info: | https://github.com/ptarmiganlabs/ctrl-q
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:39.861Z info: ----------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:39.861Z info:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:39.861Z info: Import tasks from definitions in file &amp;#34;tasks.csv&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:39.924Z info: Successfully retrieved 22 tags from QSEoW
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:39.939Z info: Successfully retrieved 29 custom properties from QSEoW
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:40.205Z info: CREATE RELOAD TASK IN QSEOW: &amp;#34;Manually triggered reload of Always failing reload (no delay)&amp;#34;, new task id: 85474d7a-6d36-437d-a687-0bb032331cfb. Result: 201/Created.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:40.268Z info: CREATE RELOAD TASK IN QSEOW: &amp;#34;Manually triggered reload of App1 🏆&amp;#34;, new task id: 253ad3fc-3742-4b27-9cd7-2626c05fe24c. Result: 201/Created.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:40.392Z info: CREATE RELOAD TASK IN QSEOW: &amp;#34;Manually triggered reload of Butler 7 Slack debug&amp;#34;, new task id: 89f198c9-2ed4-49d8-8195-7fc8c78c33c7. Result: 201/Created.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:40.502Z info: CREATE RELOAD TASK IN QSEOW: &amp;#34;Manually triggered reload of ButlerTest 1&amp;#34;, new task id: 6a0ffaa9-a94f-49d3-a331-003401936143. Result: 201/Created.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:40.549Z info: CREATE RELOAD TASK IN QSEOW: &amp;#34;Manually triggered reload of Employee salaries&amp;#34;, new task id: 75b79682-f39c-4ca5-9a83-0eef43b1276d. Result: 201/Created.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:40.689Z info: CREATE RELOAD TASK IN QSEOW: &amp;#34;Manually triggered reload of HR metrics 2015-2020&amp;#34;, new task id: 62c9e333-c58a-4170-b6e0-c5a2c063c291. Result: 201/Created.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:40.753Z info: CREATE RELOAD TASK IN QSEOW: &amp;#34;Manually triggered reload of Meetup.com&amp;#34;, new task id: 08d332a7-e6dd-4ed8-a826-61d039089bae. Result: 201/Created.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:40.815Z info: CREATE RELOAD TASK IN QSEOW: &amp;#34;Manually triggered reload of Minecraft Metrics&amp;#34;, new task id: bf91d219-f2ac-4ad3-b461-4539e73df445. Result: 201/Created.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:40.924Z info: CREATE RELOAD TASK IN QSEOW: &amp;#34;Manually triggered reload of Performance review&amp;#34;, new task id: f0c0f896-648b-4e86-adcb-1353194caa0c. Result: 201/Created.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:45.549Z info: -------------------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:45.549Z info: Creating composite events for the just created tasks...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:45.799Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&amp;#34;App2_composite_1&amp;#34; for task ID 6a0ffaa9-a94f-49d3-a331-003401936143. Result: 201/Created.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:45.877Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&amp;#34;When HR metrics done&amp;#34; for task ID f0c0f896-648b-4e86-adcb-1353194caa0c. Result: 201/Created.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:45.986Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&amp;#34;When Operations monitor has reloaded&amp;#34; for task ID 25f0c215-4e05-4e17-b6ee-233922951f6f. Result: 201/Created.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-09T23:36:46.112Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&amp;#34;When NYT comments done&amp;#34; for task ID 8165d968-b14d-45f4-97b3-5a5ac2aec8a8. Result: 201/Created.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;example-import-apps-from-qvf-files-and-create-associated-reload-tasks&#34;&gt;Example: Import apps from QVF files and create associated reload tasks&lt;/h3&gt;
+&lt;p&gt;This example will&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Import 3 apps from QVF files. Definitions of which files to import are stored in an Excel file.
+&lt;ol&gt;
+&lt;li&gt;Tags and custom properties will be set for the apps.&lt;/li&gt;
+&lt;li&gt;New app owners will be set.&lt;/li&gt;
+&lt;li&gt;The apps will be published to streams.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Create reload tasks based on definitions in same Excel file (but on a different sheet).&lt;/li&gt;
+&lt;li&gt;The reload tasks will be associated with the previously imported apps.&lt;/li&gt;
+&lt;li&gt;The reload tasks will be linked in a task chain.&lt;/li&gt;
+&lt;li&gt;Some imported tasks will be triggered by already existing Sense tasks while others will be triggered by newly created tasks.&lt;/li&gt;
+&lt;li&gt;There will be a 2 second delay after each QVF file has finished uploading, to reduce load on the Sense server.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The task import command looks like this in PowerShell:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.\&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;ctrl-q&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;exe&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;task-import&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-type&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;cert&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-host&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;192.168&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;109&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-cert&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-file&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;./&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;cert&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;client&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;pem&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-cert-key&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-file&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;./&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;cert&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;client_key&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;pem&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-dir&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;LAB&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-id&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;goran&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-file&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-type&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;excel&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-file&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-name&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;tasks&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;xlsx&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-sheet-name&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Ctrl-Q task import 1&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-import-app&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-import-app-sheet-name&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;App import&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-sleep-app-upload&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Some comments about the above command:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The certificates used to authenticate with Sense are stored in the &lt;code&gt;cert&lt;/code&gt; subdirectory, right under where Ctrl-Q is started from.&lt;br&gt;
+That&amp;rsquo;s the default locataion, meaning that the options &lt;code&gt;--auth-cert-file&lt;/code&gt; and &lt;code&gt;--auth-cert-key-file&lt;/code&gt; are really not needed in this example.&lt;/li&gt;
+&lt;li&gt;The app and task definitions are found in a Excel file (&lt;code&gt;--file-type&lt;/code&gt; option) named &lt;code&gt;tasks.xlsx&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Task definitions are found in the Excel file&amp;rsquo;s sheet named &lt;code&gt;Ctrl-Q task import&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;--import-app&lt;/code&gt; tells Ctrl-Q to import certain apps before tasks defined in the &lt;code&gt;Ctrl-Q task import 1&lt;/code&gt; sheet are created. This parameter is optional. If it is &lt;strong&gt;not&lt;/strong&gt; included no apps will be imported.&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;--import-app-sheet-name&lt;/code&gt; tells Ctrl-Q that a list of apps to be imported (and import parameters for each app) is found the &lt;code&gt;App import&lt;/code&gt; sheet of the Excel file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NOTE 1: A sample defintions Excel file is &lt;a href=&#34;https://github.com/ptarmiganlabs/ctrl-q/blob/main/testdata/tasks.xlsx?raw=true&#34;&gt;available in the GitHub repository&lt;/a&gt;.
+NOTE 2: The structure of the Excel sheet specified by the &lt;code&gt;--import-app-sheet-name&lt;/code&gt; is described &lt;a href=&#34;#source-file-columns-for-app-import-definitions&#34;&gt;above&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;defining-tasks-to-be-created&#34;&gt;Defining tasks to be created&lt;/h4&gt;
+&lt;p&gt;The format is the same as when importing tasks only (and no apps).&lt;br&gt;
+More info &lt;a href=&#34;#source-file-columns-for-task-defintions&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;associating-new-tasks-with-imported-and-existing-apps&#34;&gt;Associating new tasks with imported and existing apps&lt;/h4&gt;
+&lt;p&gt;A few special cases apply when tasks are created &lt;strong&gt;and&lt;/strong&gt; apps also imported.&lt;/p&gt;
+&lt;p&gt;In this situation it&amp;rsquo;s important that tasks can be associated with either the newly imported apps &lt;em&gt;or&lt;/em&gt; already existing apps.&lt;br&gt;
+Similarly, for composite task triggers (used to create task chains) it&amp;rsquo;s important that either newly created tasks &lt;em&gt;or&lt;/em&gt; already existing tasks can be referenced.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s say the following three QVF files should be imported into Sense.&lt;br&gt;
+Note the &lt;code&gt;App counter&lt;/code&gt; column, with values 1, 2 and 3.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ctrl-q-app-import-1.png&#34; alt=&#34;QVF app files that should be imported into Qlik Sense&#34; title=&#34;QVF app files that should be imported into Qlik Sense&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Now let&amp;rsquo;s look at the tasks to be created.
+In the image below the main info (task name etc) for each of the four tasks is shown.&lt;br&gt;
+Note that the &lt;code&gt;Task id&lt;/code&gt; column has both proper GUIDs and simple integers in it.&lt;br&gt;
+This will be important when defining composite triggers.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ctrl-q-task-import-1.png&#34; alt=&#34;Reload tasks should be created in Qlik Sense&#34; title=&#34;Reload tasks should be created in Qlik Sense&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Finally let&amp;rsquo;s look at the composite triggers associated with the last of the four tasks.&lt;br&gt;
+That composite trigger relies on two tasks, one that should fail (&lt;code&gt;TaskFail&lt;/code&gt;) to trigger the composite trigger and one that should succeed (&lt;code&gt;TaskSuccessful&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;The important part here is the last column, &lt;code&gt;Rule task id&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If that column contains a valid GUID it is assumed to be a reference to an &lt;em&gt;existing&lt;/em&gt; task.&lt;/li&gt;
+&lt;li&gt;If the column contains an integer it is assumed to be a reference to a &lt;em&gt;newly created&lt;/em&gt; task. &lt;br&gt;
+Which task? The one with the same integer number in the &lt;code&gt;Task id&lt;/code&gt; column (see previous paragraph).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This way it&amp;rsquo;s possible to chain new reload tasks to both already existing tasks and new ones.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ctrl-q-task-import-2.png&#34; alt=&#34;Reload tasks should be created in Qlik Sense&#34; title=&#34;Reload tasks should be created in Qlik Sense&#34;&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

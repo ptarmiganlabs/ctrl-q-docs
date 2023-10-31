@@ -1,7 +1,7 @@
 ---
 title: Export
 description: >
-    Exporting various information from Qlik Sense
+    Exporting various information from Qlik Sense.
 weight: 1000
 tags: [app]
 ---

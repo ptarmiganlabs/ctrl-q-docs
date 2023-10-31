@@ -2,27 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/docs/zz-todo/tasks/beds/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
-  </url><url>
-    <loc>/docs/zz-todo/tasks/ponycopters/configuring-ponycopters/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
-  </url><url>
-    <loc>/docs/zz-todo/tasks/ponycopters/launching-ponycopters/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
-  </url><url>
-    <loc>/docs/zz-todo/tutorials/multi-bear/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
-  </url><url>
-    <loc>/docs/zz-todo/tasks/porridge/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
-  </url><url>
-    <loc>/docs/zz-todo/tasks/task/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
-  </url><url>
-    <loc>/docs/zz-todo/tutorials/tutorial2/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
-  </url><url>
     <loc>/docs/command/app-script/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
   </url><url>
@@ -43,9 +22,6 @@
     <loc>/docs/getting-started/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
   </url><url>
-    <loc>/docs/zz-todo/examples/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
-  </url><url>
     <loc>/docs/command/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
   </url><url>
@@ -53,9 +29,6 @@
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/colors-formatting/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
-  </url><url>
-    <loc>/docs/zz-todo/concepts/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
   </url><url>
     <loc>/docs/command/dimension/</loc>
@@ -67,44 +40,26 @@
     <loc>/docs/command/measure/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
   </url><url>
-    <loc>/docs/zz-todo/tasks/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
-  </url><url>
     <loc>/docs/command/scramble-field/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
   </url><url>
     <loc>/docs/command/task/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
   </url><url>
-    <loc>/docs/zz-todo/tutorials/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
-  </url><url>
     <loc>/docs/command/variable/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
   </url><url>
-    <loc>/docs/zz-todo/reference/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
-  </url><url>
-    <loc>/docs/zz-todo/contribution-guidelines/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
-  </url><url>
     <loc>/docs/command/export/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <lastmod>2023-10-31T16:27:40+01:00</lastmod>
   </url><url>
     <loc>/docs/command/import/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
-  </url><url>
-    <loc>/docs/zz-todo/reference/parameter-reference/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
-  </url><url>
-    <loc>/docs/zz-todo/tasks/ponycopters/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
   </url><url>
     <loc>/about/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
   </url><url>
     <loc>/tags/app/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <lastmod>2023-10-31T16:27:40+01:00</lastmod>
   </url><url>
     <loc>/tags/bookmark/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
@@ -137,7 +92,7 @@
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
   </url><url>
     <loc>/tags/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <lastmod>2023-10-31T16:27:40+01:00</lastmod>
   </url><url>
     <loc>/tags/task/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>

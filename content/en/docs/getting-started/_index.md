@@ -11,7 +11,7 @@ weight: 20
 
 ## Download and install
 
-There is no need to install Ctrl-Q. Just download and run.
+There is no need to install Ctrl-Q. Just download and run.  
 The GitHub release page has ready-to-run binaries for Windows, macOS and Linux.
 
 The macOS binary is security scanned and signed by Apple, using their standard notarization process.

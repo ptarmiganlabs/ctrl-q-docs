@@ -1,35 +1,40 @@
 ---
 title: About Ctrl-Q
 linkTitle: About
-# menu: {main: {weight: 10}}
+menu: {main: {weight: 10}}
 ---
 
-{{% blocks/cover title="About Goldydocs" image_anchor="bottom" height="auto" %}}
+{{% blocks/cover title="" image_anchor="bottom" height="auto" %}}
 
-A sample site using the Docsy Hugo theme.
+<img src="/logo/ctrl-q-transp.png" alt="Ctrl-Q logo" height="200" class="mx-auto d-block mb-5">
+
+Ctrl-Q makes life easier for Qlik Sense admins and developers.
 {.mt-5}
 
 {{% /blocks/cover %}}
 
+
+
 {{% blocks/lead %}}
 
-Goldydocs is a sample site using the [Docsy](https://github.com/google/docsy)
-Hugo theme that shows what it can do and provides you with a template site
-structure. It’s designed for you to clone and edit as much as you like. See the
-different sections of the documentation and site for more ideas.
+It is a cross platform, command line tool for interacting with client-managed Qlik Sense Enterprise on Windows.
 
+It automates tedious, repetetive and error prone tasks related to Qlik Sense administration and development.
 {{% /blocks/lead %}}
 
+
 {{% blocks/section %}}
 
-# This is another section
+#### Ctrl-Q is open source and as such free to use and modify.
 {.text-center}
 
 {{% /blocks/section %}}
 
+
 {{% blocks/section %}}
 
-# This is another section
+#### More info [here](/docs/overview/)
 {.text-center}
 
 {{% /blocks/section %}}
+

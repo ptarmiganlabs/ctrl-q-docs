@@ -1,36 +1,58 @@
 ---
 title: Overview
-description: Here's where your user finds out if your project is for them.
-weight: 1
+description: What's Ctrl-Q and how can I use it?
+weight: 10
 ---
 
-{{% pageinfo %}}
+<!-- {{% pageinfo %}}
 This is a placeholder page that shows you how to use this template site.
-{{% /pageinfo %}}
+{{% /pageinfo %}} -->
 
+## What is Ctrl-Q?
 
-The Overview is where your users find out about your project. Depending on the size of your docset, you can have a separate overview page (like this one) or put your overview contents in the Documentation landing page (like in the Docsy User Guide).
+The focus of Ctrl-Q is on slightly more complex use cases that are not handled out of the box by other tools such as [Qlik's official Qlik CLI tool](https://qlik.dev/libraries-and-tools/qlik-cli) or [Adam Haydon's Qlik CLI Windows](https://github.com/ahaydon/Qlik-Cli-Windows) tool.
 
-Try answering these questions for your user in this page:
+Both are exceptional tools and extremely useful, but especially when it comes to interactions with the Qlik Sense engine they fall a bit short.
 
-## What is it?
+Ctrl-Q also tries to fill niches that are not covered by the various members of the Butler family of open source SenseOps tools.
 
-Introduce your project, including what it does or lets you do, why you would use it, and its primary goal (and how it achieves it). This should be similar to your README description, though you can go into a little more detail here if you want.
+The Butler tools each focus on a specific feature (or features in the case of [the original Butler tool](https://github.com/ptarmiganlabs/butler)) and goes fairly deep in those areas.  
+For example, [Butler SOS](https://github.com/ptarmiganlabs/butler-sos) focus on getting real-time metrics and events out of Sense and into a wide range of target databases and monitoring tools.  
+[Butler Sheet Icons](https://github.com/ptarmiganlabs/butler-sheet-icons) creates sheet thumbnails for Sense apps - but offers lots of flexibility and power around that use case.
 
-## Why do I want it?
+## What can Ctrl-Q do for me?
 
-Help your user know if your project will help them. Useful information can include:
+Ctrl-Q focus on specific, high-value uses cases that tend to be very time consuming and/or error prone to do manually.
 
-* **What is it good for?**: What types of problems does your project solve? What are the benefits of using it?
+The list of features include:
 
-* **What is it not good for?**: For example, point out situations that might intuitively seem suited for your project, but aren't for some reason. Also mention known limitations, scaling issues, or anything else that might let your users know if the project is not for them.
+- Get complete definition of all reload tasks and external program tasks as tree view, tabular view or JSON. Show on screen or save to disk file.
+- Bulk import of reload tasks from disk files. Optionally also import QVF files.
+- Building task chains with new and/or existing tasks supported.
+- All options available in the QMC (and then some!) can be defined.
+- Bulk import of QVF files into Sense apps, including (re-)publishing of the apps.
+- Update custom properties for multiple tasks.
+- Import master dimensions and master measures from definitions in Excel file, including per dimension/measure colors.
+- Show complete definitions for all master measures in a Sense app.
+- Delete master measures from a Sense app.
+- Show complete definitions for all master dimensions in a Sense app.
+- Delete variables in one or more apps.
+- List complete defintions for all variables in one or more apps.
+- Delete master dimensions from a Sense app.
+- Show complete definition of all bookmarks in a Sense app.
+- Scramble fields in Sense apps.
+- Get load script from Sense app.
 
-* **What is it *not yet* good for?**: Highlight any useful features that are coming soon.
+As Ctrl-Q is completely command line driven it is very suitable to be used in CI/CD pipelines, with time savings, increased reusability and higher app quality as a result.
+
+Maybe Qlik's CLI tool will evolve to include more of these use cases and engine-focused features too - great if so.  
+Until then Ctrl-Q can hopefully make life a bit easier for Sense developers and admins out there.
+
+## Where can I find out more?
+
+There are several blog posts on [ptarmiganlabs.com](https://ptarmiganlabs.com/) where various Ctrl-Q features are examined in detail.  
+Everything from short overviews of new features to very thorough, step-by-step instructions for how to use Ctrl-Q to solve some challenging Qlik Sense related task.
 
 ## Where should I go next?
 
-Give your users next steps from the Overview. For example:
-
-* [Getting Started](/docs/getting-started/): Get started with $project
-* [Examples](/docs/examples/): Check out some example code!
-
+- [Getting Started](/docs/getting-started/): Get started with Ctrl-Q

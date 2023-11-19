@@ -27,8 +27,8 @@ Ctrl-Q focus on specific, high-value uses cases that tend to be very time consum
 The list of features include:
 
 - Get complete definition of all reload tasks and external program tasks as tree view, tabular view or JSON. Show on screen or save to disk file.
-- Bulk import of reload tasks from disk files. Optionally also import QVF files.
-- Building task chains with new and/or existing tasks supported.
+- Bulk import of reload and external program tasks from disk files. Optionally also import QVF files.
+- Build task chains using newly imported and/or existing tasks.
 - All options available in the QMC (and then some!) can be defined.
 - Bulk import of QVF files into Sense apps, including (re-)publishing of the apps.
 - Update custom properties for multiple tasks.

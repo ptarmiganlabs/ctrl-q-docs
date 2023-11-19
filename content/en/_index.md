@@ -47,9 +47,8 @@ Works with client-managed Qlik Sense Enterprise on Windows.
 
 {{% blocks/section color="dark" type="row" %}}
 
-{{% blocks/feature icon="fa-lightbulb" title="Latest release: 3.13" %}}
-🥳 First steps to a more robust support for external program tasks.  
-Refactor the entire build process for the Ctrl-Q binaries.
+{{% blocks/feature icon="fa-lightbulb" title="Latest release: 3.14" %}}
+🥳 External program tasks fully supported in task export/import commands.
 
 Available on [GitHub](https://github.com/ptarmiganlabs/ctrl-q/releases).
 {{% /blocks/feature %}}

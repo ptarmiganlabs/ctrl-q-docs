@@ -104,12 +104,206 @@ This is the multi-page printable view of this section.
   
 
   
+    
+    
+	
+<li>1: <a href="#pg-177dd1fcf9811f3d6340bb3552018563">Apps</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-0302cbeb7b4257f8e7dd193127506ea9">Master items</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>3: <a href="#pg-f13eae768aa7e3aad4681f4f2f376dfc">Tasks</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
 
     </ul>
 
 
 <div class="content">
-      <!-- 
+      
+
+<div class="pageinfo pageinfo-primary">
+<p>Save time and avoid manual errors by automating the import of various information into Qlik Sense.</p>
+
+</div>
+
+
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-177dd1fcf9811f3d6340bb3552018563">1 - Apps</h1>
+    <div class="lead">Import apps into Qlik Sense</div>
+	<!-- 
+
+<div class="pageinfo pageinfo-primary">
+<p>This is a placeholder page that shows you how to use this template site.</p>
+
+</div>
+ -->
+<p><em>Page contents:</em></p>
+<ul>
+<li><a href="#import-apps-from-qvf-files">Import apps from QVF files</a></li>
+</ul>
+<hr>
+<p>All example below use Windows Terminal/PowerShell.</p>
+<h2 id="import-apps-from-qvf-files">Import apps from QVF files</h2>
+<p>.QVF files are Sense apps stored on disk.<br>
+Ctrl-Q&rsquo;s <code>app-import</code> command does bulk import of such QVF files, as well as setting tags and custom properties on the created apps.</p>
+<p>Importing apps defined on the <code>App import</code> sheet of the <code>tasks.xlsx</code> Excel file can be done with a command like this:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">app-import</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#0000cf;font-weight:bold">192.168</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">100</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">109</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-cert</span><span style="color:#ce5c00;font-weight:bold">-file</span> <span style="color:#000;font-weight:bold">./</span><span style="color:#000">cert</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">client</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-cert-key</span><span style="color:#ce5c00;font-weight:bold">-file</span> <span style="color:#000;font-weight:bold">./</span><span style="color:#000">cert</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">client_key</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#ce5c00;font-weight:bold">-file</span><span style="color:#000">-name</span> <span style="color:#000">tasks</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">xlsx</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-sheet-name</span> <span style="color:#4e9a06">&#34;App import&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: |
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: | Version      : 3.14.0
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: |
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: | Command      : app-import
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: |              : import apps/upload QVF files on disk to Sense based on definitions in Excel file.
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: |
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: |
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info:
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.825Z info: Import apps from definitions in file &#34;tasks.xlsx&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.904Z info: Successfully retrieved 26 tags from QSEoW
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.935Z info: Successfully retrieved 29 custom properties from QSEoW
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.966Z info: -------------------------------------------------------------------
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.966Z info: Importing apps...
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.966Z info: (1) Importing app &#34;App 3&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 3.qvf&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:05.060Z info: (1, delete-publish) App &#34;App 3&#34; published to stream &#34;Ctrl-Q demo apps&#34;, the existing app (if one exists) with the same name in this stream has been deleted. Id of published app: 733e586e-d06b-4aeb-9d1e-1a41e6cec048
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:05.060Z info: (2) Importing app &#34;App 3&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 3.qvf&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:09.873Z info: (2, publish-replace) App &#34;App 3&#34; published to stream &#34;Ctrl-Q demo apps&#34;, replacing the existing app with the same name. Id of published app: 733e586e-d06b-4aeb-9d1e-1a41e6cec048
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:09.873Z info: (3) Importing app &#34;App 1&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 1.qvf&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:13.357Z warn: (3) PUBLISH APP publish-replace: More than one app with the same name &#34;App 1&#34; in the target stream &#34;Ctrl-Q demo apps&#34;. Impossible to know which one to replace. Skipping publishing for this app. The uploaded app is still present in the QMC (id=fcf0abc2-6c03-436c-ac66-b2bfc27643ec).
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:13.357Z error: (3) Failed publishing app &#34;App 1&#34; to stream &#34;Ctrl-Q demo apps&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:13.357Z info: (4) Importing app &#34;App 1&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 1.qvf&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:16.779Z info: (4, publish-another) App &#34;App 1&#34; published to stream &#34;Ctrl-Q demo apps&#34;. Id of published app: 7b2f4bea-4eb1-46e4-944f-0d2e2f5896e8
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:16.779Z info: (5) Importing app &#34;App 1&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 1.qvf&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:20.185Z warn: (5) PUBLISH APP publish-replace: More than one app with the same name &#34;App 1&#34; in the target stream &#34;Ctrl-Q demo apps&#34;. Impossible to know which one to replace. Skipping publishing for this app. The uploaded app is still present in the QMC (id=6d29347f-27ea-4510-a916-f88e6857e0e2).
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:20.185Z error: (5) Failed publishing app &#34;App 1&#34; to stream &#34;Ctrl-Q demo apps&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:20.185Z info: (6) Importing app &#34;App 2&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 2.qvf&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:23.294Z warn: Stream &#34;Stream does not exist&#34; does not exist.
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:23.294Z error: (6) Failed publishing app &#34;App 2&#34; to stream &#34;Stream does not exist&#34;. The uploaded app is still present in the QMC (id=960d716f-2171-489f-b63d-de9d0e494dfa).
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:23.294Z info: (7) Importing app &#34;App 3&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 3.qvf&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:28.060Z info: (7, publish-replace) App &#34;App 3&#34; published to stream &#34;Ctrl-Q demo apps&#34;, replacing the existing app with the same name. Id of published app: 733e586e-d06b-4aeb-9d1e-1a41e6cec048
+</span></span></code></pre></div><blockquote>
+<p>NOTE 1: Qlik Sense implements rate limiting for QVF uploads. This means that if you plan to upload more than 60 QVF files you may be affected by this rate limiting.<br>
+Ctrl-Q detects that it&rsquo;s being rate limited and implements a backoff strategy for retries, waiting longer and longer until it tries again.<br>
+Such retries are clearly shown in the Ctrl-Q logs.</p>
+</blockquote>
+<p>The QMC now shows three new apps:</p>
+<p><img src="/img/ctrl-q-app-import-2.png" alt="Sense apps imported from QVF files" title="Sense apps imported from QVF files"></p>
+<p>The Excel file with definitions on what QVF files should be imported, what the apps should be named etc looks like this:</p>
+<p><img src="/img/ctrl-q-app-import-1.png" alt="QVF app files that should be imported into Qlik Sense" title="QVF app files that should be imported into Qlik Sense"></p>
+<p>The available columns in the Excel file are the same as when importing apps as part of task import.<br>
+The columns are described <a href="#source-file-columns-for-app-import-definitions">here</a>.</p>
+<blockquote>
+<p>NOTE: A sample defintions Excel file is <a href="https://github.com/ptarmiganlabs/ctrl-q/blob/main/testdata/tasks.xlsx?raw=true">available in the GitHub repository</a>.</p>
+</blockquote>
+<p>If a valid app owner is specified in the Excel file it will be applied to the new app.<br>
+Similarly, if an already existing stream name (or ID of an existing stream) is specified in the Excel file, the new app will be published to that stream.</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-0302cbeb7b4257f8e7dd193127506ea9">2 - Master items</h1>
+    <div class="lead">Import master items into Qlik Sense</div>
+	<!-- 
 
 <div class="pageinfo pageinfo-primary">
 <p>This is a placeholder page that shows you how to use this template site.</p>
@@ -121,20 +315,6 @@ This is the multi-page printable view of this section.
 <li><a href="#import-master-items-from-excel-file">Import master items from Excel file</a>
 <ul>
 <li><a href="#how-to-get-correct-color-jsons">How to get correct color JSONs</a></li>
-</ul>
-</li>
-<li><a href="#import-apps-from-qvf-files">Import apps from QVF files</a></li>
-<li><a href="#import-tasks-from-file">Import tasks from file</a>
-<ul>
-<li><a href="#source-file-columns-for-task-defintions">Source file columns for task defintions</a></li>
-<li><a href="#source-file-columns-for-app-import-definitions">Source file columns for app import definitions</a></li>
-<li><a href="#example-export-tasks-to-csv-then-import-tasks-from-same-csv">Example: Export tasks to CSV, then import tasks from same CSV</a></li>
-<li><a href="#example-import-apps-from-qvf-files-and-create-associated-reload-tasks">Example: Import apps from QVF files and create associated reload tasks</a>
-<ul>
-<li><a href="#defining-tasks-to-be-created">Defining tasks to be created</a></li>
-<li><a href="#associating-new-tasks-with-imported-and-existing-apps">Associating new tasks with imported and existing apps</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -366,70 +546,60 @@ NOTE 2: The same concept works for drill-down dimensions and measures.</p>
 </span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;usePal&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;autoFill&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
-</span></span></code></pre></div><h2 id="import-apps-from-qvf-files">Import apps from QVF files</h2>
-<p>.QVF files are Sense apps stored on disk.<br>
-Ctrl-Q&rsquo;s <code>app-import</code> command does bulk import of such QVF files, as well as setting tags and custom properties on the created apps.</p>
-<p>Importing apps defined on the <code>App import</code> sheet of the <code>tasks.xlsx</code> Excel file can be done with a command like this:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">app-import</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#0000cf;font-weight:bold">192.168</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">100</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">109</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-cert</span><span style="color:#ce5c00;font-weight:bold">-file</span> <span style="color:#000;font-weight:bold">./</span><span style="color:#000">cert</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">client</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-cert-key</span><span style="color:#ce5c00;font-weight:bold">-file</span> <span style="color:#000;font-weight:bold">./</span><span style="color:#000">cert</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">client_key</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#ce5c00;font-weight:bold">-file</span><span style="color:#000">-name</span> <span style="color:#000">tasks</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">xlsx</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-sheet-name</span> <span style="color:#4e9a06">&#34;App import&#34;</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info: -----------------------------------------------------------
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info: | Ctrl-Q
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info: |
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info: | Version      : 3.13.1
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info: | Log level    : info
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info: |
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info: | Command      : app-import
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info: |              : import apps/upload QVF files on disk to Sense based on definitions in Excel file.
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info: |
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info: |
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info: | https://github.com/ptarmiganlabs/ctrl-q
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info: ----------------------------------------------------------
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.268Z info:
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.283Z info: Import apps from definitions in file &#34;tasks.xlsx&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.378Z info: Successfully retrieved 25 tags from QSEoW
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.424Z info: Successfully retrieved 29 custom properties from QSEoW
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.455Z info: -------------------------------------------------------------------
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.455Z info: Importing apps...
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:33.455Z info: (1) Importing app &#34;App 3&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 3.qvf&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:37.437Z info: (1, delete-publish) App &#34;App 3&#34; published to stream &#34;Ctrl-Q demo apps&#34;, the existing app (if one exists) with the same name in this stream has been deleted. Id of published app: 5d3c8750-f09b-464c-a1ae-849fe8b0deb0
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:37.437Z info: (2) Importing app &#34;App 3&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 3.qvf&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:42.795Z info: (2, publish-replace) App &#34;App 3&#34; published to stream &#34;Ctrl-Q demo apps&#34;, replacing the existing app with the same name. Id of published app: 5d3c8750-f09b-464c-a1ae-849fe8b0deb0
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:42.795Z info: (3) Importing app &#34;App 1&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 1.qvf&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:46.530Z info: (3, publish-replace) App &#34;App 1&#34; published to stream &#34;Ctrl-Q demo apps&#34;, replacing the existing app with the same name. Id of published app: 88e29ab1-967a-4c03-99d0-b92d631f57aa
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:46.530Z info: (4) Importing app &#34;App 1&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 1.qvf&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:50.514Z info: (4, publish-another) App &#34;App 1&#34; published to stream &#34;Ctrl-Q demo apps&#34;. Id of published app: d7dc3005-e9bb-408c-b9d8-47997c720ddf
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:50.514Z info: (5) Importing app &#34;App 1&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 1.qvf&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:54.079Z warn: (5) PUBLISH APP publish-replace: More than one app with the same name &#34;App 1&#34; in the target stream &#34;Ctrl-Q demo apps&#34;. Impossible to know which one to replace. Skipping publishing for this app. The uploaded app is still present in the QMC (id=766c96a8-d8ba-47e6-b4a3-e1935bf12d99).
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:54.079Z error: (5) Failed publishing app &#34;App 1&#34; to stream &#34;Ctrl-Q demo apps&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:54.094Z info: (6) Importing app &#34;App 2&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 2.qvf&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:57.579Z warn: Stream &#34;Stream does not exist&#34; does not exist.
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:57.579Z error: (6) Failed publishing app &#34;App 2&#34; to stream &#34;Stream does not exist&#34;. The uploaded app is still present in the QMC (id=5733046b-df34-4989-bd33-56cde5ff779d).
-</span></span><span style="display:flex;"><span>2023-09-27T05:49:57.594Z info: (7) Importing app &#34;App 3&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 3.qvf&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:50:02.563Z info: (7, publish-replace) App &#34;App 3&#34; published to stream &#34;Ctrl-Q demo apps&#34;, replacing the existing app with the same name. Id of published app: 5d3c8750-f09b-464c-a1ae-849fe8b0deb0
-</span></span></code></pre></div><blockquote>
-<p>NOTE 1: Qlik Sense implements rate limiting for QVF uploads. This means that if you plan to upload more than 60 QVF files you may be affected by this rate limiting.<br>
-Ctrl-Q detects that it&rsquo;s being rate limited and implements a backoff strategy for retries, waiting longer and longer until it tries again.<br>
-Such retries are clearly shown in the Ctrl-Q logs.</p>
-</blockquote>
-<p>The QMC now shows three new apps:</p>
-<p><img src="/img/ctrl-q-app-import-2.png" alt="Sense apps imported from QVF files" title="Sense apps imported from QVF files"></p>
-<p>The Excel file with definitions on what QVF files should be imported, what the apps should be named etc looks like this:</p>
-<p><img src="/img/ctrl-q-app-import-1.png" alt="QVF app files that should be imported into Qlik Sense" title="QVF app files that should be imported into Qlik Sense"></p>
-<p>The available columns in the Excel file are the same as when importing apps as part of task import.<br>
-The columns are described <a href="#source-file-columns-for-app-import-definitions">here</a>.</p>
-<blockquote>
-<p>NOTE: A sample defintions Excel file is <a href="https://github.com/ptarmiganlabs/ctrl-q/blob/main/testdata/tasks.xlsx?raw=true">available in the GitHub repository</a>.</p>
-</blockquote>
-<p>If a valid app owner is specified in the Excel file it will be applied to the new app.<br>
-Similarly, if an already existing stream name (or ID of an existing stream) is specified in the Excel file, the new app will be published to that stream.</p>
+</span></span></code></pre></div>
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-f13eae768aa7e3aad4681f4f2f376dfc">3 - Tasks</h1>
+    <div class="lead">Import tasks into Qlik Sense</div>
+	<!-- 
+
+<div class="pageinfo pageinfo-primary">
+<p>This is a placeholder page that shows you how to use this template site.</p>
+
+</div>
+ -->
+<p><em>Page contents:</em></p>
+<ul>
+<li><a href="#import-tasks-from-file">Import tasks from file</a>
+<ul>
+<li><a href="#source-file-columns-for-task-defintions">Source file columns for task defintions</a></li>
+<li><a href="#source-file-columns-for-app-import-definitions">Source file columns for app import definitions</a></li>
+<li><a href="#example-export-tasks-to-csv-then-import-tasks-from-same-csv">Example: Export tasks to CSV, then import tasks from same CSV</a></li>
+<li><a href="#example-import-apps-from-qvf-files-and-create-associated-reload-tasks">Example: Import apps from QVF files and create associated reload tasks</a>
+<ul>
+<li><a href="#defining-tasks-to-be-created">Defining tasks to be created</a></li>
+<li><a href="#associating-new-tasks-with-imported-and-existing-apps">Associating new tasks with imported and existing apps</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>All example below use Windows Terminal/PowerShell.</p>
 <h2 id="import-tasks-from-file">Import tasks from file</h2>
 <p>Task definitions can be read from CSV or Excel files.<br>
 The options are as follows:</p>
@@ -467,19 +637,24 @@ Why? Because there are no sheets/tabs in CSV files.</p>
 <h3 id="source-file-columns-for-task-defintions">Source file columns for task defintions</h3>
 <p>The source file format is quite relaxed, but a few rules apply:</p>
 <ul>
-<li>The first column in the source file <em>must</em> be the task number. This value uniquely identifies each task that should be imported and should be incremented by one for each task.</li>
+<li>The first column in the source file <em>must</em> be the task number.
+<ul>
+<li>This value uniquely identifies each task that should be imported and should be incremented by one for each task.</li>
+<li>If this first column is empty the whole row will be ignored.</li>
+</ul>
+</li>
 <li>All other columns, mandatory and optional, beyond the first one may be placed in any order.
 <ul>
 <li>For mandatory columns the names listed below <em>must</em> be used (but they can be placed in any order in the file, except the first column).</li>
 <li>All mandatory columns must be present in the source file, even if they are not used/empty.
-For example, a task may not have a scheduled trigger, but the schema trigger columns must still be present in the source file.</li>
+For example, there may not be any tasks with schema/scheduled triggers, but the schema trigger columns must still be present in the source file.</li>
 </ul>
 </li>
-<li>&ldquo;Counter&rdquo; columns are used to keep together lines that are associated.
+<li>&ldquo;Counter&rdquo; columns are used to indicate that rows in the file are associated.
 <ul>
-<li>All lines involved in defining a certain task have the same &ldquo;Task counter&rdquo; value.</li>
-<li>All lines involved in defining a certain schema or composite event have the same &ldquo;Event counter&rdquo; value.</li>
-<li>All lines involved in defining a certain composite event rule have the same &ldquo;Rule counter&rdquo; value.</li>
+<li>All rows involved in defining a certain task have the same &ldquo;Task counter&rdquo; value.</li>
+<li>All rows involved in defining a certain schema or composite event have the same &ldquo;Event counter&rdquo; value.</li>
+<li>All rows involved in defining a certain composite event rule have the same &ldquo;Rule counter&rdquo; value.</li>
 </ul>
 </li>
 <li>The file format used when <em>exporting</em> task tables to disk is a superset of the format used for task <em>import</em>.
@@ -506,19 +681,19 @@ It&rsquo;s thus a good idea to first do a task export, look at the file format a
 <td>Task type</td>
 <td>1</td>
 <td>Type of task. In the future Ctrl-Q may support more task types.</td>
-<td>Reload</td>
+<td>Reload / External program</td>
 </tr>
 <tr>
 <td>Task name</td>
 <td>1</td>
 <td>Name of the task that will be created.</td>
-<td>Any string. Emojis allowed.</td>
+<td>Any string. Emojis allowed 🤪.</td>
 </tr>
 <tr>
 <td>Task id</td>
 <td>1</td>
 <td>When creating new tasks a new task ID will always be created. This column is instead used to create task chains: it links a composite trigger in a downstream task with an upstream task via this column&rsquo;s value.</td>
-<td>Any string, but to make it easier to verify task chains it&rsquo;s recommended to use integers in this column.</td>
+<td>Any string, but to make it easier to verify task chains it&rsquo;s recommended to use integers or an easy to understand format in this column. <br>For example &ldquo;3&rdquo; or &ldquo;new-task-3&rdquo;. <br> If no downstream task will link to the task being defined, this column can be left empty.</td>
 </tr>
 <tr>
 <td>Task enabled</td>
@@ -566,7 +741,7 @@ It&rsquo;s thus a good idea to first do a task export, look at the file format a
 <td>Custom properties</td>
 <td>1</td>
 <td>Custom properties to set on the created task.</td>
-<td>Format is CustPropName1=Value1 / CustPropName2=Value2</td>
+<td>Format is &ldquo;CustPropName1=Value1 / CustPropName2=Value2&rdquo;</td>
 </tr>
 <tr>
 <td>Event counter</td>
@@ -595,13 +770,13 @@ It&rsquo;s thus a good idea to first do a task export, look at the file format a
 <tr>
 <td>Schema increment option</td>
 <td>3</td>
-<td>Type of schema event. For reference only, not used when Sense evaluates schema events (or??).</td>
+<td>Type of schema event. For reference only, not used when Sense evaluates schema events.</td>
 <td>once / hourly / daily / weekly / monthly / custom</td>
 </tr>
 <tr>
 <td>Schema increment description</td>
 <td>3</td>
-<td>Structured description of the schema increment option. For reference only, not used when Sense evaluates schema events (or??).</td>
+<td>Structured description of the schema increment option. For reference only, not used when Sense evaluates schema events.</td>
 <td>Integers separated by space, e.g. &ldquo;0 0 1 0&rdquo; for weekly</td>
 </tr>
 <tr>
@@ -689,6 +864,15 @@ It&rsquo;s thus a good idea to first do a task export, look at the file format a
 2: These columns are required for all lines where general event info (shared for schema and composite events) is defined. There may be zero or more such lines for a specific task.<br>
 3: These columns are required for all lines where schema events info are defined.<br>
 4: These columns are required for all lines where composite events (&ldquo;task chains&rdquo;) are defined.</p>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">💡 Tip</h4>
+
+    Example task definition files are available on <a href="/docs/example/dissecting-task-definition-file/">this page</a>.
+
+</div>
+
 <h3 id="source-file-columns-for-app-import-definitions">Source file columns for app import definitions</h3>
 <p>If apps should be imported (by means of the <code>--import-app</code> option) an Excel file must be provided with info about what app QVF files should be imported, as well as details about each app import.<br>
 A sheet name (where the app details are found) in the Excel file must also be specified using the <code>--import-app-sheet-name</code> option.</p>
@@ -735,7 +919,7 @@ A sheet name (where the app details are found) in the Excel file must also be sp
 <tr>
 <td>App custom properties</td>
 <td>Custom properties to set on the imported app.</td>
-<td>Format is CustPropName1=Value1 / CustPropName2=Value2</td>
+<td>Format is &ldquo;CustPropName1=Value1 / CustPropName2=Value2&rdquo;</td>
 </tr>
 <tr>
 <td>Owner user directory</td>
@@ -778,22 +962,23 @@ That&rsquo;s fine though, during the task import Ctrl-Q will only look at the re
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-output-dest</span> <span style="color:#000">file</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-output</span><span style="color:#ce5c00;font-weight:bold">-file</span><span style="color:#000">-name</span> <span style="color:#000">tasks</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">csv</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-output</span><span style="color:#ce5c00;font-weight:bold">-file</span><span style="color:#000">-format</span> <span style="color:#000">csv</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info: -----------------------------------------------------------
-</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info: | Ctrl-Q
-</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info: |
-</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info: | Version      : 3.13.2
-</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info: | Log level    : info
-</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info: |
-</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info: | Command      : task-get
-</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info: |              : get info about one or more tasks
-</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info: |
-</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
-</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info: |
-</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info: | https://github.com/ptarmiganlabs/ctrl-q
-</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info: ----------------------------------------------------------
-</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.657Z info:
-</span></span><span style="display:flex;"><span>2023-10-05T10:02:18.861Z info: Successfully retrieved 25 tags from QSEoW
-</span></span><span style="display:flex;"><span>2023-10-05T10:02:20.720Z info: ✅ Writing task table to disk file &#34;tasks.csv&#34;.
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info: |
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info: | Version      : 3.14.0
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info: |
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info: | Command      : task-get
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info: |              : get info about one or more tasks
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info: |
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info: |
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info:
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.588Z info: Successfully retrieved 26 tags from QSEoW
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:26.401Z info:
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:26.401Z info: ✅ Writing task table to disk file &#34;tasks.csv&#34;.
 </span></span></code></pre></div><p>Now let&rsquo;s import tasks from the <code>tasks.csv</code> file:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">task-import</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
@@ -810,40 +995,51 @@ When that&rsquo;s the case the newly created tasks (based on the info in the CSV
 <p>This way a newly created task (based on info in the CSV file) can still be configured to start after some already existing task finish reloading.</p>
 <p>Note how Ctrl-Q first creates the reload tasks and any associated schedule triggers in a first step, then add any composite triggers in the second step.<br>
 This is needed as a composite trigger may refer to an already existing and/or a newly created task (or multiple tasks of course), i.e. all tasks must first be created. Only then is it possible to create composite triggers.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: -----------------------------------------------------------
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: | Ctrl-Q
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: |
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: | Version      : 3.9.0
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: | Log level    : info
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: |
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: | Command      : task-import
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: |              : create tasks based on definitions in a file on disk, optionally also importing apps from QVF files.
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: |
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: |
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: | https://github.com/ptarmiganlabs/ctrl-q
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: ----------------------------------------------------------
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info:
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.861Z info: Import tasks from definitions in file &#34;tasks.csv&#34;
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.924Z info: Successfully retrieved 22 tags from QSEoW
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:39.939Z info: Successfully retrieved 29 custom properties from QSEoW
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:40.205Z info: CREATE RELOAD TASK IN QSEOW: &#34;Manually triggered reload of Always failing reload (no delay)&#34;, new task id: 85474d7a-6d36-437d-a687-0bb032331cfb. Result: 201/Created.
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:40.268Z info: CREATE RELOAD TASK IN QSEOW: &#34;Manually triggered reload of App1 🏆&#34;, new task id: 253ad3fc-3742-4b27-9cd7-2626c05fe24c. Result: 201/Created.
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:40.392Z info: CREATE RELOAD TASK IN QSEOW: &#34;Manually triggered reload of Butler 7 Slack debug&#34;, new task id: 89f198c9-2ed4-49d8-8195-7fc8c78c33c7. Result: 201/Created.
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:40.502Z info: CREATE RELOAD TASK IN QSEOW: &#34;Manually triggered reload of ButlerTest 1&#34;, new task id: 6a0ffaa9-a94f-49d3-a331-003401936143. Result: 201/Created.
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:40.549Z info: CREATE RELOAD TASK IN QSEOW: &#34;Manually triggered reload of Employee salaries&#34;, new task id: 75b79682-f39c-4ca5-9a83-0eef43b1276d. Result: 201/Created.
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:40.689Z info: CREATE RELOAD TASK IN QSEOW: &#34;Manually triggered reload of HR metrics 2015-2020&#34;, new task id: 62c9e333-c58a-4170-b6e0-c5a2c063c291. Result: 201/Created.
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:40.753Z info: CREATE RELOAD TASK IN QSEOW: &#34;Manually triggered reload of Meetup.com&#34;, new task id: 08d332a7-e6dd-4ed8-a826-61d039089bae. Result: 201/Created.
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:40.815Z info: CREATE RELOAD TASK IN QSEOW: &#34;Manually triggered reload of Minecraft Metrics&#34;, new task id: bf91d219-f2ac-4ad3-b461-4539e73df445. Result: 201/Created.
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:40.924Z info: CREATE RELOAD TASK IN QSEOW: &#34;Manually triggered reload of Performance review&#34;, new task id: f0c0f896-648b-4e86-adcb-1353194caa0c. Result: 201/Created.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2023-11-19T20:13:41.432Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info: |
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info: | Version      : 3.14.0
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info: |
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info: | Command      : task-import
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info: |              : create tasks based on definitions in a file on disk, optionally also importing apps from QVF files.
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info: |
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info: |
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info:
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info: Import tasks from definitions in file &#34;tasks.csv&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.526Z info: Successfully retrieved 26 tags from QSEoW
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.557Z info: Successfully retrieved 29 custom properties from QSEoW
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.667Z info: -------------------------------------------------------------------
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.667Z info: Creating tasks...
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.807Z info: (1) Created new external program task &#34;App snapshots end of September 2022&#34;, new task id: 3f8d909d-1abc-40d5-9716-1122483e2584.
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.854Z info: (2) Created new external program task &#34;Ext program task chaining 1&#34;, new task id: 450e999a-eb61-4919-9e12-f9452518afd0.
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.901Z info: (3) Created new external program task &#34;Ext program task chaining 1&#34;, new task id: ec5604c6-b54b-4da7-b3db-93a4fcba92ca.
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.979Z info: (4) Created new external program task &#34;Ext task 1&#34;, new task id: 95e4380c-5fc1-40c1-98dc-5e165685c60a.
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:42.011Z info: (5) Created new external program task &#34;Ext task 2&#34;, new task id: 37a5c5e1-72d7-4dba-bfbb-3c352749b2fb.
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:42.089Z info: (6) Created new external program task &#34;New external program task 1&#34;, new task id: 43c45fa8-752b-40d8-ac25-d9aed681ad7d.
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:42.151Z info: (7) Created new external program task &#34;Node-RED ext program task demo 1&#34;, new task id: 27333ede-4545-48d2-bcf6-98f7348fefe7.
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:42.197Z info: (8) Created new external program task &#34;PowerShell export data connections&#34;, new task id: e8c3b895-ef44-4c7e-9b2c-72beffa274bb.
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:42.260Z info: (9) Created new external program task &#34;PowerShell export tags (ext pgm task)&#34;, new task id: 20b41d62-c014-4b02-96c2-4c3d568d137a.
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:42.292Z info: (10) Created new external program task &#34;Sample external task&#34;, new task id: 6698a907-3c07-4ea0-a053-e9c8bee62c97.
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:42.541Z info: (11) Created new external program task &#34;[ctrl-q task chain 3] Ext program task chaining&#34;, new task id: e6cbef63-ea6e-4d62-9a65-6589954d8ba4.
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:42.573Z info: (12) Created new external program task &#34;[ctrl-q task chain 3] Ext program task chaining&#34;, new task id: 37abfb92-a1ed-48f9-b20f-658743e79217.
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:42.714Z info: (13) Created new external program task &#34;[ctrl-q task chain 4] Ext program task chaining&#34;, new task id: 523aae7c-f70f-40b1-b5fa-f965ddb2552a.
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:42.776Z info: (14) Created new external program task &#34;[ctrl-q task chain 4] Ext program task chaining&#34;, new task id: 6bb9c2c0-582b-4845-a703-066ece618c54.
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:42.980Z info: (15) Created new reload task &#34;Butler test failing reloads 1 task&#34;, new task id: 48949bdb-061e-4f67-86cd-7dbb3492225a.
 </span></span><span style="display:flex;"><span>...
 </span></span><span style="display:flex;"><span>...
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:45.549Z info: -------------------------------------------------------------------
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:45.549Z info: Creating composite events for the just created tasks...
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:45.799Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;App2_composite_1&#34; for task ID 6a0ffaa9-a94f-49d3-a331-003401936143. Result: 201/Created.
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:45.877Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;When HR metrics done&#34; for task ID f0c0f896-648b-4e86-adcb-1353194caa0c. Result: 201/Created.
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:45.986Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;When Operations monitor has reloaded&#34; for task ID 25f0c215-4e05-4e17-b6ee-233922951f6f. Result: 201/Created.
-</span></span><span style="display:flex;"><span>2023-05-09T23:36:46.112Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;When NYT comments done&#34; for task ID 8165d968-b14d-45f4-97b3-5a5ac2aec8a8. Result: 201/Created.
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:55.652Z info: -------------------------------------------------------------------
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:55.652Z info: Creating composite events for the just created tasks...
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:55.729Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;When [ctrl-q 2] done&#34; for task ID e6cbef63-ea6e-4d62-9a65-6589954d8ba4. Result: 201/Created.
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:55.792Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;Start ext pgm task when reload task done&#34; for task ID e6cbef63-ea6e-4d62-9a65-6589954d8ba4. Result: 201/Created.
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:55.869Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;When [ctrl-q task chain 3] done&#34; for task ID 523aae7c-f70f-40b1-b5fa-f965ddb2552a. Result: 201/Created.
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:55.932Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;When HR metrics done&#34; for task ID 88415a4e-befa-42e9-9965-18cc0916b152. Result: 201/Created.
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:55.979Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;When Operations monitor has reloaded&#34; for task ID e1a45483-7e43-4b22-88bd-dd104921a5f1. Result: 201/Created.
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:56.042Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;When NYT comments done&#34; for task ID 4ea567f0-f606-42b6-89a9-64dd84effc24. Result: 201/Created.
+</span></span><span style="display:flex;"><span>2023-11-19T20:13:56.119Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;Task event trigger&#34; for task ID 55a9d7dc-b91d-45aa-b6fe-fe14c1732152. Result: 201/Created.
 </span></span><span style="display:flex;"><span>...
 </span></span><span style="display:flex;"><span>...
 </span></span></code></pre></div><h3 id="example-import-apps-from-qvf-files-and-create-associated-reload-tasks">Example: Import apps from QVF files and create associated reload tasks</h3>
@@ -916,9 +1112,11 @@ Which task? The one with the same integer number in the <code>Task id</code> col
 <p><img src="/img/ctrl-q-task-import-2.png" alt="Reload tasks should be created in Qlik Sense" title="Reload tasks should be created in Qlik Sense"></p>
 
 </div>
-</div>
 
 
+
+    
+      
   
   
   
@@ -927,6 +1125,10 @@ Which task? The one with the same integer number in the <code>Task id</code> col
   
   
 
+  
+
+    
+	
   
 
 

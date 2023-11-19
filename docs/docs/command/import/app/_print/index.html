@@ -1,0 +1,274 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.119.0">
+<link rel="canonical" type="text/html" href="/docs/command/import/app/">
+<link rel="alternate" type="application/rss&#43;xml" href="/docs/command/import/app/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Apps | Ctrl-Q</title>
+<meta name="description" content="Import apps into Qlik Sense
+">
+<meta property="og:title" content="Apps" />
+<meta property="og:description" content="Import apps into Qlik Sense
+" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/docs/command/import/app/" /><meta property="og:site_name" content="Ctrl-Q" />
+<meta itemprop="name" content="Apps">
+<meta itemprop="description" content="Import apps into Qlik Sense
+"><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Apps"/>
+<meta name="twitter:description" content="Import apps into Qlik Sense
+"/>
+
+
+
+
+<link rel="preload" href="/scss/main.min.291c723daa8f2fb6b09f56ac9a2ca71406607a4268e1fe586dddad1a8583b4e7.css" as="style">
+<link href="/scss/main.min.291c723daa8f2fb6b09f56ac9a2ca71406607a4268e1fe586dddad1a8583b4e7.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/css/prism.css"/>
+<script defer data-domain="ctrl-q.ptarmiganlabs.com" src="https://plausible.io/js/script.js"></script>
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar navbar-dark js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"></span><span class="navbar-brand__name">Ctrl-Q</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/about/"><span>About</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/docs/"><span>Docs</span></a>
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+This is the multi-page printable view of this section.
+<a href="#" onclick="print();return false;">Click here to print</a>.
+</p><p>
+<a href="/docs/command/import/app/">Return to the regular view of this page</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">Apps</h1>
+<div class="lead">Import apps into Qlik Sense</div>
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+
+    </ul>
+
+
+<div class="content">
+      <!-- 
+
+<div class="pageinfo pageinfo-primary">
+<p>This is a placeholder page that shows you how to use this template site.</p>
+
+</div>
+ -->
+<p><em>Page contents:</em></p>
+<ul>
+<li><a href="#import-apps-from-qvf-files">Import apps from QVF files</a></li>
+</ul>
+<hr>
+<p>All example below use Windows Terminal/PowerShell.</p>
+<h2 id="import-apps-from-qvf-files">Import apps from QVF files</h2>
+<p>.QVF files are Sense apps stored on disk.<br>
+Ctrl-Q&rsquo;s <code>app-import</code> command does bulk import of such QVF files, as well as setting tags and custom properties on the created apps.</p>
+<p>Importing apps defined on the <code>App import</code> sheet of the <code>tasks.xlsx</code> Excel file can be done with a command like this:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">app-import</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#0000cf;font-weight:bold">192.168</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">100</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">109</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-cert</span><span style="color:#ce5c00;font-weight:bold">-file</span> <span style="color:#000;font-weight:bold">./</span><span style="color:#000">cert</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">client</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-cert-key</span><span style="color:#ce5c00;font-weight:bold">-file</span> <span style="color:#000;font-weight:bold">./</span><span style="color:#000">cert</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">client_key</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#ce5c00;font-weight:bold">-file</span><span style="color:#000">-name</span> <span style="color:#000">tasks</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">xlsx</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-sheet-name</span> <span style="color:#4e9a06">&#34;App import&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: |
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: | Version      : 3.14.0
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: |
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: | Command      : app-import
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: |              : import apps/upload QVF files on disk to Sense based on definitions in Excel file.
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: |
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: |
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info:
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.825Z info: Import apps from definitions in file &#34;tasks.xlsx&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.904Z info: Successfully retrieved 26 tags from QSEoW
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.935Z info: Successfully retrieved 29 custom properties from QSEoW
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.966Z info: -------------------------------------------------------------------
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.966Z info: Importing apps...
+</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.966Z info: (1) Importing app &#34;App 3&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 3.qvf&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:05.060Z info: (1, delete-publish) App &#34;App 3&#34; published to stream &#34;Ctrl-Q demo apps&#34;, the existing app (if one exists) with the same name in this stream has been deleted. Id of published app: 733e586e-d06b-4aeb-9d1e-1a41e6cec048
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:05.060Z info: (2) Importing app &#34;App 3&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 3.qvf&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:09.873Z info: (2, publish-replace) App &#34;App 3&#34; published to stream &#34;Ctrl-Q demo apps&#34;, replacing the existing app with the same name. Id of published app: 733e586e-d06b-4aeb-9d1e-1a41e6cec048
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:09.873Z info: (3) Importing app &#34;App 1&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 1.qvf&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:13.357Z warn: (3) PUBLISH APP publish-replace: More than one app with the same name &#34;App 1&#34; in the target stream &#34;Ctrl-Q demo apps&#34;. Impossible to know which one to replace. Skipping publishing for this app. The uploaded app is still present in the QMC (id=fcf0abc2-6c03-436c-ac66-b2bfc27643ec).
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:13.357Z error: (3) Failed publishing app &#34;App 1&#34; to stream &#34;Ctrl-Q demo apps&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:13.357Z info: (4) Importing app &#34;App 1&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 1.qvf&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:16.779Z info: (4, publish-another) App &#34;App 1&#34; published to stream &#34;Ctrl-Q demo apps&#34;. Id of published app: 7b2f4bea-4eb1-46e4-944f-0d2e2f5896e8
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:16.779Z info: (5) Importing app &#34;App 1&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 1.qvf&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:20.185Z warn: (5) PUBLISH APP publish-replace: More than one app with the same name &#34;App 1&#34; in the target stream &#34;Ctrl-Q demo apps&#34;. Impossible to know which one to replace. Skipping publishing for this app. The uploaded app is still present in the QMC (id=6d29347f-27ea-4510-a916-f88e6857e0e2).
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:20.185Z error: (5) Failed publishing app &#34;App 1&#34; to stream &#34;Ctrl-Q demo apps&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:20.185Z info: (6) Importing app &#34;App 2&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 2.qvf&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:23.294Z warn: Stream &#34;Stream does not exist&#34; does not exist.
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:23.294Z error: (6) Failed publishing app &#34;App 2&#34; to stream &#34;Stream does not exist&#34;. The uploaded app is still present in the QMC (id=960d716f-2171-489f-b63d-de9d0e494dfa).
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:23.294Z info: (7) Importing app &#34;App 3&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 3.qvf&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:31:28.060Z info: (7, publish-replace) App &#34;App 3&#34; published to stream &#34;Ctrl-Q demo apps&#34;, replacing the existing app with the same name. Id of published app: 733e586e-d06b-4aeb-9d1e-1a41e6cec048
+</span></span></code></pre></div><blockquote>
+<p>NOTE 1: Qlik Sense implements rate limiting for QVF uploads. This means that if you plan to upload more than 60 QVF files you may be affected by this rate limiting.<br>
+Ctrl-Q detects that it&rsquo;s being rate limited and implements a backoff strategy for retries, waiting longer and longer until it tries again.<br>
+Such retries are clearly shown in the Ctrl-Q logs.</p>
+</blockquote>
+<p>The QMC now shows three new apps:</p>
+<p><img src="/img/ctrl-q-app-import-2.png" alt="Sense apps imported from QVF files" title="Sense apps imported from QVF files"></p>
+<p>The Excel file with definitions on what QVF files should be imported, what the apps should be named etc looks like this:</p>
+<p><img src="/img/ctrl-q-app-import-1.png" alt="QVF app files that should be imported into Qlik Sense" title="QVF app files that should be imported into Qlik Sense"></p>
+<p>The available columns in the Excel file are the same as when importing apps as part of task import.<br>
+The columns are described <a href="#source-file-columns-for-app-import-definitions">here</a>.</p>
+<blockquote>
+<p>NOTE: A sample defintions Excel file is <a href="https://github.com/ptarmiganlabs/ctrl-q/blob/main/testdata/tasks.xlsx?raw=true">available in the GitHub repository</a>.</p>
+</blockquote>
+<p>If a valid app owner is specified in the Excel file it will be applied to the new app.<br>
+Similarly, if an already existing stream name (or ID of an existing stream) is specified in the Excel file, the new app will be published to that stream.</p>
+
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Ptarmigan Labs Newsletter" aria-label="Ptarmigan Labs Newsletter">
+    <a target="_blank" rel="noopener" href="https://ptarmiganlabs.com/#/portal/signup" aria-label="Ptarmigan Labs Newsletter">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="LinkedIn" aria-label="LinkedIn">
+    <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/gorsan/" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-end text-xs-center order-sm-3">
+        
+        
+        
+<ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="GitHub" aria-label="GitHub">
+    <a target="_blank" rel="noopener" href="https://github.com/ptarmiganlabs/ctrl-q" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Get in touch with Ptarmigan Labs" aria-label="Get in touch with Ptarmigan Labs">
+    <a target="_blank" rel="noopener" href="mailto://info@ptarmiganlabs.com" aria-label="Get in touch with Ptarmigan Labs">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="td-footer__copyright-etc col-12 col-sm-4 text-center py-2 order-sm-2">
+        <span>&copy; 2023 Ptarmigan Labs AB All Rights Reserved</span>
+        <span class="ms-1"><a href="https://ptarmiganlabs.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></span>
+        <p class="td-footer__about mt-2"><a href="/about/">About Ctrl-Q</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <script src="/js/main.min.bfefba6b7ccbf88710915ea7a0df9461124cad8959623d18119929418a2da080.js" integrity="sha256-v&#43;&#43;6a3zL&#43;IcQkV6noN&#43;UYRJMrYlZYj0YEZkpQYotoIA=" crossorigin="anonymous"></script>
+<script src='/js/prism.js'></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

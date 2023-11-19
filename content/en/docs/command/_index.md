@@ -1,5 +1,5 @@
 ---
-title: Command categories
+title: Commands
 description: >
     Ctrl-Q commands.
 weight: 30

@@ -37,23 +37,23 @@ Note:
 ```
 
 ```text
-2023-09-27T16:07:40.330Z info: -----------------------------------------------------------
-2023-09-27T16:07:40.330Z info: | Ctrl-Q
-2023-09-27T16:07:40.330Z info: |
-2023-09-27T16:07:40.330Z info: | Version      : 3.13.1
-2023-09-27T16:07:40.330Z info: | Log level    : info
-2023-09-27T16:07:40.330Z info: |
-2023-09-27T16:07:40.330Z info: | Command      : field-scramble
-2023-09-27T16:07:40.330Z info: |              : scramble one or more fields in an app. A new app with the scrambled data is created.
-2023-09-27T16:07:40.330Z info: |
-2023-09-27T16:07:40.345Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
-2023-09-27T16:07:40.345Z info: |
-2023-09-27T16:07:40.345Z info: | https://github.com/ptarmiganlabs/ctrl-q
-2023-09-27T16:07:40.345Z info: ----------------------------------------------------------
-2023-09-27T16:07:40.345Z info:
-2023-09-27T16:07:40.345Z info: Scramble field
-2023-09-27T16:07:41.236Z info: Scrambled field "Expression1"
-2023-09-27T16:07:41.251Z info: Scrambled field "Dim1"
-2023-09-27T16:07:41.251Z info: Scrambled field "AsciiAlpha"
-2023-09-27T16:07:42.033Z info: Scrambled data written to new app "__ScrambledTest1" with app ID: 892d9ef2-b553-4537-adac-fb9ede3e1813
+2023-11-19T20:20:02.250Z info: -----------------------------------------------------------
+2023-11-19T20:20:02.250Z info: | Ctrl-Q
+2023-11-19T20:20:02.250Z info: |
+2023-11-19T20:20:02.250Z info: | Version      : 3.14.0
+2023-11-19T20:20:02.250Z info: | Log level    : info
+2023-11-19T20:20:02.250Z info: |
+2023-11-19T20:20:02.250Z info: | Command      : field-scramble
+2023-11-19T20:20:02.250Z info: |              : scramble one or more fields in an app. A new app with the scrambled data is created.
+2023-11-19T20:20:02.250Z info: |
+2023-11-19T20:20:02.250Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
+2023-11-19T20:20:02.250Z info: |
+2023-11-19T20:20:02.250Z info: | https://github.com/ptarmiganlabs/ctrl-q
+2023-11-19T20:20:02.250Z info: ----------------------------------------------------------
+2023-11-19T20:20:02.250Z info:
+2023-11-19T20:20:02.265Z info: Scramble field
+2023-11-19T20:20:02.766Z info: Scrambled field "Expression1"
+2023-11-19T20:20:02.766Z info: Scrambled field "Dim1"
+2023-11-19T20:20:02.781Z info: Scrambled field "AsciiAlpha"
+2023-11-19T20:20:03.391Z info: Scrambled data written to new app "__ScrambledTest1" with app ID: 6bb435ba-2ee8-4d8c-b159-e626cb77255a
 ```

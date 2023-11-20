@@ -3,11 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/docs/command/app-script/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <lastmod>2023-11-19T21:28:22+01:00</lastmod>
   </url><url>
     <loc>/docs/command/import/app/</loc>
+    <lastmod>2023-11-19T21:28:22+01:00</lastmod>
   </url><url>
     <loc>/docs/example/dissecting-task-definition-file/</loc>
+    <lastmod>2023-11-19T21:28:22+01:00</lastmod>
   </url><url>
     <loc>/docs/overview/</loc>
   </url><url>
@@ -18,7 +20,7 @@
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
   </url><url>
     <loc>/docs/command/bookmark/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <lastmod>2023-11-19T21:28:22+01:00</lastmod>
   </url><url>
     <loc>/docs/</loc>
     <lastmod>2023-10-31T16:52:01+01:00</lastmod>
@@ -27,52 +29,57 @@
     <lastmod>2023-10-31T16:52:01+01:00</lastmod>
   </url><url>
     <loc>/docs/command/import/master-item/</loc>
+    <lastmod>2023-11-19T21:28:22+01:00</lastmod>
   </url><url>
     <loc>/docs/command/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <lastmod>2023-11-19T21:28:22+01:00</lastmod>
+  </url><url>
+    <loc>/docs/command/connection-test/</loc>
   </url><url>
     <loc>/docs/command/custom-property/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <lastmod>2023-11-19T21:28:22+01:00</lastmod>
   </url><url>
     <loc>/docs/command/import/task/</loc>
+    <lastmod>2023-11-19T21:28:22+01:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/colors-formatting/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
   </url><url>
     <loc>/docs/command/dimension/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <lastmod>2023-11-19T21:28:22+01:00</lastmod>
   </url><url>
     <loc>/docs/example/</loc>
+    <lastmod>2023-11-19T21:28:22+01:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/dry-runs/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
   </url><url>
     <loc>/docs/command/measure/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <lastmod>2023-11-19T21:28:22+01:00</lastmod>
   </url><url>
     <loc>/docs/command/scramble-field/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <lastmod>2023-11-19T21:28:22+01:00</lastmod>
   </url><url>
     <loc>/docs/command/task/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <lastmod>2023-11-19T21:28:22+01:00</lastmod>
   </url><url>
     <loc>/docs/command/variable/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <lastmod>2023-11-19T21:28:22+01:00</lastmod>
   </url><url>
     <loc>/docs/command/export/</loc>
-    <lastmod>2023-10-31T16:27:40+01:00</lastmod>
+    <lastmod>2023-11-19T21:28:22+01:00</lastmod>
   </url><url>
     <loc>/docs/command/import/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <lastmod>2023-11-19T21:28:22+01:00</lastmod>
   </url><url>
     <loc>/about/</loc>
     <lastmod>2023-10-31T16:52:01+01:00</lastmod>
   </url><url>
     <loc>/tags/app/</loc>
-    <lastmod>2023-10-31T16:27:40+01:00</lastmod>
+    <lastmod>2023-11-19T21:28:22+01:00</lastmod>
   </url><url>
     <loc>/tags/bookmark/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <lastmod>2023-11-19T21:28:22+01:00</lastmod>
   </url><url>
     <loc>/tags/colors/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
@@ -81,19 +88,19 @@
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
   </url><url>
     <loc>/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <lastmod>2023-11-19T21:28:22+01:00</lastmod>
   </url><url>
     <loc>/tags/custom-property/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <lastmod>2023-11-19T21:28:22+01:00</lastmod>
   </url><url>
     <loc>/tags/formatting/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
   </url><url>
     <loc>/tags/master-item/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <lastmod>2023-11-19T21:28:22+01:00</lastmod>
   </url><url>
     <loc>/tags/script/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <lastmod>2023-11-19T21:28:22+01:00</lastmod>
   </url><url>
     <loc>/search/</loc>
     <lastmod>2023-10-29T19:25:51+01:00</lastmod>
@@ -102,12 +109,12 @@
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
   </url><url>
     <loc>/tags/</loc>
-    <lastmod>2023-10-31T16:27:40+01:00</lastmod>
+    <lastmod>2023-11-19T21:28:22+01:00</lastmod>
   </url><url>
     <loc>/tags/task/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <lastmod>2023-11-19T21:28:22+01:00</lastmod>
   </url><url>
     <loc>/tags/variable/</loc>
-    <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <lastmod>2023-11-19T21:28:22+01:00</lastmod>
   </url>
 </urlset>

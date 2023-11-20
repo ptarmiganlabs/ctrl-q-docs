@@ -194,6 +194,57 @@
     </item>
     
     <item>
+      <title>Docs: Connection test</title>
+      <link>/docs/command/connection-test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/command/connection-test/</guid>
+      <description>
+        
+        
+        &lt;!-- 
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;This is a placeholder page that shows you how to use this template site.&lt;/p&gt;
+
+&lt;/div&gt;
+ --&gt;
+&lt;p&gt;&lt;em&gt;Page contents:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#set-custom-property-of-reload-task&#34;&gt;Set custom property of reload task&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;test-connection-to-qlik-sense-server&#34;&gt;Test connection to Qlik Sense server&lt;/h2&gt;
+&lt;p&gt;Some of the Ctrl-Q commands are rather complex and it can be difficult to figure out what is wrong if the command fails.&lt;/p&gt;
+&lt;p&gt;To rule out any connection issues between the machine running Ctrl-Q and the Qlik Sense server it is possible to run the &lt;code&gt;connection-test&lt;/code&gt; command.&lt;/p&gt;
+&lt;p&gt;Here that command is executed using certificate authentication, using the default certificates, port (for connecting to QRS using certificates) and virtual proxy.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.\&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;ctrl-q&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;exe&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;connection-test&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;``&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-host&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;192.168&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;109&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;``&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-dir&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;LAB&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;``&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-id&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;goran&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;2023-11-20T18:00:06.727Z info: -----------------------------------------------------------
+2023-11-20T18:00:06.729Z info: | Ctrl-Q
+2023-11-20T18:00:06.730Z info: | 
+2023-11-20T18:00:06.730Z info: | Version      : 3.14.0
+2023-11-20T18:00:06.730Z info: | Log level    : info
+2023-11-20T18:00:06.730Z info: | 
+2023-11-20T18:00:06.730Z info: | Command      : connection-test
+2023-11-20T18:00:06.731Z info: |              : test connection to Qlik Sense server.
+2023-11-20T18:00:06.731Z info: | 
+2023-11-20T18:00:06.731Z info: | Run Ctrl-Q with the &amp;#39;--help&amp;#39; option to see a list of all available options for this command.
+2023-11-20T18:00:06.731Z info: | 
+2023-11-20T18:00:06.732Z info: | https://github.com/ptarmiganlabs/ctrl-q
+2023-11-20T18:00:06.732Z info: ----------------------------------------------------------
+2023-11-20T18:00:06.732Z info: 
+2023-11-20T18:00:06.736Z info: Testing connection to Qlik Sense server 192.168.100.109 on port 4242
+2023-11-20T18:00:06.814Z info: Successfully connected to Qlik Sense server 192.168.100.109 on port 4242
+2023-11-20T18:00:06.814Z info: Qlik Sense repository build version: 31.34.0.0
+2023-11-20T18:00:06.814Z info: Qlik Sense repository build date: 6/13/2023 10:08:17 AM
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Custom properties</title>
       <link>/docs/command/custom-property/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

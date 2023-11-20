@@ -109,6 +109,8 @@
   <a href="/docs/command/app-script/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandapp-script"><span class="">App scripts</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandbookmark-li">
   <a href="/docs/command/bookmark/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandbookmark"><span class="">Bookmarks</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandconnection-test-li">
+  <a href="/docs/command/connection-test/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandconnection-test"><span class="">Connection test</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandcustom-property-li">
   <a href="/docs/command/custom-property/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandcustom-property"><span class="">Custom properties</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommanddimension-li">
@@ -266,8 +268,8 @@ The same coloring options are available as in the web UI for both dimensions and
 </span></span><span style="display:flex;"><span>  -t, --file-type &lt;type&gt;                                       source file type (choices: &#34;excel&#34;, default: &#34;excel&#34;)
 </span></span><span style="display:flex;"><span>  --file &lt;filename&gt;                                            file containing master item definitions
 </span></span><span style="display:flex;"><span>  --sheet &lt;name&gt;                                               name of Excel sheet where dim/measure flag column is found
-</span></span><span style="display:flex;"><span>  --col-ref-by &lt;reftype&gt;                                       how to refer to columns in the source file. Options are by name or by position (zero based) (choices: &#34;name&#34;, &#34;position&#34;,
-</span></span><span style="display:flex;"><span>                                                               default: &#34;name&#34;)
+</span></span><span style="display:flex;"><span>  --col-ref-by &lt;reftype&gt;                                       how to refer to columns in the source file. Options are by name or by position (zero based) (choices: &#34;name&#34;, &#34;position&#34;, default:
+</span></span><span style="display:flex;"><span>                                                               &#34;name&#34;)
 </span></span><span style="display:flex;"><span>  --col-item-type &lt;column position or name&gt;                    column where dim/measure flag is found. Use &#34;dim-single&#34; in that column to create dimension, &#34;dim-drilldown&#34; for drill-down
 </span></span><span style="display:flex;"><span>                                                               dimension, &#34;measure&#34; for measure (default: &#34;Master item type&#34;)
 </span></span><span style="display:flex;"><span>  --col-master-item-name &lt;column position or name&gt;             column number (zero based) or name to use as master item name (default: &#34;Master item name&#34;)
@@ -345,34 +347,34 @@ Notes on the example below:</li>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-col-master-item-tag</span> <span style="color:#000">Tag</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-col-master-item-color</span> <span style="color:#000">Color</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-col-master-item-per-value-color</span> <span style="color:#4e9a06">&#39;Per value color&#39;</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2023-09-27T05:45:35.046Z info: -----------------------------------------------------------
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.046Z info: | Ctrl-Q
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.046Z info: |
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.046Z info: | Version      : 3.13.1
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.046Z info: | Log level    : info
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info: |
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info: | Command      : master-item-import
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info: |              : create master items based on definitions in a file on disk
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info: |
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info: |
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info: | https://github.com/ptarmiganlabs/ctrl-q
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info: ----------------------------------------------------------
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info:
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info: Import master items from definitions in Excel file &#34;./ctrl-q-master-items.xlsx&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:36.014Z info: (1/12) Updated existing measure &#34;No. of sold units&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:37.045Z info: (2/12) Updated existing measure &#34;No. of sold units (LY)&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:38.076Z info: (3/12) Created new measure &#34;Revenue EUR&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:39.092Z info: (4/12) Updated existing measure &#34;Revenue EUR (LY)&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:40.128Z info: (5/12) Updated existing measure &#34;Profit EUR&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:41.141Z warn: (6/12) Found an unknown master item type: &#34;measur&#34;. Ignoring this line in the imported file.
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:42.156Z info: (7/12) Created new measure &#34;Profit EUR (LY)&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:43.203Z info: (8/12) Created new dimension &#34;Country&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:44.220Z info: (9/12) Created new dimension &#34;Sales month&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:45.266Z info: (10/12) Updated existing dimension &#34;Salesperson&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:46.703Z info: (11/12) Updated existing dimension &#34;Color&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:47.735Z info: (12/12) Updated existing drill-down dimension &#34;DimDrill&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:48.751Z info: Imported 12 master items from Excel file ./ctrl-q-master-items.xlsx
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2023-11-19T19:32:41.744Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.744Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.744Z info: |
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.744Z info: | Version      : 3.14.0
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: |
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: | Command      : master-item-import
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: |              : create master items based on definitions in a file on disk
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: |
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: |
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info:
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: Import master items from definitions in Excel file &#34;./ctrl-q-master-items.xlsx&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:42.556Z info: (1/12) Updated existing measure &#34;No. of sold units&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:43.572Z info: (2/12) Updated existing measure &#34;No. of sold units (LY)&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:44.587Z info: (3/12) Updated existing measure &#34;Revenue EUR&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:45.604Z info: (4/12) Updated existing measure &#34;Revenue EUR (LY)&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:46.618Z info: (5/12) Updated existing measure &#34;Profit EUR&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:47.634Z warn: (6/12) Found an unknown master item type: &#34;measur&#34;. Ignoring this line in the imported file.
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:48.635Z info: (7/12) Updated existing measure &#34;Profit EUR (LY)&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:49.681Z info: (8/12) Created new dimension &#34;Country&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:50.712Z info: (9/12) Created new dimension &#34;Sales month&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:51.759Z info: (10/12) Updated existing dimension &#34;Salesperson&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:53.134Z info: (11/12) Updated existing dimension &#34;Color&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:54.150Z info: (12/12) Updated existing drill-down dimension &#34;DimDrill&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:55.182Z info: Imported 12 master items from Excel file ./ctrl-q-master-items.xlsx
 </span></span></code></pre></div><blockquote>
 <p>NOTE: A sample defintions Excel file is <a href="https://github.com/ptarmiganlabs/ctrl-q/blob/main/testdata/ctrl-q-master-items.xlsx?raw=true">available in the GitHub repository</a>. That file contains examples of most combinations of master item types and properties.</p>
 </blockquote>
@@ -476,6 +478,9 @@ NOTE 2: The same concept works for drill-down dimensions and measures.</p>
     
     
     
+</div>
+<div class="text-muted mt-5 pt-3 border-top">
+  Last modified November 19, 2023: <a href="https://github.com/ptarmiganlabs/ctrl-q-docs/commit/a6fbfed7029914aa47b1428a87698a8029199bbf">Update to handle Ctrl-Q 3.14 (a6fbfed)</a>
 </div>
 </div>
 

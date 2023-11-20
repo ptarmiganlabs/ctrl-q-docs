@@ -270,7 +270,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>3.3: <a href="#pg-1657edebc1d3c55c255c5ce6767bc6cb">Custom properties</a></li>
+<li>3.3: <a href="#pg-39dcec580f62f9b4bd15b16f1a321111">Connection test</a></li>
 
 
     
@@ -289,7 +289,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>3.4: <a href="#pg-755149e57d9d246684caf65d357a4b7b">Dimensions</a></li>
+<li>3.4: <a href="#pg-1657edebc1d3c55c255c5ce6767bc6cb">Custom properties</a></li>
 
 
     
@@ -308,7 +308,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>3.5: <a href="#pg-996b012bd9faad06a9207f81306d0aff">Measures</a></li>
+<li>3.5: <a href="#pg-755149e57d9d246684caf65d357a4b7b">Dimensions</a></li>
 
 
     
@@ -327,7 +327,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>3.6: <a href="#pg-3596d58bfdfb8400b566e0549bbd5284">Scramble fields</a></li>
+<li>3.6: <a href="#pg-996b012bd9faad06a9207f81306d0aff">Measures</a></li>
 
 
     
@@ -346,7 +346,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>3.7: <a href="#pg-1abf6cf0b01aac918c5950a6b9525901">Tasks</a></li>
+<li>3.7: <a href="#pg-3596d58bfdfb8400b566e0549bbd5284">Scramble fields</a></li>
 
 
     
@@ -365,7 +365,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>3.8: <a href="#pg-8178dd7f669edf670b0a6b81671fceed">Variables</a></li>
+<li>3.8: <a href="#pg-1abf6cf0b01aac918c5950a6b9525901">Tasks</a></li>
 
 
     
@@ -384,7 +384,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>3.9: <a href="#pg-b9f53addf32066ae4aa6b93f739d8a88">Export</a></li>
+<li>3.9: <a href="#pg-8178dd7f669edf670b0a6b81671fceed">Variables</a></li>
 
 
     
@@ -403,22 +403,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>3.10: <a href="#pg-79bcfbb4c167f29da9133aaf63adf3f5">Import</a></li>
-
-
-    
-    <ul>
-        
-  
-  
-  
-  
-
-  
-    
-    
-	
-<li>3.10.1: <a href="#pg-177dd1fcf9811f3d6340bb3552018563">Apps</a></li>
+<li>3.10: <a href="#pg-b9f53addf32066ae4aa6b93f739d8a88">Export</a></li>
 
 
     
@@ -437,7 +422,22 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>3.10.2: <a href="#pg-0302cbeb7b4257f8e7dd193127506ea9">Master items</a></li>
+<li>3.11: <a href="#pg-79bcfbb4c167f29da9133aaf63adf3f5">Import</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>3.11.1: <a href="#pg-177dd1fcf9811f3d6340bb3552018563">Apps</a></li>
 
 
     
@@ -456,7 +456,26 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>3.10.3: <a href="#pg-f13eae768aa7e3aad4681f4f2f376dfc">Tasks</a></li>
+<li>3.11.2: <a href="#pg-0302cbeb7b4257f8e7dd193127506ea9">Master items</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>3.11.3: <a href="#pg-f13eae768aa7e3aad4681f4f2f376dfc">Tasks</a></li>
 
 
     
@@ -1182,7 +1201,74 @@ If it is used, Ctrl-Q will not make any changes in Sense, but instead only show 
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-1657edebc1d3c55c255c5ce6767bc6cb">3.3 - Custom properties</h1>
+	<h1 id="pg-39dcec580f62f9b4bd15b16f1a321111">3.3 - Connection test</h1>
+    <div class="lead">Command to test connection to Qlik Sense server.</div>
+	<!-- 
+
+<div class="pageinfo pageinfo-primary">
+<p>This is a placeholder page that shows you how to use this template site.</p>
+
+</div>
+ -->
+<p><em>Page contents:</em></p>
+<ul>
+<li><a href="#set-custom-property-of-reload-task">Set custom property of reload task</a></li>
+</ul>
+<hr>
+<h2 id="test-connection-to-qlik-sense-server">Test connection to Qlik Sense server</h2>
+<p>Some of the Ctrl-Q commands are rather complex and it can be difficult to figure out what is wrong if the command fails.</p>
+<p>To rule out any connection issues between the machine running Ctrl-Q and the Qlik Sense server it is possible to run the <code>connection-test</code> command.</p>
+<p>Here that command is executed using certificate authentication, using the default certificates, port (for connecting to QRS using certificates) and virtual proxy.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">connection-test</span> <span style="color:#000;font-weight:bold">``</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#0000cf;font-weight:bold">192.168</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">100</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">109</span> <span style="color:#000;font-weight:bold">``</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">``</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span>
+</span></span></code></pre></div><pre tabindex="0"><code>2023-11-20T18:00:06.727Z info: -----------------------------------------------------------
+2023-11-20T18:00:06.729Z info: | Ctrl-Q
+2023-11-20T18:00:06.730Z info: | 
+2023-11-20T18:00:06.730Z info: | Version      : 3.14.0
+2023-11-20T18:00:06.730Z info: | Log level    : info
+2023-11-20T18:00:06.730Z info: | 
+2023-11-20T18:00:06.730Z info: | Command      : connection-test
+2023-11-20T18:00:06.731Z info: |              : test connection to Qlik Sense server.
+2023-11-20T18:00:06.731Z info: | 
+2023-11-20T18:00:06.731Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+2023-11-20T18:00:06.731Z info: | 
+2023-11-20T18:00:06.732Z info: | https://github.com/ptarmiganlabs/ctrl-q
+2023-11-20T18:00:06.732Z info: ----------------------------------------------------------
+2023-11-20T18:00:06.732Z info: 
+2023-11-20T18:00:06.736Z info: Testing connection to Qlik Sense server 192.168.100.109 on port 4242
+2023-11-20T18:00:06.814Z info: Successfully connected to Qlik Sense server 192.168.100.109 on port 4242
+2023-11-20T18:00:06.814Z info: Qlik Sense repository build version: 31.34.0.0
+2023-11-20T18:00:06.814Z info: Qlik Sense repository build date: 6/13/2023 10:08:17 AM
+</code></pre>
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-1657edebc1d3c55c255c5ce6767bc6cb">3.4 - Custom properties</h1>
     <div class="lead">Commands to retrieve and manipulate custom properties.</div>
 	<!-- 
 
@@ -1306,7 +1392,7 @@ If a task already has values for this custom property new values will be added w
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-755149e57d9d246684caf65d357a4b7b">3.4 - Dimensions</h1>
+	<h1 id="pg-755149e57d9d246684caf65d357a4b7b">3.5 - Dimensions</h1>
     <div class="lead">In-app master dimension.</div>
 	<!-- 
 
@@ -1481,7 +1567,7 @@ If a task already has values for this custom property new values will be added w
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-996b012bd9faad06a9207f81306d0aff">3.5 - Measures</h1>
+	<h1 id="pg-996b012bd9faad06a9207f81306d0aff">3.6 - Measures</h1>
     <div class="lead">In-app master measures.</div>
 	<!-- 
 
@@ -1608,7 +1694,7 @@ If a task already has values for this custom property new values will be added w
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-3596d58bfdfb8400b566e0549bbd5284">3.6 - Scramble fields</h1>
+	<h1 id="pg-3596d58bfdfb8400b566e0549bbd5284">3.7 - Scramble fields</h1>
     <div class="lead">Scramble fields in Sense apps.</div>
 	<!-- 
 
@@ -1683,7 +1769,7 @@ If a task already has values for this custom property new values will be added w
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-1abf6cf0b01aac918c5950a6b9525901">3.7 - Tasks</h1>
+	<h1 id="pg-1abf6cf0b01aac918c5950a6b9525901">3.8 - Tasks</h1>
     <div class="lead">Reload, external program and user sync tasks.</div>
 	<!-- 
 
@@ -2074,7 +2160,7 @@ Here only the most basic task info included via the <code>--table-details</code>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-8178dd7f669edf670b0a6b81671fceed">3.8 - Variables</h1>
+	<h1 id="pg-8178dd7f669edf670b0a6b81671fceed">3.9 - Variables</h1>
     <div class="lead">In-app variables.</div>
 	<!-- 
 
@@ -2242,7 +2328,7 @@ Note that if <code>--delete-all</code> is used <code>--id-type</code> and <code>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-b9f53addf32066ae4aa6b93f739d8a88">3.9 - Export</h1>
+	<h1 id="pg-b9f53addf32066ae4aa6b93f739d8a88">3.10 - Export</h1>
     <div class="lead">Exporting various information from Qlik Sense.</div>
 	<!-- 
 
@@ -2410,7 +2496,7 @@ It is thus possible to first export apps and get a metadata Excel file, then imp
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-79bcfbb4c167f29da9133aaf63adf3f5">3.10 - Import</h1>
+	<h1 id="pg-79bcfbb4c167f29da9133aaf63adf3f5">3.11 - Import</h1>
     <div class="lead">Import various information into Qlik Sense</div>
 	
 
@@ -2442,7 +2528,7 @@ It is thus possible to first export apps and get a metadata Excel file, then imp
 
 <div class="td-content" style="">
     
-	<h1 id="pg-177dd1fcf9811f3d6340bb3552018563">3.10.1 - Apps</h1>
+	<h1 id="pg-177dd1fcf9811f3d6340bb3552018563">3.11.1 - Apps</h1>
     <div class="lead">Import apps into Qlik Sense</div>
 	<!-- 
 
@@ -2549,7 +2635,7 @@ Similarly, if an already existing stream name (or ID of an existing stream) is s
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-0302cbeb7b4257f8e7dd193127506ea9">3.10.2 - Master items</h1>
+	<h1 id="pg-0302cbeb7b4257f8e7dd193127506ea9">3.11.2 - Master items</h1>
     <div class="lead">Import master items into Qlik Sense</div>
 	<!-- 
 
@@ -2595,8 +2681,8 @@ The same coloring options are available as in the web UI for both dimensions and
 </span></span><span style="display:flex;"><span>  -t, --file-type &lt;type&gt;                                       source file type (choices: &#34;excel&#34;, default: &#34;excel&#34;)
 </span></span><span style="display:flex;"><span>  --file &lt;filename&gt;                                            file containing master item definitions
 </span></span><span style="display:flex;"><span>  --sheet &lt;name&gt;                                               name of Excel sheet where dim/measure flag column is found
-</span></span><span style="display:flex;"><span>  --col-ref-by &lt;reftype&gt;                                       how to refer to columns in the source file. Options are by name or by position (zero based) (choices: &#34;name&#34;, &#34;position&#34;,
-</span></span><span style="display:flex;"><span>                                                               default: &#34;name&#34;)
+</span></span><span style="display:flex;"><span>  --col-ref-by &lt;reftype&gt;                                       how to refer to columns in the source file. Options are by name or by position (zero based) (choices: &#34;name&#34;, &#34;position&#34;, default:
+</span></span><span style="display:flex;"><span>                                                               &#34;name&#34;)
 </span></span><span style="display:flex;"><span>  --col-item-type &lt;column position or name&gt;                    column where dim/measure flag is found. Use &#34;dim-single&#34; in that column to create dimension, &#34;dim-drilldown&#34; for drill-down
 </span></span><span style="display:flex;"><span>                                                               dimension, &#34;measure&#34; for measure (default: &#34;Master item type&#34;)
 </span></span><span style="display:flex;"><span>  --col-master-item-name &lt;column position or name&gt;             column number (zero based) or name to use as master item name (default: &#34;Master item name&#34;)
@@ -2674,34 +2760,34 @@ Notes on the example below:</li>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-col-master-item-tag</span> <span style="color:#000">Tag</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-col-master-item-color</span> <span style="color:#000">Color</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-col-master-item-per-value-color</span> <span style="color:#4e9a06">&#39;Per value color&#39;</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2023-09-27T05:45:35.046Z info: -----------------------------------------------------------
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.046Z info: | Ctrl-Q
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.046Z info: |
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.046Z info: | Version      : 3.13.1
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.046Z info: | Log level    : info
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info: |
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info: | Command      : master-item-import
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info: |              : create master items based on definitions in a file on disk
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info: |
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info: |
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info: | https://github.com/ptarmiganlabs/ctrl-q
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info: ----------------------------------------------------------
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info:
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:35.060Z info: Import master items from definitions in Excel file &#34;./ctrl-q-master-items.xlsx&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:36.014Z info: (1/12) Updated existing measure &#34;No. of sold units&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:37.045Z info: (2/12) Updated existing measure &#34;No. of sold units (LY)&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:38.076Z info: (3/12) Created new measure &#34;Revenue EUR&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:39.092Z info: (4/12) Updated existing measure &#34;Revenue EUR (LY)&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:40.128Z info: (5/12) Updated existing measure &#34;Profit EUR&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:41.141Z warn: (6/12) Found an unknown master item type: &#34;measur&#34;. Ignoring this line in the imported file.
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:42.156Z info: (7/12) Created new measure &#34;Profit EUR (LY)&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:43.203Z info: (8/12) Created new dimension &#34;Country&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:44.220Z info: (9/12) Created new dimension &#34;Sales month&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:45.266Z info: (10/12) Updated existing dimension &#34;Salesperson&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:46.703Z info: (11/12) Updated existing dimension &#34;Color&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:47.735Z info: (12/12) Updated existing drill-down dimension &#34;DimDrill&#34;
-</span></span><span style="display:flex;"><span>2023-09-27T05:45:48.751Z info: Imported 12 master items from Excel file ./ctrl-q-master-items.xlsx
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2023-11-19T19:32:41.744Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.744Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.744Z info: |
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.744Z info: | Version      : 3.14.0
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: |
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: | Command      : master-item-import
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: |              : create master items based on definitions in a file on disk
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: |
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: |
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info:
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: Import master items from definitions in Excel file &#34;./ctrl-q-master-items.xlsx&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:42.556Z info: (1/12) Updated existing measure &#34;No. of sold units&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:43.572Z info: (2/12) Updated existing measure &#34;No. of sold units (LY)&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:44.587Z info: (3/12) Updated existing measure &#34;Revenue EUR&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:45.604Z info: (4/12) Updated existing measure &#34;Revenue EUR (LY)&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:46.618Z info: (5/12) Updated existing measure &#34;Profit EUR&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:47.634Z warn: (6/12) Found an unknown master item type: &#34;measur&#34;. Ignoring this line in the imported file.
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:48.635Z info: (7/12) Updated existing measure &#34;Profit EUR (LY)&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:49.681Z info: (8/12) Created new dimension &#34;Country&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:50.712Z info: (9/12) Created new dimension &#34;Sales month&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:51.759Z info: (10/12) Updated existing dimension &#34;Salesperson&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:53.134Z info: (11/12) Updated existing dimension &#34;Color&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:54.150Z info: (12/12) Updated existing drill-down dimension &#34;DimDrill&#34;
+</span></span><span style="display:flex;"><span>2023-11-19T19:32:55.182Z info: Imported 12 master items from Excel file ./ctrl-q-master-items.xlsx
 </span></span></code></pre></div><blockquote>
 <p>NOTE: A sample defintions Excel file is <a href="https://github.com/ptarmiganlabs/ctrl-q/blob/main/testdata/ctrl-q-master-items.xlsx?raw=true">available in the GitHub repository</a>. That file contains examples of most combinations of master item types and properties.</p>
 </blockquote>
@@ -2821,7 +2907,7 @@ NOTE 2: The same concept works for drill-down dimensions and measures.</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-f13eae768aa7e3aad4681f4f2f376dfc">3.10.3 - Tasks</h1>
+	<h1 id="pg-f13eae768aa7e3aad4681f4f2f376dfc">3.11.3 - Tasks</h1>
     <div class="lead">Import tasks into Qlik Sense</div>
 	<!-- 
 

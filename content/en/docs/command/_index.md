@@ -26,10 +26,12 @@ Using macOS/Linux:
 ```
 
 ```text
-Usage: index [options] [command]
+Usage: build [options] [command]
 
 Ctrl-Q is a command line utility for interacting with client-managed Qlik Sense Enterprise on Windows servers.
 Among other things the tool does bulk import of apps and tasks, manipulates master items and scrambles in-app data.
+
+Version: 3.15.0
 
 Options:
   -V, --version                         output the version number
@@ -51,5 +53,8 @@ Commands:
   task-import [options]                 create tasks based on definitions in a file on disk, optionally also importing apps from QVF files.
   app-import [options]                  import apps/upload QVF files on disk to Sense based on definitions in Excel file.
   app-export [options]                  export Qlik Sense apps to QVF files on disk.
+  connection-test [options]             test connection to Qlik Sense server.
+  version [options]                     show version info
+  task-vis [options]                    visualise task network
   help [command]                        display help for command
 ```

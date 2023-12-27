@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.119.0">
+<meta name="generator" content="Hugo 0.121.1">
 <link rel="canonical" type="text/html" href="/docs/command/">
 <link rel="alternate" type="application/rss&#43;xml" href="/docs/command/index.xml">
 <meta name="robots" content="noindex, nofollow">
@@ -28,10 +28,10 @@
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/docs/command/" /><meta property="og:site_name" content="Ctrl-Q" />
+
 <meta itemprop="name" content="Commands">
 <meta itemprop="description" content="Ctrl-Q commands.
-"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Commands"/>
+"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Commands"/>
 <meta name="twitter:description" content="Ctrl-Q commands.
 "/>
 
@@ -388,10 +388,12 @@ This is the multi-page printable view of this section.
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#000">help</span>
 </span></span></code></pre></div><p>Using macOS/Linux:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./ctrl-q <span style="color:#204a87">help</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Usage: index [options] [command]
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Usage: build [options] [command]
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Ctrl-Q is a command line utility for interacting with client-managed Qlik Sense Enterprise on Windows servers.
 </span></span><span style="display:flex;"><span>Among other things the tool does bulk import of apps and tasks, manipulates master items and scrambles in-app data.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Version: 3.15.0
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Options:
 </span></span><span style="display:flex;"><span>  -V, --version                         output the version number
@@ -413,6 +415,9 @@ This is the multi-page printable view of this section.
 </span></span><span style="display:flex;"><span>  task-import [options]                 create tasks based on definitions in a file on disk, optionally also importing apps from QVF files.
 </span></span><span style="display:flex;"><span>  app-import [options]                  import apps/upload QVF files on disk to Sense based on definitions in Excel file.
 </span></span><span style="display:flex;"><span>  app-export [options]                  export Qlik Sense apps to QVF files on disk.
+</span></span><span style="display:flex;"><span>  connection-test [options]             test connection to Qlik Sense server.
+</span></span><span style="display:flex;"><span>  version [options]                     show version info
+</span></span><span style="display:flex;"><span>  task-vis [options]                    visualise task network
 </span></span><span style="display:flex;"><span>  help [command]                        display help for command
 </span></span></code></pre></div>
 </div>
@@ -1240,6 +1245,17 @@ If a task already has values for this custom property new values will be added w
 <li><a href="#save-task-to-disk-file-as-json">Save task to disk file as JSON</a></li>
 </ul>
 </li>
+<li><a href="#list-tasks-as-network-graph">List tasks as network graph</a>
+<ul>
+<li><a href="#node-types">Node types</a></li>
+<li><a href="#user-interface">User interface</a>
+<ul>
+<li><a href="#collapsingexpanding-node-clusters">Collapsing/expanding node clusters</a></li>
+<li><a href="#legend-and-network-graph-configuration">Legend and network graph configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <hr>
 <h2 id="list-tasks-as-tree">List tasks as tree</h2>
@@ -1578,7 +1594,110 @@ Here only the most basic task info included via the <code>--table-details</code>
 </span></span><span style="display:flex;"><span><span style="color:#a40000">...</span>
 </span></span><span style="display:flex;"><span><span style="color:#a40000">...</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">]</span>
-</span></span></code></pre></div>
+</span></span></code></pre></div><h2 id="list-tasks-as-network-graph">List tasks as network graph</h2>
+<p>This command provides an interactive network graph view of reload tasks and external program tasks.</p>
+<p>First Ctrl-Q will retrieve information about all reload and external program tasks from the Qlik Sense repository service (QRS).<br>
+This includes information about last execution results for the tasks.</p>
+<p>A web server is then started on the local computer where Ctrl-Q is running, serving a web page with the network graph in it.<br>
+A link to the web page is shown in the console where Ctrl-Q is running.<br>
+In the example below the link is <code>http://localhost:3000</code>.</p>
+
+
+<div class="alert alert-warning" role="alert">
+<h4 class="alert-heading">Beta feature</h4>
+
+    <p>Graph visualisation of Qlik Sense tasks is a beta feature.</p>
+<p>Only a basic set of features are available at this point.<br>
+Performance is ok for small to medium sized Qlik Sense sites, but will slower for larger sites (many hundreds or thousands of tasks).</p>
+
+
+</div>
+
+<p>On Windows using PowerShell it can look like this:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#204a87">PS </span><span style="color:#000">C:</span><span style="color:#000;font-weight:bold">\</span><span style="color:#000">tools</span><span style="color:#000;font-weight:bold">\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">task-vis</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#0000cf;font-weight:bold">192.168</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">100</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">109</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span>
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">2023</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">12</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">26T21</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">38</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">09</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">003Z</span> <span style="color:#000">info</span><span style="color:#a40000">:</span> <span style="color:#000;font-weight:bold">-----------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">2023</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">12</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">26T21</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">38</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">09</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">003Z</span> <span style="color:#000">info</span><span style="color:#a40000">:</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87">Ctrl-Q</span>
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">2023</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">12</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">26T21</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">38</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">09</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">003Z</span> <span style="color:#000">info</span><span style="color:#a40000">:</span> <span style="color:#000;font-weight:bold">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">2023</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">12</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">26T21</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">38</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">09</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">003Z</span> <span style="color:#000">info</span><span style="color:#a40000">:</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#000">Version</span>      <span style="color:#a40000">:</span> <span style="color:#0000cf;font-weight:bold">3.15</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">2023</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">12</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">26T21</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">38</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">09</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">003Z</span> <span style="color:#000">info</span><span style="color:#a40000">:</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#000">Log</span> <span style="color:#000">level</span>    <span style="color:#a40000">:</span> <span style="color:#000">info</span>
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">2023</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">12</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">26T21</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">38</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">09</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">003Z</span> <span style="color:#000">info</span><span style="color:#a40000">:</span> <span style="color:#000;font-weight:bold">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">2023</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">12</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">26T21</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">38</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">09</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">003Z</span> <span style="color:#000">info</span><span style="color:#a40000">:</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#000">Command</span>      <span style="color:#a40000">:</span> <span style="color:#204a87">task-vis</span>
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">2023</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">12</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">26T21</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">38</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">09</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">003Z</span> <span style="color:#000">info</span><span style="color:#a40000">:</span> <span style="color:#000;font-weight:bold">|</span>              <span style="color:#a40000">:</span> <span style="color:#000">visualise</span> <span style="color:#000">task</span> <span style="color:#000">network</span>
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">2023</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">12</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">26T21</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">38</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">09</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">003Z</span> <span style="color:#000">info</span><span style="color:#a40000">:</span> <span style="color:#000;font-weight:bold">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">2023</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">12</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">26T21</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">38</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">09</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">003Z</span> <span style="color:#000">info</span><span style="color:#a40000">:</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#000">Run</span> <span style="color:#204a87">Ctrl-Q</span> <span style="color:#000">with</span> <span style="color:#000">the</span> <span style="color:#4e9a06">&#39;--help&#39;</span> <span style="color:#000">option</span> <span style="color:#000">to</span> <span style="color:#000">see</span> <span style="color:#000">a</span> <span style="color:#000">list</span> <span style="color:#000">of</span> <span style="color:#000">all</span> <span style="color:#000">available</span> <span style="color:#000">options</span> <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">this</span> <span style="color:#000">command</span><span style="color:#000;font-weight:bold">.</span>
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">2023</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">12</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">26T21</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">38</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">09</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">003Z</span> <span style="color:#000">info</span><span style="color:#a40000">:</span> <span style="color:#000;font-weight:bold">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">2023</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">12</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">26T21</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">38</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">09</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">003Z</span> <span style="color:#000">info</span><span style="color:#a40000">:</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#000">https</span><span style="color:#a40000">:</span><span style="color:#000;font-weight:bold">//</span><span style="color:#000">github</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">com</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">ptarmiganlabs</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87">ctrl-q</span>
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">2023</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">12</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">26T21</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">38</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">09</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">003Z</span> <span style="color:#000">info</span><span style="color:#a40000">:</span> <span style="color:#000;font-weight:bold">----------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">2023</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">12</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">26T21</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">38</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">09</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">003Z</span> <span style="color:#000">info</span><span style="color:#a40000">:</span>
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">2023</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">12</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">26T21</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">38</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">941Z</span> <span style="color:#000">info</span><span style="color:#a40000">:</span> <span style="color:#000">Using</span> <span style="color:#000">vis</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">js</span> <span style="color:#000">to</span> <span style="color:#000">visualize</span> <span style="color:#000">tasks</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">more</span> <span style="color:#000">info</span> <span style="color:#000">at</span> <span style="color:#000">https</span><span style="color:#a40000">:</span><span style="color:#000;font-weight:bold">//</span><span style="color:#000">github</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">com</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">visjs</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87">vis-network</span>
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">2023</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">12</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">26T21</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">38</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">941Z</span> <span style="color:#000">info</span><span style="color:#a40000">:</span>
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">2023</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">12</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">26T21</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">38</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">941Z</span> <span style="color:#000">info</span><span style="color:#a40000">:</span> <span style="color:#000">Task</span> <span style="color:#000">visualization</span> <span style="color:#000">server</span> <span style="color:#000">listening</span> <span style="color:#000">on</span> <span style="color:#000">http</span><span style="color:#a40000">:</span><span style="color:#000;font-weight:bold">//</span><span style="color:#000">localhost</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">3000</span>
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">2023</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">12</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">26T21</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">38</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">941Z</span> <span style="color:#000">info</span><span style="color:#a40000">:</span> <span style="color:#000">Press</span> <span style="color:#204a87">Ctrl-C</span> <span style="color:#000">to</span> <span style="color:#000">quit</span><span style="color:#000;font-weight:bold">.</span>
+</span></span></code></pre></div><p>Ctrl-clicking (on Windows. Use Cmd-Clik on macOS) on the link will open the network graph in a browser:</p>
+<p><img src="./ctrl-q-task-network-graph-1.png" alt="Qlik Sense task network graph" title="Qlik Sense task network graph"></p>
+<h3 id="node-types">Node types</h3>
+<table>
+<thead>
+<tr>
+<th>Node type</th>
+<th>Shape</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Schema trigger</td>
+<td>Triangle</td>
+<td>A schema trigger is a time-based task trigger.<br>Orange if enabled, gray when disabled</td>
+</tr>
+<tr>
+<td>Composite trigger</td>
+<td>Hexagon</td>
+<td>If a task&rsquo;s composite trigger has two or more upstream triggers the composite trigger will be shown as a hexagon.<br>Orange if enabled, gray when disabled.<br><br>If the composite trigger only has one upstream task the composite trigger will not be shown in the graph. In this case the arrow from the upstream task will go directly to the downstream task.</td>
+</tr>
+<tr>
+<td>Reload task</td>
+<td>Rectangle</td>
+<td>A reload task.<br>Green when last reload finished successfully, red when last reload failed, gray when task is disabled, blue when task has never been started.</td>
+</tr>
+<tr>
+<td>External program task</td>
+<td>Elipse</td>
+<td>An external program task.<br>Green when last run finished successfully, red when last run failed, gray when task is disabled, blue when task has never been started.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="user-interface">User interface</h3>
+<p>The user interface consists of a toolbar at the top of the page and the network graph itself.</p>
+<p>The toolbar has a fixed position and size at the top of the page, while the network graph will resize to fit the available space below the toolbar.</p>
+<h4 id="collapsingexpanding-node-clusters">Collapsing/expanding node clusters</h4>
+<p>Networks with many tasks can be hard to read.<br>
+To make it easier to read such networks Ctrl-Q offers the possibility to collapse/expand node clusters and/or leaf nodes.</p>
+<ul>
+<li>A node cluster is a group of nodes that are connected to each other.</li>
+<li>A leaf node is a node that does not have any downstream nodes.</li>
+</ul>
+<p>Here is an example where the &ldquo;Cluster leaves&rdquo; button has been clicked a few times.<br>
+Note the circular task chain that becomes very easy to see when the leaf nodes are collapsed:</p>
+<p><img src="./ctrl-q-task-network-graph-collapsed-1.png" alt="Qlik Sense task network graph" title="Qlik Sense task network graph"></p>
+<p>Expanding the leaf nodes again makes is done by clicking the &ldquo;Uncluster all&rdquo; button.</p>
+<h4 id="legend-and-network-graph-configuration">Legend and network graph configuration</h4>
+<p>The &ldquo;Legend&rdquo; button will toggle the floating (also moveable!) legend window on/off.</p>
+<p>The &ldquo;Network config&rdquo; button will toggle a network configuration pane to the left on/off:</p>
+<p><img src="./ctrl-q-task-network-config-1.png" alt="Qlik Sense task network graph" title="Configuration of Qlik Sense task network graph"></p>
+<p>The network configuration pane makes it possible to fine-tune the parameters used when creating the network graph.<br>
+Things like gravity, spring stiffness, overlap stragegy etc. can be adjusted.</p>
+<p>If the network graph is hard to read it can be worth trying different values for these parameters.</p>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Tip</h4>
+
+    If things don&rsquo;t work out as expected the &ldquo;Refresh&rdquo; button in the top toolbar will reload tasks from Qlik Sense and reset all visualisation parameters to their default values.
+
+</div>
+
+
 </div>
 
 
@@ -2978,7 +3097,7 @@ Which task? The one with the same integer number in the <code>Task id</code> col
 </footer>
     </div>
     
-  <script src="/js/main.min.bfefba6b7ccbf88710915ea7a0df9461124cad8959623d18119929418a2da080.js" integrity="sha256-v&#43;&#43;6a3zL&#43;IcQkV6noN&#43;UYRJMrYlZYj0YEZkpQYotoIA=" crossorigin="anonymous"></script>
+  <script src="/js/main.min.5f003f0f44f67457bc9ed9ed0dc55152c7f7d98fa81308468cb8b7fead157dc0.js" integrity="sha256-XwA/D0T2dFe8ntntDcVRUsf32Y&#43;oEwhGjLi3/q0VfcA=" crossorigin="anonymous"></script>
 <script src='/js/prism.js'></script>
 <script src='/js/tabpane-persist.js'></script>
 

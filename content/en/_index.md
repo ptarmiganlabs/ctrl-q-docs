@@ -27,35 +27,38 @@ Ctrl-Q is an open source (free!!) tool that makes life easier for Qlik Sense adm
 {{% blocks/lead color="info" %}}
 How? By automating the boring stuff, like:
 
-* Exporting reload task definitions to disk files
-* Creating reload tasks from definitions in a Excel or CSV file
-* Importing apps from disk and create associated reload tasks
-* View load chains as tree diagrams
-* Show (and optionally store to disk) definitions for master dimensions and measures
-* Import master dimensions and measures from definitions in an Excel file
-* Delete master dimensions and measures from Sense apps
-* Update custom properties for muliple tasks
-* Show (and optionally store to disk) definitions for all bookmarks in Sense apps
-* Show (and optionally store to disk) definitions for all variables in Sense apps
-* Scramble fields in Sense apps
-* Get load script for Sense apps
-
+Exporting reload task definitions to disk files  
+Creating reload tasks from definitions in a Excel or CSV file  
+Importing apps from disk and create associated reload tasks  
+View task dependencies as network diagrams, trees or tables  
+Show (and optionally store to disk) definitions for master dimensions and measures  
+Import master dimensions and measures from definitions in an Excel file  
+Delete master dimensions and measures from Sense apps  
+Update custom properties for muliple tasks  
+Show (and optionally store to disk) definitions for all bookmarks in Sense apps  
+Show (and optionally store to disk) definitions for all variables in Sense apps  
+Scramble fields in Sense apps  
+Get load script for Sense apps  
+<br>
+<br>
 It runs on Windows, Linux and macOS.  
+
 Works with client-managed Qlik Sense Enterprise on Windows.
 {{% /blocks/lead %}}
 
 
 {{% blocks/section color="dark" type="row" %}}
 
-{{% blocks/feature icon="fa-lightbulb" title="Latest release: 3.14" %}}
-🥳 External program tasks fully supported in task export/import commands.
+{{% blocks/feature icon="fa-lightbulb" title="Latest release: 3.15" %}}
+🥳 Beta version: View task dependencies as network diagrams.  
+Network diagrams are a great way to visualize task dependencies, and Ctrl-Q now supports this.
 
 Available on [GitHub](https://github.com/ptarmiganlabs/ctrl-q/releases).
 {{% /blocks/feature %}}
 
 
-{{% blocks/feature icon="fab fa-github" title="Contributions welcome!" url="https://github.com/google/docsy-example" %}}
-We use a [Pull Request](https://github.com/ptarmiganlabs/butler-sos/pulls) contributions workflow on **GitHub**.  
+{{% blocks/feature icon="fab fa-github" title="Contributions welcome!" url="https://github.com/ptarmiganlabs/ctrl-q" %}}
+We use a [Pull Request](https://github.com/ptarmiganlabs/ctrl-q/pulls) contributions workflow on **GitHub**.  
 New developers are always welcome!
 {{% /blocks/feature %}}
 

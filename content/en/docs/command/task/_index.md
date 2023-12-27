@@ -21,6 +21,11 @@ This is a placeholder page that shows you how to use this template site.
   - [Show task table on screen](#show-task-table-on-screen)
   - [Save task to disk file in tabular format](#save-task-to-disk-file-in-tabular-format)
   - [Save task to disk file as JSON](#save-task-to-disk-file-as-json)
+- [List tasks as network graph](#list-tasks-as-network-graph)
+  - [Node types](#node-types)
+  - [User interface](#user-interface)
+    - [Collapsing/expanding node clusters](#collapsingexpanding-node-clusters)
+    - [Legend and network graph configuration](#legend-and-network-graph-configuration)
 
 ---
 
@@ -408,3 +413,97 @@ The resulting JSON file looks like this:
 ...
 ]
 ```
+
+## List tasks as network graph
+
+This command provides an interactive network graph view of reload tasks and external program tasks.
+
+First Ctrl-Q will retrieve information about all reload and external program tasks from the Qlik Sense repository service (QRS).  
+This includes information about last execution results for the tasks.
+
+A web server is then started on the local computer where Ctrl-Q is running, serving a web page with the network graph in it.  
+A link to the web page is shown in the console where Ctrl-Q is running.  
+In the example below the link is `http://localhost:3000`.
+
+{{% alert title="Beta feature" color="warning" %}}
+Graph visualisation of Qlik Sense tasks is a beta feature.
+
+Only a basic set of features are available at this point.  
+Performance is ok for small to medium sized Qlik Sense sites, but will slower for larger sites (many hundreds or thousands of tasks).  
+{{% /alert %}}
+
+On Windows using PowerShell it can look like this:
+
+```powershell
+PS C:\tools\ctrl-q> .\ctrl-q.exe task-vis --host 192.168.100.109 --auth-type cert --auth-user-dir LAB --auth-user-id goran
+2023-12-26T21:38:09.003Z info: -----------------------------------------------------------
+2023-12-26T21:38:09.003Z info: | Ctrl-Q
+2023-12-26T21:38:09.003Z info: |
+2023-12-26T21:38:09.003Z info: | Version      : 3.15.0
+2023-12-26T21:38:09.003Z info: | Log level    : info
+2023-12-26T21:38:09.003Z info: |
+2023-12-26T21:38:09.003Z info: | Command      : task-vis
+2023-12-26T21:38:09.003Z info: |              : visualise task network
+2023-12-26T21:38:09.003Z info: |
+2023-12-26T21:38:09.003Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
+2023-12-26T21:38:09.003Z info: |
+2023-12-26T21:38:09.003Z info: | https://github.com/ptarmiganlabs/ctrl-q
+2023-12-26T21:38:09.003Z info: ----------------------------------------------------------
+2023-12-26T21:38:09.003Z info:
+2023-12-26T21:38:10.941Z info: Using vis.js to visualize tasks, more info at https://github.com/visjs/vis-network
+2023-12-26T21:38:10.941Z info:
+2023-12-26T21:38:10.941Z info: Task visualization server listening on http://localhost:3000
+2023-12-26T21:38:10.941Z info: Press Ctrl-C to quit.
+```
+
+Ctrl-clicking (on Windows. Use Cmd-Clik on macOS) on the link will open the network graph in a browser:
+
+![Qlik Sense task network graph](./ctrl-q-task-network-graph-1.png "Qlik Sense task network graph")
+
+### Node types
+
+| Node type | Shape | Description |
+| --------- | ----- | ----------- |
+| Schema trigger | Triangle | A schema trigger is a time-based task trigger.<br>Orange if enabled, gray when disabled |
+| Composite trigger | Hexagon | If a task's composite trigger has two or more upstream triggers the composite trigger will be shown as a hexagon.<br>Orange if enabled, gray when disabled.<br><br>If the composite trigger only has one upstream task the composite trigger will not be shown in the graph. In this case the arrow from the upstream task will go directly to the downstream task. |
+| Reload task | Rectangle | A reload task.<br>Green when last reload finished successfully, red when last reload failed, gray when task is disabled, blue when task has never been started. |
+| External program task | Elipse | An external program task.<br>Green when last run finished successfully, red when last run failed, gray when task is disabled, blue when task has never been started. |
+
+### User interface
+
+The user interface consists of a toolbar at the top of the page and the network graph itself.
+
+The toolbar has a fixed position and size at the top of the page, while the network graph will resize to fit the available space below the toolbar.
+
+#### Collapsing/expanding node clusters
+
+Networks with many tasks can be hard to read.  
+To make it easier to read such networks Ctrl-Q offers the possibility to collapse/expand node clusters and/or leaf nodes.
+
+- A node cluster is a group of nodes that are connected to each other.
+- A leaf node is a node that does not have any downstream nodes.
+
+Here is an example where the "Cluster leaves" button has been clicked a few times.  
+Note the circular task chain that becomes very easy to see when the leaf nodes are collapsed:
+
+![Qlik Sense task network graph](./ctrl-q-task-network-graph-collapsed-1.png "Qlik Sense task network graph")
+
+Expanding the leaf nodes again makes is done by clicking the "Uncluster all" button.
+
+#### Legend and network graph configuration
+
+The "Legend" button will toggle the floating (also moveable!) legend window on/off.
+
+The "Network config" button will toggle a network configuration pane to the left on/off:
+
+![Qlik Sense task network graph](./ctrl-q-task-network-config-1.png "Configuration of Qlik Sense task network graph")
+
+The network configuration pane makes it possible to fine-tune the parameters used when creating the network graph.  
+Things like gravity, spring stiffness, overlap stragegy etc. can be adjusted.
+
+If the network graph is hard to read it can be worth trying different values for these parameters.  
+
+
+{{% alert title="Tip" color="primary" %}}
+If things don't work out as expected the "Refresh" button in the top toolbar will reload tasks from Qlik Sense and reset all visualisation parameters to their default values.
+{{% /alert %}}

@@ -266,3 +266,8 @@ enable = false
     disable = false
     # privacyEnhanced = false
 	
+
+  [sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+#  priority = 0.5

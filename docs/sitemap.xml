@@ -4,118 +4,157 @@
   <url>
     <loc>/docs/command/app-script/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/docs/command/import/app/</loc>
-    <lastmod>2023-11-19T21:28:22+01:00</lastmod>
+    <lastmod>2023-12-30T07:04:25+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/docs/example/dissecting-task-definition-file/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/docs/overview/</loc>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/docs/getting-started/security/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/docs/getting-started/qseow-auth/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/docs/command/bookmark/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/docs/</loc>
     <lastmod>2023-10-31T16:52:01+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/docs/getting-started/</loc>
     <lastmod>2023-10-31T16:52:01+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/docs/command/import/master-item/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/docs/command/</loc>
     <lastmod>2023-12-27T09:12:28+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/docs/command/connection-test/</loc>
     <lastmod>2023-11-20T19:10:48+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/docs/command/custom-property/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/docs/command/import/task/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/docs/getting-started/colors-formatting/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/docs/command/dimension/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/docs/example/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/docs/getting-started/dry-runs/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/docs/command/measure/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/docs/command/scramble-field/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/docs/command/task/</loc>
     <lastmod>2023-12-27T09:12:28+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/docs/command/variable/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/docs/command/export/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/docs/command/import/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/about/</loc>
     <lastmod>2023-10-31T16:52:01+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/tags/app/</loc>
-    <lastmod>2023-11-19T21:28:22+01:00</lastmod>
+    <lastmod>2023-12-30T07:04:25+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/tags/bookmark/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/tags/colors/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/community/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/</loc>
     <lastmod>2023-12-27T09:12:28+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/tags/custom-property/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/tags/formatting/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/tags/master-item/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/tags/script/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/search/</loc>
     <lastmod>2023-10-29T19:25:51+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/tags/security/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/tags/</loc>
-    <lastmod>2023-12-27T09:12:28+01:00</lastmod>
+    <lastmod>2023-12-30T07:04:25+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/tags/task/</loc>
     <lastmod>2023-12-27T09:12:28+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url><url>
     <loc>/tags/variable/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
+    <changefreq>monthly</changefreq>
   </url>
 </urlset>

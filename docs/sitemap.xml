@@ -2,158 +2,158 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/docs/command/app-script/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/docs/command/app-script/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/docs/command/import/app/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/docs/command/import/app/</loc>
     <lastmod>2023-12-30T07:04:25+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/docs/example/dissecting-task-definition-file/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/docs/example/dissecting-task-definition-file/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/docs/overview/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/docs/overview/</loc>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/docs/getting-started/security/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/docs/getting-started/security/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/docs/getting-started/qseow-auth/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/docs/getting-started/qseow-auth/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/docs/command/bookmark/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/docs/command/bookmark/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/docs/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/docs/</loc>
     <lastmod>2023-10-31T16:52:01+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/docs/getting-started/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/docs/getting-started/</loc>
     <lastmod>2023-10-31T16:52:01+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/docs/command/import/master-item/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/docs/command/import/master-item/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/docs/command/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/docs/command/</loc>
     <lastmod>2023-12-27T09:12:28+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/docs/command/connection-test/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/docs/command/connection-test/</loc>
     <lastmod>2023-11-20T19:10:48+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/docs/command/custom-property/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/docs/command/custom-property/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/docs/command/import/task/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/docs/command/import/task/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/docs/getting-started/colors-formatting/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/docs/getting-started/colors-formatting/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/docs/command/dimension/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/docs/command/dimension/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/docs/example/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/docs/example/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/docs/getting-started/dry-runs/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/docs/getting-started/dry-runs/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/docs/command/measure/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/docs/command/measure/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/docs/command/scramble-field/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/docs/command/scramble-field/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/docs/command/task/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/docs/command/task/</loc>
     <lastmod>2023-12-27T09:12:28+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/docs/command/variable/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/docs/command/variable/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/docs/command/export/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/docs/command/export/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/docs/command/import/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/docs/command/import/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/about/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/about/</loc>
     <lastmod>2023-10-31T16:52:01+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/tags/app/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/tags/app/</loc>
     <lastmod>2023-12-30T07:04:25+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/tags/bookmark/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/tags/bookmark/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/tags/colors/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/tags/colors/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/community/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/community/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/</loc>
     <lastmod>2023-12-27T09:12:28+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/tags/custom-property/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/tags/custom-property/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/tags/formatting/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/tags/formatting/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/tags/master-item/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/tags/master-item/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/tags/script/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/tags/script/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/search/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/search/</loc>
     <lastmod>2023-10-29T19:25:51+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/tags/security/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/tags/security/</loc>
     <lastmod>2023-10-31T16:14:57+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/tags/</loc>
     <lastmod>2023-12-30T07:04:25+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/tags/task/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/tags/task/</loc>
     <lastmod>2023-12-27T09:12:28+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
-    <loc>/tags/variable/</loc>
+    <loc>https://ctrl-q.ptarmiganlabs.com/tags/variable/</loc>
     <lastmod>2023-11-19T21:28:22+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url>

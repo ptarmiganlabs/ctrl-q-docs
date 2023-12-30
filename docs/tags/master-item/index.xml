@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ctrl-Q – master-item</title>
-    <link>/tags/master-item/</link>
+    <link>https://ctrl-q.ptarmiganlabs.com/tags/master-item/</link>
     <description>Recent content in master-item on Ctrl-Q</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/tags/master-item/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://ctrl-q.ptarmiganlabs.com/tags/master-item/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Master items</title>
-      <link>/docs/command/import/master-item/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/docs/command/import/master-item/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/command/import/master-item/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/docs/command/import/master-item/</guid>
       <description>
         
         
@@ -272,10 +272,10 @@ NOTE 2: The same concept works for drill-down dimensions and measures.&lt;/p&gt;
     
     <item>
       <title>Docs: Dimensions</title>
-      <link>/docs/command/dimension/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/docs/command/dimension/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/command/dimension/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/docs/command/dimension/</guid>
       <description>
         
         
@@ -431,10 +431,10 @@ NOTE 2: The same concept works for drill-down dimensions and measures.&lt;/p&gt;
     
     <item>
       <title>Docs: Measures</title>
-      <link>/docs/command/measure/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/docs/command/measure/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/command/measure/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/docs/command/measure/</guid>
       <description>
         
         
@@ -542,10 +542,10 @@ NOTE 2: The same concept works for drill-down dimensions and measures.&lt;/p&gt;
     
     <item>
       <title>Docs: Import</title>
-      <link>/docs/command/import/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/docs/command/import/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/command/import/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/docs/command/import/</guid>
       <description>
         
         

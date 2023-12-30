@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ctrl-Q – app</title>
-    <link>/tags/app/</link>
+    <link>https://ctrl-q.ptarmiganlabs.com/tags/app/</link>
     <description>Recent content in app on Ctrl-Q</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/tags/app/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://ctrl-q.ptarmiganlabs.com/tags/app/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Apps</title>
-      <link>/docs/command/import/app/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/docs/command/import/app/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/command/import/app/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/docs/command/import/app/</guid>
       <description>
         
         
@@ -91,9 +91,9 @@ Ctrl-Q detects that it&amp;rsquo;s being rate limited and implements a backoff s
 Such retries are clearly shown in the Ctrl-Q logs.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;The QMC now shows three new apps:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ctrl-q-app-import-2.png&#34; alt=&#34;Sense apps imported from QVF files&#34; title=&#34;Sense apps imported from QVF files&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ctrl-q.ptarmiganlabs.com/img/ctrl-q-app-import-2.png&#34; alt=&#34;Sense apps imported from QVF files&#34; title=&#34;Sense apps imported from QVF files&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The Excel file with definitions on what QVF files should be imported, what the apps should be named etc looks like this:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ctrl-q-app-import-1.png&#34; alt=&#34;QVF app files that should be imported into Qlik Sense&#34; title=&#34;QVF app files that should be imported into Qlik Sense&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ctrl-q.ptarmiganlabs.com/img/ctrl-q-app-import-1.png&#34; alt=&#34;QVF app files that should be imported into Qlik Sense&#34; title=&#34;QVF app files that should be imported into Qlik Sense&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The available columns in the Excel file are the same as when importing apps as part of task import.&lt;br&gt;
 The columns are described on the &lt;a href=&#34;http://localhost:1313/docs/command/import/task/#source-file-columns-for-app-import-definitions&#34;&gt;page describing app importing as part of task imports&lt;/a&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -107,10 +107,10 @@ Similarly, if an already existing stream name (or ID of an existing stream) is s
     
     <item>
       <title>Docs: Export</title>
-      <link>/docs/command/export/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/docs/command/export/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/command/export/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/docs/command/export/</guid>
       <description>
         
         
@@ -129,7 +129,7 @@ Similarly, if an already existing stream name (or ID of an existing stream) is s
 &lt;hr&gt;
 &lt;h2 id=&#34;export-tasks-to-excel-file&#34;&gt;Export tasks to Excel file&lt;/h2&gt;
 &lt;p&gt;See this page for details on how to export task definitions to a disk file:&lt;br&gt;
-&lt;a href=&#34;/docs/command/task/#save-task-to-disk-file-in-tabular-format&#34;&gt;Save task to disk in tabular format&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://ctrl-q.ptarmiganlabs.com/docs/command/task/#save-task-to-disk-file-in-tabular-format&#34;&gt;Save task to disk in tabular format&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;export-apps-to-qvf-files&#34;&gt;Export apps to QVF files&lt;/h2&gt;
 &lt;p&gt;This command exports Sense apps to QVF files, with or without data.&lt;/p&gt;
 &lt;p&gt;The command optionally also creates an Excel file with metadata about each app, in the same format used by the &lt;code&gt;app-import&lt;/code&gt; command.&lt;br&gt;
@@ -250,7 +250,7 @@ It is thus possible to first export apps and get a metadata Excel file, then imp
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;-a&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;----&lt;/span&gt;        &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;19&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;11&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2023&lt;/span&gt;     &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;20&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;29&lt;/span&gt;         &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;524288&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;Ctrl-Q&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;CLI_2023&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;11&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;19&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;qvf&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;-a&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;----&lt;/span&gt;        &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;19&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;11&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2023&lt;/span&gt;     &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;20&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;29&lt;/span&gt;         &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;327680&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Performance&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;review_2022&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;03&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;28_2023&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;11&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;19&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;qvf&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;-a&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;----&lt;/span&gt;        &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;19&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;11&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2023&lt;/span&gt;     &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;20&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;29&lt;/span&gt;         &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;360448&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;User&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;retention_2023&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;11&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;19&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;qvf&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The format of the created Excel file is almost identical to the one used when importing apps from QVF files, described &lt;a href=&#34;/docs/command/import/#source-file-columns-for-app-import-definitions&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The format of the created Excel file is almost identical to the one used when importing apps from QVF files, described &lt;a href=&#34;https://ctrl-q.ptarmiganlabs.com/docs/command/import/#source-file-columns-for-app-import-definitions&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The only difference is that the app export format includes an &amp;ldquo;App id&amp;rdquo; column, which is not required when importing apps.&lt;/p&gt;
 &lt;p&gt;App import will however work just fine if there is an &amp;ldquo;App id&amp;rdquo; column present, it just won&amp;rsquo;t be used for anything.&lt;/p&gt;
 
@@ -259,10 +259,10 @@ It is thus possible to first export apps and get a metadata Excel file, then imp
     
     <item>
       <title>Docs: Import</title>
-      <link>/docs/command/import/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/docs/command/import/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/command/import/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/docs/command/import/</guid>
       <description>
         
         

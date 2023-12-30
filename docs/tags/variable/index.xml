@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ctrl-Q – variable</title>
-    <link>/tags/variable/</link>
+    <link>https://ctrl-q.ptarmiganlabs.com/tags/variable/</link>
     <description>Recent content in variable on Ctrl-Q</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/tags/variable/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://ctrl-q.ptarmiganlabs.com/tags/variable/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Variables</title>
-      <link>/docs/command/variable/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/docs/command/variable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/command/variable/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/docs/command/variable/</guid>
       <description>
         
         
@@ -96,7 +96,7 @@
 These have the property &amp;ldquo;Is reserved&amp;rdquo; set to &lt;code&gt;true&lt;/code&gt; in the variable table created by Ctrl-Q&amp;rsquo;s &lt;code&gt;variable-get&lt;/code&gt; command.&lt;br&gt;
 All the variables that are automatically inserted at the beginning of new apps are of this kind, see image below.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;/img/qlik-sense-special-variables-1.png&#34; alt=&#34;Qlik sense variables with special meaning&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ctrl-q.ptarmiganlabs.com/img/qlik-sense-special-variables-1.png&#34; alt=&#34;Qlik sense variables with special meaning&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The protected variables &lt;a href=&#34;https://help.qlik.com/en-US/sense-developer/February2023/Subsystems/EngineAPI/Content/Sense_EngineAPI/WorkingWithAppsAndVisualizations/CreateVariables/remove-variable.htm&#34;&gt;cannot be deleted&lt;/a&gt; using the app development UI or by Ctrl-Q, neither can script-created variables.&lt;br&gt;
 To remove script created variables you must first remove them from the app&amp;rsquo;s load script and then reload the app. Those variables re&lt;/p&gt;
 &lt;p&gt;The example below deletes certain variables in several apps. The &lt;code&gt;--dry-run&lt;/code&gt; option means Ctrl-Q will not delete any variables, but rather show what would be deleted.&lt;/p&gt;

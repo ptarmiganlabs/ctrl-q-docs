@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ctrl-Q – task</title>
-    <link>/tags/task/</link>
+    <link>https://ctrl-q.ptarmiganlabs.com/tags/task/</link>
     <description>Recent content in task on Ctrl-Q</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/tags/task/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://ctrl-q.ptarmiganlabs.com/tags/task/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Dissecting the task definition file</title>
-      <link>/docs/example/dissecting-task-definition-file/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/docs/example/dissecting-task-definition-file/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/example/dissecting-task-definition-file/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/docs/example/dissecting-task-definition-file/</guid>
       <description>
         
         
@@ -422,10 +422,10 @@ flowchart TD
     
     <item>
       <title>Docs: Tasks</title>
-      <link>/docs/command/import/task/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/docs/command/import/task/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/command/import/task/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/docs/command/import/task/</guid>
       <description>
         
         
@@ -723,7 +723,7 @@ It&amp;rsquo;s thus a good idea to first do a task export, look at the file form
 &lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
 &lt;h4 class=&#34;alert-heading&#34;&gt;💡 Tip&lt;/h4&gt;
 
-    Example task definition files are available on &lt;a href=&#34;/docs/example/dissecting-task-definition-file/&#34;&gt;this page&lt;/a&gt;.
+    Example task definition files are available on &lt;a href=&#34;https://ctrl-q.ptarmiganlabs.com/docs/example/dissecting-task-definition-file/&#34;&gt;this page&lt;/a&gt;.
 
 &lt;/div&gt;
 
@@ -948,12 +948,12 @@ More info &lt;a href=&#34;#source-file-columns-for-task-defintions&#34;&gt;here&
 Similarly, for composite task triggers (used to create task chains) it&amp;rsquo;s important that either newly created tasks &lt;em&gt;or&lt;/em&gt; already existing tasks can be referenced.&lt;/p&gt;
 &lt;p&gt;Let&amp;rsquo;s say the following three QVF files should be imported into Sense.&lt;br&gt;
 Note the &lt;code&gt;App counter&lt;/code&gt; column, with values 1, 2 and 3.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ctrl-q-app-import-1.png&#34; alt=&#34;QVF app files that should be imported into Qlik Sense&#34; title=&#34;QVF app files that should be imported into Qlik Sense&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ctrl-q.ptarmiganlabs.com/img/ctrl-q-app-import-1.png&#34; alt=&#34;QVF app files that should be imported into Qlik Sense&#34; title=&#34;QVF app files that should be imported into Qlik Sense&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Now let&amp;rsquo;s look at the tasks to be created.
 In the image below the main info (task name etc) for each of the four tasks is shown.&lt;br&gt;
 Note that the &lt;code&gt;Task id&lt;/code&gt; column has both proper GUIDs and simple integers in it.&lt;br&gt;
 This will be important when defining composite triggers.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ctrl-q-task-import-1.png&#34; alt=&#34;Reload tasks should be created in Qlik Sense&#34; title=&#34;Reload tasks should be created in Qlik Sense&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ctrl-q.ptarmiganlabs.com/img/ctrl-q-task-import-1.png&#34; alt=&#34;Reload tasks should be created in Qlik Sense&#34; title=&#34;Reload tasks should be created in Qlik Sense&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Finally let&amp;rsquo;s look at the composite triggers associated with the last of the four tasks.&lt;br&gt;
 That composite trigger relies on two tasks, one that should fail (&lt;code&gt;TaskFail&lt;/code&gt;) to trigger the composite trigger and one that should succeed (&lt;code&gt;TaskSuccessful&lt;/code&gt;).&lt;/p&gt;
 &lt;p&gt;The important part here is the last column, &lt;code&gt;Rule task id&lt;/code&gt;:&lt;/p&gt;
@@ -963,17 +963,17 @@ That composite trigger relies on two tasks, one that should fail (&lt;code&gt;Ta
 Which task? The one with the same integer number in the &lt;code&gt;Task id&lt;/code&gt; column (see previous paragraph).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;This way it&amp;rsquo;s possible to chain new reload tasks to both already existing tasks and new ones.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ctrl-q-task-import-2.png&#34; alt=&#34;Reload tasks should be created in Qlik Sense&#34; title=&#34;Reload tasks should be created in Qlik Sense&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ctrl-q.ptarmiganlabs.com/img/ctrl-q-task-import-2.png&#34; alt=&#34;Reload tasks should be created in Qlik Sense&#34; title=&#34;Reload tasks should be created in Qlik Sense&#34;&gt;&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Docs: Tasks</title>
-      <link>/docs/command/task/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/docs/command/task/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/command/task/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/docs/command/task/</guid>
       <description>
         
         
@@ -1016,7 +1016,7 @@ Which task? The one with the same integer number in the &lt;code&gt;Task id&lt;/
 &lt;hr&gt;
 &lt;h2 id=&#34;list-tasks-as-tree&#34;&gt;List tasks as tree&lt;/h2&gt;
 &lt;p&gt;This command provides a hierarchical tree view of reload tasks and external program tasks, similar to what is available in QlikView.&lt;/p&gt;
-&lt;p&gt;The tree view can be enhanced with colours (see &lt;a href=&#34;/docs/getting-started/colors-formatting/&#34;&gt;this page&lt;/a&gt;) and task details.&lt;/p&gt;
+&lt;p&gt;The tree view can be enhanced with colours (see &lt;a href=&#34;https://ctrl-q.ptarmiganlabs.com/docs/getting-started/colors-formatting/&#34;&gt;this page&lt;/a&gt;) and task details.&lt;/p&gt;
 &lt;p&gt;There are quite a few customisation options available when creating a task tree.&lt;br&gt;
 Note that some options are used when creating task tables, these are not applicable for task trees. Ctrl-Q will show an error when invalid combinations of options are used.&lt;/p&gt;
 &lt;p&gt;Here &lt;a href=&#34;https://github.com/microsoft/terminal&#34;&gt;Windows Terminal&lt;/a&gt; is used to run Ctrl-Q.
@@ -1114,7 +1114,7 @@ The allowed values for this option are &lt;code&gt;taskid&lt;/code&gt;, &lt;code
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-tree-icons&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-text-color&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;yes&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-tree-details&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;nextstart&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;appname&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;/img/task-tree-color-details-2_65.png&#34; alt=&#34;Qlik Sense task tree 5&#34; title=&#34;Qlik Sense task tree with task details and colors&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://ctrl-q.ptarmiganlabs.com/img/task-tree-color-details-2_65.png&#34; alt=&#34;Qlik Sense task tree 5&#34; title=&#34;Qlik Sense task tree with task details and colors&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;save-tree-to-disk-file&#34;&gt;Save tree to disk file&lt;/h3&gt;
 &lt;p&gt;Under the hood the task tree is stored as a JSON structure.&lt;br&gt;
 It&amp;rsquo;s possible to save this JSON to disk:&lt;/p&gt;
@@ -1172,7 +1172,7 @@ Tags, custom properties, schedules, triggers and references to other tasks are a
 This tabular task view can be shown on screen or saved to disk as Excel or CSV files.&lt;/p&gt;
 &lt;p&gt;The idea is that all information needed to recreate the tasks should be included in the table.&lt;br&gt;
 In reality a few more fields are included, for example app name for the app associated with a task.&lt;/p&gt;
-&lt;p&gt;The table view can be enhanced with colours (see &lt;a href=&#34;/docs/getting-started/colors-formattin&#34;&gt;this page&lt;/a&gt;) and task details.&lt;/p&gt;
+&lt;p&gt;The table view can be enhanced with colours (see &lt;a href=&#34;https://ctrl-q.ptarmiganlabs.com/docs/getting-started/colors-formattin&#34;&gt;this page&lt;/a&gt;) and task details.&lt;/p&gt;
 &lt;p&gt;There are quite a few customisation options available when creating a task tree.&lt;br&gt;
 Note that some options are used when creating task tables, these are not applicable for task trees. Ctrl-Q will show an error when invalid combinations of options are used.&lt;/p&gt;
 &lt;h3 id=&#34;show-task-table-on-screen&#34;&gt;Show task table on screen&lt;/h3&gt;
@@ -1459,10 +1459,10 @@ Things like gravity, spring stiffness, overlap stragegy etc. can be adjusted.&lt
     
     <item>
       <title>Docs: Import</title>
-      <link>/docs/command/import/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/docs/command/import/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/command/import/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/docs/command/import/</guid>
       <description>
         
         

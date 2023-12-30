@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ctrl-Q – Import</title>
-    <link>/docs/command/import/</link>
+    <link>https://ctrl-q.ptarmiganlabs.com/docs/command/import/</link>
     <description>Recent content in Import on Ctrl-Q</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/docs/command/import/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://ctrl-q.ptarmiganlabs.com/docs/command/import/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Apps</title>
-      <link>/docs/command/import/app/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/docs/command/import/app/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/command/import/app/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/docs/command/import/app/</guid>
       <description>
         
         
@@ -91,9 +91,9 @@ Ctrl-Q detects that it&amp;rsquo;s being rate limited and implements a backoff s
 Such retries are clearly shown in the Ctrl-Q logs.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;The QMC now shows three new apps:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ctrl-q-app-import-2.png&#34; alt=&#34;Sense apps imported from QVF files&#34; title=&#34;Sense apps imported from QVF files&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ctrl-q.ptarmiganlabs.com/img/ctrl-q-app-import-2.png&#34; alt=&#34;Sense apps imported from QVF files&#34; title=&#34;Sense apps imported from QVF files&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The Excel file with definitions on what QVF files should be imported, what the apps should be named etc looks like this:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ctrl-q-app-import-1.png&#34; alt=&#34;QVF app files that should be imported into Qlik Sense&#34; title=&#34;QVF app files that should be imported into Qlik Sense&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ctrl-q.ptarmiganlabs.com/img/ctrl-q-app-import-1.png&#34; alt=&#34;QVF app files that should be imported into Qlik Sense&#34; title=&#34;QVF app files that should be imported into Qlik Sense&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The available columns in the Excel file are the same as when importing apps as part of task import.&lt;br&gt;
 The columns are described on the &lt;a href=&#34;http://localhost:1313/docs/command/import/task/#source-file-columns-for-app-import-definitions&#34;&gt;page describing app importing as part of task imports&lt;/a&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -107,10 +107,10 @@ Similarly, if an already existing stream name (or ID of an existing stream) is s
     
     <item>
       <title>Docs: Master items</title>
-      <link>/docs/command/import/master-item/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/docs/command/import/master-item/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/command/import/master-item/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/docs/command/import/master-item/</guid>
       <description>
         
         
@@ -363,10 +363,10 @@ NOTE 2: The same concept works for drill-down dimensions and measures.&lt;/p&gt;
     
     <item>
       <title>Docs: Tasks</title>
-      <link>/docs/command/import/task/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/docs/command/import/task/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/command/import/task/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/docs/command/import/task/</guid>
       <description>
         
         
@@ -664,7 +664,7 @@ It&amp;rsquo;s thus a good idea to first do a task export, look at the file form
 &lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
 &lt;h4 class=&#34;alert-heading&#34;&gt;💡 Tip&lt;/h4&gt;
 
-    Example task definition files are available on &lt;a href=&#34;/docs/example/dissecting-task-definition-file/&#34;&gt;this page&lt;/a&gt;.
+    Example task definition files are available on &lt;a href=&#34;https://ctrl-q.ptarmiganlabs.com/docs/example/dissecting-task-definition-file/&#34;&gt;this page&lt;/a&gt;.
 
 &lt;/div&gt;
 
@@ -889,12 +889,12 @@ More info &lt;a href=&#34;#source-file-columns-for-task-defintions&#34;&gt;here&
 Similarly, for composite task triggers (used to create task chains) it&amp;rsquo;s important that either newly created tasks &lt;em&gt;or&lt;/em&gt; already existing tasks can be referenced.&lt;/p&gt;
 &lt;p&gt;Let&amp;rsquo;s say the following three QVF files should be imported into Sense.&lt;br&gt;
 Note the &lt;code&gt;App counter&lt;/code&gt; column, with values 1, 2 and 3.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ctrl-q-app-import-1.png&#34; alt=&#34;QVF app files that should be imported into Qlik Sense&#34; title=&#34;QVF app files that should be imported into Qlik Sense&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ctrl-q.ptarmiganlabs.com/img/ctrl-q-app-import-1.png&#34; alt=&#34;QVF app files that should be imported into Qlik Sense&#34; title=&#34;QVF app files that should be imported into Qlik Sense&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Now let&amp;rsquo;s look at the tasks to be created.
 In the image below the main info (task name etc) for each of the four tasks is shown.&lt;br&gt;
 Note that the &lt;code&gt;Task id&lt;/code&gt; column has both proper GUIDs and simple integers in it.&lt;br&gt;
 This will be important when defining composite triggers.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ctrl-q-task-import-1.png&#34; alt=&#34;Reload tasks should be created in Qlik Sense&#34; title=&#34;Reload tasks should be created in Qlik Sense&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ctrl-q.ptarmiganlabs.com/img/ctrl-q-task-import-1.png&#34; alt=&#34;Reload tasks should be created in Qlik Sense&#34; title=&#34;Reload tasks should be created in Qlik Sense&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Finally let&amp;rsquo;s look at the composite triggers associated with the last of the four tasks.&lt;br&gt;
 That composite trigger relies on two tasks, one that should fail (&lt;code&gt;TaskFail&lt;/code&gt;) to trigger the composite trigger and one that should succeed (&lt;code&gt;TaskSuccessful&lt;/code&gt;).&lt;/p&gt;
 &lt;p&gt;The important part here is the last column, &lt;code&gt;Rule task id&lt;/code&gt;:&lt;/p&gt;
@@ -904,7 +904,7 @@ That composite trigger relies on two tasks, one that should fail (&lt;code&gt;Ta
 Which task? The one with the same integer number in the &lt;code&gt;Task id&lt;/code&gt; column (see previous paragraph).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;This way it&amp;rsquo;s possible to chain new reload tasks to both already existing tasks and new ones.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ctrl-q-task-import-2.png&#34; alt=&#34;Reload tasks should be created in Qlik Sense&#34; title=&#34;Reload tasks should be created in Qlik Sense&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ctrl-q.ptarmiganlabs.com/img/ctrl-q-task-import-2.png&#34; alt=&#34;Reload tasks should be created in Qlik Sense&#34; title=&#34;Reload tasks should be created in Qlik Sense&#34;&gt;&lt;/p&gt;
 
       </description>
     </item>

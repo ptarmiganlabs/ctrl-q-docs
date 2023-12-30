@@ -95,7 +95,7 @@ Such retries are clearly shown in the Ctrl-Q logs.&lt;/p&gt;
 &lt;p&gt;The Excel file with definitions on what QVF files should be imported, what the apps should be named etc looks like this:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/img/ctrl-q-app-import-1.png&#34; alt=&#34;QVF app files that should be imported into Qlik Sense&#34; title=&#34;QVF app files that should be imported into Qlik Sense&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The available columns in the Excel file are the same as when importing apps as part of task import.&lt;br&gt;
-The columns are described &lt;a href=&#34;#source-file-columns-for-app-import-definitions&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+The columns are described on the &lt;a href=&#34;http://localhost:1313/docs/command/import/task/#source-file-columns-for-app-import-definitions&#34;&gt;page describing app importing as part of task imports&lt;/a&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;NOTE: A sample defintions Excel file is &lt;a href=&#34;https://github.com/ptarmiganlabs/ctrl-q/blob/main/testdata/tasks.xlsx?raw=true&#34;&gt;available in the GitHub repository&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;

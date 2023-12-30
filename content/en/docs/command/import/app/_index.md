@@ -89,7 +89,7 @@ The Excel file with definitions on what QVF files should be imported, what the a
 ![QVF app files that should be imported into Qlik Sense](/img/ctrl-q-app-import-1.png "QVF app files that should be imported into Qlik Sense")
 
 The available columns in the Excel file are the same as when importing apps as part of task import.  
-The columns are described [here](#source-file-columns-for-app-import-definitions).
+The columns are described on the [page describing app importing as part of task imports](http://localhost:1313/docs/command/import/task/#source-file-columns-for-app-import-definitions).
 
 > NOTE: A sample defintions Excel file is [available in the GitHub repository](https://github.com/ptarmiganlabs/ctrl-q/blob/main/testdata/tasks.xlsx?raw=true).
 

@@ -20,18 +20,18 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Authentication with Sense | Ctrl-Q</title>
-<meta name="description" content="Authentication with Qlik Sense.
+<meta name="description" content="Authentication with client-managed Qlik Sense Enterprise can be done in two ways: certificates and JWTs. 
 ">
 <meta property="og:title" content="Authentication with Sense" />
-<meta property="og:description" content="Authentication with Qlik Sense.
+<meta property="og:description" content="Authentication with client-managed Qlik Sense Enterprise can be done in two ways: certificates and JWTs. 
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://ctrl-q.ptarmiganlabs.com/docs/getting-started/qseow-auth/" /><meta property="og:site_name" content="Ctrl-Q" />
 
 <meta itemprop="name" content="Authentication with Sense">
-<meta itemprop="description" content="Authentication with Qlik Sense.
+<meta itemprop="description" content="Authentication with client-managed Qlik Sense Enterprise can be done in two ways: certificates and JWTs. 
 "><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Authentication with Sense"/>
-<meta name="twitter:description" content="Authentication with Qlik Sense.
+<meta name="twitter:description" content="Authentication with client-managed Qlik Sense Enterprise can be done in two ways: certificates and JWTs. 
 "/>
 
 
@@ -90,7 +90,7 @@ This is the multi-page printable view of this section.
 
 
 <h1 class="title">Authentication with Sense</h1>
-<div class="lead">Authentication with Qlik Sense.</div>
+<div class="lead">Authentication with client-managed Qlik Sense Enterprise can be done in two ways: certificates and JWTs.</div>
 
 
 
@@ -109,8 +109,9 @@ This is the multi-page printable view of this section.
 
 <div class="content">
       <h2 id="certificates">Certificates</h2>
-<p>Ctrl-Q will authenticate with Sense using certificates.<br>
-These certificates are <a href="https://help.qlik.com/en-US/sense-admin/May2023/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Administer_QSEoW/Managing_QSEoW/export-certificates.htm">exported from the QMC</a> and stored on disk in PEM format.</p>
+<p>If the <code>--auth-type</code> option is set to <code>cert</code>, Ctrl-Q will authenticate with Qlik Sense Enterprise using certificates.<br>
+This is the default authentication method that will be used if no <code>--auth-type</code> option is specified.</p>
+<p>These certificates are <a href="https://help.qlik.com/en-US/sense-admin/May2023/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Administer_QSEoW/Managing_QSEoW/export-certificates.htm">exported from the QMC</a> and stored on disk in PEM format.</p>
 <p>Ctrl-Q can reference these certificates in two ways:</p>
 <ol>
 <li>if the <code>--auth-cert-file</code> and <code>auth-cert-key-file</code> options are used, Ctrl-Q will read the certificates from the disk files pointed to by those options.
@@ -121,6 +122,25 @@ These certificates are <a href="https://help.qlik.com/en-US/sense-admin/May2023/
 <li>If the options above are <em>not</em> specified when Ctrl-Q is started, it will look for certificates in the <code>config</code> folder in the same folder as the Ctrl-Q executable. The certificate files must be named <code>client.pem</code>, <code>client_key.pem</code> and <code>root.pem</code>.</li>
 </ol>
 <p>The options <code>--auth-user-dir</code> and <code>-auth-user-id</code> are also needed to authenticate with Sense. They define which user will be used when interacting with both the engine and repository APIs.</p>
+<h2 id="jwts">JWTs</h2>
+<p>If the <code>--auth-type</code> option is set to <code>jwt</code>, Ctrl-Q will authenticate with Qlik Sense Enterprise using JWTs.</p>
+<p>JWTs - JSON Web Tokens - are a standard way of authenticating with web services, where a token is issued by an authentication service and then used to authenticate with other services.<br>
+JWTs contain a number of claims, including the user ID, which is used to identify the user.</p>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">💡 Remember</h4>
+
+    <p>JWTs are essentially full credentials in a single file.<br>
+I.e. anyone with a JWT can authenticate with Sense as the user that the JWT was issued for.</p>
+<p>Treat JWTs as you would any other credentials (e.g. passwords etc).</p>
+
+
+</div>
+
+<p>When Ctrl-Q is started with <code>--auth-type</code> option set to <code>jwt</code>, it will then look for an option called <code>--auth-jwt</code>.<br>
+Pass in the JWT as the value of this option, and Ctrl-Q will use it to authenticate with Sense.<br>
+Embed the JWT in double quotes if it contains special characters (e.g. spaces).</p>
 
 </div>
 </div>
@@ -191,7 +211,7 @@ These certificates are <a href="https://help.qlik.com/en-US/sense-admin/May2023/
         
       </div>
       <div class="td-footer__copyright-etc col-12 col-sm-4 text-center py-2 order-sm-2">
-        <span>&copy; 2023 Ptarmigan Labs AB All Rights Reserved</span>
+        <span>&copy; 2024 Ptarmigan Labs AB All Rights Reserved</span>
         <span class="ms-1"><a href="https://ptarmiganlabs.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></span>
         <p class="td-footer__about mt-2"><a href="/about/">About Ctrl-Q</a></p>
       </div>

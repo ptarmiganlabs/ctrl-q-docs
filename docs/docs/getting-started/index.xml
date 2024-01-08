@@ -77,8 +77,9 @@ A warning may still be shown first time the app is started. This is expected and
         
         
         &lt;h2 id=&#34;certificates&#34;&gt;Certificates&lt;/h2&gt;
-&lt;p&gt;Ctrl-Q will authenticate with Sense using certificates.&lt;br&gt;
-These certificates are &lt;a href=&#34;https://help.qlik.com/en-US/sense-admin/May2023/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Administer_QSEoW/Managing_QSEoW/export-certificates.htm&#34;&gt;exported from the QMC&lt;/a&gt; and stored on disk in PEM format.&lt;/p&gt;
+&lt;p&gt;If the &lt;code&gt;--auth-type&lt;/code&gt; option is set to &lt;code&gt;cert&lt;/code&gt;, Ctrl-Q will authenticate with Qlik Sense Enterprise using certificates.&lt;br&gt;
+This is the default authentication method that will be used if no &lt;code&gt;--auth-type&lt;/code&gt; option is specified.&lt;/p&gt;
+&lt;p&gt;These certificates are &lt;a href=&#34;https://help.qlik.com/en-US/sense-admin/May2023/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Administer_QSEoW/Managing_QSEoW/export-certificates.htm&#34;&gt;exported from the QMC&lt;/a&gt; and stored on disk in PEM format.&lt;/p&gt;
 &lt;p&gt;Ctrl-Q can reference these certificates in two ways:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;if the &lt;code&gt;--auth-cert-file&lt;/code&gt; and &lt;code&gt;auth-cert-key-file&lt;/code&gt; options are used, Ctrl-Q will read the certificates from the disk files pointed to by those options.
@@ -89,6 +90,25 @@ These certificates are &lt;a href=&#34;https://help.qlik.com/en-US/sense-admin/M
 &lt;li&gt;If the options above are &lt;em&gt;not&lt;/em&gt; specified when Ctrl-Q is started, it will look for certificates in the &lt;code&gt;config&lt;/code&gt; folder in the same folder as the Ctrl-Q executable. The certificate files must be named &lt;code&gt;client.pem&lt;/code&gt;, &lt;code&gt;client_key.pem&lt;/code&gt; and &lt;code&gt;root.pem&lt;/code&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;The options &lt;code&gt;--auth-user-dir&lt;/code&gt; and &lt;code&gt;-auth-user-id&lt;/code&gt; are also needed to authenticate with Sense. They define which user will be used when interacting with both the engine and repository APIs.&lt;/p&gt;
+&lt;h2 id=&#34;jwts&#34;&gt;JWTs&lt;/h2&gt;
+&lt;p&gt;If the &lt;code&gt;--auth-type&lt;/code&gt; option is set to &lt;code&gt;jwt&lt;/code&gt;, Ctrl-Q will authenticate with Qlik Sense Enterprise using JWTs.&lt;/p&gt;
+&lt;p&gt;JWTs - JSON Web Tokens - are a standard way of authenticating with web services, where a token is issued by an authentication service and then used to authenticate with other services.&lt;br&gt;
+JWTs contain a number of claims, including the user ID, which is used to identify the user.&lt;/p&gt;
+
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;💡 Remember&lt;/h4&gt;
+
+    &lt;p&gt;JWTs are essentially full credentials in a single file.&lt;br&gt;
+I.e. anyone with a JWT can authenticate with Sense as the user that the JWT was issued for.&lt;/p&gt;
+&lt;p&gt;Treat JWTs as you would any other credentials (e.g. passwords etc).&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+&lt;p&gt;When Ctrl-Q is started with &lt;code&gt;--auth-type&lt;/code&gt; option set to &lt;code&gt;jwt&lt;/code&gt;, it will then look for an option called &lt;code&gt;--auth-jwt&lt;/code&gt;.&lt;br&gt;
+Pass in the JWT as the value of this option, and Ctrl-Q will use it to authenticate with Sense.&lt;br&gt;
+Embed the JWT in double quotes if it contains special characters (e.g. spaces).&lt;/p&gt;
 
       </description>
     </item>

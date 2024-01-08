@@ -204,10 +204,10 @@ The only difference is that you don&amp;rsquo;t have to install a new command li
       <description>
         
         
-        &lt;p&gt;Many of Ctrl-Q&amp;rsquo;s commands will create, update or delete things in Sense.&lt;br&gt;
-As long as you have specified the correct parameters that&amp;rsquo;s all good - but there is also the risk of using incorrect parameters or filters, causing too many (or too few or the wrong ones) resources in Sense to be affected.&lt;/p&gt;
+        &lt;p&gt;Many of Ctrl-Q&amp;rsquo;s commands will create, update or delete things in Sense.&lt;/p&gt;
+&lt;p&gt;As long as you have specified the correct parameters that&amp;rsquo;s all good - but there is also the risk of using incorrect parameters or filters, causing too many (or too few or the wrong) resources in Sense to be affected.&lt;/p&gt;
 &lt;p&gt;Most Ctrl-Q commands that change things in Sense have a &lt;code&gt;--dry-run&lt;/code&gt; option.&lt;br&gt;
-If it is used, Ctrl-Q will not make any changes in Sense, but instead only show what &lt;em&gt;would&lt;/em&gt; happen.&lt;/p&gt;
+If used, Ctrl-Q will not make any changes in Sense, but instead only show what &lt;em&gt;would&lt;/em&gt; happen.&lt;/p&gt;
 &lt;p&gt;It&amp;rsquo;s thus a &lt;em&gt;very&lt;/em&gt; good idea to first do a dry run of the intended command, verify that the correct things would happen and then finally do a real execution of the desired Ctrl-Q command.&lt;/p&gt;
 &lt;p&gt;Might take a bit of extra time, but better safe than sorry.&lt;/p&gt;
 

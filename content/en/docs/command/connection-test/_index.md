@@ -12,7 +12,7 @@ This is a placeholder page that shows you how to use this template site.
 
 *Page contents:*
 
-- [Set custom property of reload task](#set-custom-property-of-reload-task)
+- [Test connection to Qlik Sense server](#test-connection-to-qlik-sense-server)
 
 ---
 
@@ -25,9 +25,9 @@ To rule out any connection issues between the machine running Ctrl-Q and the Qli
 Here that command is executed using certificate authentication, using the default certificates, port (for connecting to QRS using certificates) and virtual proxy.
 
 ```powershell
-.\ctrl-q.exe connection-test ``
---host 192.168.100.109 ``
---auth-user-dir LAB ``
+.\ctrl-q.exe connection-test `
+--host 192.168.100.109 `
+--auth-user-dir LAB `
 --auth-user-id goran
 ```
 

@@ -1236,16 +1236,16 @@ If used, Ctrl-Q will not make any changes in Sense, but instead only show what <
  -->
 <p><em>Page contents:</em></p>
 <ul>
-<li><a href="#set-custom-property-of-reload-task">Set custom property of reload task</a></li>
+<li><a href="#test-connection-to-qlik-sense-server">Test connection to Qlik Sense server</a></li>
 </ul>
 <hr>
 <h2 id="test-connection-to-qlik-sense-server">Test connection to Qlik Sense server</h2>
 <p>Some of the Ctrl-Q commands are rather complex and it can be difficult to figure out what is wrong if the command fails.</p>
 <p>To rule out any connection issues between the machine running Ctrl-Q and the Qlik Sense server it is possible to run the <code>connection-test</code> command.</p>
 <p>Here that command is executed using certificate authentication, using the default certificates, port (for connecting to QRS using certificates) and virtual proxy.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">connection-test</span> <span style="color:#000;font-weight:bold">``</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#0000cf;font-weight:bold">192.168</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">100</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">109</span> <span style="color:#000;font-weight:bold">``</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">``</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">connection-test</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#0000cf;font-weight:bold">192.168</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">100</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">109</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span>
 </span></span></code></pre></div><pre tabindex="0"><code>2023-11-20T18:00:06.727Z info: -----------------------------------------------------------
 2023-11-20T18:00:06.729Z info: | Ctrl-Q

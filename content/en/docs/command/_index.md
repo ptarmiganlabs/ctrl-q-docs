@@ -50,8 +50,8 @@ Commands:
   master-item-measure-delete [options]  delete master measure(s)
   master-item-measure-get [options]     get info about one or more master measures
   script-get [options]                  get script from Qlik Sense app
-  sessions-delete [options]             delete proxy session(s) on a specific virtual proxy and proxy service
-  sessions-get [options]                get info about proxy sessions on one or more virtual proxies
+  session-delete [options]             delete proxy session(s) on a specific virtual proxy and proxy service
+  session-get [options]                get info about proxy sessions on one or more virtual proxies
   task-custom-property-set [options]    update a custom property of one or more tasks
   task-get [options]                    get info about one or more tasks
   task-import [options]                 create tasks based on definitions in a file on disk, optionally also importing apps from QVF files.

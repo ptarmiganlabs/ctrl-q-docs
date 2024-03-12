@@ -37,7 +37,7 @@ The command for the most basic task tree is
 ```powershell
 .\ctrl-q.exe task-get `
 --auth-type cert `
---host 192.168.100.109 `
+--host pro2-win1.lab.ptarmiganlabs.net `
 --auth-user-dir LAB `
 --auth-user-id goran `
 --output-format tree `
@@ -52,7 +52,7 @@ Note: the `task-get` command has lots of options, these are described in more de
 ```powershell
 .\ctrl-q.exe task-get `
 --auth-type cert `
---host 192.168.100.109 `
+--host pro2-win1.lab.ptarmiganlabs.net `
 --auth-user-dir LAB `
 --auth-user-id goran `
 --output-format tree `
@@ -72,7 +72,7 @@ Thanks to Windows Terminal handling text coloring and emojis we can add a couple
 ```powershell
 .\ctrl-q.exe task-get `
 --auth-type cert `
---host 192.168.100.109 `
+--host pro2-win1.lab.ptarmiganlabs.net `
 --auth-user-dir LAB `
 --auth-user-id goran `
 --output-format tree `
@@ -88,7 +88,7 @@ Adding `--tree-details` gives us a tree that's a lot easier to read compared to 
 ```powershell
 .\ctrl-q.exe task-get `
 --auth-type cert `
---host 192.168.100.109 `
+--host pro2-win1.lab.ptarmiganlabs.net `
 --auth-user-dir LAB `
 --auth-user-id goran `
 --output-format tree `

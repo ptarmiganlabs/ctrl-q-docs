@@ -256,9 +256,7 @@ Existing custom property values are preserved (i.e. the new values are appended 
 If a task already has values for this custom property new values will be added without asking first (<code>--overwrite</code> option)</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">task-custom</span><span style="color:#000">-property-set</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#0000cf;font-weight:bold">192.168</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">100</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">109</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-cert</span><span style="color:#ce5c00;font-weight:bold">-file</span> <span style="color:#000;font-weight:bold">./</span><span style="color:#000">cert</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">client</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-cert-key</span><span style="color:#ce5c00;font-weight:bold">-file</span> <span style="color:#000;font-weight:bold">./</span><span style="color:#000">cert</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">client_key</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#204a87">pro2-win1</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">lab</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ptarmiganlabs</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">net</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-task-id</span> <span style="color:#000">82bc3e66-c899</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">4e44</span><span style="color:#000">-b52f</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">552145da5ee0</span> <span style="color:#000">5748afa9</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">3abe</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">43ab-bb1f</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">127c48ced075</span> <span style="color:#0000cf;font-weight:bold">5520e710</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">91ad</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">41d2-aeb6</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">434cafbf366b</span> <span style="color:#000;font-weight:bold">`</span>
@@ -267,51 +265,46 @@ If a task already has values for this custom property new values will be added w
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-custom-property-value</span> <span style="color:#000">Finance</span> <span style="color:#000">Sales</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-overwrite</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-update-mode</span> <span style="color:#000">append</span>
-</span></span></code></pre></div><pre tabindex="0"><code>2023-11-19T19:24:46.202Z info: -----------------------------------------------------------
-2023-11-19T19:24:46.202Z info: | Ctrl-Q
-2023-11-19T19:24:46.202Z info: |
-2023-11-19T19:24:46.202Z info: | Version      : 3.14.0
-2023-11-19T19:24:46.202Z info: | Log level    : info
-2023-11-19T19:24:46.202Z info: |
-2023-11-19T19:24:46.202Z info: | Command      : task-custom-property-set
-2023-11-19T19:24:46.202Z info: |              : update a custom property of one or more tasks
-2023-11-19T19:24:46.217Z info: |
-2023-11-19T19:24:46.217Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
-2023-11-19T19:24:46.217Z info: |
-2023-11-19T19:24:46.217Z info: | https://github.com/ptarmiganlabs/ctrl-q
-2023-11-19T19:24:46.217Z info: ----------------------------------------------------------
-2023-11-19T19:24:46.217Z info:
-2023-11-19T19:24:46.468Z info: Number of tasks that will be updated: 5
-2023-11-19T19:24:46.468Z info:
-2023-11-19T19:24:46.468Z info: -----------------------------------------------------------
-2023-11-19T19:24:46.468Z info: Processing task &#34;Reload Operations Monitor&#34; with ID=fbf645f0-0c92-40a4-af9a-6e3eb1d3c35c
-2023-11-19T19:24:46.468Z info: Starting updating custom property &#34;Department&#34; of task &#34;Reload Operations Monitor&#34; with ID=fbf645f0-0c92-40a4-af9a-6e3eb1d3c35c
-2023-11-19T19:24:50.030Z info:
-2023-11-19T19:24:50.233Z info:    ...Custom property &#34;Department&#34; on task &#34;Reload Operations Monitor&#34; successfully updated.
-2023-11-19T19:24:50.233Z info:
-2023-11-19T19:24:50.233Z info: -----------------------------------------------------------
-2023-11-19T19:24:50.233Z info: Processing task &#34;Reload of Test data - Seattle library checkouts &amp; collection inventory&#34; with ID=5520e710-91ad-41d2-aeb6-434cafbf366b
-2023-11-19T19:24:50.233Z info: Starting updating custom property &#34;Department&#34; of task &#34;Reload of Test data - Seattle library checkouts &amp; collection inventory&#34; with ID=5520e710-91ad-41d2-aeb6-434cafbf366b
-2023-11-19T19:24:51.734Z info:
-2023-11-19T19:24:51.858Z info:    ...Custom property &#34;Department&#34; on task &#34;Reload of Test data - Seattle library checkouts &amp; collection inventory&#34; successfully updated.
-2023-11-19T19:24:51.858Z info:
-2023-11-19T19:24:51.858Z info: -----------------------------------------------------------
-2023-11-19T19:24:51.858Z info: Processing task &#34;Reload task of App ageing&#34; with ID=5217e6b2-65ce-4535-ad2a-37b62e66d12c
-2023-11-19T19:24:51.858Z info: Starting updating custom property &#34;Department&#34; of task &#34;Reload task of App ageing&#34; with ID=5217e6b2-65ce-4535-ad2a-37b62e66d12c
-2023-11-19T19:24:52.796Z info:
-2023-11-19T19:24:52.905Z info:    ...Custom property &#34;Department&#34; on task &#34;Reload task of App ageing&#34; successfully updated.
-2023-11-19T19:24:52.905Z info:
-2023-11-19T19:24:52.920Z info: -----------------------------------------------------------
-2023-11-19T19:24:52.920Z info: Processing task &#34;Reload of Test data - Seattle checkouts by title3&#34; with ID=82bc3e66-c899-4e44-b52f-552145da5ee0
-2023-11-19T19:24:52.920Z info: Starting updating custom property &#34;Department&#34; of task &#34;Reload of Test data - Seattle checkouts by title3&#34; with ID=82bc3e66-c899-4e44-b52f-552145da5ee0
-2023-11-19T19:24:53.827Z info:
-2023-11-19T19:24:53.952Z info:    ...Custom property &#34;Department&#34; on task &#34;Reload of Test data - Seattle checkouts by title3&#34; successfully updated.
-2023-11-19T19:24:53.952Z info:
-2023-11-19T19:24:53.952Z info: -----------------------------------------------------------
-2023-11-19T19:24:53.952Z info: Processing task &#34;Reload task of Lab 1_1&#34; with ID=5748afa9-3abe-43ab-bb1f-127c48ced075
-2023-11-19T19:24:53.952Z info: Starting updating custom property &#34;Department&#34; of task &#34;Reload task of Lab 1_1&#34; with ID=5748afa9-3abe-43ab-bb1f-127c48ced075
-2023-11-19T19:24:54.890Z info:
-2023-11-19T19:24:54.983Z info:    ...Custom property &#34;Department&#34; on task &#34;Reload task of Lab 1_1&#34; successfully updated.
+</span></span></code></pre></div><pre tabindex="0"><code>2024-03-12T08:36:20.324Z info: -----------------------------------------------------------
+2024-03-12T08:36:20.324Z info: | Ctrl-Q
+2024-03-12T08:36:20.324Z info: |
+2024-03-12T08:36:20.324Z info: | Version      : 3.16.0
+2024-03-12T08:36:20.324Z info: | Log level    : info
+2024-03-12T08:36:20.324Z info: |
+2024-03-12T08:36:20.324Z info: | Command      : task-custom-property-set
+2024-03-12T08:36:20.324Z info: |              : update a custom property of one or more tasks
+2024-03-12T08:36:20.324Z info: |
+2024-03-12T08:36:20.324Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+2024-03-12T08:36:20.324Z info: |
+2024-03-12T08:36:20.324Z info: | https://github.com/ptarmiganlabs/ctrl-q
+2024-03-12T08:36:20.324Z info: ----------------------------------------------------------
+2024-03-12T08:36:20.324Z info:
+2024-03-12T08:36:20.699Z info: Number of tasks that will be updated: 5
+2024-03-12T08:36:20.699Z info:
+2024-03-12T08:36:20.699Z info: -----------------------------------------------------------
+2024-03-12T08:36:20.699Z info: Processing task &#34;Reload of Test data - Seattle checkouts by title3&#34; with ID=82bc3e66-c899-4e44-b52f-552145da5ee0
+2024-03-12T08:36:20.699Z info: Starting updating custom property &#34;Department&#34; of task &#34;Reload of Test data - Seattle checkouts by title3&#34; with ID=82bc3e66-c899-4e44-b52f-552145da5ee0
+2024-03-12T08:36:21.013Z info:    ...Custom property &#34;Department&#34; on task &#34;Reload of Test data - Seattle checkouts by title3&#34; successfully updated.
+2024-03-12T08:36:21.013Z info:
+2024-03-12T08:36:21.013Z info: -----------------------------------------------------------
+2024-03-12T08:36:21.013Z info: Processing task &#34;Reload task of Lab 1_1&#34; with ID=5748afa9-3abe-43ab-bb1f-127c48ced075
+2024-03-12T08:36:21.013Z info: Starting updating custom property &#34;Department&#34; of task &#34;Reload task of Lab 1_1&#34; with ID=5748afa9-3abe-43ab-bb1f-127c48ced075
+2024-03-12T08:36:21.235Z info:    ...Custom property &#34;Department&#34; on task &#34;Reload task of Lab 1_1&#34; successfully updated.
+2024-03-12T08:36:21.235Z info:
+2024-03-12T08:36:21.235Z info: -----------------------------------------------------------
+2024-03-12T08:36:21.235Z info: Processing task &#34;Reload of Test data - Seattle library checkouts &amp; collection inventory&#34; with ID=5520e710-91ad-41d2-aeb6-434cafbf366b
+2024-03-12T08:36:21.235Z info: Starting updating custom property &#34;Department&#34; of task &#34;Reload of Test data - Seattle library checkouts &amp; collection inventory&#34; with ID=5520e710-91ad-41d2-aeb6-434cafbf366b
+2024-03-12T08:36:21.427Z info:    ...Custom property &#34;Department&#34; on task &#34;Reload of Test data - Seattle library checkouts &amp; collection inventory&#34; successfully updated.
+2024-03-12T08:36:21.427Z info:
+2024-03-12T08:36:21.427Z info: -----------------------------------------------------------
+2024-03-12T08:36:21.427Z info: Processing task &#34;Reload Operations Monitor&#34; with ID=fbf645f0-0c92-40a4-af9a-6e3eb1d3c35c
+2024-03-12T08:36:21.427Z info: Starting updating custom property &#34;Department&#34; of task &#34;Reload Operations Monitor&#34; with ID=fbf645f0-0c92-40a4-af9a-6e3eb1d3c35c
+2024-03-12T08:36:21.629Z info:    ...Custom property &#34;Department&#34; on task &#34;Reload Operations Monitor&#34; successfully updated.
+2024-03-12T08:36:21.629Z info:
+2024-03-12T08:36:21.629Z info: -----------------------------------------------------------
+2024-03-12T08:36:21.629Z info: Processing task &#34;Reload task of App ageing&#34; with ID=5217e6b2-65ce-4535-ad2a-37b62e66d12c
+2024-03-12T08:36:21.629Z info: Starting updating custom property &#34;Department&#34; of task &#34;Reload task of App ageing&#34; with ID=5217e6b2-65ce-4535-ad2a-37b62e66d12c
+2024-03-12T08:36:21.832Z info:    ...Custom property &#34;Department&#34; on task &#34;Reload task of App ageing&#34; successfully updated.
 </code></pre>
   <div class="section-index">
     

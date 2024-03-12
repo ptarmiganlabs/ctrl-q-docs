@@ -36,23 +36,24 @@ The command options are
 ```
 
 ```text
-Usage: build app-export [options]
+Usage: ctrl-q app-export [options]
 
 export Qlik Sense apps to QVF files on disk.
 
 Options:
   --log-level <level>                log level (choices: "error", "warn", "info", "verbose", "debug", "silly", default: "info")
   --host <host>                      Qlik Sense server IP/FQDN
-  --port <port>                      Qlik Sense server engine port (default: "4242")
+  --port <port>                      Qlik Sense repository service (QRS) port (usually 4242 for cert auth, 443 for jwt auth) (default: "4242")
   --schema-version <string>          Qlik Sense engine schema version (default: "12.612.0")
   --virtual-proxy <prefix>           Qlik Sense virtual proxy prefix (default: "")
-  --secure <true|false>              connection to Qlik Sense engine is via https (default: true)
+  --secure <true|false>              https connection to Qlik Sense must use correct certificate. Invalid certificates will result in rejected/failed connection. (default: true)
   --auth-user-dir <directory>        user directory for user to connect with
   --auth-user-id <userid>            user ID for user to connect with
-  -a, --auth-type <type>             authentication type (choices: "cert", default: "cert")
+  -a, --auth-type <type>             authentication type (choices: "cert", "jwt", default: "cert")
   --auth-cert-file <file>            Qlik Sense certificate file (exported from QMC) (default: "./cert/client.pem")
   --auth-cert-key-file <file>        Qlik Sense certificate key file (exported from QMC) (default: "./cert/client_key.pem")
   --auth-root-cert-file <file>       Qlik Sense root certificate file (exported from QMC) (default: "./cert/root.pem")
+  --auth-jwt <jwt>                   JSON Web Token (JWT) to use for authentication with Qlik Sense server
   --app-id <ids...>                  use app IDs to select which apps to export
   --app-tag <tags...>                use app tags to select which apps to export
   --output-dir <directory>           relative or absolut path in which QVF files should be stored. (default: "qvf-export")
@@ -77,13 +78,15 @@ The next example will
 - The name of the QVF files will be `<app name>_<exportdate>.qvf`.
 - QVF files will be stored in a subdirectory `qvf-export`.
 - An Excel file will be created, containing select metadata about the apps.
+- The certificate files are specifically named in the command, and are stored in a subdirectory `cert`.
 
 ```powershell
 .\ctrl-q.exe app-export `
 --auth-type cert `
---host 192.168.100.109 `
+--host pro2-win1.lab.ptarmiganlabs.net `
 --auth-cert-file ./cert/client.pem `
 --auth-cert-key-file ./cert/client_key.pem `
+--auth-root-cert-file ./cert/root.pem `
 --auth-user-dir LAB `
 --auth-user-id goran `
 --output-dir qvf-export `
@@ -96,51 +99,54 @@ The next example will
 ```
 
 ```text
-2023-11-19T19:29:45.655Z info: -----------------------------------------------------------
-2023-11-19T19:29:45.655Z info: | Ctrl-Q
-2023-11-19T19:29:45.669Z info: |
-2023-11-19T19:29:45.669Z info: | Version      : 3.14.0
-2023-11-19T19:29:45.669Z info: | Log level    : info
-2023-11-19T19:29:45.669Z info: |
-2023-11-19T19:29:45.669Z info: | Command      : app-export
-2023-11-19T19:29:45.669Z info: |              : export Qlik Sense apps to QVF files on disk.
-2023-11-19T19:29:45.669Z info: |
-2023-11-19T19:29:45.669Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
-2023-11-19T19:29:45.669Z info: |
-2023-11-19T19:29:45.669Z info: | https://github.com/ptarmiganlabs/ctrl-q
-2023-11-19T19:29:45.669Z info: ----------------------------------------------------------
-2023-11-19T19:29:45.669Z info:
-2023-11-19T19:29:45.669Z info: Export apps to directory "C:/tools/ctrl-q/qvf-export"
-2023-11-19T19:29:45.779Z info: Number of apps to export: 8
-2023-11-19T19:29:46.233Z info: ------------------------------------
-2023-11-19T19:29:46.233Z info: App [eb3ab049-d007-43d3-93da-5962f9208c65] "User retention.qvf", download starting
-2023-11-19T19:29:46.341Z info: ✅ App [eb3ab049-d007-43d3-93da-5962f9208c65] "User retention.qvf", download complete. Size=360448 bytes
-2023-11-19T19:29:48.029Z info: ------------------------------------
-2023-11-19T19:29:48.029Z info: App [2933711d-6638-41d4-a2d2-6dd2d965208b] "Ctrl-Q CLI.qvf", download starting
-2023-11-19T19:29:48.169Z info: ✅ App [2933711d-6638-41d4-a2d2-6dd2d965208b] "Ctrl-Q CLI.qvf", download complete. Size=524288 bytes
-2023-11-19T19:29:49.670Z info: ------------------------------------
-2023-11-19T19:29:49.670Z info: App [e9d2f9b2-b598-480e-b84f-4c5d34467f6f] "Performance review_2022-03-28.qvf", download starting
-2023-11-19T19:29:49.794Z info: ✅ App [e9d2f9b2-b598-480e-b84f-4c5d34467f6f] "Performance review_2022-03-28.qvf", download complete. Size=327680 bytes
-2023-11-19T19:29:51.295Z info: ------------------------------------
-2023-11-19T19:29:51.295Z info: App [5733046b-df34-4989-bd33-56cde5ff779d] "App 2.qvf", download starting
-2023-11-19T19:29:51.388Z info: ✅ App [5733046b-df34-4989-bd33-56cde5ff779d] "App 2.qvf", download complete. Size=245760 bytes
-2023-11-19T19:29:52.889Z info: ------------------------------------
-2023-11-19T19:29:52.889Z info: App [deba4bcf-47e4-472e-97b2-4fe8d6498e11] "Always failing reload (no delay).qvf", download starting
-2023-11-19T19:29:52.966Z info: ✅ App [deba4bcf-47e4-472e-97b2-4fe8d6498e11] "Always failing reload (no delay).qvf", download complete. Size=180224 bytes
-2023-11-19T19:29:54.561Z info: ------------------------------------
-2023-11-19T19:29:54.561Z info: App [88e29ab1-967a-4c03-99d0-b92d631f57aa] "App 1.qvf", download starting
-2023-11-19T19:29:54.669Z info: ✅ App [88e29ab1-967a-4c03-99d0-b92d631f57aa] "App 1.qvf", download complete. Size=245760 bytes
-2023-11-19T19:29:56.201Z info:
-                                  Destination file "C:\tools\ctrl-q\qvf-export\App 1_2023-11-19.qvf" exists. Do you want to overwrite it? (y/n) y
-2023-11-19T19:30:03.591Z info:
-2023-11-19T19:30:03.591Z info: ------------------------------------
-2023-11-19T19:30:03.591Z info: App [d7dc3005-e9bb-408c-b9d8-47997c720ddf] "App 1.qvf", download starting
-2023-11-19T19:30:03.685Z info: ✅ App [d7dc3005-e9bb-408c-b9d8-47997c720ddf] "App 1.qvf", download complete. Size=245760 bytes
-2023-11-19T19:30:05.216Z info: ------------------------------------
-2023-11-19T19:30:05.216Z info: App [5d3c8750-f09b-464c-a1ae-849fe8b0deb0] "App 3.qvf", download starting
-2023-11-19T19:30:05.310Z info: ✅ App [5d3c8750-f09b-464c-a1ae-849fe8b0deb0] "App 3.qvf", download complete. Size=245760 bytes
-2023-11-19T19:30:06.327Z info: ------------------------------------
-2023-11-19T19:30:06.342Z info: ✅ Done writing app metadata file "app_export.xlsx" to disk
+2024-03-12T09:26:45.165Z info: -----------------------------------------------------------
+2024-03-12T09:26:45.165Z info: | Ctrl-Q
+2024-03-12T09:26:45.165Z info: |
+2024-03-12T09:26:45.165Z info: | Version      : 3.16.0
+2024-03-12T09:26:45.165Z info: | Log level    : info
+2024-03-12T09:26:45.165Z info: |
+2024-03-12T09:26:45.165Z info: | Command      : app-export
+2024-03-12T09:26:45.165Z info: |              : export Qlik Sense apps to QVF files on disk.
+2024-03-12T09:26:45.165Z info: |
+2024-03-12T09:26:45.165Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
+2024-03-12T09:26:45.165Z info: |
+2024-03-12T09:26:45.165Z info: | https://github.com/ptarmiganlabs/ctrl-q
+2024-03-12T09:26:45.165Z info: ----------------------------------------------------------
+2024-03-12T09:26:45.165Z info:
+2024-03-12T09:26:45.180Z info: Export apps to directory "C:/tools/ctrl-q/qvf-export"
+2024-03-12T09:26:45.352Z info: Number of apps to export: 8
+2024-03-12T09:26:45.930Z info: ------------------------------------
+2024-03-12T09:26:45.930Z info: App [eb3ab049-d007-43d3-93da-5962f9208c65] "User retention.qvf", download starting
+2024-03-12T09:26:47.118Z info: ✅ App [eb3ab049-d007-43d3-93da-5962f9208c65] "User retention.qvf", download complete. Size=360448 bytes
+2024-03-12T09:26:48.946Z info: ------------------------------------
+2024-03-12T09:26:48.946Z info: App [2933711d-6638-41d4-a2d2-6dd2d965208b] "Ctrl-Q CLI.qvf", download starting
+2024-03-12T09:26:49.430Z info: ✅ App [2933711d-6638-41d4-a2d2-6dd2d965208b] "Ctrl-Q CLI.qvf", download complete. Size=720896 bytes
+2024-03-12T09:26:51.002Z info: ------------------------------------
+2024-03-12T09:26:51.002Z info: App [e9d2f9b2-b598-480e-b84f-4c5d34467f6f] "Performance review_2022-03-28.qvf", download starting
+2024-03-12T09:26:51.268Z info: ✅ App [e9d2f9b2-b598-480e-b84f-4c5d34467f6f] "Performance review_2022-03-28.qvf", download complete. Size=327680 bytes
+2024-03-12T09:26:52.867Z info: ------------------------------------
+2024-03-12T09:26:52.867Z info: App [5733046b-df34-4989-bd33-56cde5ff779d] "App 2.qvf", download starting
+2024-03-12T09:26:53.351Z info: ✅ App [5733046b-df34-4989-bd33-56cde5ff779d] "App 2.qvf", download complete. Size=245760 bytes
+2024-03-12T09:26:54.882Z info: ------------------------------------
+2024-03-12T09:26:54.882Z info: App [deba4bcf-47e4-472e-97b2-4fe8d6498e11] "Always failing reload (no delay).qvf", download starting
+2024-03-12T09:26:55.101Z info: ✅ App [deba4bcf-47e4-472e-97b2-4fe8d6498e11] "Always failing reload (no delay).qvf", download complete. Size=180224 bytes
+2024-03-12T09:26:56.695Z info:
+                                  Destination file "C:\tools\ctrl-q\qvf-export\App 2_2024-03-12.qvf" exists. Do you want to overwrite it? (y/n) y
+2024-03-12T09:27:09.320Z info:
+2024-03-12T09:27:09.320Z info: ------------------------------------
+2024-03-12T09:27:09.320Z info: App [4e96965a-ebc9-4572-ad71-35d6cc7dbb23] "App 2.qvf", download starting
+2024-03-12T09:27:09.554Z info: ✅ App [4e96965a-ebc9-4572-ad71-35d6cc7dbb23] "App 2.qvf", download complete. Size=245760 bytes
+2024-03-12T09:27:11.133Z info: ------------------------------------
+2024-03-12T09:27:11.133Z info: App [8272af5f-2677-459a-8d50-ee45a1c5a775] "App 1.qvf", download starting
+2024-03-12T09:27:11.339Z info: ✅ App [8272af5f-2677-459a-8d50-ee45a1c5a775] "App 1.qvf", download complete. Size=245760 bytes
+2024-03-12T09:27:12.898Z info:
+                                  Destination file "C:\tools\ctrl-q\qvf-export\App 1_2024-03-12.qvf" exists. Do you want to overwrite it? (y/n) y
+2024-03-12T09:27:13.835Z info:
+2024-03-12T09:27:13.835Z info: ------------------------------------
+2024-03-12T09:27:13.835Z info: App [6bf8f41f-31d0-40b0-9e59-95ec8839eb57] "App 1.qvf", download starting
+2024-03-12T09:27:14.054Z info: ✅ App [6bf8f41f-31d0-40b0-9e59-95ec8839eb57] "App 1.qvf", download complete. Size=245760 bytes
+2024-03-12T09:27:15.070Z info: ------------------------------------
+2024-03-12T09:27:15.085Z info: ✅ Done writing app metadata file "app_export.xlsx" to disk
 ```
 
 The `qvf-export` directory now contains these files:
@@ -150,19 +156,19 @@ dir .\qvf-export\
 ```
 
 ```powershell
+
     Directory: C:\tools\ctrl-q\qvf-export
 
 
 Mode                 LastWriteTime         Length Name
 ----                 -------------         ------ ----
--a----        19/11/2023     20:29         180224 Always failing reload (no delay)_2023-11-19.qvf
--a----        19/11/2023     20:30         245760 App 1_2023-11-19.qvf
--a----        19/11/2023     20:29         245760 App 2_2023-11-19.qvf
--a----        19/11/2023     20:30         245760 App 3_2023-11-19.qvf
--a----        19/11/2023     20:30          20150 app_export.xlsx
--a----        19/11/2023     20:29         524288 Ctrl-Q CLI_2023-11-19.qvf
--a----        19/11/2023     20:29         327680 Performance review_2022-03-28_2023-11-19.qvf
--a----        19/11/2023     20:29         360448 User retention_2023-11-19.qvf
+-a----        12/03/2024     10:26         180224 Always failing reload (no delay)_2024-03-12.qvf
+-a----        12/03/2024     10:27         245760 App 1_2024-03-12.qvf
+-a----        12/03/2024     10:27         245760 App 2_2024-03-12.qvf
+-a----        12/03/2024     10:27          20539 app_export.xlsx
+-a----        12/03/2024     10:26         720896 Ctrl-Q CLI_2024-03-12.qvf
+-a----        12/03/2024     10:26         327680 Performance review_2022-03-28_2024-03-12.qvf
+-a----        12/03/2024     10:26         360448 User retention_2024-03-12.qvf
 
 ```
 

@@ -34,23 +34,24 @@ The options are as follows:
 ```
 
 ```text
-Usage: build task-import [options]
+Usage: ctrl-q task-import [options]
 
 create tasks based on definitions in a file on disk, optionally also importing apps from QVF files.
 
 Options:
   --log-level <level>                log level (choices: "error", "warn", "info", "verbose", "debug", "silly", default: "info")
   --host <host>                      Qlik Sense server IP/FQDN
-  --port <port>                      Qlik Sense server engine port (default: "4242")
+  --port <port>                      Qlik Sense repository service (QRS) port (usually 4242 for cert auth, 443 for jwt auth) (default: "4242")
   --schema-version <string>          Qlik Sense engine schema version (default: "12.612.0")
   --virtual-proxy <prefix>           Qlik Sense virtual proxy prefix (default: "")
-  --secure <true|false>              connection to Qlik Sense engine is via https (default: true)
+  --secure <true|false>              https connection to Qlik Sense must use correct certificate. Invalid certificates will result in rejected/failed connection. (default: true)
   --auth-user-dir <directory>        user directory for user to connect with
   --auth-user-id <userid>            user ID for user to connect with
-  -a, --auth-type <type>             authentication type (choices: "cert", default: "cert")
+  -a, --auth-type <type>             authentication type (choices: "cert", "jwt", default: "cert")
   --auth-cert-file <file>            Qlik Sense certificate file (exported from QMC) (default: "./cert/client.pem")
   --auth-cert-key-file <file>        Qlik Sense certificate key file (exported from QMC) (default: "./cert/client_key.pem")
   --auth-root-cert-file <file>       Qlik Sense root certificate file (exported from QMC) (default: "./cert/root.pem")
+  --auth-jwt <jwt>                   JSON Web Token (JWT) to use for authentication with Qlik Sense server
   -t, --file-type <type>             source file type (choices: "excel", "csv", default: "excel")
   --file-name <filename>             file containing task definitions
   --sheet-name <name>                name of Excel sheet where task info is found
@@ -172,7 +173,7 @@ Export tasks to CSV file:
 ```powershell
 .\ctrl-q.exe task-get `
 --auth-type cert `
---host 192.168.100.109 `
+--host pro2-win1.lab.ptarmiganlabs.net `
 --auth-user-dir LAB `
 --auth-user-id goran `
 --output-format table `
@@ -182,23 +183,22 @@ Export tasks to CSV file:
 ```
 
 ```text
-2023-11-19T20:13:22.448Z info: -----------------------------------------------------------
-2023-11-19T20:13:22.448Z info: | Ctrl-Q
-2023-11-19T20:13:22.448Z info: |
-2023-11-19T20:13:22.448Z info: | Version      : 3.14.0
-2023-11-19T20:13:22.448Z info: | Log level    : info
-2023-11-19T20:13:22.448Z info: |
-2023-11-19T20:13:22.448Z info: | Command      : task-get
-2023-11-19T20:13:22.448Z info: |              : get info about one or more tasks
-2023-11-19T20:13:22.448Z info: |
-2023-11-19T20:13:22.448Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
-2023-11-19T20:13:22.448Z info: |
-2023-11-19T20:13:22.448Z info: | https://github.com/ptarmiganlabs/ctrl-q
-2023-11-19T20:13:22.448Z info: ----------------------------------------------------------
-2023-11-19T20:13:22.448Z info:
-2023-11-19T20:13:22.588Z info: Successfully retrieved 26 tags from QSEoW
-2023-11-19T20:13:26.401Z info:
-2023-11-19T20:13:26.401Z info: ✅ Writing task table to disk file "tasks.csv".
+2024-03-12T09:33:25.950Z info: -----------------------------------------------------------
+2024-03-12T09:33:25.950Z info: | Ctrl-Q
+2024-03-12T09:33:25.950Z info: |
+2024-03-12T09:33:25.950Z info: | Version      : 3.16.0
+2024-03-12T09:33:25.950Z info: | Log level    : info
+2024-03-12T09:33:25.950Z info: |
+2024-03-12T09:33:25.950Z info: | Command      : task-get
+2024-03-12T09:33:25.964Z info: |              : get info about one or more tasks
+2024-03-12T09:33:25.964Z info: |
+2024-03-12T09:33:25.964Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
+2024-03-12T09:33:25.964Z info: |
+2024-03-12T09:33:25.964Z info: | https://github.com/ptarmiganlabs/ctrl-q
+2024-03-12T09:33:25.964Z info: ----------------------------------------------------------
+2024-03-12T09:33:25.964Z info:
+2024-03-12T09:33:26.089Z info: Successfully retrieved 28 tags from QSEoW
+2024-03-12T09:33:27.918Z info: ✅ Writing task table to disk file "tasks.csv".
 ```
 
 Now let's import tasks from the `tasks.csv` file:
@@ -206,7 +206,7 @@ Now let's import tasks from the `tasks.csv` file:
 ```powershell
 .\ctrl-q.exe task-import `
 --auth-type cert `
---host 192.168.100.109 `
+--host pro2-win1.lab.ptarmiganlabs.net `
 --auth-cert-file ./cert/client.pem `
 --auth-cert-key-file ./cert/client_key.pem `
 --auth-user-dir LAB `
@@ -225,51 +225,57 @@ Note how Ctrl-Q first creates the reload tasks and any associated schedule trigg
 This is needed as a composite trigger may refer to an already existing and/or a newly created task (or multiple tasks of course), i.e. all tasks must first be created. Only then is it possible to create composite triggers.
 
 ```text
-2023-11-19T20:13:41.432Z info: -----------------------------------------------------------
-2023-11-19T20:13:41.448Z info: | Ctrl-Q
-2023-11-19T20:13:41.448Z info: |
-2023-11-19T20:13:41.448Z info: | Version      : 3.14.0
-2023-11-19T20:13:41.448Z info: | Log level    : info
-2023-11-19T20:13:41.448Z info: |
-2023-11-19T20:13:41.448Z info: | Command      : task-import
-2023-11-19T20:13:41.448Z info: |              : create tasks based on definitions in a file on disk, optionally also importing apps from QVF files.
-2023-11-19T20:13:41.448Z info: |
-2023-11-19T20:13:41.448Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
-2023-11-19T20:13:41.448Z info: |
-2023-11-19T20:13:41.448Z info: | https://github.com/ptarmiganlabs/ctrl-q
-2023-11-19T20:13:41.448Z info: ----------------------------------------------------------
-2023-11-19T20:13:41.448Z info:
-2023-11-19T20:13:41.448Z info: Import tasks from definitions in file "tasks.csv"
-2023-11-19T20:13:41.526Z info: Successfully retrieved 26 tags from QSEoW
-2023-11-19T20:13:41.557Z info: Successfully retrieved 29 custom properties from QSEoW
-2023-11-19T20:13:41.667Z info: -------------------------------------------------------------------
-2023-11-19T20:13:41.667Z info: Creating tasks...
-2023-11-19T20:13:41.807Z info: (1) Created new external program task "App snapshots end of September 2022", new task id: 3f8d909d-1abc-40d5-9716-1122483e2584.
-2023-11-19T20:13:41.854Z info: (2) Created new external program task "Ext program task chaining 1", new task id: 450e999a-eb61-4919-9e12-f9452518afd0.
-2023-11-19T20:13:41.901Z info: (3) Created new external program task "Ext program task chaining 1", new task id: ec5604c6-b54b-4da7-b3db-93a4fcba92ca.
-2023-11-19T20:13:41.979Z info: (4) Created new external program task "Ext task 1", new task id: 95e4380c-5fc1-40c1-98dc-5e165685c60a.
-2023-11-19T20:13:42.011Z info: (5) Created new external program task "Ext task 2", new task id: 37a5c5e1-72d7-4dba-bfbb-3c352749b2fb.
-2023-11-19T20:13:42.089Z info: (6) Created new external program task "New external program task 1", new task id: 43c45fa8-752b-40d8-ac25-d9aed681ad7d.
-2023-11-19T20:13:42.151Z info: (7) Created new external program task "Node-RED ext program task demo 1", new task id: 27333ede-4545-48d2-bcf6-98f7348fefe7.
-2023-11-19T20:13:42.197Z info: (8) Created new external program task "PowerShell export data connections", new task id: e8c3b895-ef44-4c7e-9b2c-72beffa274bb.
-2023-11-19T20:13:42.260Z info: (9) Created new external program task "PowerShell export tags (ext pgm task)", new task id: 20b41d62-c014-4b02-96c2-4c3d568d137a.
-2023-11-19T20:13:42.292Z info: (10) Created new external program task "Sample external task", new task id: 6698a907-3c07-4ea0-a053-e9c8bee62c97.
-2023-11-19T20:13:42.541Z info: (11) Created new external program task "[ctrl-q task chain 3] Ext program task chaining", new task id: e6cbef63-ea6e-4d62-9a65-6589954d8ba4.
-2023-11-19T20:13:42.573Z info: (12) Created new external program task "[ctrl-q task chain 3] Ext program task chaining", new task id: 37abfb92-a1ed-48f9-b20f-658743e79217.
-2023-11-19T20:13:42.714Z info: (13) Created new external program task "[ctrl-q task chain 4] Ext program task chaining", new task id: 523aae7c-f70f-40b1-b5fa-f965ddb2552a.
-2023-11-19T20:13:42.776Z info: (14) Created new external program task "[ctrl-q task chain 4] Ext program task chaining", new task id: 6bb9c2c0-582b-4845-a703-066ece618c54.
-2023-11-19T20:13:42.980Z info: (15) Created new reload task "Butler test failing reloads 1 task", new task id: 48949bdb-061e-4f67-86cd-7dbb3492225a.
+2024-03-12T09:34:09.780Z info: -----------------------------------------------------------
+2024-03-12T09:34:09.780Z info: | Ctrl-Q
+2024-03-12T09:34:09.780Z info: |
+2024-03-12T09:34:09.780Z info: | Version      : 3.16.0
+2024-03-12T09:34:09.780Z info: | Log level    : info
+2024-03-12T09:34:09.780Z info: |
+2024-03-12T09:34:09.794Z info: | Command      : task-import
+2024-03-12T09:34:09.794Z info: |              : create tasks based on definitions in a file on disk, optionally also importing apps from QVF files.
+2024-03-12T09:34:09.794Z info: |
+2024-03-12T09:34:09.794Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
+2024-03-12T09:34:09.794Z info: |
+2024-03-12T09:34:09.794Z info: | https://github.com/ptarmiganlabs/ctrl-q
+2024-03-12T09:34:09.794Z info: ----------------------------------------------------------
+2024-03-12T09:34:09.794Z info:
+2024-03-12T09:34:09.794Z info: Import tasks from definitions in file "tasks.csv"
+2024-03-12T09:34:09.935Z info: Successfully retrieved 28 tags from QSEoW
+2024-03-12T09:34:10.044Z info: Successfully retrieved 31 custom properties from QSEoW
+2024-03-12T09:34:10.155Z info: -------------------------------------------------------------------
+2024-03-12T09:34:10.155Z info: Creating tasks...
+2024-03-12T09:34:10.294Z info: (1) Created new external program task "App snapshots end of September 2022", new task id: 88bdbd10-eb45-4490-ac14-596e7e9bdaf3.
+2024-03-12T09:34:10.419Z info: (2) Created new external program task "Ext program task chaining 1", new task id: 32222dad-ec1b-4a74-bd39-430619bba874.
+2024-03-12T09:34:10.529Z info: (3) Created new external program task "Ext program task chaining 1", new task id: 1be0d039-b68f-4916-9fa5-2aa9d27f8344.
+2024-03-12T09:34:10.686Z info: (4) Created new external program task "Ext task 1", new task id: ca37875a-d977-4d0f-a034-f2d9e3aee85c.
+2024-03-12T09:34:10.810Z info: (5) Created new external program task "Ext task 2", new task id: d6b324ee-73e9-43dc-80be-164bd16daef8.
+2024-03-12T09:34:10.951Z info: (6) Created new external program task "New external program task 1", new task id: 2a9f7d8d-9f98-4cb5-af0b-c0b7551064c4.
+2024-03-12T09:34:11.077Z info: (7) Created new external program task "Node-RED ext program task demo 1", new task id: 0deb6ea6-896a-4363-a28c-ff0e227d4fc8.
+2024-03-12T09:34:11.186Z info: (8) Created new external program task "PowerShell export data connections", new task id: 7eecf18d-479b-4834-9b95-2b5f71cc0a7b.
+2024-03-12T09:34:11.388Z info: (9) Created new external program task "PowerShell export tags (ext pgm task)", new task id: 44cef627-81ce-4a5e-ab83-13390d822d93.
+2024-03-12T09:34:11.498Z info: (10) Created new external program task "Sample external task", new task id: cfe6f6fe-b557-4e11-af92-1ec7dc05221b.
+2024-03-12T09:34:12.077Z info: (11) Created new external program task "[ctrl-q task chain 3] Ext program task chaining", new task id: a751e35a-8ffe-4ee9-bc5f-e863c1f7c1b0.
+2024-03-12T09:34:12.186Z info: (12) Created new external program task "[ctrl-q task chain 3] Ext program task chaining", new task id: f45382b1-1b6d-4f32-9549-90fe0ba65aeb.
+2024-03-12T09:34:12.498Z info: (13) Created new external program task "[ctrl-q task chain 4] Ext program task chaining", new task id: f03da04c-8d0a-48ee-8643-42d429c69e12.
+2024-03-12T09:34:12.623Z info: (14) Created new external program task "[ctrl-q task chain 4] Ext program task chaining", new task id: e00e097a-0316-4fe5-a767-82b00910e774.
+2024-03-12T09:34:12.888Z info: (15) Created new reload task "Butler test failing reloads 1 task", new task id: ff1359b8-ff1e-4fef-b871-c44b2afce877.
+2024-03-12T09:34:13.139Z info: (16) Created new reload task "Butler test failing reloads 1 task", new task id: a2a21c75-6fcd-4341-b927-47fd7fc7074d.
+2024-03-12T09:34:13.436Z info: (17) Created new reload task "Manually triggered reload of Always failing reload (no delay)", new task id: f97e71c4-7a73-4de9-ade8-93dc87abb5f5.
+2024-03-12T09:34:13.716Z info: (18) Created new reload task "Manually triggered reload of Butler 7 Slack debug", new task id: 835c8937-d3c5-45a8-93b1-42f987dbf6e8.
+2024-03-12T09:34:13.983Z info: (19) Created new reload task "Manually triggered reload of Butler regression test app 1", new task id: 2653f70f-3d12-46f2-b45d-5af48f1c1708.
+2024-03-12T09:34:14.217Z info: (20) Created new reload task "Manually triggered reload of Butler regression test app 2", new task id: 81d5ac39-ac60-432e-9331-211454282d01.
+2024-03-12T09:34:14.463Z info: (21) Created new reload task "Manually triggered reload of Butler regression test app 3", new task id: 921d36b5-d46e-46f2-9cb8-1c2ef1dad4fe.
 ...
 ...
-2023-11-19T20:13:55.652Z info: -------------------------------------------------------------------
-2023-11-19T20:13:55.652Z info: Creating composite events for the just created tasks...
-2023-11-19T20:13:55.729Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name="When [ctrl-q 2] done" for task ID e6cbef63-ea6e-4d62-9a65-6589954d8ba4. Result: 201/Created.
-2023-11-19T20:13:55.792Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name="Start ext pgm task when reload task done" for task ID e6cbef63-ea6e-4d62-9a65-6589954d8ba4. Result: 201/Created.
-2023-11-19T20:13:55.869Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name="When [ctrl-q task chain 3] done" for task ID 523aae7c-f70f-40b1-b5fa-f965ddb2552a. Result: 201/Created.
-2023-11-19T20:13:55.932Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name="When HR metrics done" for task ID 88415a4e-befa-42e9-9965-18cc0916b152. Result: 201/Created.
-2023-11-19T20:13:55.979Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name="When Operations monitor has reloaded" for task ID e1a45483-7e43-4b22-88bd-dd104921a5f1. Result: 201/Created.
-2023-11-19T20:13:56.042Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name="When NYT comments done" for task ID 4ea567f0-f606-42b6-89a9-64dd84effc24. Result: 201/Created.
-2023-11-19T20:13:56.119Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name="Task event trigger" for task ID 55a9d7dc-b91d-45aa-b6fe-fe14c1732152. Result: 201/Created.
+2024-03-12T09:34:38.450Z info: -------------------------------------------------------------------
+2024-03-12T09:34:38.450Z info: Creating composite events for the just created tasks...
+2024-03-12T09:34:38.607Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name="When [ctrl-q 2] done" for task ID a751e35a-8ffe-4ee9-bc5f-e863c1f7c1b0. Result: 201/Created.
+2024-03-12T09:34:38.747Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name="Start ext pgm task when reload task done" for task ID a751e35a-8ffe-4ee9-bc5f-e863c1f7c1b0. Result: 201/Created.
+2024-03-12T09:34:38.888Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name="When [ctrl-q task chain 3] done" for task ID f03da04c-8d0a-48ee-8643-42d429c69e12. Result: 201/Created.
+2024-03-12T09:34:39.012Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name="When HR metrics done" for task ID 2079c888-537b-4bce-8252-8bac8517eff7. Result: 201/Created.
+2024-03-12T09:34:39.137Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name="When Operations monitor has reloaded" for task ID 73e89949-51ea-4b64-b74a-1aa625e064e0. Result: 201/Created.
+2024-03-12T09:34:39.263Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name="When NYT comments done" for task ID 28541735-b57a-4b03-85fe-d09062a9adfa. Result: 201/Created.
+2024-03-12T09:34:39.395Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name="Task event trigger" for task ID e818fa3f-c8ca-4399-ab21-c61c05087fb9. Result: 201/Created.
 ...
 ...
 ```
@@ -293,7 +299,7 @@ The task import command looks like this in PowerShell:
 ```powershell
 .\ctrl-q.exe task-import `
 --auth-type cert `
---host 192.168.100.109 `
+--host pro2-win1.lab.ptarmiganlabs.net `
 --auth-cert-file ./cert/client.pem `
 --auth-cert-key-file ./cert/client_key.pem `
 --auth-user-dir LAB `

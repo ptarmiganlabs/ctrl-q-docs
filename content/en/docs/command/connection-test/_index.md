@@ -26,28 +26,28 @@ Here that command is executed using certificate authentication, using the defaul
 
 ```powershell
 .\ctrl-q.exe connection-test `
---host 192.168.100.109 `
+--host pro2-win1.lab.ptarmiganlabs.net `
 --auth-user-dir LAB `
 --auth-user-id goran
 ```
 
 ```
-2023-11-20T18:00:06.727Z info: -----------------------------------------------------------
-2023-11-20T18:00:06.729Z info: | Ctrl-Q
-2023-11-20T18:00:06.730Z info: | 
-2023-11-20T18:00:06.730Z info: | Version      : 3.14.0
-2023-11-20T18:00:06.730Z info: | Log level    : info
-2023-11-20T18:00:06.730Z info: | 
-2023-11-20T18:00:06.730Z info: | Command      : connection-test
-2023-11-20T18:00:06.731Z info: |              : test connection to Qlik Sense server.
-2023-11-20T18:00:06.731Z info: | 
-2023-11-20T18:00:06.731Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
-2023-11-20T18:00:06.731Z info: | 
-2023-11-20T18:00:06.732Z info: | https://github.com/ptarmiganlabs/ctrl-q
-2023-11-20T18:00:06.732Z info: ----------------------------------------------------------
-2023-11-20T18:00:06.732Z info: 
-2023-11-20T18:00:06.736Z info: Testing connection to Qlik Sense server 192.168.100.109 on port 4242
-2023-11-20T18:00:06.814Z info: Successfully connected to Qlik Sense server 192.168.100.109 on port 4242
-2023-11-20T18:00:06.814Z info: Qlik Sense repository build version: 31.34.0.0
-2023-11-20T18:00:06.814Z info: Qlik Sense repository build date: 6/13/2023 10:08:17 AM
+2024-03-12T08:35:45.058Z info: -----------------------------------------------------------
+2024-03-12T08:35:45.058Z info: | Ctrl-Q
+2024-03-12T08:35:45.058Z info: |
+2024-03-12T08:35:45.058Z info: | Version      : 3.16.0
+2024-03-12T08:35:45.058Z info: | Log level    : info
+2024-03-12T08:35:45.058Z info: |
+2024-03-12T08:35:45.058Z info: | Command      : connection-test
+2024-03-12T08:35:45.058Z info: |              : test connection to Qlik Sense server.
+2024-03-12T08:35:45.058Z info: |
+2024-03-12T08:35:45.058Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
+2024-03-12T08:35:45.058Z info: |
+2024-03-12T08:35:45.058Z info: | https://github.com/ptarmiganlabs/ctrl-q
+2024-03-12T08:35:45.058Z info: ----------------------------------------------------------
+2024-03-12T08:35:45.058Z info:
+2024-03-12T08:35:45.058Z info: Testing connection to Qlik Sense server pro2-win1.lab.ptarmiganlabs.net on port 4242
+2024-03-12T08:35:45.198Z info: Successfully connected to Qlik Sense server pro2-win1.lab.ptarmiganlabs.net on port 4242
+2024-03-12T08:35:45.198Z info: Qlik Sense repository build version: 31.36.2.0
+2024-03-12T08:35:45.198Z info: Qlik Sense repository build date: 1/11/2024 22:04:12 PM
 ```

@@ -28,7 +28,7 @@ Importing apps defined on the `App import` sheet of the `tasks.xlsx` Excel file 
 ```powershell
 .\ctrl-q.exe app-import `
 --auth-type cert `
---host 192.168.100.109 `
+--host pro2-win1.lab.ptarmiganlabs.net `
 --auth-cert-file ./cert/client.pem `
 --auth-cert-key-file ./cert/client_key.pem `
 --auth-user-dir LAB `
@@ -38,42 +38,42 @@ Importing apps defined on the `App import` sheet of the `tasks.xlsx` Excel file 
 ```
 
 ```text
-2023-11-19T19:30:59.811Z info: -----------------------------------------------------------
-2023-11-19T19:30:59.811Z info: | Ctrl-Q
-2023-11-19T19:30:59.811Z info: |
-2023-11-19T19:30:59.811Z info: | Version      : 3.14.0
-2023-11-19T19:30:59.811Z info: | Log level    : info
-2023-11-19T19:30:59.811Z info: |
-2023-11-19T19:30:59.811Z info: | Command      : app-import
-2023-11-19T19:30:59.811Z info: |              : import apps/upload QVF files on disk to Sense based on definitions in Excel file.
-2023-11-19T19:30:59.811Z info: |
-2023-11-19T19:30:59.811Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
-2023-11-19T19:30:59.811Z info: |
-2023-11-19T19:30:59.811Z info: | https://github.com/ptarmiganlabs/ctrl-q
-2023-11-19T19:30:59.811Z info: ----------------------------------------------------------
-2023-11-19T19:30:59.811Z info:
-2023-11-19T19:30:59.825Z info: Import apps from definitions in file "tasks.xlsx"
-2023-11-19T19:30:59.904Z info: Successfully retrieved 26 tags from QSEoW
-2023-11-19T19:30:59.935Z info: Successfully retrieved 29 custom properties from QSEoW
-2023-11-19T19:30:59.966Z info: -------------------------------------------------------------------
-2023-11-19T19:30:59.966Z info: Importing apps...
-2023-11-19T19:30:59.966Z info: (1) Importing app "App 3" from file "C:/tools/ctrl-q/testdata/App import 3.qvf"
-2023-11-19T19:31:05.060Z info: (1, delete-publish) App "App 3" published to stream "Ctrl-Q demo apps", the existing app (if one exists) with the same name in this stream has been deleted. Id of published app: 733e586e-d06b-4aeb-9d1e-1a41e6cec048
-2023-11-19T19:31:05.060Z info: (2) Importing app "App 3" from file "C:/tools/ctrl-q/testdata/App import 3.qvf"
-2023-11-19T19:31:09.873Z info: (2, publish-replace) App "App 3" published to stream "Ctrl-Q demo apps", replacing the existing app with the same name. Id of published app: 733e586e-d06b-4aeb-9d1e-1a41e6cec048
-2023-11-19T19:31:09.873Z info: (3) Importing app "App 1" from file "C:/tools/ctrl-q/testdata/App import 1.qvf"
-2023-11-19T19:31:13.357Z warn: (3) PUBLISH APP publish-replace: More than one app with the same name "App 1" in the target stream "Ctrl-Q demo apps". Impossible to know which one to replace. Skipping publishing for this app. The uploaded app is still present in the QMC (id=fcf0abc2-6c03-436c-ac66-b2bfc27643ec).
-2023-11-19T19:31:13.357Z error: (3) Failed publishing app "App 1" to stream "Ctrl-Q demo apps"
-2023-11-19T19:31:13.357Z info: (4) Importing app "App 1" from file "C:/tools/ctrl-q/testdata/App import 1.qvf"
-2023-11-19T19:31:16.779Z info: (4, publish-another) App "App 1" published to stream "Ctrl-Q demo apps". Id of published app: 7b2f4bea-4eb1-46e4-944f-0d2e2f5896e8
-2023-11-19T19:31:16.779Z info: (5) Importing app "App 1" from file "C:/tools/ctrl-q/testdata/App import 1.qvf"
-2023-11-19T19:31:20.185Z warn: (5) PUBLISH APP publish-replace: More than one app with the same name "App 1" in the target stream "Ctrl-Q demo apps". Impossible to know which one to replace. Skipping publishing for this app. The uploaded app is still present in the QMC (id=6d29347f-27ea-4510-a916-f88e6857e0e2).
-2023-11-19T19:31:20.185Z error: (5) Failed publishing app "App 1" to stream "Ctrl-Q demo apps"
-2023-11-19T19:31:20.185Z info: (6) Importing app "App 2" from file "C:/tools/ctrl-q/testdata/App import 2.qvf"
-2023-11-19T19:31:23.294Z warn: Stream "Stream does not exist" does not exist.
-2023-11-19T19:31:23.294Z error: (6) Failed publishing app "App 2" to stream "Stream does not exist". The uploaded app is still present in the QMC (id=960d716f-2171-489f-b63d-de9d0e494dfa).
-2023-11-19T19:31:23.294Z info: (7) Importing app "App 3" from file "C:/tools/ctrl-q/testdata/App import 3.qvf"
-2023-11-19T19:31:28.060Z info: (7, publish-replace) App "App 3" published to stream "Ctrl-Q demo apps", replacing the existing app with the same name. Id of published app: 733e586e-d06b-4aeb-9d1e-1a41e6cec048
+2024-03-12T09:28:28.250Z info: -----------------------------------------------------------
+2024-03-12T09:28:28.250Z info: | Ctrl-Q
+2024-03-12T09:28:28.250Z info: |
+2024-03-12T09:28:28.250Z info: | Version      : 3.16.0
+2024-03-12T09:28:28.250Z info: | Log level    : info
+2024-03-12T09:28:28.250Z info: |
+2024-03-12T09:28:28.250Z info: | Command      : app-import
+2024-03-12T09:28:28.250Z info: |              : import apps/upload QVF files on disk to Sense based on definitions in Excel file.
+2024-03-12T09:28:28.250Z info: |
+2024-03-12T09:28:28.250Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
+2024-03-12T09:28:28.250Z info: |
+2024-03-12T09:28:28.250Z info: | https://github.com/ptarmiganlabs/ctrl-q
+2024-03-12T09:28:28.250Z info: ----------------------------------------------------------
+2024-03-12T09:28:28.250Z info:
+2024-03-12T09:28:28.265Z info: Import apps from definitions in file "tasks.xlsx"
+2024-03-12T09:28:28.406Z info: Successfully retrieved 28 tags from QSEoW
+2024-03-12T09:28:28.515Z info: Successfully retrieved 31 custom properties from QSEoW
+2024-03-12T09:28:28.547Z info: -------------------------------------------------------------------
+2024-03-12T09:28:28.547Z info: Importing apps...
+2024-03-12T09:28:28.547Z info: (1) Importing app "App 3" from file "C:/tools/ctrl-q/testdata/App import 3.qvf"
+2024-03-12T09:28:33.079Z info: (1, delete-publish) App "App 3" published to stream "Ctrl-Q demo apps", the existing app (if one exists) with the same name in this stream has been deleted. Id of published app: 6668310c-19e8-416c-94b0-e32505e4de78
+2024-03-12T09:28:33.079Z info: (2) Importing app "App 3" from file "C:/tools/ctrl-q/testdata/App import 3.qvf"
+2024-03-12T09:28:39.055Z info: (2, publish-replace) App "App 3" published to stream "Ctrl-Q demo apps", replacing the existing app with the same name. Id of published app: 6668310c-19e8-416c-94b0-e32505e4de78
+2024-03-12T09:28:39.055Z info: (3) Importing app "App 1" from file "C:/tools/ctrl-q/testdata/App import 1.qvf"
+2024-03-12T09:28:43.024Z warn: (3) PUBLISH APP publish-replace: More than one app with the same name "App 1" in the target stream "Ctrl-Q demo apps". Impossible to know which one to replace. Skipping publishing for this app. The uploaded app is still present in the QMC (id=bcda9997-1a6c-42bb-b5aa-ff75fcad3f09).
+2024-03-12T09:28:43.024Z error: (3) Failed publishing app "App 1" to stream "Ctrl-Q demo apps"
+2024-03-12T09:28:43.024Z info: (4) Importing app "App 1" from file "C:/tools/ctrl-q/testdata/App import 1.qvf"
+2024-03-12T09:28:47.243Z info: (4, publish-another) App "App 1" published to stream "Ctrl-Q demo apps". Id of published app: dda304b5-792e-4241-9bd8-b5e2e8ca21af
+2024-03-12T09:28:47.243Z info: (5) Importing app "App 1" from file "C:/tools/ctrl-q/testdata/App import 1.qvf"
+2024-03-12T09:28:51.117Z warn: (5) PUBLISH APP publish-replace: More than one app with the same name "App 1" in the target stream "Ctrl-Q demo apps". Impossible to know which one to replace. Skipping publishing for this app. The uploaded app is still present in the QMC (id=06d9f5d6-53a2-449c-ae7b-7033597cf88b).
+2024-03-12T09:28:51.117Z error: (5) Failed publishing app "App 1" to stream "Ctrl-Q demo apps"
+2024-03-12T09:28:51.117Z info: (6) Importing app "App 2" from file "C:/tools/ctrl-q/testdata/App import 2.qvf"
+2024-03-12T09:28:54.610Z warn: Stream "Stream does not exist" does not exist.
+2024-03-12T09:28:54.610Z error: (6) Failed publishing app "App 2" to stream "Stream does not exist". The uploaded app is still present in the QMC (id=3a7812fe-7d8c-467e-8fd0-62f4ee42a116).
+2024-03-12T09:28:54.610Z info: (7) Importing app "App 3" from file "C:/tools/ctrl-q/testdata/App import 3.qvf"
+2024-03-12T09:29:00.011Z info: (7, publish-replace) App "App 3" published to stream "Ctrl-Q demo apps", replacing the existing app with the same name. Id of published app: 6668310c-19e8-416c-94b0-e32505e4de78
 ```
 
 > NOTE 1: Qlik Sense implements rate limiting for QVF uploads. This means that if you plan to upload more than 60 QVF files you may be affected by this rate limiting.  

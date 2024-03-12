@@ -33,31 +33,30 @@ First let's take a look at the command options:
 ```
 
 ```text
-Usage: build master-item-import [options]
+Usage: ctrl-q master-item-import [options]
 
 create master items based on definitions in a file on disk
 
 Options:
   --log-level <level>                                          log level (choices: "error", "warn", "info", "verbose", "debug", "silly", default: "info")
   --host <host>                                                Qlik Sense server IP/FQDN
-  --port <port>                                                Qlik Sense server engine port (default: "4747")
+  --port <port>                                                Qlik Sense server engine port (usually 4747 for cert auth, 443 for jwt auth) (default: "4747")
   --schema-version <string>                                    Qlik Sense engine schema version (default: "12.612.0")
   --app-id <id>                                                Qlik Sense app ID
   --virtual-proxy <prefix>                                     Qlik Sense virtual proxy prefix (default: "")
-  --secure <true|false>                                        connection to Qlik Sense engine is via https (default: true)
+  --secure <true|false>                                        https connection to Qlik Sense must use correct certificate. Invalid certificates will result in rejected/failed connection. (default: true)
   --auth-user-dir <directory>                                  user directory for user to connect with
   --auth-user-id <userid>                                      user ID for user to connect with
-  -a, --auth-type <type>                                       authentication type (choices: "cert", default: "cert")
+  -a, --auth-type <type>                                       authentication type (choices: "cert", "jwt", default: "cert")
   --auth-cert-file <file>                                      Qlik Sense certificate file (exported from QMC) (default: "./cert/client.pem")
   --auth-cert-key-file <file>                                  Qlik Sense certificate key file (exported from QMC) (default: "./cert/client_key.pem")
   --auth-root-cert-file <file>                                 Qlik Sense root certificate file (exported from QMC) (default: "./cert/root.pem")
+  --auth-jwt <jwt>                                             JSON Web Token (JWT) to use for authentication with Qlik Sense server
   -t, --file-type <type>                                       source file type (choices: "excel", default: "excel")
   --file <filename>                                            file containing master item definitions
   --sheet <name>                                               name of Excel sheet where dim/measure flag column is found
-  --col-ref-by <reftype>                                       how to refer to columns in the source file. Options are by name or by position (zero based) (choices: "name", "position", default:
-                                                               "name")
-  --col-item-type <column position or name>                    column where dim/measure flag is found. Use "dim-single" in that column to create dimension, "dim-drilldown" for drill-down
-                                                               dimension, "measure" for measure (default: "Master item type")
+  --col-ref-by <reftype>                                       how to refer to columns in the source file. Options are by name or by position (zero based) (choices: "name", "position", default: "name")
+  --col-item-type <column position or name>                    column where dim/measure flag is found. Use "dim-single" in that column to create dimension, "dim-drilldown" for drill-down dimension, "measure" for measure (default: "Master item type")
   --col-master-item-name <column position or name>             column number (zero based) or name to use as master item name (default: "Master item name")
   --col-master-item-descr <column position or name>            column number (zero based) or name to use as master item description (default: "Description")
   --col-master-item-label <column position or name>            column number (zero based) or name to use as master item label (default: "Label")
@@ -109,7 +108,7 @@ Now let's run the command.
 
 ```powershell
 .\ctrl-q.exe master-item-import `
---host 192.168.100.109 `
+--host pro2-win1.lab.ptarmiganlabs.net `
 --auth-user-dir LAB `
 --auth-user-id goran `
 --auth-type cert `
@@ -129,34 +128,34 @@ Now let's run the command.
 ```
 
 ```text
-2023-11-19T19:32:41.744Z info: -----------------------------------------------------------
-2023-11-19T19:32:41.744Z info: | Ctrl-Q
-2023-11-19T19:32:41.744Z info: |
-2023-11-19T19:32:41.744Z info: | Version      : 3.14.0
-2023-11-19T19:32:41.759Z info: | Log level    : info
-2023-11-19T19:32:41.759Z info: |
-2023-11-19T19:32:41.759Z info: | Command      : master-item-import
-2023-11-19T19:32:41.759Z info: |              : create master items based on definitions in a file on disk
-2023-11-19T19:32:41.759Z info: |
-2023-11-19T19:32:41.759Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
-2023-11-19T19:32:41.759Z info: |
-2023-11-19T19:32:41.759Z info: | https://github.com/ptarmiganlabs/ctrl-q
-2023-11-19T19:32:41.759Z info: ----------------------------------------------------------
-2023-11-19T19:32:41.759Z info:
-2023-11-19T19:32:41.759Z info: Import master items from definitions in Excel file "./ctrl-q-master-items.xlsx"
-2023-11-19T19:32:42.556Z info: (1/12) Updated existing measure "No. of sold units"
-2023-11-19T19:32:43.572Z info: (2/12) Updated existing measure "No. of sold units (LY)"
-2023-11-19T19:32:44.587Z info: (3/12) Updated existing measure "Revenue EUR"
-2023-11-19T19:32:45.604Z info: (4/12) Updated existing measure "Revenue EUR (LY)"
-2023-11-19T19:32:46.618Z info: (5/12) Updated existing measure "Profit EUR"
-2023-11-19T19:32:47.634Z warn: (6/12) Found an unknown master item type: "measur". Ignoring this line in the imported file.
-2023-11-19T19:32:48.635Z info: (7/12) Updated existing measure "Profit EUR (LY)"
-2023-11-19T19:32:49.681Z info: (8/12) Created new dimension "Country"
-2023-11-19T19:32:50.712Z info: (9/12) Created new dimension "Sales month"
-2023-11-19T19:32:51.759Z info: (10/12) Updated existing dimension "Salesperson"
-2023-11-19T19:32:53.134Z info: (11/12) Updated existing dimension "Color"
-2023-11-19T19:32:54.150Z info: (12/12) Updated existing drill-down dimension "DimDrill"
-2023-11-19T19:32:55.182Z info: Imported 12 master items from Excel file ./ctrl-q-master-items.xlsx
+2024-03-12T09:30:47.416Z info: -----------------------------------------------------------
+2024-03-12T09:30:47.416Z info: | Ctrl-Q
+2024-03-12T09:30:47.416Z info: |
+2024-03-12T09:30:47.416Z info: | Version      : 3.16.0
+2024-03-12T09:30:47.416Z info: | Log level    : info
+2024-03-12T09:30:47.416Z info: |
+2024-03-12T09:30:47.416Z info: | Command      : master-item-import
+2024-03-12T09:30:47.416Z info: |              : create master items based on definitions in a file on disk
+2024-03-12T09:30:47.416Z info: |
+2024-03-12T09:30:47.416Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
+2024-03-12T09:30:47.416Z info: |
+2024-03-12T09:30:47.416Z info: | https://github.com/ptarmiganlabs/ctrl-q
+2024-03-12T09:30:47.416Z info: ----------------------------------------------------------
+2024-03-12T09:30:47.416Z info:
+2024-03-12T09:30:47.430Z info: Import master items from definitions in Excel file "./ctrl-q-master-items.xlsx"
+2024-03-12T09:30:47.993Z info: (1/12) Updated existing measure "No. of sold units"
+2024-03-12T09:30:49.009Z info: (2/12) Updated existing measure "No. of sold units (LY)"
+2024-03-12T09:30:50.041Z info: (3/12) Created new measure "Revenue EUR"
+2024-03-12T09:30:51.071Z info: (4/12) Updated existing measure "Revenue EUR (LY)"
+2024-03-12T09:30:52.087Z info: (5/12) Updated existing measure "Profit EUR"
+2024-03-12T09:30:53.102Z warn: (6/12) Found an unknown master item type: "measur". Ignoring this line in the imported file.
+2024-03-12T09:30:54.119Z info: (7/12) Created new measure "Profit EUR (LY)"
+2024-03-12T09:30:55.165Z info: (8/12) Created new dimension "Country"
+2024-03-12T09:30:56.181Z info: (9/12) Created new dimension "Sales month"
+2024-03-12T09:30:57.227Z info: (10/12) Updated existing dimension "Salesperson"
+2024-03-12T09:30:58.258Z info: (11/12) Updated existing dimension "Color"
+2024-03-12T09:30:59.292Z info: (12/12) Updated existing drill-down dimension "DimDrill"
+2024-03-12T09:31:00.308Z info: Imported 12 master items from Excel file ./ctrl-q-master-items.xlsx
 ```
 
 > NOTE: A sample defintions Excel file is [available in the GitHub repository](https://github.com/ptarmiganlabs/ctrl-q/blob/main/testdata/ctrl-q-master-items.xlsx?raw=true). That file contains examples of most combinations of master item types and properties.
@@ -185,7 +184,7 @@ Here we want to get the JSON for the color of the master dimension "Country".
 
 ```powershell
 .\ctrl-q.exe master-item-dim-get `
---host 192.168.100.109 `
+--host pro2-win1.lab.ptarmiganlabs.net `
 --auth-user-dir LAB `
 --auth-user-id goran `
 --app-id a3e0f5d2-000a-464f-998d-33d333b175d7 `

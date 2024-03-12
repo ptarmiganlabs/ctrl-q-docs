@@ -167,8 +167,17 @@
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#certificates">Certificates</a></li>
-    <li><a href="#jwts">JWTs</a></li>
+    <li><a href="#certificates">Certificates</a>
+      <ul>
+        <li><a href="#strict-or-relaxed-certificate-validation">Strict or relaxed certificate validation</a></li>
+        <li><a href="#ports-used-for-certificate-authentication">Ports used for certificate authentication</a></li>
+      </ul>
+    </li>
+    <li><a href="#jwts">JWTs</a>
+      <ul>
+        <li><a href="#ports-used-for-jwt-authentication">Ports used for JWT authentication</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </div>
@@ -222,16 +231,88 @@
 <p>If the <code>--auth-type</code> option is set to <code>cert</code>, Ctrl-Q will authenticate with Qlik Sense Enterprise using certificates.<br>
 This is the default authentication method that will be used if no <code>--auth-type</code> option is specified.</p>
 <p>These certificates are <a href="https://help.qlik.com/en-US/sense-admin/May2023/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Administer_QSEoW/Managing_QSEoW/export-certificates.htm">exported from the QMC</a> and stored on disk in PEM format.</p>
+<p>Three certificate files are needed (and exported from the QMC):</p>
+<ol>
+<li>The client certificate, which is used to authenticate with the Sense engine.</li>
+<li>The client key, which is used to authenticate with the Sense engine.</li>
+<li>The root certificate, which is needed to verify the Sense server&rsquo;s certificate (as Qlik Sense uses a self-signed certificate).</li>
+</ol>
 <p>Ctrl-Q can reference these certificates in two ways:</p>
 <ol>
-<li>if the <code>--auth-cert-file</code> and <code>auth-cert-key-file</code> options are used, Ctrl-Q will read the certificates from the disk files pointed to by those options.
+<li>if one or more of the <code>--auth-cert-file</code>, <code>auth-cert-key-file</code> and <code>--auth-root-cert-file</code> options are used, Ctrl-Q will read the certificates from the disk file(s) pointed to by those options.</li>
+<li>If one or more of the options above are <em>not</em> specified when Ctrl-Q is started, it will look for certificates in the <code>config</code> folder in the same folder as the Ctrl-Q executable.
 <ol>
-<li>The <code>--auth-root-cert-file</code> option refers to the certificate CA, and is optional to use. In most cases it&rsquo;s not needed.</li>
+<li>The certificate files must then be named <code>client.pem</code>, <code>client_key.pem</code> and <code>root.pem</code>, i.e. the names used by the QMC when exporting the certificates.</li>
 </ol>
 </li>
-<li>If the options above are <em>not</em> specified when Ctrl-Q is started, it will look for certificates in the <code>config</code> folder in the same folder as the Ctrl-Q executable. The certificate files must be named <code>client.pem</code>, <code>client_key.pem</code> and <code>root.pem</code>.</li>
 </ol>
-<p>The options <code>--auth-user-dir</code> and <code>-auth-user-id</code> are also needed to authenticate with Sense. They define which user will be used when interacting with both the engine and repository APIs.</p>
+<p>If the <code>-secure false</code> option is used, Ctrl-Q will not verify the Sense server&rsquo;s certificate.<br>
+This is not recommended from a security perspective, but can still be useful if you are having trouble getting Ctrl-Q to authenticate with Sense.</p>
+<p>The options <code>--auth-user-dir</code> and <code>-auth-user-id</code> are also needed to authenticate with Sense.<br>
+They define which user will be used when interacting with both the engine and repository APIs.</p>
+<h3 id="strict-or-relaxed-certificate-validation">Strict or relaxed certificate validation</h3>
+<p>When using certificate authentication, Ctrl-Q will by default validate the Sense server&rsquo;s certificate.<br>
+This happens as the default value for the <code>--secure</code> option is <code>true</code>.</p>
+<p>What does &ldquo;validate the certificate&rdquo; mean?</p>
+<p>Validating a certificate means that Ctrl-Q will check that the certificate is signed by a trusted authority, that it has not expired, and that the server&rsquo;s hostname matches the certificate&rsquo;s common name.</p>
+<p>For example, if the certificate is created for a host called <code>pro2-win1.lab.ptarmiganlabs.net</code>, Ctrl-Q will - by verifying the server certificate - check that the server it is connecting to is indeed <code>pro2-win1.lab.ptarmiganlabs.net</code>.<br>
+If the server&rsquo;s hostname does not match the certificate&rsquo;s common name, Ctrl-Q will refuse to connect.<br>
+Looks like this:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PS C:<span style="color:#4e9a06">\t</span>ools<span style="color:#4e9a06">\c</span>trl-q&gt; .<span style="color:#4e9a06">\c</span>trl-q.exe connection-test <span style="color:#4e9a06">`</span>
+</span></span><span style="display:flex;"><span>&gt;&gt; --host pro2-win1.ptarmiganlabs.net <span style="color:#4e9a06">`</span>
+</span></span><span style="display:flex;"><span>&gt;&gt; --auth-user-dir LAB <span style="color:#4e9a06">`</span>
+</span></span><span style="display:flex;"><span>&gt;&gt; --auth-user-id goran
+</span></span><span style="display:flex;"><span>2024-03-09T13:42:31.263Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-09T13:42:31.263Z info: <span style="color:#000;font-weight:bold">|</span> Ctrl-Q
+</span></span><span style="display:flex;"><span>2024-03-09T13:42:31.263Z info: <span style="color:#000;font-weight:bold">|</span>
+</span></span><span style="display:flex;"><span>2024-03-09T13:42:31.263Z info: <span style="color:#000;font-weight:bold">|</span> Version      : 3.15.2
+</span></span><span style="display:flex;"><span>2024-03-09T13:42:31.263Z info: <span style="color:#000;font-weight:bold">|</span> Log level    : info
+</span></span><span style="display:flex;"><span>2024-03-09T13:42:31.263Z info: <span style="color:#000;font-weight:bold">|</span>
+</span></span><span style="display:flex;"><span>2024-03-09T13:42:31.263Z info: <span style="color:#000;font-weight:bold">|</span> Command      : connection-test
+</span></span><span style="display:flex;"><span>2024-03-09T13:42:31.263Z info: <span style="color:#000;font-weight:bold">|</span>              : <span style="color:#204a87">test</span> connection to Qlik Sense server.
+</span></span><span style="display:flex;"><span>2024-03-09T13:42:31.263Z info: <span style="color:#000;font-weight:bold">|</span>
+</span></span><span style="display:flex;"><span>2024-03-09T13:42:31.263Z info: <span style="color:#000;font-weight:bold">|</span> Run Ctrl-Q with the <span style="color:#4e9a06">&#39;--help&#39;</span> option to see a list of all available options <span style="color:#204a87;font-weight:bold">for</span> this command.
+</span></span><span style="display:flex;"><span>2024-03-09T13:42:31.263Z info: <span style="color:#000;font-weight:bold">|</span>
+</span></span><span style="display:flex;"><span>2024-03-09T13:42:31.263Z info: <span style="color:#000;font-weight:bold">|</span> https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2024-03-09T13:42:31.263Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-09T13:42:31.263Z info:
+</span></span><span style="display:flex;"><span>2024-03-09T13:42:31.278Z info: Testing connection to Qlik Sense server pro2-win1.ptarmiganlabs.net on port <span style="color:#0000cf;font-weight:bold">4242</span>
+</span></span><span style="display:flex;"><span>2024-03-09T13:42:31.403Z error: GET ABOUT INFO: Hostname/IP does not match certificate<span style="color:#4e9a06">&#39;s altnames: Host: pro2-win1.ptarmiganlabs.net. is not in the cert&#39;</span>s altnames: DNS:pro2-win1.lab.ptarmiganlabs.net
+</span></span></code></pre></div><p>Ctrl-Q tells us that something is not right with the certificate and we even get a pretty clear message about what is wrong.</p>
+<p>Changing the command to use the correct hostname makes the error go away and the command works as expected:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PS C:<span style="color:#4e9a06">\t</span>ools<span style="color:#4e9a06">\c</span>trl-q&gt; .<span style="color:#4e9a06">\c</span>trl-q.exe connection-test <span style="color:#4e9a06">`</span>
+</span></span><span style="display:flex;"><span>&gt;&gt; --host pro2-win1.lab.ptarmiganlabs.net <span style="color:#4e9a06">`</span>
+</span></span><span style="display:flex;"><span>&gt;&gt; --auth-user-dir LAB <span style="color:#4e9a06">`</span>
+</span></span><span style="display:flex;"><span>&gt;&gt; --auth-user-id goran
+</span></span><span style="display:flex;"><span>2024-03-09T13:50:10.741Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-09T13:50:10.741Z info: <span style="color:#000;font-weight:bold">|</span> Ctrl-Q
+</span></span><span style="display:flex;"><span>2024-03-09T13:50:10.741Z info: <span style="color:#000;font-weight:bold">|</span>
+</span></span><span style="display:flex;"><span>2024-03-09T13:50:10.741Z info: <span style="color:#000;font-weight:bold">|</span> Version      : 3.15.2
+</span></span><span style="display:flex;"><span>2024-03-09T13:50:10.741Z info: <span style="color:#000;font-weight:bold">|</span> Log level    : info
+</span></span><span style="display:flex;"><span>2024-03-09T13:50:10.741Z info: <span style="color:#000;font-weight:bold">|</span>
+</span></span><span style="display:flex;"><span>2024-03-09T13:50:10.741Z info: <span style="color:#000;font-weight:bold">|</span> Command      : connection-test
+</span></span><span style="display:flex;"><span>2024-03-09T13:50:10.741Z info: <span style="color:#000;font-weight:bold">|</span>              : <span style="color:#204a87">test</span> connection to Qlik Sense server.
+</span></span><span style="display:flex;"><span>2024-03-09T13:50:10.741Z info: <span style="color:#000;font-weight:bold">|</span>
+</span></span><span style="display:flex;"><span>2024-03-09T13:50:10.741Z info: <span style="color:#000;font-weight:bold">|</span> Run Ctrl-Q with the <span style="color:#4e9a06">&#39;--help&#39;</span> option to see a list of all available options <span style="color:#204a87;font-weight:bold">for</span> this command.
+</span></span><span style="display:flex;"><span>2024-03-09T13:50:10.741Z info: <span style="color:#000;font-weight:bold">|</span>
+</span></span><span style="display:flex;"><span>2024-03-09T13:50:10.757Z info: <span style="color:#000;font-weight:bold">|</span> https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2024-03-09T13:50:10.757Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-09T13:50:10.757Z info:
+</span></span><span style="display:flex;"><span>2024-03-09T13:50:10.757Z info: Testing connection to Qlik Sense server pro2-win1.lab.ptarmiganlabs.net on port <span style="color:#0000cf;font-weight:bold">4242</span>
+</span></span><span style="display:flex;"><span>2024-03-09T13:50:10.913Z info: Successfully connected to Qlik Sense server pro2-win1.lab.ptarmiganlabs.net on port <span style="color:#0000cf;font-weight:bold">4242</span>
+</span></span><span style="display:flex;"><span>2024-03-09T13:50:10.913Z info: Qlik Sense repository build version: 31.36.2.0
+</span></span><span style="display:flex;"><span>2024-03-09T13:50:10.913Z info: Qlik Sense repository build date: 1/11/2024 22:04:12 PM
+</span></span></code></pre></div><p>All this said, if you are having trouble getting Ctrl-Q to connect to Sense, you can use the <code>--secure false</code> option to disable certificate validation.
+Not preferred from a security perspective, but it can still be useful if you are having trouble getting Ctrl-Q to authenticate with Sense.</p>
+<h3 id="ports-used-for-certificate-authentication">Ports used for certificate authentication</h3>
+<p>When using certificate authentication, Ctrl-Q will connect to the Qlik Engine API on port 4747.</p>
+<p>When using certificate authentication, Ctrl-Q will connect directly to the various Qlik Sense services on the port exposed by each service:</p>
+<ul>
+<li>Qlik Repository Service (QRS) on port 4242</li>
+<li>Qlik Proxy Service (QPS) on port 4243</li>
+<li>Qlik Engine Service (QES) on port 4747</li>
+</ul>
+<p>If the default ports are not used, each Ctrl-Q command allows you to specify the port to use for each Sense service.</p>
 <h2 id="jwts">JWTs</h2>
 <p>If the <code>--auth-type</code> option is set to <code>jwt</code>, Ctrl-Q will authenticate with Qlik Sense Enterprise using JWTs.</p>
 <p>JWTs - JSON Web Tokens - are a standard way of authenticating with web services, where a token is issued by an authentication service and then used to authenticate with other services.<br>
@@ -251,6 +332,12 @@ I.e. anyone with a JWT can authenticate with Sense as the user that the JWT was 
 <p>When Ctrl-Q is started with <code>--auth-type</code> option set to <code>jwt</code>, it will then look for an option called <code>--auth-jwt</code>.<br>
 Pass in the JWT as the value of this option, and Ctrl-Q will use it to authenticate with Sense.<br>
 Embed the JWT in double quotes if it contains special characters (e.g. spaces).</p>
+<h3 id="ports-used-for-jwt-authentication">Ports used for JWT authentication</h3>
+<p>Given the nature of JWT authentication and the fact that it is handled on a virtual proxy level, Ctrl-Q cannot connect directly to the Qlik Sense services when using JWT authentication.<br>
+Instead all access must go via a virtual proxy that is configured to use JWT authentication.</p>
+<p>This in turn means that Ctrl-Q will need to use whatever port the virtual proxy is configured to use.<br>
+Usually this is port 443, but it can be any port, as configured in the proxy linked to the virtual proxy.</p>
+<p><strong>Remember to specify the correct port when using JWT authentication, using the <code>--port</code> (might be called <code>--proxy-port</code> or similar in some Ctrl-Q commands) option.</strong></p>
 
   <div class="section-index">
     

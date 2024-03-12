@@ -39,6 +39,7 @@ Show (and optionally store to disk) definitions for all bookmarks in Sense apps
 Show (and optionally store to disk) definitions for all variables in Sense apps  
 Scramble fields in Sense apps  
 Get load script for Sense apps  
+List and delete user sessions for some or all virtual proxies and proxies
 <br>
 <br>
 It runs on Windows, Linux and macOS.  
@@ -49,9 +50,13 @@ Works with client-managed Qlik Sense Enterprise on Windows.
 
 {{% blocks/section color="dark" type="row" %}}
 
-{{% blocks/feature icon="fa-lightbulb" title="Latest release: 3.15" %}}
-🥳 Beta version: View task dependencies as network diagrams.  
-Network diagrams are a great way to visualize task dependencies, and Ctrl-Q now supports this.
+{{% blocks/feature icon="fa-lightbulb" title="Latest release: 3.16" %}}
+🥳 View task dependencies as network diagrams.  
+Network diagrams are a great way to visualize task dependencies, and Ctrl-Q now officially supports this.
+
+🥳 Manage user sessions.  
+Ctrl-Q can list and delete user sessions for some or all virtual proxies and proxies.
+
 
 Available on [GitHub](https://github.com/ptarmiganlabs/ctrl-q/releases).
 {{% /blocks/feature %}}

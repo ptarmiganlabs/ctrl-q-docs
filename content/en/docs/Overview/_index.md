@@ -26,6 +26,8 @@ Ctrl-Q focus on specific, high-value uses cases that tend to be very time consum
 
 The list of features include:
 
+- Get all current sessions, including user ID, virtual proxy, load balanced servers and more.
+- Delete all or some sessions for a given virtual proxy / proxy service.
 - Get complete definition of all reload tasks and external program tasks as tree view, network graph, tabular view or JSON. Show on screen or save to disk file.
 - Bulk import of reload and external program tasks from disk files. Optionally also import QVF files.
 - Build task chains using newly imported and/or existing tasks.

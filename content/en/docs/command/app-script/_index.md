@@ -22,33 +22,33 @@ Get script and associated metadata for a Sense app.
 
 ```powershell
 .\ctrl-q.exe script-get `
---host 192.168.100.109 `
+--host pro2-win1.lab.ptarmiganlabs.net `
 --app-id a3e0f5d2-000a-464f-998d-33d333b175d7 `
 --auth-user-dir LAB `
 --auth-user-id goran
 ```
 
 ```text
-2023-11-19T19:22:59.746Z info: -----------------------------------------------------------
-2023-11-19T19:22:59.746Z info: | Ctrl-Q
-2023-11-19T19:22:59.746Z info: |
-2023-11-19T19:22:59.746Z info: | Version      : 3.14.0
-2023-11-19T19:22:59.746Z info: | Log level    : info
-2023-11-19T19:22:59.746Z info: |
-2023-11-19T19:22:59.746Z info: | Command      : script-get
-2023-11-19T19:22:59.746Z info: |              : get script from Qlik Sense app
-2023-11-19T19:22:59.746Z info: |
-2023-11-19T19:22:59.746Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
-2023-11-19T19:22:59.746Z info: |
-2023-11-19T19:22:59.746Z info: | https://github.com/ptarmiganlabs/ctrl-q
-2023-11-19T19:22:59.746Z info: ----------------------------------------------------------
-2023-11-19T19:22:59.746Z info:
-2023-11-19T19:23:00.229Z info: ----- Script metadata -----
-2023-11-19T19:23:00.229Z info: App id: a3e0f5d2-000a-464f-998d-33d333b175d7
-2023-11-19T19:23:00.229Z info: Created date: 2021-06-03T22:04:52.283Z
-2023-11-19T19:23:00.229Z info: Modified date: 2023-05-05T06:17:05.456Z
-2023-11-19T19:23:00.229Z info: ----- End script metadata -----
-2023-11-19T19:23:00.229Z info:
+2024-03-12T08:33:16.678Z info: -----------------------------------------------------------
+2024-03-12T08:33:16.678Z info: | Ctrl-Q
+2024-03-12T08:33:16.678Z info: |
+2024-03-12T08:33:16.678Z info: | Version      : 3.16.0
+2024-03-12T08:33:16.678Z info: | Log level    : info
+2024-03-12T08:33:16.678Z info: |
+2024-03-12T08:33:16.678Z info: | Command      : script-get
+2024-03-12T08:33:16.678Z info: |              : get script from Qlik Sense app
+2024-03-12T08:33:16.678Z info: |
+2024-03-12T08:33:16.678Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
+2024-03-12T08:33:16.678Z info: |
+2024-03-12T08:33:16.678Z info: | https://github.com/ptarmiganlabs/ctrl-q
+2024-03-12T08:33:16.678Z info: ----------------------------------------------------------
+2024-03-12T08:33:16.678Z info:
+2024-03-12T08:33:17.897Z info: ----- Script metadata -----
+2024-03-12T08:33:17.897Z info: App id: a3e0f5d2-000a-464f-998d-33d333b175d7
+2024-03-12T08:33:17.897Z info: Created date: 2021-06-03T22:04:52.283Z
+2024-03-12T08:33:17.897Z info: Modified date: 2023-05-05T06:17:05.456Z
+2024-03-12T08:33:17.897Z info: ----- End script metadata -----
+2024-03-12T08:33:17.897Z info:
 ///$tab Main
 SET ThousandSep=',';
 SET DecimalSep='.';

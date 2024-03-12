@@ -214,49 +214,49 @@ Ctrl-Q&rsquo;s <code>app-import</code> command does bulk import of such QVF file
 <p>Importing apps defined on the <code>App import</code> sheet of the <code>tasks.xlsx</code> Excel file can be done with a command like this:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">app-import</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#0000cf;font-weight:bold">192.168</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">100</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">109</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#204a87">pro2-win1</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">lab</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ptarmiganlabs</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">net</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-cert</span><span style="color:#ce5c00;font-weight:bold">-file</span> <span style="color:#000;font-weight:bold">./</span><span style="color:#000">cert</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">client</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-cert-key</span><span style="color:#ce5c00;font-weight:bold">-file</span> <span style="color:#000;font-weight:bold">./</span><span style="color:#000">cert</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">client_key</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#ce5c00;font-weight:bold">-file</span><span style="color:#000">-name</span> <span style="color:#000">tasks</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">xlsx</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-sheet-name</span> <span style="color:#4e9a06">&#34;App import&#34;</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: -----------------------------------------------------------
-</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: | Ctrl-Q
-</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: |
-</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: | Version      : 3.14.0
-</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: | Log level    : info
-</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: |
-</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: | Command      : app-import
-</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: |              : import apps/upload QVF files on disk to Sense based on definitions in Excel file.
-</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: |
-</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
-</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: |
-</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: | https://github.com/ptarmiganlabs/ctrl-q
-</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info: ----------------------------------------------------------
-</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.811Z info:
-</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.825Z info: Import apps from definitions in file &#34;tasks.xlsx&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.904Z info: Successfully retrieved 26 tags from QSEoW
-</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.935Z info: Successfully retrieved 29 custom properties from QSEoW
-</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.966Z info: -------------------------------------------------------------------
-</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.966Z info: Importing apps...
-</span></span><span style="display:flex;"><span>2023-11-19T19:30:59.966Z info: (1) Importing app &#34;App 3&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 3.qvf&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T19:31:05.060Z info: (1, delete-publish) App &#34;App 3&#34; published to stream &#34;Ctrl-Q demo apps&#34;, the existing app (if one exists) with the same name in this stream has been deleted. Id of published app: 733e586e-d06b-4aeb-9d1e-1a41e6cec048
-</span></span><span style="display:flex;"><span>2023-11-19T19:31:05.060Z info: (2) Importing app &#34;App 3&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 3.qvf&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T19:31:09.873Z info: (2, publish-replace) App &#34;App 3&#34; published to stream &#34;Ctrl-Q demo apps&#34;, replacing the existing app with the same name. Id of published app: 733e586e-d06b-4aeb-9d1e-1a41e6cec048
-</span></span><span style="display:flex;"><span>2023-11-19T19:31:09.873Z info: (3) Importing app &#34;App 1&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 1.qvf&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T19:31:13.357Z warn: (3) PUBLISH APP publish-replace: More than one app with the same name &#34;App 1&#34; in the target stream &#34;Ctrl-Q demo apps&#34;. Impossible to know which one to replace. Skipping publishing for this app. The uploaded app is still present in the QMC (id=fcf0abc2-6c03-436c-ac66-b2bfc27643ec).
-</span></span><span style="display:flex;"><span>2023-11-19T19:31:13.357Z error: (3) Failed publishing app &#34;App 1&#34; to stream &#34;Ctrl-Q demo apps&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T19:31:13.357Z info: (4) Importing app &#34;App 1&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 1.qvf&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T19:31:16.779Z info: (4, publish-another) App &#34;App 1&#34; published to stream &#34;Ctrl-Q demo apps&#34;. Id of published app: 7b2f4bea-4eb1-46e4-944f-0d2e2f5896e8
-</span></span><span style="display:flex;"><span>2023-11-19T19:31:16.779Z info: (5) Importing app &#34;App 1&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 1.qvf&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T19:31:20.185Z warn: (5) PUBLISH APP publish-replace: More than one app with the same name &#34;App 1&#34; in the target stream &#34;Ctrl-Q demo apps&#34;. Impossible to know which one to replace. Skipping publishing for this app. The uploaded app is still present in the QMC (id=6d29347f-27ea-4510-a916-f88e6857e0e2).
-</span></span><span style="display:flex;"><span>2023-11-19T19:31:20.185Z error: (5) Failed publishing app &#34;App 1&#34; to stream &#34;Ctrl-Q demo apps&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T19:31:20.185Z info: (6) Importing app &#34;App 2&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 2.qvf&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T19:31:23.294Z warn: Stream &#34;Stream does not exist&#34; does not exist.
-</span></span><span style="display:flex;"><span>2023-11-19T19:31:23.294Z error: (6) Failed publishing app &#34;App 2&#34; to stream &#34;Stream does not exist&#34;. The uploaded app is still present in the QMC (id=960d716f-2171-489f-b63d-de9d0e494dfa).
-</span></span><span style="display:flex;"><span>2023-11-19T19:31:23.294Z info: (7) Importing app &#34;App 3&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 3.qvf&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T19:31:28.060Z info: (7, publish-replace) App &#34;App 3&#34; published to stream &#34;Ctrl-Q demo apps&#34;, replacing the existing app with the same name. Id of published app: 733e586e-d06b-4aeb-9d1e-1a41e6cec048
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info: | Version      : 3.16.0
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info: | Command      : app-import
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info: |              : import apps/upload QVF files on disk to Sense based on definitions in Excel file.
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info:
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.265Z info: Import apps from definitions in file &#34;tasks.xlsx&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.406Z info: Successfully retrieved 28 tags from QSEoW
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.515Z info: Successfully retrieved 31 custom properties from QSEoW
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.547Z info: -------------------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.547Z info: Importing apps...
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.547Z info: (1) Importing app &#34;App 3&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 3.qvf&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:33.079Z info: (1, delete-publish) App &#34;App 3&#34; published to stream &#34;Ctrl-Q demo apps&#34;, the existing app (if one exists) with the same name in this stream has been deleted. Id of published app: 6668310c-19e8-416c-94b0-e32505e4de78
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:33.079Z info: (2) Importing app &#34;App 3&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 3.qvf&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:39.055Z info: (2, publish-replace) App &#34;App 3&#34; published to stream &#34;Ctrl-Q demo apps&#34;, replacing the existing app with the same name. Id of published app: 6668310c-19e8-416c-94b0-e32505e4de78
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:39.055Z info: (3) Importing app &#34;App 1&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 1.qvf&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:43.024Z warn: (3) PUBLISH APP publish-replace: More than one app with the same name &#34;App 1&#34; in the target stream &#34;Ctrl-Q demo apps&#34;. Impossible to know which one to replace. Skipping publishing for this app. The uploaded app is still present in the QMC (id=bcda9997-1a6c-42bb-b5aa-ff75fcad3f09).
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:43.024Z error: (3) Failed publishing app &#34;App 1&#34; to stream &#34;Ctrl-Q demo apps&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:43.024Z info: (4) Importing app &#34;App 1&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 1.qvf&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:47.243Z info: (4, publish-another) App &#34;App 1&#34; published to stream &#34;Ctrl-Q demo apps&#34;. Id of published app: dda304b5-792e-4241-9bd8-b5e2e8ca21af
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:47.243Z info: (5) Importing app &#34;App 1&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 1.qvf&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:51.117Z warn: (5) PUBLISH APP publish-replace: More than one app with the same name &#34;App 1&#34; in the target stream &#34;Ctrl-Q demo apps&#34;. Impossible to know which one to replace. Skipping publishing for this app. The uploaded app is still present in the QMC (id=06d9f5d6-53a2-449c-ae7b-7033597cf88b).
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:51.117Z error: (5) Failed publishing app &#34;App 1&#34; to stream &#34;Ctrl-Q demo apps&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:51.117Z info: (6) Importing app &#34;App 2&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 2.qvf&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:54.610Z warn: Stream &#34;Stream does not exist&#34; does not exist.
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:54.610Z error: (6) Failed publishing app &#34;App 2&#34; to stream &#34;Stream does not exist&#34;. The uploaded app is still present in the QMC (id=3a7812fe-7d8c-467e-8fd0-62f4ee42a116).
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:54.610Z info: (7) Importing app &#34;App 3&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 3.qvf&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:29:00.011Z info: (7, publish-replace) App &#34;App 3&#34; published to stream &#34;Ctrl-Q demo apps&#34;, replacing the existing app with the same name. Id of published app: 6668310c-19e8-416c-94b0-e32505e4de78
 </span></span></code></pre></div><blockquote>
 <p>NOTE 1: Qlik Sense implements rate limiting for QVF uploads. This means that if you plan to upload more than 60 QVF files you may be affected by this rate limiting.<br>
 Ctrl-Q detects that it&rsquo;s being rate limited and implements a backoff strategy for retries, waiting longer and longer until it tries again.<br>
@@ -325,31 +325,30 @@ Similarly, if an already existing stream name (or ID of an existing stream) is s
 The same coloring options are available as in the web UI for both dimensions and measures.</p>
 <p>First let&rsquo;s take a look at the command options:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">master-item</span><span style="color:#000">-import</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-help</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Usage: build master-item-import [options]
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Usage: ctrl-q master-item-import [options]
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>create master items based on definitions in a file on disk
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Options:
 </span></span><span style="display:flex;"><span>  --log-level &lt;level&gt;                                          log level (choices: &#34;error&#34;, &#34;warn&#34;, &#34;info&#34;, &#34;verbose&#34;, &#34;debug&#34;, &#34;silly&#34;, default: &#34;info&#34;)
 </span></span><span style="display:flex;"><span>  --host &lt;host&gt;                                                Qlik Sense server IP/FQDN
-</span></span><span style="display:flex;"><span>  --port &lt;port&gt;                                                Qlik Sense server engine port (default: &#34;4747&#34;)
+</span></span><span style="display:flex;"><span>  --port &lt;port&gt;                                                Qlik Sense server engine port (usually 4747 for cert auth, 443 for jwt auth) (default: &#34;4747&#34;)
 </span></span><span style="display:flex;"><span>  --schema-version &lt;string&gt;                                    Qlik Sense engine schema version (default: &#34;12.612.0&#34;)
 </span></span><span style="display:flex;"><span>  --app-id &lt;id&gt;                                                Qlik Sense app ID
 </span></span><span style="display:flex;"><span>  --virtual-proxy &lt;prefix&gt;                                     Qlik Sense virtual proxy prefix (default: &#34;&#34;)
-</span></span><span style="display:flex;"><span>  --secure &lt;true|false&gt;                                        connection to Qlik Sense engine is via https (default: true)
+</span></span><span style="display:flex;"><span>  --secure &lt;true|false&gt;                                        https connection to Qlik Sense must use correct certificate. Invalid certificates will result in rejected/failed connection. (default: true)
 </span></span><span style="display:flex;"><span>  --auth-user-dir &lt;directory&gt;                                  user directory for user to connect with
 </span></span><span style="display:flex;"><span>  --auth-user-id &lt;userid&gt;                                      user ID for user to connect with
-</span></span><span style="display:flex;"><span>  -a, --auth-type &lt;type&gt;                                       authentication type (choices: &#34;cert&#34;, default: &#34;cert&#34;)
+</span></span><span style="display:flex;"><span>  -a, --auth-type &lt;type&gt;                                       authentication type (choices: &#34;cert&#34;, &#34;jwt&#34;, default: &#34;cert&#34;)
 </span></span><span style="display:flex;"><span>  --auth-cert-file &lt;file&gt;                                      Qlik Sense certificate file (exported from QMC) (default: &#34;./cert/client.pem&#34;)
 </span></span><span style="display:flex;"><span>  --auth-cert-key-file &lt;file&gt;                                  Qlik Sense certificate key file (exported from QMC) (default: &#34;./cert/client_key.pem&#34;)
 </span></span><span style="display:flex;"><span>  --auth-root-cert-file &lt;file&gt;                                 Qlik Sense root certificate file (exported from QMC) (default: &#34;./cert/root.pem&#34;)
+</span></span><span style="display:flex;"><span>  --auth-jwt &lt;jwt&gt;                                             JSON Web Token (JWT) to use for authentication with Qlik Sense server
 </span></span><span style="display:flex;"><span>  -t, --file-type &lt;type&gt;                                       source file type (choices: &#34;excel&#34;, default: &#34;excel&#34;)
 </span></span><span style="display:flex;"><span>  --file &lt;filename&gt;                                            file containing master item definitions
 </span></span><span style="display:flex;"><span>  --sheet &lt;name&gt;                                               name of Excel sheet where dim/measure flag column is found
-</span></span><span style="display:flex;"><span>  --col-ref-by &lt;reftype&gt;                                       how to refer to columns in the source file. Options are by name or by position (zero based) (choices: &#34;name&#34;, &#34;position&#34;, default:
-</span></span><span style="display:flex;"><span>                                                               &#34;name&#34;)
-</span></span><span style="display:flex;"><span>  --col-item-type &lt;column position or name&gt;                    column where dim/measure flag is found. Use &#34;dim-single&#34; in that column to create dimension, &#34;dim-drilldown&#34; for drill-down
-</span></span><span style="display:flex;"><span>                                                               dimension, &#34;measure&#34; for measure (default: &#34;Master item type&#34;)
+</span></span><span style="display:flex;"><span>  --col-ref-by &lt;reftype&gt;                                       how to refer to columns in the source file. Options are by name or by position (zero based) (choices: &#34;name&#34;, &#34;position&#34;, default: &#34;name&#34;)
+</span></span><span style="display:flex;"><span>  --col-item-type &lt;column position or name&gt;                    column where dim/measure flag is found. Use &#34;dim-single&#34; in that column to create dimension, &#34;dim-drilldown&#34; for drill-down dimension, &#34;measure&#34; for measure (default: &#34;Master item type&#34;)
 </span></span><span style="display:flex;"><span>  --col-master-item-name &lt;column position or name&gt;             column number (zero based) or name to use as master item name (default: &#34;Master item name&#34;)
 </span></span><span style="display:flex;"><span>  --col-master-item-descr &lt;column position or name&gt;            column number (zero based) or name to use as master item description (default: &#34;Description&#34;)
 </span></span><span style="display:flex;"><span>  --col-master-item-label &lt;column position or name&gt;            column number (zero based) or name to use as master item label (default: &#34;Label&#34;)
@@ -408,7 +407,7 @@ Notes on the example below:</li>
 </ul>
 <p>Now let&rsquo;s run the command.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">master-item</span><span style="color:#000">-import</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#0000cf;font-weight:bold">192.168</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">100</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">109</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#204a87">pro2-win1</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">lab</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ptarmiganlabs</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">net</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
@@ -425,34 +424,34 @@ Notes on the example below:</li>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-col-master-item-tag</span> <span style="color:#000">Tag</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-col-master-item-color</span> <span style="color:#000">Color</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-col-master-item-per-value-color</span> <span style="color:#4e9a06">&#39;Per value color&#39;</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2023-11-19T19:32:41.744Z info: -----------------------------------------------------------
-</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.744Z info: | Ctrl-Q
-</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.744Z info: |
-</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.744Z info: | Version      : 3.14.0
-</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: | Log level    : info
-</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: |
-</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: | Command      : master-item-import
-</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: |              : create master items based on definitions in a file on disk
-</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: |
-</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
-</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: |
-</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: | https://github.com/ptarmiganlabs/ctrl-q
-</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: ----------------------------------------------------------
-</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info:
-</span></span><span style="display:flex;"><span>2023-11-19T19:32:41.759Z info: Import master items from definitions in Excel file &#34;./ctrl-q-master-items.xlsx&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T19:32:42.556Z info: (1/12) Updated existing measure &#34;No. of sold units&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T19:32:43.572Z info: (2/12) Updated existing measure &#34;No. of sold units (LY)&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T19:32:44.587Z info: (3/12) Updated existing measure &#34;Revenue EUR&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T19:32:45.604Z info: (4/12) Updated existing measure &#34;Revenue EUR (LY)&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T19:32:46.618Z info: (5/12) Updated existing measure &#34;Profit EUR&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T19:32:47.634Z warn: (6/12) Found an unknown master item type: &#34;measur&#34;. Ignoring this line in the imported file.
-</span></span><span style="display:flex;"><span>2023-11-19T19:32:48.635Z info: (7/12) Updated existing measure &#34;Profit EUR (LY)&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T19:32:49.681Z info: (8/12) Created new dimension &#34;Country&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T19:32:50.712Z info: (9/12) Created new dimension &#34;Sales month&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T19:32:51.759Z info: (10/12) Updated existing dimension &#34;Salesperson&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T19:32:53.134Z info: (11/12) Updated existing dimension &#34;Color&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T19:32:54.150Z info: (12/12) Updated existing drill-down dimension &#34;DimDrill&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T19:32:55.182Z info: Imported 12 master items from Excel file ./ctrl-q-master-items.xlsx
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info: | Version      : 3.16.0
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info: | Command      : master-item-import
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info: |              : create master items based on definitions in a file on disk
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info:
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.430Z info: Import master items from definitions in Excel file &#34;./ctrl-q-master-items.xlsx&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.993Z info: (1/12) Updated existing measure &#34;No. of sold units&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:49.009Z info: (2/12) Updated existing measure &#34;No. of sold units (LY)&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:50.041Z info: (3/12) Created new measure &#34;Revenue EUR&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:51.071Z info: (4/12) Updated existing measure &#34;Revenue EUR (LY)&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:52.087Z info: (5/12) Updated existing measure &#34;Profit EUR&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:53.102Z warn: (6/12) Found an unknown master item type: &#34;measur&#34;. Ignoring this line in the imported file.
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:54.119Z info: (7/12) Created new measure &#34;Profit EUR (LY)&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:55.165Z info: (8/12) Created new dimension &#34;Country&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:56.181Z info: (9/12) Created new dimension &#34;Sales month&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:57.227Z info: (10/12) Updated existing dimension &#34;Salesperson&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:58.258Z info: (11/12) Updated existing dimension &#34;Color&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:59.292Z info: (12/12) Updated existing drill-down dimension &#34;DimDrill&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:31:00.308Z info: Imported 12 master items from Excel file ./ctrl-q-master-items.xlsx
 </span></span></code></pre></div><blockquote>
 <p>NOTE: A sample defintions Excel file is <a href="https://github.com/ptarmiganlabs/ctrl-q/blob/main/testdata/ctrl-q-master-items.xlsx?raw=true">available in the GitHub repository</a>. That file contains examples of most combinations of master item types and properties.</p>
 </blockquote>
@@ -483,7 +482,7 @@ This will show you what the structure of the JSON looks like, or even provide yo
 <p>Let&rsquo;s look at some examples.</p>
 <p>Here we want to get the JSON for the color of the master dimension &ldquo;Country&rdquo;.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">master-item</span><span style="color:#000">-dim-get</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#0000cf;font-weight:bold">192.168</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">100</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">109</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#204a87">pro2-win1</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">lab</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ptarmiganlabs</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">net</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-app-id</span> <span style="color:#000">a3e0f5d2</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">000a</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">464f</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">998d</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">33d333b175d7</span> <span style="color:#000;font-weight:bold">`</span>
@@ -603,23 +602,24 @@ NOTE 2: The same concept works for drill-down dimensions and measures.</p>
 <p>Task definitions can be read from CSV or Excel files.<br>
 The options are as follows:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">task-import</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-help</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Usage: build task-import [options]
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Usage: ctrl-q task-import [options]
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>create tasks based on definitions in a file on disk, optionally also importing apps from QVF files.
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Options:
 </span></span><span style="display:flex;"><span>  --log-level &lt;level&gt;                log level (choices: &#34;error&#34;, &#34;warn&#34;, &#34;info&#34;, &#34;verbose&#34;, &#34;debug&#34;, &#34;silly&#34;, default: &#34;info&#34;)
 </span></span><span style="display:flex;"><span>  --host &lt;host&gt;                      Qlik Sense server IP/FQDN
-</span></span><span style="display:flex;"><span>  --port &lt;port&gt;                      Qlik Sense server engine port (default: &#34;4242&#34;)
+</span></span><span style="display:flex;"><span>  --port &lt;port&gt;                      Qlik Sense repository service (QRS) port (usually 4242 for cert auth, 443 for jwt auth) (default: &#34;4242&#34;)
 </span></span><span style="display:flex;"><span>  --schema-version &lt;string&gt;          Qlik Sense engine schema version (default: &#34;12.612.0&#34;)
 </span></span><span style="display:flex;"><span>  --virtual-proxy &lt;prefix&gt;           Qlik Sense virtual proxy prefix (default: &#34;&#34;)
-</span></span><span style="display:flex;"><span>  --secure &lt;true|false&gt;              connection to Qlik Sense engine is via https (default: true)
+</span></span><span style="display:flex;"><span>  --secure &lt;true|false&gt;              https connection to Qlik Sense must use correct certificate. Invalid certificates will result in rejected/failed connection. (default: true)
 </span></span><span style="display:flex;"><span>  --auth-user-dir &lt;directory&gt;        user directory for user to connect with
 </span></span><span style="display:flex;"><span>  --auth-user-id &lt;userid&gt;            user ID for user to connect with
-</span></span><span style="display:flex;"><span>  -a, --auth-type &lt;type&gt;             authentication type (choices: &#34;cert&#34;, default: &#34;cert&#34;)
+</span></span><span style="display:flex;"><span>  -a, --auth-type &lt;type&gt;             authentication type (choices: &#34;cert&#34;, &#34;jwt&#34;, default: &#34;cert&#34;)
 </span></span><span style="display:flex;"><span>  --auth-cert-file &lt;file&gt;            Qlik Sense certificate file (exported from QMC) (default: &#34;./cert/client.pem&#34;)
 </span></span><span style="display:flex;"><span>  --auth-cert-key-file &lt;file&gt;        Qlik Sense certificate key file (exported from QMC) (default: &#34;./cert/client_key.pem&#34;)
 </span></span><span style="display:flex;"><span>  --auth-root-cert-file &lt;file&gt;       Qlik Sense root certificate file (exported from QMC) (default: &#34;./cert/root.pem&#34;)
+</span></span><span style="display:flex;"><span>  --auth-jwt &lt;jwt&gt;                   JSON Web Token (JWT) to use for authentication with Qlik Sense server
 </span></span><span style="display:flex;"><span>  -t, --file-type &lt;type&gt;             source file type (choices: &#34;excel&#34;, &#34;csv&#34;, default: &#34;excel&#34;)
 </span></span><span style="display:flex;"><span>  --file-name &lt;filename&gt;             file containing task definitions
 </span></span><span style="display:flex;"><span>  --sheet-name &lt;name&gt;                name of Excel sheet where task info is found
@@ -954,34 +954,33 @@ That&rsquo;s fine though, during the task import Ctrl-Q will only look at the re
 <p>Export tasks to CSV file:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">task-get</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#0000cf;font-weight:bold">192.168</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">100</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">109</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#204a87">pro2-win1</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">lab</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ptarmiganlabs</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">net</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-output-format</span> <span style="color:#000">table</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-output-dest</span> <span style="color:#000">file</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-output</span><span style="color:#ce5c00;font-weight:bold">-file</span><span style="color:#000">-name</span> <span style="color:#000">tasks</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">csv</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-output</span><span style="color:#ce5c00;font-weight:bold">-file</span><span style="color:#000">-format</span> <span style="color:#000">csv</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info: -----------------------------------------------------------
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info: | Ctrl-Q
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info: |
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info: | Version      : 3.14.0
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info: | Log level    : info
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info: |
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info: | Command      : task-get
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info: |              : get info about one or more tasks
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info: |
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info: |
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info: | https://github.com/ptarmiganlabs/ctrl-q
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info: ----------------------------------------------------------
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.448Z info:
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:22.588Z info: Successfully retrieved 26 tags from QSEoW
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:26.401Z info:
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:26.401Z info: ✅ Writing task table to disk file &#34;tasks.csv&#34;.
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2024-03-12T09:33:25.950Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T09:33:25.950Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2024-03-12T09:33:25.950Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:33:25.950Z info: | Version      : 3.16.0
+</span></span><span style="display:flex;"><span>2024-03-12T09:33:25.950Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2024-03-12T09:33:25.950Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:33:25.950Z info: | Command      : task-get
+</span></span><span style="display:flex;"><span>2024-03-12T09:33:25.964Z info: |              : get info about one or more tasks
+</span></span><span style="display:flex;"><span>2024-03-12T09:33:25.964Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:33:25.964Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2024-03-12T09:33:25.964Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:33:25.964Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2024-03-12T09:33:25.964Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T09:33:25.964Z info:
+</span></span><span style="display:flex;"><span>2024-03-12T09:33:26.089Z info: Successfully retrieved 28 tags from QSEoW
+</span></span><span style="display:flex;"><span>2024-03-12T09:33:27.918Z info: ✅ Writing task table to disk file &#34;tasks.csv&#34;.
 </span></span></code></pre></div><p>Now let&rsquo;s import tasks from the <code>tasks.csv</code> file:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">task-import</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#0000cf;font-weight:bold">192.168</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">100</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">109</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#204a87">pro2-win1</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">lab</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ptarmiganlabs</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">net</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-cert</span><span style="color:#ce5c00;font-weight:bold">-file</span> <span style="color:#000;font-weight:bold">./</span><span style="color:#000">cert</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">client</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-cert-key</span><span style="color:#ce5c00;font-weight:bold">-file</span> <span style="color:#000;font-weight:bold">./</span><span style="color:#000">cert</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">client_key</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
@@ -994,51 +993,57 @@ When that&rsquo;s the case the newly created tasks (based on the info in the CSV
 <p>This way a newly created task (based on info in the CSV file) can still be configured to start after some already existing task finish reloading.</p>
 <p>Note how Ctrl-Q first creates the reload tasks and any associated schedule triggers in a first step, then add any composite triggers in the second step.<br>
 This is needed as a composite trigger may refer to an already existing and/or a newly created task (or multiple tasks of course), i.e. all tasks must first be created. Only then is it possible to create composite triggers.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2023-11-19T20:13:41.432Z info: -----------------------------------------------------------
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info: | Ctrl-Q
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info: |
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info: | Version      : 3.14.0
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info: | Log level    : info
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info: |
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info: | Command      : task-import
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info: |              : create tasks based on definitions in a file on disk, optionally also importing apps from QVF files.
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info: |
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info: |
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info: | https://github.com/ptarmiganlabs/ctrl-q
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info: ----------------------------------------------------------
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info:
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.448Z info: Import tasks from definitions in file &#34;tasks.csv&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.526Z info: Successfully retrieved 26 tags from QSEoW
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.557Z info: Successfully retrieved 29 custom properties from QSEoW
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.667Z info: -------------------------------------------------------------------
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.667Z info: Creating tasks...
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.807Z info: (1) Created new external program task &#34;App snapshots end of September 2022&#34;, new task id: 3f8d909d-1abc-40d5-9716-1122483e2584.
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.854Z info: (2) Created new external program task &#34;Ext program task chaining 1&#34;, new task id: 450e999a-eb61-4919-9e12-f9452518afd0.
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.901Z info: (3) Created new external program task &#34;Ext program task chaining 1&#34;, new task id: ec5604c6-b54b-4da7-b3db-93a4fcba92ca.
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:41.979Z info: (4) Created new external program task &#34;Ext task 1&#34;, new task id: 95e4380c-5fc1-40c1-98dc-5e165685c60a.
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:42.011Z info: (5) Created new external program task &#34;Ext task 2&#34;, new task id: 37a5c5e1-72d7-4dba-bfbb-3c352749b2fb.
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:42.089Z info: (6) Created new external program task &#34;New external program task 1&#34;, new task id: 43c45fa8-752b-40d8-ac25-d9aed681ad7d.
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:42.151Z info: (7) Created new external program task &#34;Node-RED ext program task demo 1&#34;, new task id: 27333ede-4545-48d2-bcf6-98f7348fefe7.
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:42.197Z info: (8) Created new external program task &#34;PowerShell export data connections&#34;, new task id: e8c3b895-ef44-4c7e-9b2c-72beffa274bb.
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:42.260Z info: (9) Created new external program task &#34;PowerShell export tags (ext pgm task)&#34;, new task id: 20b41d62-c014-4b02-96c2-4c3d568d137a.
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:42.292Z info: (10) Created new external program task &#34;Sample external task&#34;, new task id: 6698a907-3c07-4ea0-a053-e9c8bee62c97.
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:42.541Z info: (11) Created new external program task &#34;[ctrl-q task chain 3] Ext program task chaining&#34;, new task id: e6cbef63-ea6e-4d62-9a65-6589954d8ba4.
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:42.573Z info: (12) Created new external program task &#34;[ctrl-q task chain 3] Ext program task chaining&#34;, new task id: 37abfb92-a1ed-48f9-b20f-658743e79217.
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:42.714Z info: (13) Created new external program task &#34;[ctrl-q task chain 4] Ext program task chaining&#34;, new task id: 523aae7c-f70f-40b1-b5fa-f965ddb2552a.
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:42.776Z info: (14) Created new external program task &#34;[ctrl-q task chain 4] Ext program task chaining&#34;, new task id: 6bb9c2c0-582b-4845-a703-066ece618c54.
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:42.980Z info: (15) Created new reload task &#34;Butler test failing reloads 1 task&#34;, new task id: 48949bdb-061e-4f67-86cd-7dbb3492225a.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2024-03-12T09:34:09.780Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:09.780Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:09.780Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:09.780Z info: | Version      : 3.16.0
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:09.780Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:09.780Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:09.794Z info: | Command      : task-import
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:09.794Z info: |              : create tasks based on definitions in a file on disk, optionally also importing apps from QVF files.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:09.794Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:09.794Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:09.794Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:09.794Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:09.794Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:09.794Z info:
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:09.794Z info: Import tasks from definitions in file &#34;tasks.csv&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:09.935Z info: Successfully retrieved 28 tags from QSEoW
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:10.044Z info: Successfully retrieved 31 custom properties from QSEoW
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:10.155Z info: -------------------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:10.155Z info: Creating tasks...
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:10.294Z info: (1) Created new external program task &#34;App snapshots end of September 2022&#34;, new task id: 88bdbd10-eb45-4490-ac14-596e7e9bdaf3.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:10.419Z info: (2) Created new external program task &#34;Ext program task chaining 1&#34;, new task id: 32222dad-ec1b-4a74-bd39-430619bba874.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:10.529Z info: (3) Created new external program task &#34;Ext program task chaining 1&#34;, new task id: 1be0d039-b68f-4916-9fa5-2aa9d27f8344.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:10.686Z info: (4) Created new external program task &#34;Ext task 1&#34;, new task id: ca37875a-d977-4d0f-a034-f2d9e3aee85c.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:10.810Z info: (5) Created new external program task &#34;Ext task 2&#34;, new task id: d6b324ee-73e9-43dc-80be-164bd16daef8.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:10.951Z info: (6) Created new external program task &#34;New external program task 1&#34;, new task id: 2a9f7d8d-9f98-4cb5-af0b-c0b7551064c4.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:11.077Z info: (7) Created new external program task &#34;Node-RED ext program task demo 1&#34;, new task id: 0deb6ea6-896a-4363-a28c-ff0e227d4fc8.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:11.186Z info: (8) Created new external program task &#34;PowerShell export data connections&#34;, new task id: 7eecf18d-479b-4834-9b95-2b5f71cc0a7b.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:11.388Z info: (9) Created new external program task &#34;PowerShell export tags (ext pgm task)&#34;, new task id: 44cef627-81ce-4a5e-ab83-13390d822d93.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:11.498Z info: (10) Created new external program task &#34;Sample external task&#34;, new task id: cfe6f6fe-b557-4e11-af92-1ec7dc05221b.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:12.077Z info: (11) Created new external program task &#34;[ctrl-q task chain 3] Ext program task chaining&#34;, new task id: a751e35a-8ffe-4ee9-bc5f-e863c1f7c1b0.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:12.186Z info: (12) Created new external program task &#34;[ctrl-q task chain 3] Ext program task chaining&#34;, new task id: f45382b1-1b6d-4f32-9549-90fe0ba65aeb.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:12.498Z info: (13) Created new external program task &#34;[ctrl-q task chain 4] Ext program task chaining&#34;, new task id: f03da04c-8d0a-48ee-8643-42d429c69e12.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:12.623Z info: (14) Created new external program task &#34;[ctrl-q task chain 4] Ext program task chaining&#34;, new task id: e00e097a-0316-4fe5-a767-82b00910e774.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:12.888Z info: (15) Created new reload task &#34;Butler test failing reloads 1 task&#34;, new task id: ff1359b8-ff1e-4fef-b871-c44b2afce877.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:13.139Z info: (16) Created new reload task &#34;Butler test failing reloads 1 task&#34;, new task id: a2a21c75-6fcd-4341-b927-47fd7fc7074d.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:13.436Z info: (17) Created new reload task &#34;Manually triggered reload of Always failing reload (no delay)&#34;, new task id: f97e71c4-7a73-4de9-ade8-93dc87abb5f5.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:13.716Z info: (18) Created new reload task &#34;Manually triggered reload of Butler 7 Slack debug&#34;, new task id: 835c8937-d3c5-45a8-93b1-42f987dbf6e8.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:13.983Z info: (19) Created new reload task &#34;Manually triggered reload of Butler regression test app 1&#34;, new task id: 2653f70f-3d12-46f2-b45d-5af48f1c1708.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:14.217Z info: (20) Created new reload task &#34;Manually triggered reload of Butler regression test app 2&#34;, new task id: 81d5ac39-ac60-432e-9331-211454282d01.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:14.463Z info: (21) Created new reload task &#34;Manually triggered reload of Butler regression test app 3&#34;, new task id: 921d36b5-d46e-46f2-9cb8-1c2ef1dad4fe.
 </span></span><span style="display:flex;"><span>...
 </span></span><span style="display:flex;"><span>...
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:55.652Z info: -------------------------------------------------------------------
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:55.652Z info: Creating composite events for the just created tasks...
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:55.729Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;When [ctrl-q 2] done&#34; for task ID e6cbef63-ea6e-4d62-9a65-6589954d8ba4. Result: 201/Created.
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:55.792Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;Start ext pgm task when reload task done&#34; for task ID e6cbef63-ea6e-4d62-9a65-6589954d8ba4. Result: 201/Created.
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:55.869Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;When [ctrl-q task chain 3] done&#34; for task ID 523aae7c-f70f-40b1-b5fa-f965ddb2552a. Result: 201/Created.
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:55.932Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;When HR metrics done&#34; for task ID 88415a4e-befa-42e9-9965-18cc0916b152. Result: 201/Created.
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:55.979Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;When Operations monitor has reloaded&#34; for task ID e1a45483-7e43-4b22-88bd-dd104921a5f1. Result: 201/Created.
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:56.042Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;When NYT comments done&#34; for task ID 4ea567f0-f606-42b6-89a9-64dd84effc24. Result: 201/Created.
-</span></span><span style="display:flex;"><span>2023-11-19T20:13:56.119Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;Task event trigger&#34; for task ID 55a9d7dc-b91d-45aa-b6fe-fe14c1732152. Result: 201/Created.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:38.450Z info: -------------------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:38.450Z info: Creating composite events for the just created tasks...
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:38.607Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;When [ctrl-q 2] done&#34; for task ID a751e35a-8ffe-4ee9-bc5f-e863c1f7c1b0. Result: 201/Created.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:38.747Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;Start ext pgm task when reload task done&#34; for task ID a751e35a-8ffe-4ee9-bc5f-e863c1f7c1b0. Result: 201/Created.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:38.888Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;When [ctrl-q task chain 3] done&#34; for task ID f03da04c-8d0a-48ee-8643-42d429c69e12. Result: 201/Created.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:39.012Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;When HR metrics done&#34; for task ID 2079c888-537b-4bce-8252-8bac8517eff7. Result: 201/Created.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:39.137Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;When Operations monitor has reloaded&#34; for task ID 73e89949-51ea-4b64-b74a-1aa625e064e0. Result: 201/Created.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:39.263Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;When NYT comments done&#34; for task ID 28541735-b57a-4b03-85fe-d09062a9adfa. Result: 201/Created.
+</span></span><span style="display:flex;"><span>2024-03-12T09:34:39.395Z info: CREATE COMPOSITE EVENT IN QSEOW: Event name=&#34;Task event trigger&#34; for task ID e818fa3f-c8ca-4399-ab21-c61c05087fb9. Result: 201/Created.
 </span></span><span style="display:flex;"><span>...
 </span></span><span style="display:flex;"><span>...
 </span></span></code></pre></div><h3 id="example-import-apps-from-qvf-files-and-create-associated-reload-tasks">Example: Import apps from QVF files and create associated reload tasks</h3>
@@ -1060,7 +1065,7 @@ This is needed as a composite trigger may refer to an already existing and/or a 
 <p>The task import command looks like this in PowerShell:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">task-import</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#0000cf;font-weight:bold">192.168</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">100</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">109</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#204a87">pro2-win1</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">lab</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ptarmiganlabs</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">net</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-cert</span><span style="color:#ce5c00;font-weight:bold">-file</span> <span style="color:#000;font-weight:bold">./</span><span style="color:#000">cert</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">client</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-cert-key</span><span style="color:#ce5c00;font-weight:bold">-file</span> <span style="color:#000;font-weight:bold">./</span><span style="color:#000">cert</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">client_key</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>

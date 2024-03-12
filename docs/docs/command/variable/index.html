@@ -236,7 +236,7 @@
 <p>If the <code>--variable</code> option is not included all variables will be included in the table.</p>
 <p>Use <code>--output-format json</code> to get the results as JSON.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">variable-get</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#0000cf;font-weight:bold">192.168</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">100</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">109</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#204a87">pro2-win1</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">lab</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ptarmiganlabs</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">net</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-qrs-port</span> <span style="color:#0000cf;font-weight:bold">4242</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span> <span style="color:#000;font-weight:bold">`</span>
@@ -245,24 +245,29 @@
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-id-type</span> <span style="color:#000">name</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-variable</span> <span style="color:#4e9a06">&#39;Ctrl-Q variable 1&#39;</span> <span style="color:#4e9a06">&#39;TimestampFormat&#39;</span> <span style="color:#4e9a06">&#39;var1&#39;</span> <span style="color:#4e9a06">&#39;vVar1&#39;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-output-format</span> <span style="color:#000">table</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2023-11-19T20:24:45.815Z info: -----------------------------------------------------------
-</span></span><span style="display:flex;"><span>2023-11-19T20:24:45.815Z info: | Ctrl-Q
-</span></span><span style="display:flex;"><span>2023-11-19T20:24:45.815Z info: |
-</span></span><span style="display:flex;"><span>2023-11-19T20:24:45.815Z info: | Version      : 3.14.0
-</span></span><span style="display:flex;"><span>2023-11-19T20:24:45.829Z info: | Log level    : info
-</span></span><span style="display:flex;"><span>2023-11-19T20:24:45.829Z info: |
-</span></span><span style="display:flex;"><span>2023-11-19T20:24:45.829Z info: | Command      : variable-get
-</span></span><span style="display:flex;"><span>2023-11-19T20:24:45.829Z info: |              : get variable definitions in one or more apps
-</span></span><span style="display:flex;"><span>2023-11-19T20:24:45.829Z info: |
-</span></span><span style="display:flex;"><span>2023-11-19T20:24:45.829Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
-</span></span><span style="display:flex;"><span>2023-11-19T20:24:45.829Z info: |
-</span></span><span style="display:flex;"><span>2023-11-19T20:24:45.829Z info: | https://github.com/ptarmiganlabs/ctrl-q
-</span></span><span style="display:flex;"><span>2023-11-19T20:24:45.829Z info: ----------------------------------------------------------
-</span></span><span style="display:flex;"><span>2023-11-19T20:24:45.829Z info:
-</span></span><span style="display:flex;"><span>2023-11-19T20:24:47.939Z info:
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2024-03-12T08:44:59.101Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T08:44:59.101Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2024-03-12T08:44:59.101Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T08:44:59.101Z info: | Version      : 3.16.0
+</span></span><span style="display:flex;"><span>2024-03-12T08:44:59.101Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2024-03-12T08:44:59.101Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T08:44:59.101Z info: | Command      : variable-get
+</span></span><span style="display:flex;"><span>2024-03-12T08:44:59.101Z info: |              : get variable definitions in one or more apps
+</span></span><span style="display:flex;"><span>2024-03-12T08:44:59.101Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T08:44:59.101Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2024-03-12T08:44:59.101Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T08:44:59.101Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2024-03-12T08:44:59.101Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T08:44:59.101Z info:
+</span></span><span style="display:flex;"><span>2024-03-12T08:44:59.258Z info: Found 5 apps to process
+</span></span><span style="display:flex;"><span>2024-03-12T08:44:59.398Z info: Getting variables from app f16fa63d-54c7-4c8d-81f1-2d084d46bcfe, &#34;Minecraft Metrics&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T08:44:59.743Z info: Getting variables from app e377d9b5-231a-4795-800f-3649983647dd, &#34;LDAP lab&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T08:45:00.164Z info: Getting variables from app a3e0f5d2-000a-464f-998d-33d333b175d7, &#34;Sheet thumbnails demo app&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T08:45:00.805Z info: Getting variables from app d1ace221-b80e-4754-98ea-3d0a9ebc9632, &#34;Residential energy analysis&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T08:45:01.258Z info: Getting variables from app c840670c-7178-4a5e-8409-ba2da69127e2, &#34;Meetup.com&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T08:45:01.851Z info:
 </span></span><span style="display:flex;"><span>┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-</span></span><span style="display:flex;"><span>│ In-app variables
-</span></span><span style="display:flex;"><span>                                                                                                                                                                  │
+</span></span><span style="display:flex;"><span>│ In-app variables                                                                                                                                                                                                                                                                                                                                                     │
 </span></span><span style="display:flex;"><span>├──────────────────────────────────────┬─────────────────────────────┬──────────────────────────────────────┬─────────────────┬───────────────────┬──────────┬───────────────────────────┬─────────────┬───────────────────┬──────────────────────────┬──────────────────────────┬────────────────────┬──────┬───────┬───────────────────────────────┬─────────────────┤
 </span></span><span style="display:flex;"><span>│ App ID                               │ App name                    │ Variable ID                          │ Variable name   │ Description       │ Type     │ Definition                │ Is reserved │ Is script created │ Created date             │ Modified date            │ Engine object type │ Size │ Title │ Privileges                    │ Tags            │
 </span></span><span style="display:flex;"><span>├──────────────────────────────────────┼─────────────────────────────┼──────────────────────────────────────┼─────────────────┼───────────────────┼──────────┼───────────────────────────┼─────────────┼───────────────────┼──────────────────────────┼──────────────────────────┼────────────────────┼──────┼───────┼───────────────────────────────┼─────────────────┤
@@ -270,18 +275,16 @@
 </span></span><span style="display:flex;"><span>├──────────────────────────────────────┼─────────────────────────────┼──────────────────────────────────────┼─────────────────┼───────────────────┼──────────┼───────────────────────────┼─────────────┼───────────────────┼──────────────────────────┼──────────────────────────┼────────────────────┼──────┼───────┼───────────────────────────────┼─────────────────┤
 </span></span><span style="display:flex;"><span>│ e377d9b5-231a-4795-800f-3649983647dd │ LDAP lab                    │ c1a99293-51d0-426b-bdb7-a43b2d896dc9 │ TimestampFormat │                   │ variable │ M/D/YYYY h:mm:ss[.fff] TT │ true        │ true              │                          │                          │                    │      │       │ read,update,delete            │                 │
 </span></span><span style="display:flex;"><span>├──────────────────────────────────────┼─────────────────────────────┼──────────────────────────────────────┼─────────────────┼───────────────────┼──────────┼───────────────────────────┼─────────────┼───────────────────┼──────────────────────────┼──────────────────────────┼────────────────────┼──────┼───────┼───────────────────────────────┼─────────────────┤
-</span></span><span style="display:flex;"><span>│ a3e0f5d2-000a-464f-998d-33d333b175d7 │ Sheet thumbnails demo app   │ 0155e35e-8054-4896-9dd7-d947405f3a90 │ vVar1           │ vVar1 description │ variable │ =&#39;abc&#39; &amp; &#39;123&#39;            │
-</span></span><span style="display:flex;"><span>  │                   │ 2021-06-03T22:04:52.283Z │ 2023-10-31T06:12:00.194Z │                    │ -1   │       │ read,update,delete,exportdata │ varTag1,varTag2 │
+</span></span><span style="display:flex;"><span>│ a3e0f5d2-000a-464f-998d-33d333b175d7 │ Sheet thumbnails demo app   │ 0155e35e-8054-4896-9dd7-d947405f3a90 │ vVar1           │ vVar1 description │ variable │ =&#39;abc&#39; &amp; &#39;123&#39;            │             │                   │ 2021-06-03T22:04:52.283Z │ 2023-10-31T06:12:00.194Z │                    │ -1   │       │ read,update,delete,exportdata │ varTag1,varTag2 │
 </span></span><span style="display:flex;"><span>├──────────────────────────────────────┼─────────────────────────────┼──────────────────────────────────────┼─────────────────┼───────────────────┼──────────┼───────────────────────────┼─────────────┼───────────────────┼──────────────────────────┼──────────────────────────┼────────────────────┼──────┼───────┼───────────────────────────────┼─────────────────┤
 </span></span><span style="display:flex;"><span>│ a3e0f5d2-000a-464f-998d-33d333b175d7 │ Sheet thumbnails demo app   │ 8b9ed9b7-7db9-420f-8c00-308e19befd54 │ TimestampFormat │                   │ variable │ M/D/YYYY h:mm:ss[.fff] TT │ true        │ true              │                          │                          │                    │      │       │ read,update,delete            │                 │
 </span></span><span style="display:flex;"><span>├──────────────────────────────────────┼─────────────────────────────┼──────────────────────────────────────┼─────────────────┼───────────────────┼──────────┼───────────────────────────┼─────────────┼───────────────────┼──────────────────────────┼──────────────────────────┼────────────────────┼──────┼───────┼───────────────────────────────┼─────────────────┤
-</span></span><span style="display:flex;"><span>│ a3e0f5d2-000a-464f-998d-33d333b175d7 │ Sheet thumbnails demo app   │ 548828d1-4e83-4e57-a0ed-b94119fc46ad │ var1            │                   │ variable │ This is variable 1        │
-</span></span><span style="display:flex;"><span>  │ true              │                          │                          │                    │      │       │ read,update,delete            │                 │
+</span></span><span style="display:flex;"><span>│ a3e0f5d2-000a-464f-998d-33d333b175d7 │ Sheet thumbnails demo app   │ 548828d1-4e83-4e57-a0ed-b94119fc46ad │ var1            │                   │ variable │ This is variable 1        │             │ true              │                          │                          │                    │      │       │ read,update,delete            │                 │
 </span></span><span style="display:flex;"><span>├──────────────────────────────────────┼─────────────────────────────┼──────────────────────────────────────┼─────────────────┼───────────────────┼──────────┼───────────────────────────┼─────────────┼───────────────────┼──────────────────────────┼──────────────────────────┼────────────────────┼──────┼───────┼───────────────────────────────┼─────────────────┤
 </span></span><span style="display:flex;"><span>│ d1ace221-b80e-4754-98ea-3d0a9ebc9632 │ Residential energy analysis │ 185378fa-4835-47db-b142-ecffb4ffe951 │ TimestampFormat │                   │ variable │ M/D/YYYY h:mm:ss[.fff] TT │ true        │ true              │                          │                          │                    │      │       │ read,update,delete            │                 │
 </span></span><span style="display:flex;"><span>├──────────────────────────────────────┼─────────────────────────────┼──────────────────────────────────────┼─────────────────┼───────────────────┼──────────┼───────────────────────────┼─────────────┼───────────────────┼──────────────────────────┼──────────────────────────┼────────────────────┼──────┼───────┼───────────────────────────────┼─────────────────┤
 </span></span><span style="display:flex;"><span>│ c840670c-7178-4a5e-8409-ba2da69127e2 │ Meetup.com                  │ 3773a685-d3ce-453f-9e7a-d88514207dbe │ TimestampFormat │                   │ variable │ M/D/YYYY h:mm:ss[.fff] TT │ true        │ true              │                          │                          │                    │      │       │ read,update,delete            │                 │
-</span></span><span style="display:flex;"><span>└──────────────────────────────────────┴─────────────────────────────┴──────────────────────────────────────┴─────────────────┴───────────────────┴──────────┴────────────≤
+</span></span><span style="display:flex;"><span>└──────────────────────────────────────┴─────────────────────────────┴──────────────────────────────────────┴─────────────────┴───────────────────┴──────────┴───────────────────────────┴─────────────┴───────────────────┴──────────────────────────┴──────────────────────────┴────────────────────┴──────┴───────┴───────────────────────────────┴─────────────────┘
 </span></span></code></pre></div><h2 id="delete-variables-in-a-sense-app">Delete variables in a Sense app</h2>
 <p>There are three kinds of variables in Sense:</p>
 <ol>
@@ -294,12 +297,13 @@ All the variables that are automatically inserted at the beginning of new apps a
 <p><img src="/img/qlik-sense-special-variables-1.png" alt="Qlik sense variables with special meaning"></p>
 <p>The protected variables <a href="https://help.qlik.com/en-US/sense-developer/February2023/Subsystems/EngineAPI/Content/Sense_EngineAPI/WorkingWithAppsAndVisualizations/CreateVariables/remove-variable.htm">cannot be deleted</a> using the app development UI or by Ctrl-Q, neither can script-created variables.<br>
 To remove script created variables you must first remove them from the app&rsquo;s load script and then reload the app. Those variables re</p>
-<p>The example below deletes certain variables in several apps. The <code>--dry-run</code> option means Ctrl-Q will not delete any variables, but rather show what would be deleted.</p>
+<p>The example below deletes certain variables in several apps.<br>
+The <code>--dry-run</code> option means Ctrl-Q will not delete any variables, but rather show what would be deleted.</p>
 <p>If all variables should be deleted the <code>--delete-all</code> option can be used.<br>
 Note that if <code>--delete-all</code> is used <code>--id-type</code> and <code>--variable</code> must <strong>not</strong> be used.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span>  <span style="color:#204a87">variable-delete</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#0000cf;font-weight:bold">192.168</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">100</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">109</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#204a87">pro2-win1</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">lab</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ptarmiganlabs</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">net</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-app-id</span> <span style="color:#000">a3e0f5d2</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">000a</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">464f</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">998d</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">33d333b175d7</span> <span style="color:#0000cf;font-weight:bold">2933711d</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">6638</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">41d4-a2d2</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">6dd2d965208b</span> <span style="color:#000;font-weight:bold">`</span>
@@ -307,56 +311,56 @@ Note that if <code>--delete-all</code> is used <code>--id-type</code> and <code>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-id-type</span> <span style="color:#000">name</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-variable</span> <span style="color:#000">a1</span> <span style="color:#000">a2</span> <span style="color:#000">a3</span> <span style="color:#000">vVar1</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-dry-run</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2023-11-19T20:25:42.231Z info: -----------------------------------------------------------
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:42.231Z info: | Ctrl-Q
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:42.231Z info: |
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:42.231Z info: | Version      : 3.14.0
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:42.231Z info: | Log level    : info
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:42.231Z info: |
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:42.231Z info: | Command      : variable-delete
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:42.231Z info: |              : delete one or more variables in one or more apps
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:42.231Z info: |
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:42.231Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:42.231Z info: |
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:42.231Z info: | https://github.com/ptarmiganlabs/ctrl-q
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:42.231Z info: ----------------------------------------------------------
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:42.231Z info:
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:42.341Z info: ------------------------
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:42.341Z info: Deleting variables in app 2933711d-6638-41d4-a2d2-6dd2d965208b &#34;Ctrl-Q CLI&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:42.809Z warn: Variable &#34;a1&#34; does not exist in app 2933711d-6638-41d4-a2d2-6dd2d965208b &#34;Ctrl-Q CLI&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:42.809Z warn: Variable &#34;a2&#34; does not exist in app 2933711d-6638-41d4-a2d2-6dd2d965208b &#34;Ctrl-Q CLI&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:42.809Z warn: Variable &#34;a3&#34; does not exist in app 2933711d-6638-41d4-a2d2-6dd2d965208b &#34;Ctrl-Q CLI&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:42.809Z warn: Variable &#34;vVar1&#34; does not exist in app 2933711d-6638-41d4-a2d2-6dd2d965208b &#34;Ctrl-Q CLI&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:42.809Z info: ------------------------
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:42.809Z info: Deleting variables in app f16fa63d-54c7-4c8d-81f1-2d084d46bcfe &#34;Minecraft Metrics&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:43.185Z warn: Variable &#34;a1&#34; does not exist in app f16fa63d-54c7-4c8d-81f1-2d084d46bcfe &#34;Minecraft Metrics&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:43.185Z warn: Variable &#34;a2&#34; does not exist in app f16fa63d-54c7-4c8d-81f1-2d084d46bcfe &#34;Minecraft Metrics&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:43.185Z warn: Variable &#34;a3&#34; does not exist in app f16fa63d-54c7-4c8d-81f1-2d084d46bcfe &#34;Minecraft Metrics&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:43.185Z warn: Variable &#34;vVar1&#34; does not exist in app f16fa63d-54c7-4c8d-81f1-2d084d46bcfe &#34;Minecraft Metrics&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:43.200Z info: ------------------------
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:43.200Z info: Deleting variables in app e377d9b5-231a-4795-800f-3649983647dd &#34;LDAP lab&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:43.575Z warn: Variable &#34;a1&#34; does not exist in app e377d9b5-231a-4795-800f-3649983647dd &#34;LDAP lab&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:43.575Z warn: Variable &#34;a2&#34; does not exist in app e377d9b5-231a-4795-800f-3649983647dd &#34;LDAP lab&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:43.575Z warn: Variable &#34;a3&#34; does not exist in app e377d9b5-231a-4795-800f-3649983647dd &#34;LDAP lab&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:43.575Z warn: Variable &#34;vVar1&#34; does not exist in app e377d9b5-231a-4795-800f-3649983647dd &#34;LDAP lab&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:43.575Z info: ------------------------
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:43.575Z info: Deleting variables in app a3e0f5d2-000a-464f-998d-33d333b175d7 &#34;Sheet thumbnails demo app&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:44.153Z info: DRY RUN: Delete of variable &#34;a1&#34; in app a3e0f5d2-000a-464f-998d-33d333b175d7 &#34;Sheet thumbnails demo app&#34; would happen here
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:44.153Z info: DRY RUN: Delete of variable &#34;a2&#34; in app a3e0f5d2-000a-464f-998d-33d333b175d7 &#34;Sheet thumbnails demo app&#34; would happen here
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:44.153Z warn: Variable &#34;a3&#34; does not exist in app a3e0f5d2-000a-464f-998d-33d333b175d7 &#34;Sheet thumbnails demo app&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:44.153Z info: DRY RUN: Delete of variable &#34;vVar1&#34; in app a3e0f5d2-000a-464f-998d-33d333b175d7 &#34;Sheet thumbnails demo app&#34; would happen here
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:44.169Z info: ------------------------
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:44.169Z info: Deleting variables in app d1ace221-b80e-4754-98ea-3d0a9ebc9632 &#34;Residential energy analysis&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:44.622Z warn: Variable &#34;a1&#34; does not exist in app d1ace221-b80e-4754-98ea-3d0a9ebc9632 &#34;Residential energy analysis&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:44.622Z warn: Variable &#34;a2&#34; does not exist in app d1ace221-b80e-4754-98ea-3d0a9ebc9632 &#34;Residential energy analysis&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:44.622Z warn: Variable &#34;a3&#34; does not exist in app d1ace221-b80e-4754-98ea-3d0a9ebc9632 &#34;Residential energy analysis&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:44.622Z warn: Variable &#34;vVar1&#34; does not exist in app d1ace221-b80e-4754-98ea-3d0a9ebc9632 &#34;Residential energy analysis&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:44.622Z info: ------------------------
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:44.622Z info: Deleting variables in app c840670c-7178-4a5e-8409-ba2da69127e2 &#34;Meetup.com&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:45.090Z warn: Variable &#34;a1&#34; does not exist in app c840670c-7178-4a5e-8409-ba2da69127e2 &#34;Meetup.com&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:45.090Z warn: Variable &#34;a2&#34; does not exist in app c840670c-7178-4a5e-8409-ba2da69127e2 &#34;Meetup.com&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:45.090Z warn: Variable &#34;a3&#34; does not exist in app c840670c-7178-4a5e-8409-ba2da69127e2 &#34;Meetup.com&#34;
-</span></span><span style="display:flex;"><span>2023-11-19T20:25:45.090Z warn: Variable &#34;vVar1&#34; does not exist in app c840670c-7178-4a5e-8409-ba2da69127e2 &#34;Meetup.com&#34;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2024-03-12T09:21:30.657Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:30.657Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:30.657Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:30.657Z info: | Version      : 3.16.0
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:30.657Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:30.657Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:30.657Z info: | Command      : variable-delete
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:30.657Z info: |              : delete one or more variables in one or more apps
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:30.657Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:30.657Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:30.657Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:30.657Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:30.657Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:30.657Z info:
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:31.126Z info: ------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:31.126Z info: Deleting variables in app 2933711d-6638-41d4-a2d2-6dd2d965208b, &#34;Ctrl-Q CLI&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:31.626Z info: DRY RUN: Delete of variable &#34;a1&#34; in app 2933711d-6638-41d4-a2d2-6dd2d965208b &#34;Ctrl-Q CLI&#34; would happen here
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:31.626Z warn: Variable &#34;a2&#34; does not exist in app 2933711d-6638-41d4-a2d2-6dd2d965208b &#34;Ctrl-Q CLI&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:31.626Z info: DRY RUN: Delete of variable &#34;a3&#34; in app 2933711d-6638-41d4-a2d2-6dd2d965208b &#34;Ctrl-Q CLI&#34; would happen here
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:31.626Z warn: Variable &#34;vVar1&#34; does not exist in app 2933711d-6638-41d4-a2d2-6dd2d965208b &#34;Ctrl-Q CLI&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:31.626Z info: ------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:31.626Z info: Deleting variables in app f16fa63d-54c7-4c8d-81f1-2d084d46bcfe, &#34;Minecraft Metrics&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:32.032Z warn: Variable &#34;a1&#34; does not exist in app f16fa63d-54c7-4c8d-81f1-2d084d46bcfe &#34;Minecraft Metrics&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:32.032Z warn: Variable &#34;a2&#34; does not exist in app f16fa63d-54c7-4c8d-81f1-2d084d46bcfe &#34;Minecraft Metrics&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:32.032Z warn: Variable &#34;a3&#34; does not exist in app f16fa63d-54c7-4c8d-81f1-2d084d46bcfe &#34;Minecraft Metrics&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:32.032Z warn: Variable &#34;vVar1&#34; does not exist in app f16fa63d-54c7-4c8d-81f1-2d084d46bcfe &#34;Minecraft Metrics&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:32.032Z info: ------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:32.032Z info: Deleting variables in app e377d9b5-231a-4795-800f-3649983647dd, &#34;LDAP lab&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:32.422Z warn: Variable &#34;a1&#34; does not exist in app e377d9b5-231a-4795-800f-3649983647dd &#34;LDAP lab&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:32.422Z warn: Variable &#34;a2&#34; does not exist in app e377d9b5-231a-4795-800f-3649983647dd &#34;LDAP lab&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:32.422Z warn: Variable &#34;a3&#34; does not exist in app e377d9b5-231a-4795-800f-3649983647dd &#34;LDAP lab&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:32.422Z info: DRY RUN: Delete of variable &#34;vVar1&#34; in app e377d9b5-231a-4795-800f-3649983647dd &#34;LDAP lab&#34; would happen here
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:32.422Z info: ------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:32.422Z info: Deleting variables in app a3e0f5d2-000a-464f-998d-33d333b175d7, &#34;Sheet thumbnails demo app&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:33.095Z info: DRY RUN: Delete of variable &#34;a1&#34; in app a3e0f5d2-000a-464f-998d-33d333b175d7 &#34;Sheet thumbnails demo app&#34; would happen here
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:33.095Z info: DRY RUN: Delete of variable &#34;a2&#34; in app a3e0f5d2-000a-464f-998d-33d333b175d7 &#34;Sheet thumbnails demo app&#34; would happen here
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:33.095Z warn: Variable &#34;a3&#34; does not exist in app a3e0f5d2-000a-464f-998d-33d333b175d7 &#34;Sheet thumbnails demo app&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:33.095Z info: DRY RUN: Delete of variable &#34;vVar1&#34; in app a3e0f5d2-000a-464f-998d-33d333b175d7 &#34;Sheet thumbnails demo app&#34; would happen here
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:33.095Z info: ------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:33.095Z info: Deleting variables in app d1ace221-b80e-4754-98ea-3d0a9ebc9632, &#34;Residential energy analysis&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:33.516Z warn: Variable &#34;a1&#34; does not exist in app d1ace221-b80e-4754-98ea-3d0a9ebc9632 &#34;Residential energy analysis&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:33.532Z warn: Variable &#34;a2&#34; does not exist in app d1ace221-b80e-4754-98ea-3d0a9ebc9632 &#34;Residential energy analysis&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:33.532Z warn: Variable &#34;a3&#34; does not exist in app d1ace221-b80e-4754-98ea-3d0a9ebc9632 &#34;Residential energy analysis&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:33.532Z warn: Variable &#34;vVar1&#34; does not exist in app d1ace221-b80e-4754-98ea-3d0a9ebc9632 &#34;Residential energy analysis&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:33.532Z info: ------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:33.532Z info: Deleting variables in app c840670c-7178-4a5e-8409-ba2da69127e2, &#34;Meetup.com&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:34.002Z warn: Variable &#34;a1&#34; does not exist in app c840670c-7178-4a5e-8409-ba2da69127e2 &#34;Meetup.com&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:34.016Z warn: Variable &#34;a2&#34; does not exist in app c840670c-7178-4a5e-8409-ba2da69127e2 &#34;Meetup.com&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:34.016Z warn: Variable &#34;a3&#34; does not exist in app c840670c-7178-4a5e-8409-ba2da69127e2 &#34;Meetup.com&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:21:34.016Z warn: Variable &#34;vVar1&#34; does not exist in app c840670c-7178-4a5e-8409-ba2da69127e2 &#34;Meetup.com&#34;
 </span></span></code></pre></div>
   <div class="section-index">
     

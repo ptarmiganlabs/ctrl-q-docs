@@ -222,37 +222,39 @@
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#000">help</span>
 </span></span></code></pre></div><p>Using macOS/Linux:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./ctrl-q <span style="color:#204a87">help</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Usage: build [options] [command]
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Usage: ctrl-q [options] [command]
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Ctrl-Q is a command line utility for interacting with client-managed Qlik Sense Enterprise on Windows servers.
 </span></span><span style="display:flex;"><span>Among other things the tool does bulk import of apps and tasks, manipulates master items and scrambles in-app data.
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Version: 3.15.0
+</span></span><span style="display:flex;"><span>Version: 3.16.0
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Options:
 </span></span><span style="display:flex;"><span>  -V, --version                         output the version number
 </span></span><span style="display:flex;"><span>  -h, --help                            display help for command
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Commands:
-</span></span><span style="display:flex;"><span>  master-item-import [options]          create master items based on definitions in a file on disk
-</span></span><span style="display:flex;"><span>  master-item-measure-get [options]     get info about one or more master measures
-</span></span><span style="display:flex;"><span>  master-item-measure-delete [options]  delete master measure(s)
-</span></span><span style="display:flex;"><span>  master-item-dim-get [options]         get info about one or more master dimensions
-</span></span><span style="display:flex;"><span>  master-item-dim-delete [options]      delete master dimension(s)
-</span></span><span style="display:flex;"><span>  variable-get [options]                get variable definitions in one or more apps
-</span></span><span style="display:flex;"><span>  variable-delete [options]             delete one or more variables in one or more apps
-</span></span><span style="display:flex;"><span>  field-scramble [options]              scramble one or more fields in an app. A new app with the scrambled data is created.
-</span></span><span style="display:flex;"><span>  script-get [options]                  get script from Qlik Sense app
-</span></span><span style="display:flex;"><span>  bookmark-get [options]                get info about one or more bookmarks
-</span></span><span style="display:flex;"><span>  task-get [options]                    get info about one or more tasks
-</span></span><span style="display:flex;"><span>  task-custom-property-set [options]    update a custom property of one or more tasks
-</span></span><span style="display:flex;"><span>  task-import [options]                 create tasks based on definitions in a file on disk, optionally also importing apps from QVF files.
-</span></span><span style="display:flex;"><span>  app-import [options]                  import apps/upload QVF files on disk to Sense based on definitions in Excel file.
 </span></span><span style="display:flex;"><span>  app-export [options]                  export Qlik Sense apps to QVF files on disk.
+</span></span><span style="display:flex;"><span>  app-import [options]                  import apps/upload QVF files on disk to Sense based on definitions in Excel file.
+</span></span><span style="display:flex;"><span>  bookmark-get [options]                get info about one or more bookmarks
 </span></span><span style="display:flex;"><span>  connection-test [options]             test connection to Qlik Sense server.
-</span></span><span style="display:flex;"><span>  version [options]                     show version info
-</span></span><span style="display:flex;"><span>  task-vis [options]                    visualise task network
+</span></span><span style="display:flex;"><span>  field-scramble [options]              scramble one or more fields in an app. A new app with the scrambled data is created.
 </span></span><span style="display:flex;"><span>  help [command]                        display help for command
+</span></span><span style="display:flex;"><span>  master-item-dim-delete [options]      delete master dimension(s)
+</span></span><span style="display:flex;"><span>  master-item-dim-get [options]         get info about one or more master dimensions
+</span></span><span style="display:flex;"><span>  master-item-import [options]          create master items based on definitions in a file on disk
+</span></span><span style="display:flex;"><span>  master-item-measure-delete [options]  delete master measure(s)
+</span></span><span style="display:flex;"><span>  master-item-measure-get [options]     get info about one or more master measures
+</span></span><span style="display:flex;"><span>  script-get [options]                  get script from Qlik Sense app
+</span></span><span style="display:flex;"><span>  sessions-delete [options]             delete proxy session(s) on a specific virtual proxy and proxy service
+</span></span><span style="display:flex;"><span>  sessions-get [options]                get info about proxy sessions on one or more virtual proxies
+</span></span><span style="display:flex;"><span>  task-custom-property-set [options]    update a custom property of one or more tasks
+</span></span><span style="display:flex;"><span>  task-get [options]                    get info about one or more tasks
+</span></span><span style="display:flex;"><span>  task-import [options]                 create tasks based on definitions in a file on disk, optionally also importing apps from QVF files.
+</span></span><span style="display:flex;"><span>  task-vis [options]                    visualise task network
+</span></span><span style="display:flex;"><span>  variable-delete [options]             delete one or more variables in one or more apps
+</span></span><span style="display:flex;"><span>  variable-get [options]                get variable definitions in one or more apps
+</span></span><span style="display:flex;"><span>  version [options]                     show version info
 </span></span></code></pre></div>
   <div class="section-index">
     

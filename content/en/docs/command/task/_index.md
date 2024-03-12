@@ -33,7 +33,7 @@ This is a placeholder page that shows you how to use this template site.
 
 This command provides a hierarchical tree view of reload tasks and external program tasks, similar to what is available in QlikView.
 
-The tree view can be enhanced with colours (see [this page](/docs/getting-started/colors-formatting/)) and task details.
+The tree view can be enhanced with colors (see [this page](/docs/getting-started/colors-formatting/)) and task details.
 
 There are quite a few customisation options available when creating a task tree.  
 Note that some options are used when creating task tables, these are not applicable for task trees. Ctrl-Q will show an error when invalid combinations of options are used.
@@ -46,23 +46,24 @@ Let's first take a look at the options for the`task-get` command:
 ```
 
 ```text
-Usage: build task-get [options]
+Usage: ctrl-q task-get [options]
 
 get info about one or more tasks
 
 Options:
   --log-level <level>            log level (choices: "error", "warn", "info", "verbose", "debug", "silly", default: "info")
   --host <host>                  Qlik Sense server IP/FQDN
-  --port <port>                  Qlik Sense repository service (QRS) port (default: "4242")
+  --port <port>                  Qlik Sense repository service (QRS) port (usually 4242 for cert auth, 443 for jwt auth) (default: "4242")
   --schema-version <string>      Qlik Sense engine schema version (default: "12.612.0")
   --virtual-proxy <prefix>       Qlik Sense virtual proxy prefix (default: "")
-  --secure <true|false>          connection to Qlik Sense engine is via https (default: true)
+  --secure <true|false>          https connection to Qlik Sense must use correct certificate. Invalid certificates will result in rejected/failed connection. (default: true)
   --auth-user-dir <directory>    user directory for user to connect with
   --auth-user-id <userid>        user ID for user to connect with
-  -a, --auth-type <type>         authentication type (choices: "cert", default: "cert")
+  -a, --auth-type <type>         authentication type (choices: "cert", "jwt", default: "cert")
   --auth-cert-file <file>        Qlik Sense certificate file (exported from QMC) (default: "./cert/client.pem")
   --auth-cert-key-file <file>    Qlik Sense certificate key file (exported from QMC) (default: "./cert/client_key.pem")
   --auth-root-cert-file <file>   Qlik Sense root certificate file (exported from QMC) (default: "./cert/root.pem")
+  --auth-jwt <jwt>               JSON Web Token (JWT) to use for authentication with Qlik Sense server
   --task-type <type...>          type of tasks to include (choices: "reload", "ext-program")
   --task-id <ids...>             use task IDs to select which tasks to retrieve. Only allowed when --output-format=table
   --task-tag <tags...>           use tags to select which tasks to retrieve. Only allowed when --output-format=table
@@ -74,8 +75,8 @@ Options:
   --text-color <show>            use colored text in task views (choices: "yes", "no", default: "yes")
   --tree-icons                   display task status icons in tree view
   --tree-details [detail...]     display details for each task in tree view (choices: "taskid", "laststart", "laststop", "nextstart", "appname", "appstream", default: "")
-  --table-details [detail...]    which aspects of tasks should be included in table view. Not choosing any details will show all (choices: "common", "lastexecution", "tag", "customproperty",
-                                 "schematrigger", "compositetrigger", default: "")
+  --table-details [detail...]    which aspects of tasks should be included in table view. Not choosing any details will show all (choices: "common", "lastexecution", "tag", "customproperty", "schematrigger", "compositetrigger", default:
+                                 "")
   -h, --help                     display help for command
 ```
 
@@ -114,7 +115,7 @@ Let's say we want a task tree with the app name and next start time for the task
 ```powershell
 .\ctrl-q.exe task-get `
 --auth-type cert `
---host 192.168.100.109 `
+--host pro2-win1.lab.ptarmiganlabs.net `
 --auth-user-dir LAB `
 --auth-user-id goran `
 --output-format tree `
@@ -123,6 +124,8 @@ Let's say we want a task tree with the app name and next start time for the task
 --text-color yes `
 --tree-details nextstart appname
 ```
+
+Note how Ctrl-Q detects and warns about cyclic task dependencies:
 
 ![Qlik Sense task tree 5](/img/task-tree-color-details-2_65.png "Qlik Sense task tree with task details and colors")
 
@@ -134,7 +137,7 @@ It's possible to save this JSON to disk:
 ```powershell
 .\ctrl-q.exe task-get `
 --auth-type cert `
---host 192.168.100.109 `
+--host pro2-win1.lab.ptarmiganlabs.net `
 --auth-user-dir LAB `
 --auth-user-id goran `
 --output-format tree `
@@ -145,47 +148,50 @@ It's possible to save this JSON to disk:
 ```
 
 ```text
-2023-11-19T20:21:00.767Z info: -----------------------------------------------------------
-2023-11-19T20:21:00.782Z info: | Ctrl-Q
-2023-11-19T20:21:00.782Z info: |
-2023-11-19T20:21:00.782Z info: | Version      : 3.14.0
-2023-11-19T20:21:00.782Z info: | Log level    : info
-2023-11-19T20:21:00.782Z info: |
-2023-11-19T20:21:00.782Z info: | Command      : task-get
-2023-11-19T20:21:00.782Z info: |              : get info about one or more tasks
-2023-11-19T20:21:00.782Z info: |
-2023-11-19T20:21:00.782Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
-2023-11-19T20:21:00.782Z info: |
-2023-11-19T20:21:00.782Z info: | https://github.com/ptarmiganlabs/ctrl-q
-2023-11-19T20:21:00.782Z info: ----------------------------------------------------------
-2023-11-19T20:21:00.782Z info:
-2023-11-19T20:21:00.860Z info: Successfully retrieved 26 tags from QSEoW
-2023-11-19T20:21:03.610Z info:
-2023-11-19T20:21:03.610Z info: ✅ Writing task tree to disk file "tasktree.json".
+2024-03-12T08:41:11.115Z info: -----------------------------------------------------------
+2024-03-12T08:41:11.115Z info: | Ctrl-Q
+2024-03-12T08:41:11.115Z info: |
+2024-03-12T08:41:11.115Z info: | Version      : 3.16.0
+2024-03-12T08:41:11.115Z info: | Log level    : info
+2024-03-12T08:41:11.115Z info: |
+2024-03-12T08:41:11.115Z info: | Command      : task-get
+2024-03-12T08:41:11.115Z info: |              : get info about one or more tasks
+2024-03-12T08:41:11.115Z info: |
+2024-03-12T08:41:11.115Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
+2024-03-12T08:41:11.115Z info: |
+2024-03-12T08:41:11.115Z info: | https://github.com/ptarmiganlabs/ctrl-q
+2024-03-12T08:41:11.115Z info: ----------------------------------------------------------
+2024-03-12T08:41:11.115Z info:
+2024-03-12T08:41:11.286Z info: Successfully retrieved 28 tags from QSEoW
+2024-03-12T08:41:13.114Z warn: Cyclic dependency detected in task tree, from task "[ctrl-q task chain 11.1] Reload task of Ctrl-Q reload chain app 1-1" to "[ctrl-q task chain 2] Reload task of Ctrl-Q reload chain app 2-1". Won't go deeper.
+2024-03-12T08:41:13.114Z warn: Cyclic dependency detected in task tree, from task "[ctrl-q task chain 10.1] Reload task of Ctrl-Q reload chain app 1-1" to "[ctrl-q task chain 11.1] Reload task of Ctrl-Q reload chain app 1-1". Won't go deeper.
+2024-03-12T08:41:13.130Z info: ✅ Writing task tree to disk file "tasktree.json".
 ```
 
 Running the same command again, when the destination file already exists, results in a question to overwrite the file:
 
 ```text
-2023-11-19T20:21:23.129Z info: -----------------------------------------------------------
-2023-11-19T20:21:23.129Z info: | Ctrl-Q
-2023-11-19T20:21:23.129Z info: |
-2023-11-19T20:21:23.129Z info: | Version      : 3.14.0
-2023-11-19T20:21:23.129Z info: | Log level    : info
-2023-11-19T20:21:23.129Z info: |
-2023-11-19T20:21:23.129Z info: | Command      : task-get
-2023-11-19T20:21:23.129Z info: |              : get info about one or more tasks
-2023-11-19T20:21:23.129Z info: |
-2023-11-19T20:21:23.129Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
-2023-11-19T20:21:23.129Z info: |
-2023-11-19T20:21:23.129Z info: | https://github.com/ptarmiganlabs/ctrl-q
-2023-11-19T20:21:23.129Z info: ----------------------------------------------------------
-2023-11-19T20:21:23.129Z info:
-2023-11-19T20:21:23.207Z info: Successfully retrieved 26 tags from QSEoW
-2023-11-19T20:21:24.630Z info:
+2024-03-12T08:41:32.882Z info: -----------------------------------------------------------
+2024-03-12T08:41:32.882Z info: | Ctrl-Q
+2024-03-12T08:41:32.882Z info: |
+2024-03-12T08:41:32.882Z info: | Version      : 3.16.0
+2024-03-12T08:41:32.882Z info: | Log level    : info
+2024-03-12T08:41:32.882Z info: |
+2024-03-12T08:41:32.882Z info: | Command      : task-get
+2024-03-12T08:41:32.882Z info: |              : get info about one or more tasks
+2024-03-12T08:41:32.897Z info: |
+2024-03-12T08:41:32.897Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
+2024-03-12T08:41:32.897Z info: |
+2024-03-12T08:41:32.897Z info: | https://github.com/ptarmiganlabs/ctrl-q
+2024-03-12T08:41:32.897Z info: ----------------------------------------------------------
+2024-03-12T08:41:32.897Z info:
+2024-03-12T08:41:33.023Z info: Successfully retrieved 28 tags from QSEoW
+2024-03-12T08:41:34.898Z warn: Cyclic dependency detected in task tree, from task "[ctrl-q task chain 11.1] Reload task of Ctrl-Q reload chain app 1-1" to "[ctrl-q task chain 2] Reload task of Ctrl-Q reload chain app 2-1". Won't go deeper.
+2024-03-12T08:41:34.898Z warn: Cyclic dependency detected in task tree, from task "[ctrl-q task chain 10.1] Reload task of Ctrl-Q reload chain app 1-1" to "[ctrl-q task chain 11.1] Reload task of Ctrl-Q reload chain app 1-1". Won't go deeper.
+2024-03-12T08:41:34.898Z info:
                                   Destination file "tasktree.json" exists. Do you want to overwrite it? (y/n) y
-2023-11-19T20:21:27.180Z info:
-2023-11-19T20:21:27.180Z info: ✅ Writing task tree to disk file "tasktree.json".
+2024-03-12T08:41:35.694Z info:
+2024-03-12T08:41:35.694Z info: ✅ Writing task tree to disk file "tasktree.json".
 ```
 
 To forcibly overwrite the destination file the `--output-file-overwrite` option can be specified.
@@ -211,7 +217,7 @@ Show a list of tasks on screen, including main task fields as well as any tags d
 ```powershell
 .\ctrl-q.exe task-get `
 --auth-type cert `
---host 192.168.100.109 `
+--host pro2-win1.lab.ptarmiganlabs.net `
 --auth-user-dir LAB `
 --auth-user-id goran `
 --output-format table `
@@ -228,25 +234,25 @@ If `--table-details` is not specified all available information will be showed a
 This will result in a *very* wide table!
 
 ```text
-2023-11-19T20:21:56.546Z info: -----------------------------------------------------------
-2023-11-19T20:21:56.546Z info: | Ctrl-Q
-2023-11-19T20:21:56.546Z info: |
-2023-11-19T20:21:56.546Z info: | Version      : 3.14.0
-2023-11-19T20:21:56.546Z info: | Log level    : info
-2023-11-19T20:21:56.546Z info: |
-2023-11-19T20:21:56.546Z info: | Command      : task-get
-2023-11-19T20:21:56.546Z info: |              : get info about one or more tasks
-2023-11-19T20:21:56.546Z info: |
-2023-11-19T20:21:56.546Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
-2023-11-19T20:21:56.546Z info: |
-2023-11-19T20:21:56.546Z info: | https://github.com/ptarmiganlabs/ctrl-q
-2023-11-19T20:21:56.546Z info: ----------------------------------------------------------
-2023-11-19T20:21:56.546Z info:
-2023-11-19T20:21:56.640Z info: Successfully retrieved 26 tags from QSEoW
-2023-11-19T20:21:58.078Z info: # rows in table: 76
-2023-11-19T20:21:58.078Z info: # reload tasks in table: 68
-2023-11-19T20:21:58.078Z info: # external program tasks in table: 8
-2023-11-19T20:21:58.187Z info:
+2024-03-12T08:42:10.554Z info: -----------------------------------------------------------
+2024-03-12T08:42:10.554Z info: | Ctrl-Q
+2024-03-12T08:42:10.554Z info: |
+2024-03-12T08:42:10.554Z info: | Version      : 3.16.0
+2024-03-12T08:42:10.554Z info: | Log level    : info
+2024-03-12T08:42:10.554Z info: |
+2024-03-12T08:42:10.554Z info: | Command      : task-get
+2024-03-12T08:42:10.569Z info: |              : get info about one or more tasks
+2024-03-12T08:42:10.569Z info: |
+2024-03-12T08:42:10.569Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
+2024-03-12T08:42:10.569Z info: |
+2024-03-12T08:42:10.569Z info: | https://github.com/ptarmiganlabs/ctrl-q
+2024-03-12T08:42:10.569Z info: ----------------------------------------------------------
+2024-03-12T08:42:10.569Z info:
+2024-03-12T08:42:10.710Z info: Successfully retrieved 28 tags from QSEoW
+2024-03-12T08:42:12.540Z info: # rows in table: 90
+2024-03-12T08:42:12.540Z info: # reload tasks in table: 76
+2024-03-12T08:42:12.540Z info: # external program tasks in table: 14
+2024-03-12T08:42:12.680Z info:
 ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 │ # reload tasks: 68, # external program tasks: 8, # rows in table: 76
 
@@ -283,7 +289,7 @@ Example command using these options. Note the double quotes around the task tags
 ```powershell
 .\ctrl-q.exe task-get `
 --auth-type cert `
---host 192.168.100.109 `
+--host pro2-win1.lab.ptarmiganlabs.net `
 --auth-user-dir LAB `
 --auth-user-id goran `
 --output-format table `
@@ -301,7 +307,7 @@ Here the most common task fileds together with task tags are included in the tab
 ```powershell
 .\ctrl-q.exe task-get `
 --auth-type cert `
---host 192.168.100.109 `
+--host pro2-win1.lab.ptarmiganlabs.net `
 --auth-user-dir LAB `
 --auth-user-id goran `
 --output-format table `
@@ -312,23 +318,22 @@ Here the most common task fileds together with task tags are included in the tab
 ```
 
 ````text
-2023-11-19T20:23:43.715Z info: -----------------------------------------------------------
-2023-11-19T20:23:43.715Z info: | Ctrl-Q
-2023-11-19T20:23:43.715Z info: |
-2023-11-19T20:23:43.715Z info: | Version      : 3.14.0
-2023-11-19T20:23:43.715Z info: | Log level    : info
-2023-11-19T20:23:43.715Z info: |
-2023-11-19T20:23:43.715Z info: | Command      : task-get
-2023-11-19T20:23:43.715Z info: |              : get info about one or more tasks
-2023-11-19T20:23:43.715Z info: |
-2023-11-19T20:23:43.731Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
-2023-11-19T20:23:43.731Z info: |
-2023-11-19T20:23:43.731Z info: | https://github.com/ptarmiganlabs/ctrl-q
-2023-11-19T20:23:43.731Z info: ----------------------------------------------------------
-2023-11-19T20:23:43.731Z info:
-2023-11-19T20:23:43.810Z info: Successfully retrieved 26 tags from QSEoW
-2023-11-19T20:23:48.232Z info:
-2023-11-19T20:23:48.232Z info: ✅ Writing task table to disk file "tasktable.csv".
+2024-03-12T08:43:16.986Z info: -----------------------------------------------------------
+2024-03-12T08:43:16.986Z info: | Ctrl-Q
+2024-03-12T08:43:16.986Z info: |
+2024-03-12T08:43:16.986Z info: | Version      : 3.16.0
+2024-03-12T08:43:16.986Z info: | Log level    : info
+2024-03-12T08:43:16.986Z info: |
+2024-03-12T08:43:16.986Z info: | Command      : task-get
+2024-03-12T08:43:16.986Z info: |              : get info about one or more tasks
+2024-03-12T08:43:16.986Z info: |
+2024-03-12T08:43:16.986Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
+2024-03-12T08:43:16.986Z info: |
+2024-03-12T08:43:16.986Z info: | https://github.com/ptarmiganlabs/ctrl-q
+2024-03-12T08:43:16.986Z info: ----------------------------------------------------------
+2024-03-12T08:43:16.986Z info:
+2024-03-12T08:43:17.124Z info: Successfully retrieved 28 tags from QSEoW
+2024-03-12T08:43:18.969Z info: ✅ Writing task table to disk file "tasktable.csv".
 ````
 
 ### Save task to disk file as JSON
@@ -339,7 +344,7 @@ Here only the most basic task info included via the `--table-details` option.
 ```powershell
 .\ctrl-q.exe task-get `
 --auth-type cert `
---host 192.168.100.109 `
+--host pro2-win1.lab.ptarmiganlabs.net `
 --auth-user-dir LAB `
 --auth-user-id goran `
 --output-format table `
@@ -350,23 +355,22 @@ Here only the most basic task info included via the `--table-details` option.
 ```
 
 ```text
-2023-11-19T20:24:09.307Z info: -----------------------------------------------------------
-2023-11-19T20:24:09.307Z info: | Ctrl-Q
-2023-11-19T20:24:09.307Z info: |
-2023-11-19T20:24:09.307Z info: | Version      : 3.14.0
-2023-11-19T20:24:09.307Z info: | Log level    : info
-2023-11-19T20:24:09.307Z info: |
-2023-11-19T20:24:09.307Z info: | Command      : task-get
-2023-11-19T20:24:09.307Z info: |              : get info about one or more tasks
-2023-11-19T20:24:09.307Z info: |
-2023-11-19T20:24:09.307Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
-2023-11-19T20:24:09.307Z info: |
-2023-11-19T20:24:09.307Z info: | https://github.com/ptarmiganlabs/ctrl-q
-2023-11-19T20:24:09.307Z info: ----------------------------------------------------------
-2023-11-19T20:24:09.307Z info:
-2023-11-19T20:24:09.400Z info: Successfully retrieved 26 tags from QSEoW
-2023-11-19T20:24:12.057Z info:
-2023-11-19T20:24:12.057Z info: ✅ Writing task table to disk file "tasks.json".
+2024-03-12T08:43:53.762Z info: -----------------------------------------------------------
+2024-03-12T08:43:53.762Z info: | Ctrl-Q
+2024-03-12T08:43:53.762Z info: |
+2024-03-12T08:43:53.762Z info: | Version      : 3.16.0
+2024-03-12T08:43:53.762Z info: | Log level    : info
+2024-03-12T08:43:53.762Z info: |
+2024-03-12T08:43:53.762Z info: | Command      : task-get
+2024-03-12T08:43:53.762Z info: |              : get info about one or more tasks
+2024-03-12T08:43:53.762Z info: |
+2024-03-12T08:43:53.762Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
+2024-03-12T08:43:53.762Z info: |
+2024-03-12T08:43:53.762Z info: | https://github.com/ptarmiganlabs/ctrl-q
+2024-03-12T08:43:53.762Z info: ----------------------------------------------------------
+2024-03-12T08:43:53.762Z info:
+2024-03-12T08:43:53.903Z info: Successfully retrieved 28 tags from QSEoW
+2024-03-12T08:43:55.747Z info: ✅ Writing task table to disk file "tasks.json".
 ```
 
 The resulting JSON file looks like this:
@@ -435,25 +439,25 @@ Performance is ok for small to medium sized Qlik Sense sites, but will slower fo
 On Windows using PowerShell it can look like this:
 
 ```powershell
-PS C:\tools\ctrl-q> .\ctrl-q.exe task-vis --host 192.168.100.109 --auth-type cert --auth-user-dir LAB --auth-user-id goran
-2023-12-26T21:38:09.003Z info: -----------------------------------------------------------
-2023-12-26T21:38:09.003Z info: | Ctrl-Q
-2023-12-26T21:38:09.003Z info: |
-2023-12-26T21:38:09.003Z info: | Version      : 3.15.0
-2023-12-26T21:38:09.003Z info: | Log level    : info
-2023-12-26T21:38:09.003Z info: |
-2023-12-26T21:38:09.003Z info: | Command      : task-vis
-2023-12-26T21:38:09.003Z info: |              : visualise task network
-2023-12-26T21:38:09.003Z info: |
-2023-12-26T21:38:09.003Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
-2023-12-26T21:38:09.003Z info: |
-2023-12-26T21:38:09.003Z info: | https://github.com/ptarmiganlabs/ctrl-q
-2023-12-26T21:38:09.003Z info: ----------------------------------------------------------
-2023-12-26T21:38:09.003Z info:
-2023-12-26T21:38:10.941Z info: Using vis.js to visualize tasks, more info at https://github.com/visjs/vis-network
-2023-12-26T21:38:10.941Z info:
-2023-12-26T21:38:10.941Z info: Task visualization server listening on http://localhost:3000
-2023-12-26T21:38:10.941Z info: Press Ctrl-C to quit.
+PS C:\tools\ctrl-q> .\ctrl-q.exe task-vis --host pro2-win1.lab.ptarmiganlabs.net --auth-type cert --auth-user-dir LAB --auth-user-id goran
+2024-03-12T08:44:24.637Z info: -----------------------------------------------------------
+2024-03-12T08:44:24.637Z info: | Ctrl-Q
+2024-03-12T08:44:24.637Z info: |
+2024-03-12T08:44:24.637Z info: | Version      : 3.16.0
+2024-03-12T08:44:24.637Z info: | Log level    : info
+2024-03-12T08:44:24.637Z info: |
+2024-03-12T08:44:24.637Z info: | Command      : task-vis
+2024-03-12T08:44:24.637Z info: |              : visualise task network
+2024-03-12T08:44:24.637Z info: |
+2024-03-12T08:44:24.637Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
+2024-03-12T08:44:24.637Z info: |
+2024-03-12T08:44:24.637Z info: | https://github.com/ptarmiganlabs/ctrl-q
+2024-03-12T08:44:24.637Z info: ----------------------------------------------------------
+2024-03-12T08:44:24.637Z info:
+2024-03-12T08:44:26.684Z info: Using vis.js to visualize tasks, more info at https://github.com/visjs/vis-network
+2024-03-12T08:44:26.684Z info:
+2024-03-12T08:44:26.684Z info: Task visualization server listening on http://localhost:3000
+2024-03-12T08:44:26.684Z info: Press Ctrl-C to quit.
 ```
 
 Ctrl-clicking (on Windows. Use Cmd-Clik on macOS) on the link will open the network graph in a browser:

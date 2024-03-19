@@ -43,7 +43,7 @@ Let's first take a look at what proxy sessions are active in a Qlik Sense enviro
    --output-format table
 ```
 
-The command gives ut several pieces of information:
+The command gives us several pieces of information:
 
 - Information about all proxies in the Qlik Sense environment, including how many virtual proxies are linked to each one.
 - Warnings about some virtual proxies not having *any* linked proxy services. This is not an error per se, but the virtual proxies will not function given this configuration.

@@ -1,0 +1,243 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="canonical" type="text/html" href="https://ctrl-q.ptarmiganlabs.com/docs/command/scramble-field/">
+<link rel="alternate" type="application/rss&#43;xml" href="https://ctrl-q.ptarmiganlabs.com/docs/command/scramble-field/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Scramble fields | Ctrl-Q</title>
+<meta name="description" content="Scramble fields in Sense apps.
+">
+<meta property="og:title" content="Scramble fields" />
+<meta property="og:description" content="Scramble fields in Sense apps.
+" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ctrl-q.ptarmiganlabs.com/docs/command/scramble-field/" /><meta property="og:site_name" content="Ctrl-Q" />
+
+<meta itemprop="name" content="Scramble fields">
+<meta itemprop="description" content="Scramble fields in Sense apps.
+"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Scramble fields"/>
+<meta name="twitter:description" content="Scramble fields in Sense apps.
+"/>
+
+
+
+
+<link rel="preload" href="/scss/main.min.6a0cd268a007b5169ed43ee5cd2ba18e4df3ce4a8befa58f30b0fe7149728fb4.css" as="style">
+<link href="/scss/main.min.6a0cd268a007b5169ed43ee5cd2ba18e4df3ce4a8befa58f30b0fe7149728fb4.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/css/prism.css"/>
+<script defer data-domain="ctrl-q.ptarmiganlabs.com" src="https://plausible.io/js/script.js"></script>
+
+<link rel="canonical" href="https://ctrl-q.ptarmiganlabs.com/docs/command/scramble-field/" />
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar navbar-dark js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"></span><span class="navbar-brand__name">Ctrl-Q</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/about/"><span>About</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/docs/"><span>Docs</span></a>
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+This is the multi-page printable view of this section.
+<a href="#" onclick="print();return false;">Click here to print</a>.
+</p><p>
+<a href="/docs/command/scramble-field/">Return to the regular view of this page</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">Scramble fields</h1>
+<div class="lead">Scramble fields in Sense apps.</div>
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+
+    </ul>
+
+
+<div class="content">
+      <!-- 
+
+<div class="pageinfo pageinfo-primary">
+<p>This is a placeholder page that shows you how to use this template site.</p>
+
+</div>
+ -->
+<p><em>Page contents:</em></p>
+<ul>
+<li><a href="#scramble-fields-in-sense-app">Scramble fields in Sense app</a></li>
+</ul>
+<hr>
+<h2 id="scramble-fields-in-sense-app">Scramble fields in Sense app</h2>
+<p>Scramble one or more fields in an app using Qlik Sense&rsquo;s internal scrambling feature.</p>
+<p>Note:</p>
+<ul>
+<li>If more than one field is to be scrambled, the indidivudal field names should be separated by the character or string specified in the <code>--separator</code> option.</li>
+<li>The entire list of field names (the <code>--fieldname</code> option) should be surrounded by double quotes.</li>
+<li>A new app with the scrambled data will be created. Specify its name in the <code>--newappname</code> option.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">field-scramble</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#204a87">pro2-win1</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">lab</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ptarmiganlabs</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">net</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-app-id</span> <span style="color:#000">a3e0f5d2</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">000a</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">464f</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">998d</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">33d333b175d7</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-field-name</span> <span style="color:#000">Expression1</span> <span style="color:#000">Dim1</span> <span style="color:#000">AsciiAlpha</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-new-app-name</span> <span style="color:#000">__ScrambledTest1</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2024-03-12T08:39:17.987Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T08:39:18.004Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2024-03-12T08:39:18.004Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T08:39:18.004Z info: | Version      : 3.16.0
+</span></span><span style="display:flex;"><span>2024-03-12T08:39:18.004Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2024-03-12T08:39:18.004Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T08:39:18.004Z info: | Command      : field-scramble
+</span></span><span style="display:flex;"><span>2024-03-12T08:39:18.004Z info: |              : scramble one or more fields in an app. A new app with the scrambled data is created.
+</span></span><span style="display:flex;"><span>2024-03-12T08:39:18.004Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T08:39:18.004Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2024-03-12T08:39:18.004Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T08:39:18.004Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2024-03-12T08:39:18.004Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T08:39:18.004Z info:
+</span></span><span style="display:flex;"><span>2024-03-12T08:39:18.004Z info: Scramble field
+</span></span><span style="display:flex;"><span>2024-03-12T08:39:18.502Z info: Scrambled field &#34;Expression1&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T08:39:18.502Z info: Scrambled field &#34;Dim1&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T08:39:18.518Z info: Scrambled field &#34;AsciiAlpha&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T08:39:19.127Z info: Scrambled data written to new app &#34;__ScrambledTest1&#34; with app ID: 65091695-a23c-432e-a430-b2ff4e367ea2
+</span></span></code></pre></div>
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Ptarmigan Labs Newsletter" aria-label="Ptarmigan Labs Newsletter">
+    <a target="_blank" rel="noopener" href="https://ptarmiganlabs.com/#/portal/signup" aria-label="Ptarmigan Labs Newsletter">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="LinkedIn" aria-label="LinkedIn">
+    <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/gorsan/" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-end text-xs-center order-sm-3">
+        
+        
+        
+<ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="GitHub" aria-label="GitHub">
+    <a target="_blank" rel="noopener" href="https://github.com/ptarmiganlabs/ctrl-q" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Get in touch with Ptarmigan Labs" aria-label="Get in touch with Ptarmigan Labs">
+    <a target="_blank" rel="noopener" href="mailto://info@ptarmiganlabs.com" aria-label="Get in touch with Ptarmigan Labs">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="td-footer__copyright-etc col-12 col-sm-4 text-center py-2 order-sm-2">
+        <span>&copy; 2024 Ptarmigan Labs AB All Rights Reserved</span>
+        <span class="ms-1"><a href="https://ptarmiganlabs.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></span>
+        <p class="td-footer__about mt-2"><a href="/about/">About Ctrl-Q</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <script src="/js/main.min.00b0947702f6bf9c86afe620f44bfda788662ef0ca688315732ee7b00e408279.js" integrity="sha256-ALCUdwL2v5yGr&#43;Yg9Ev9p4hmLvDKaIMVcy7nsA5Agnk=" crossorigin="anonymous"></script>
+<script src='/js/prism.js'></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

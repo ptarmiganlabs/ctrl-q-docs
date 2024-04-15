@@ -1,0 +1,639 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="canonical" type="text/html" href="https://ctrl-q.ptarmiganlabs.com/docs/command/session/">
+<link rel="alternate" type="application/rss&#43;xml" href="https://ctrl-q.ptarmiganlabs.com/docs/command/session/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Sessions | Ctrl-Q</title>
+<meta name="description" content="Manage Qlik Sense proxy sessions.
+">
+<meta property="og:title" content="Sessions" />
+<meta property="og:description" content="Manage Qlik Sense proxy sessions.
+" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ctrl-q.ptarmiganlabs.com/docs/command/session/" /><meta property="og:site_name" content="Ctrl-Q" />
+
+<meta itemprop="name" content="Sessions">
+<meta itemprop="description" content="Manage Qlik Sense proxy sessions.
+"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Sessions"/>
+<meta name="twitter:description" content="Manage Qlik Sense proxy sessions.
+"/>
+
+
+
+
+<link rel="preload" href="/scss/main.min.6a0cd268a007b5169ed43ee5cd2ba18e4df3ce4a8befa58f30b0fe7149728fb4.css" as="style">
+<link href="/scss/main.min.6a0cd268a007b5169ed43ee5cd2ba18e4df3ce4a8befa58f30b0fe7149728fb4.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/css/prism.css"/>
+<script defer data-domain="ctrl-q.ptarmiganlabs.com" src="https://plausible.io/js/script.js"></script>
+
+<link rel="canonical" href="https://ctrl-q.ptarmiganlabs.com/docs/command/session/" />
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar navbar-dark js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"></span><span class="navbar-brand__name">Ctrl-Q</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/about/"><span>About</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/docs/"><span>Docs</span></a>
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+This is the multi-page printable view of this section.
+<a href="#" onclick="print();return false;">Click here to print</a>.
+</p><p>
+<a href="/docs/command/session/">Return to the regular view of this page</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">Sessions</h1>
+<div class="lead">Manage Qlik Sense proxy sessions.</div>
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+
+    </ul>
+
+
+<div class="content">
+      <!-- 
+
+<div class="pageinfo pageinfo-primary">
+<p>This is a placeholder page that shows you how to use this template site.</p>
+
+</div>
+ -->
+<p>Each time a user connects to a client-managed Qlik Sense server a proxy session is created.<br>
+In busy environments with many users the number of proxy sessions can thus grow to a large number.</p>
+<p>Knowing which users are connected to the system can be useful for system administrators.<br>
+For example, when a server is to be restarted, it&rsquo;s good to know if there are any active users connected to the system - and if so, who they are.</p>
+<ul>
+<li>The <code>session-get</code> command lists active proxy sessions for parts of, or the entire, Sense environment.</li>
+<li>The <code>session-delete</code> command can be used to delete a single or many proxy sessions.</li>
+</ul>
+<p>Note: Given how Sense&rsquo;s proxy API works it is only possible to authenthicate using certificates.<br>
+I.e. JWT authentication is not supported.</p>
+<hr>
+<p><em>Page contents:</em></p>
+<ul>
+<li><a href="#scramble-fields-in-sense-app">Scramble fields in Sense app</a></li>
+</ul>
+<hr>
+<h2 id="list-proxy-sessions">List proxy sessions</h2>
+<p>Let&rsquo;s first take a look at what proxy sessions are active in a Qlik Sense environment.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span> <span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">session-get</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#204a87">pro2-win1</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">lab</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ptarmiganlabs</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">net</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-output-format</span> <span style="color:#000">table</span>
+</span></span></code></pre></div><p>The command gives us several pieces of information:</p>
+<ul>
+<li>Information about all proxies in the Qlik Sense environment, including how many virtual proxies are linked to each one.</li>
+<li>Warnings about some virtual proxies not having <em>any</em> linked proxy services. This is not an error per se, but the virtual proxies will not function given this configuration.</li>
+<li>Detailed information about all active sessions.</li>
+</ul>
+<p>In the examplel below there is a single session active, for user <code>goran</code> in the <code>LAB</code> user directory.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2024-03-12T10:14:50.543Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T10:14:50.543Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2024-03-12T10:14:50.543Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T10:14:50.543Z info: | Version      : 3.16.0
+</span></span><span style="display:flex;"><span>2024-03-12T10:14:50.543Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2024-03-12T10:14:50.543Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T10:14:50.543Z info: | Command      : session-get
+</span></span><span style="display:flex;"><span>2024-03-12T10:14:50.543Z info: |              : get info about proxy sessions on one or more virtual proxies
+</span></span><span style="display:flex;"><span>2024-03-12T10:14:50.558Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T10:14:50.558Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2024-03-12T10:14:50.558Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T10:14:50.558Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2024-03-12T10:14:50.558Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T10:14:50.558Z info:
+</span></span><span style="display:flex;"><span>2024-03-12T10:14:50.558Z info: Get Qlik Sense proxy sessions
+</span></span><span style="display:flex;"><span>2024-03-12T10:14:51.043Z info: Successfully retrieved 29 virtual proxies from host pro2-win1.lab.ptarmiganlabs.net
+</span></span><span style="display:flex;"><span>2024-03-12T10:14:51.371Z info: Successfully retrieved 2 proxies from host pro2-win1.lab.ptarmiganlabs.net
+</span></span><span style="display:flex;"><span>2024-03-12T10:14:51.387Z info: Available Proxy services.
+</span></span><span style="display:flex;"><span>┌───────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+</span></span><span style="display:flex;"><span>│ Available proxy services.                                                                                 │
+</span></span><span style="display:flex;"><span>│                                                                                                           │
+</span></span><span style="display:flex;"><span>│ Note: The &#34;sessions-get&#34; command will only work correctly if the correct --host parameter is used when ca │
+</span></span><span style="display:flex;"><span>│ lling Ctrl-Q.                                                                                             │
+</span></span><span style="display:flex;"><span>│ The --host parameter should be one of the host names listed below.                                        │
+</span></span><span style="display:flex;"><span>├─────────┬─────────────────────────────────┬──────────────────────────────────────┬────────────────────────┤
+</span></span><span style="display:flex;"><span>│ Name    │ Host name                       │ Id                                   │ Linked virtual proxies │
+</span></span><span style="display:flex;"><span>├─────────┼─────────────────────────────────┼──────────────────────────────────────┼────────────────────────┤
+</span></span><span style="display:flex;"><span>│ Central │ pro2-win1.lab.ptarmiganlabs.net │ 9d5d7900-3e52-4f22-b6b9-51f38a3afe86 │ 24                     │
+</span></span><span style="display:flex;"><span>├─────────┼─────────────────────────────────┼──────────────────────────────────────┼────────────────────────┤
+</span></span><span style="display:flex;"><span>│ dev1    │ pro2-win2.lab.ptarmiganlabs.net │ d0510bbe-c686-459b-b10e-713fcf3951e8 │ 5                      │
+</span></span><span style="display:flex;"><span>└─────────┴─────────────────────────────────┴──────────────────────────────────────┴────────────────────────┘
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>2024-03-12T10:14:51.481Z warn: Virtual proxy is not linked to any proxy. Prefix=&#34;mobile&#34;, Session cookie header name=&#34;X-Qlik-Session-mob&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T10:14:51.840Z warn: Virtual proxy is not linked to any proxy. Prefix=&#34;hdr&#34;, Session cookie header name=&#34;X-Qlik-Session-hdr-dev&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T10:14:53.340Z warn: Virtual proxy is not linked to any proxy. Prefix=&#34;hdr-access1&#34;, Session cookie header name=&#34;X-Qlik-Session-hdr-access1&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T10:14:54.605Z info:
+</span></span><span style="display:flex;"><span>┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+</span></span><span style="display:flex;"><span>│ -- Sessions per virtual proxy and proxy services --                                                                                                                                                                                                                                            │
+</span></span><span style="display:flex;"><span>│                                                                                                                                                                                                                                                                                                │
+</span></span><span style="display:flex;"><span>│ Total number of sessions: 1                                                                                                                                                                                                                                                                    │
+</span></span><span style="display:flex;"><span>│                                                                                                                                                                                                                                                                                                │
+</span></span><span style="display:flex;"><span>│ Sessions per proxy service:                                                                                                                                                                                                                                                                    │
+</span></span><span style="display:flex;"><span>│    Central: pro2-win1.lab.ptarmiganlabs.net: 1                                                                                                                                                                                                                                                 │
+</span></span><span style="display:flex;"><span>│    dev1: pro2-win2.lab.ptarmiganlabs.net: 0                                                                                                                                                                                                                                                    │
+</span></span><span style="display:flex;"><span>│                                                                                                                                                                                                                                                                                                │
+</span></span><span style="display:flex;"><span>├───────────────────────────┬──────────────────────┬─────────────────────────────────────┬─────────────────────────────────┬──────────────────────────────────────────┬────────────────────────┬─────────────────┬───────────────────┬────────────────────┬──────────────────────────────────────┤
+</span></span><span style="display:flex;"><span>│ Virtual proxy description │ Virtual proxy prefix │ Virtual proxy session cookie header │ Linked proxy service            │ Load balancing nodes                     │ Session user directory │ Session user ID │ Session user name │ Session attributes │ Session ID                           │
+</span></span><span style="display:flex;"><span>├───────────────────────────┼──────────────────────┼─────────────────────────────────────┼─────────────────────────────────┼──────────────────────────────────────────┼────────────────────────┼─────────────────┼───────────────────┼────────────────────┼──────────────────────────────────────┤
+</span></span><span style="display:flex;"><span>│ Central Proxy (Default)   │                      │ X-Qlik-Session                      │ Central:                        │ Central: pro2-win1.lab.ptarmiganlabs.net │ LAB                    │ goran           │                   │                    │ a906ee6b-a8da-4c66-9700-48036c96de7b │
+</span></span><span style="display:flex;"><span>│                           │                      │                                     │ pro2-win1.lab.ptarmiganlabs.net │                                          │                        │                 │                   │                    │                                      │
+</span></span><span style="display:flex;"><span>└───────────────────────────┴──────────────────────┴─────────────────────────────────────┴─────────────────────────────────┴──────────────────────────────────────────┴────────────────────────┴─────────────────┴───────────────────┴────────────────────┴──────────────────────────────────────┘
+</span></span></code></pre></div><h3 id="add-some-sessions">Add some sessions</h3>
+<p>To explore the various options for the <code>session-get</code> command, let&rsquo;s first add some sessions to the Sense environment.</p>
+<p>This can be done in different ways:</p>
+<ul>
+<li>Manully by logging in as different users in incognito/private browser windows.</li>
+<li>Using the <a href="https://community.qlik.com/t5/Scalability/Qlik-Sense-Enterprise-Scalability-Tools/td-p/1579916">Qlik Scalability Tools</a>.</li>
+<li>By scripting the creation of sessions using browser automation tools, example in <a href="https://ptarmiganlabs.com/automate-safari-browser-using-applescript/">this blog post</a>.</li>
+</ul>
+<p>In this example we&rsquo;ll use the last option above, and create a few sessions by remote controlling/automating the Safari browser in macOS.<br>
+Two connections have been created to <code>https://qliksense.ptarmiganlabs.net/finance</code>, and two to <code>https://qliksense.ptarmiganlabs.net/win</code>.<br>
+I.e. there should be two new sessions to the <code>finance</code> virtual proxy, and two to the <code>win</code> virtual proxy.</p>
+<p>Let&rsquo;s see what the <code>session-get</code> command returns now</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span> <span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">session-get</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#204a87">pro2-win1</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">lab</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ptarmiganlabs</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">net</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-output-format</span> <span style="color:#000">table</span>
+</span></span></code></pre></div><p>The output now shows the new sessions:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2024-03-12T10:55:50.652Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T10:55:50.652Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2024-03-12T10:55:50.652Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T10:55:50.652Z info: | Version      : 3.16.0
+</span></span><span style="display:flex;"><span>2024-03-12T10:55:50.652Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2024-03-12T10:55:50.652Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T10:55:50.652Z info: | Command      : session-get
+</span></span><span style="display:flex;"><span>2024-03-12T10:55:50.652Z info: |              : get info about proxy sessions on one or more virtual proxies
+</span></span><span style="display:flex;"><span>2024-03-12T10:55:50.652Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T10:55:50.652Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2024-03-12T10:55:50.652Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T10:55:50.652Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2024-03-12T10:55:50.652Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T10:55:50.652Z info:
+</span></span><span style="display:flex;"><span>2024-03-12T10:55:50.668Z info: Get Qlik Sense proxy sessions
+</span></span><span style="display:flex;"><span>2024-03-12T10:55:50.981Z info: Successfully retrieved 29 virtual proxies from host pro2-win1.lab.ptarmiganlabs.net
+</span></span><span style="display:flex;"><span>2024-03-12T10:55:51.262Z info: Successfully retrieved 2 proxies from host pro2-win1.lab.ptarmiganlabs.net
+</span></span><span style="display:flex;"><span>2024-03-12T10:55:51.277Z info: Available Proxy services.
+</span></span><span style="display:flex;"><span>┌───────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+</span></span><span style="display:flex;"><span>│ Available proxy services.                                                                                 │
+</span></span><span style="display:flex;"><span>│                                                                                                           │
+</span></span><span style="display:flex;"><span>│ Note: The &#34;sessions-get&#34; command will only work correctly if the correct --host parameter is used when ca │
+</span></span><span style="display:flex;"><span>│ lling Ctrl-Q.                                                                                             │
+</span></span><span style="display:flex;"><span>│ The --host parameter should be one of the host names listed below.                                        │
+</span></span><span style="display:flex;"><span>├─────────┬─────────────────────────────────┬──────────────────────────────────────┬────────────────────────┤
+</span></span><span style="display:flex;"><span>│ Name    │ Host name                       │ Id                                   │ Linked virtual proxies │
+</span></span><span style="display:flex;"><span>├─────────┼─────────────────────────────────┼──────────────────────────────────────┼────────────────────────┤
+</span></span><span style="display:flex;"><span>│ Central │ pro2-win1.lab.ptarmiganlabs.net │ 9d5d7900-3e52-4f22-b6b9-51f38a3afe86 │ 24                     │
+</span></span><span style="display:flex;"><span>├─────────┼─────────────────────────────────┼──────────────────────────────────────┼────────────────────────┤
+</span></span><span style="display:flex;"><span>│ dev1    │ pro2-win2.lab.ptarmiganlabs.net │ d0510bbe-c686-459b-b10e-713fcf3951e8 │ 5                      │
+</span></span><span style="display:flex;"><span>└─────────┴─────────────────────────────────┴──────────────────────────────────────┴────────────────────────┘
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>2024-03-12T10:55:51.386Z warn: Virtual proxy is not linked to any proxy. Prefix=&#34;mobile&#34;, Session cookie header name=&#34;X-Qlik-Session-mob&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T10:55:51.761Z warn: Virtual proxy is not linked to any proxy. Prefix=&#34;hdr&#34;, Session cookie header name=&#34;X-Qlik-Session-hdr-dev&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T10:55:52.746Z warn: Virtual proxy is not linked to any proxy. Prefix=&#34;hdr-access1&#34;, Session cookie header name=&#34;X-Qlik-Session-hdr-access1&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T10:55:53.949Z info:
+</span></span><span style="display:flex;"><span>┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+</span></span><span style="display:flex;"><span>│ -- Sessions per virtual proxy and proxy services --                                                                                                                                                                                                                                            │
+</span></span><span style="display:flex;"><span>│                                                                                                                                                                                                                                                                                                │
+</span></span><span style="display:flex;"><span>│ Total number of sessions: 5                                                                                                                                                                                                                                                                    │
+</span></span><span style="display:flex;"><span>│                                                                                                                                                                                                                                                                                                │
+</span></span><span style="display:flex;"><span>│ Sessions per proxy service:                                                                                                                                                                                                                                                                    │
+</span></span><span style="display:flex;"><span>│    Central: pro2-win1.lab.ptarmiganlabs.net: 5                                                                                                                                                                                                                                                 │
+</span></span><span style="display:flex;"><span>│    dev1: pro2-win2.lab.ptarmiganlabs.net: 0                                                                                                                                                                                                                                                    │
+</span></span><span style="display:flex;"><span>│                                                                                                                                                                                                                                                                                                │
+</span></span><span style="display:flex;"><span>├───────────────────────────┬──────────────────────┬─────────────────────────────────────┬─────────────────────────────────┬──────────────────────────────────────────┬────────────────────────┬─────────────────┬───────────────────┬────────────────────┬──────────────────────────────────────┤
+</span></span><span style="display:flex;"><span>│ Virtual proxy description │ Virtual proxy prefix │ Virtual proxy session cookie header │ Linked proxy service            │ Load balancing nodes                     │ Session user directory │ Session user ID │ Session user name │ Session attributes │ Session ID                           │
+</span></span><span style="display:flex;"><span>├───────────────────────────┼──────────────────────┼─────────────────────────────────────┼─────────────────────────────────┼──────────────────────────────────────────┼────────────────────────┼─────────────────┼───────────────────┼────────────────────┼──────────────────────────────────────┤
+</span></span><span style="display:flex;"><span>│ Central Proxy (Default)   │                      │ X-Qlik-Session                      │ Central:                        │ Central: pro2-win1.lab.ptarmiganlabs.net │ LAB                    │ goran           │                   │                    │ a906ee6b-a8da-4c66-9700-48036c96de7b │
+</span></span><span style="display:flex;"><span>│                           │                      │                                     │ pro2-win1.lab.ptarmiganlabs.net │                                          │                        │                 │                   │                    │                                      │
+</span></span><span style="display:flex;"><span>├───────────────────────────┼──────────────────────┼─────────────────────────────────────┼─────────────────────────────────┼──────────────────────────────────────────┼────────────────────────┼─────────────────┼───────────────────┼────────────────────┼──────────────────────────────────────┤
+</span></span><span style="display:flex;"><span>│ finance virtual proxy     │ finance              │ X-Qlik-Session-finance              │ Central:                        │ Central: pro2-win1.lab.ptarmiganlabs.net │ LAB                    │ testuser_2      │                   │                    │ d1b5d953-4312-4cf2-a106-1992a84dd82b │
+</span></span><span style="display:flex;"><span>│                           │                      │                                     │ pro2-win1.lab.ptarmiganlabs.net │ dev1: pro2-win2.lab.ptarmiganlabs.net    │                        │                 │                   │                    │                                      │
+</span></span><span style="display:flex;"><span>├───────────────────────────┼──────────────────────┼─────────────────────────────────────┼─────────────────────────────────┼──────────────────────────────────────────┼────────────────────────┼─────────────────┼───────────────────┼────────────────────┼──────────────────────────────────────┤
+</span></span><span style="display:flex;"><span>│ finance virtual proxy     │ finance              │ X-Qlik-Session-finance              │ Central:                        │ Central: pro2-win1.lab.ptarmiganlabs.net │ LAB                    │ testuser_1      │                   │                    │ 55142b14-8d2d-43b3-a522-4b2fb46b2798 │
+</span></span><span style="display:flex;"><span>│                           │                      │                                     │ pro2-win1.lab.ptarmiganlabs.net │ dev1: pro2-win2.lab.ptarmiganlabs.net    │                        │                 │                   │                    │                                      │
+</span></span><span style="display:flex;"><span>├───────────────────────────┼──────────────────────┼─────────────────────────────────────┼─────────────────────────────────┼──────────────────────────────────────────┼────────────────────────┼─────────────────┼───────────────────┼────────────────────┼──────────────────────────────────────┤
+</span></span><span style="display:flex;"><span>│ Central Win auth          │ win                  │ X-Qlik-Session-win                  │ Central:                        │ Central: pro2-win1.lab.ptarmiganlabs.net │ LAB                    │ testuser_3      │                   │                    │ e9a9c1d3-2d75-4559-9a68-48d1180b3859 │
+</span></span><span style="display:flex;"><span>│                           │                      │                                     │ pro2-win1.lab.ptarmiganlabs.net │                                          │                        │                 │                   │                    │                                      │
+</span></span><span style="display:flex;"><span>├───────────────────────────┼──────────────────────┼─────────────────────────────────────┼─────────────────────────────────┼──────────────────────────────────────────┼────────────────────────┼─────────────────┼───────────────────┼────────────────────┼──────────────────────────────────────┤
+</span></span><span style="display:flex;"><span>│ Central Win auth          │ win                  │ X-Qlik-Session-win                  │ Central:                        │ Central: pro2-win1.lab.ptarmiganlabs.net │ LAB                    │ testuser_4      │                   │                    │ 6ac3b0ea-7d87-41d6-bede-89eb43c63e38 │
+</span></span><span style="display:flex;"><span>│                           │                      │                                     │ pro2-win1.lab.ptarmiganlabs.net │                                          │                        │                 │                   │                    │                                      │
+</span></span><span style="display:flex;"><span>└───────────────────────────┴──────────────────────┴─────────────────────────────────────┴─────────────────────────────────┴──────────────────────────────────────────┴────────────────────────┴─────────────────┴───────────────────┴────────────────────┴──────────────────────────────────────┘
+</span></span></code></pre></div><p>It is also possible to filter the output to only show sessions for a specific virtual proxy or proxy service.<br>
+This is done using the <code>--session-virtual-proxy</code> and <code>-proxy-host</code> options.<br>
+Each of them takes one or more values.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Usage: ctrl-q session-get [options]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>get info about proxy sessions on one or more virtual proxies
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Options:
+</span></span><span style="display:flex;"><span>  --log-level &lt;level&gt;                  log level (choices: &#34;error&#34;, &#34;warn&#34;, &#34;info&#34;, &#34;verbose&#34;, &#34;debug&#34;, &#34;silly&#34;, default: &#34;info&#34;)
+</span></span><span style="display:flex;"><span>  --host &lt;host&gt;                        Qlik Sense host (IP/FQDN) where Qlik Repository Service (QRS) is running
+</span></span><span style="display:flex;"><span>  --qrs-port &lt;port&gt;                    Qlik Sense repository service (QRS) port (usually 4242) (default: &#34;4242&#34;)
+</span></span><span style="display:flex;"><span>  --virtual-proxy &lt;prefix&gt;             Qlik Sense virtual proxy prefix to access QRS via (default: &#34;&#34;)
+</span></span><span style="display:flex;"><span>  --secure &lt;true|false&gt;                https connection to Qlik Sense must use correct certificate. Invalid certificates will result in rejected/failed connection. (default: true)
+</span></span><span style="display:flex;"><span>  --session-virtual-proxy &lt;prefix...&gt;  one or more Qlik Sense virtual proxies to get sessions for
+</span></span><span style="display:flex;"><span>  --host-proxy &lt;host...&gt;               Qlik Sense hosts/proxies (IP/FQDN) to get sessions from. Must match the host names of the Sense nodes
+</span></span><span style="display:flex;"><span>  --qps-port &lt;port&gt;                    Qlik Sense proxy service (QPS) port (usually 4243) (default: &#34;4243&#34;)
+</span></span><span style="display:flex;"><span>  --auth-user-dir &lt;directory&gt;          user directory for user to connect with
+</span></span><span style="display:flex;"><span>  --auth-user-id &lt;userid&gt;              user ID for user to connect with
+</span></span><span style="display:flex;"><span>  -a, --auth-type &lt;type&gt;               authentication type (choices: &#34;cert&#34;, default: &#34;cert&#34;)
+</span></span><span style="display:flex;"><span>  --auth-cert-file &lt;file&gt;              Qlik Sense certificate file (exported from QMC) (default: &#34;./cert/client.pem&#34;)
+</span></span><span style="display:flex;"><span>  --auth-cert-key-file &lt;file&gt;          Qlik Sense certificate key file (exported from QMC) (default: &#34;./cert/client_key.pem&#34;)
+</span></span><span style="display:flex;"><span>  --auth-root-cert-file &lt;file&gt;         Qlik Sense root certificate file (exported from QMC) (default: &#34;./cert/root.pem&#34;)
+</span></span><span style="display:flex;"><span>  --output-format &lt;json|table&gt;         output format (default: &#34;json&#34;)
+</span></span><span style="display:flex;"><span>  -s, --sort-by &lt;column&gt;               column to sort output table by (choices: &#34;prefix&#34;, &#34;proxyhost&#34;, &#34;proxyname&#34;, &#34;userdir&#34;, &#34;userid&#34;, &#34;username&#34;, default: &#34;prefix&#34;)
+</span></span><span style="display:flex;"><span>  -h, --help                           display help for command
+</span></span></code></pre></div><p>Let&rsquo;s filter to only show the sessions connected to the <code>finance</code> virtual proxy:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">session-get</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#204a87">pro2-win1</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">lab</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ptarmiganlabs</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">net</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-output-format</span> <span style="color:#000">table</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-session-virtual-proxy</span> <span style="color:#000">finance</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2024-03-12T11:03:10.614Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T11:03:10.628Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2024-03-12T11:03:10.628Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T11:03:10.628Z info: | Version      : 3.16.0
+</span></span><span style="display:flex;"><span>2024-03-12T11:03:10.628Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2024-03-12T11:03:10.628Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T11:03:10.628Z info: | Command      : session-get
+</span></span><span style="display:flex;"><span>2024-03-12T11:03:10.628Z info: |              : get info about proxy sessions on one or more virtual proxies
+</span></span><span style="display:flex;"><span>2024-03-12T11:03:10.628Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T11:03:10.628Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2024-03-12T11:03:10.628Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T11:03:10.628Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2024-03-12T11:03:10.628Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T11:03:10.628Z info:
+</span></span><span style="display:flex;"><span>2024-03-12T11:03:10.628Z info: Get Qlik Sense proxy sessions
+</span></span><span style="display:flex;"><span>2024-03-12T11:03:10.769Z info: Successfully retrieved 1 virtual proxies from host pro2-win1.lab.ptarmiganlabs.net
+</span></span><span style="display:flex;"><span>2024-03-12T11:03:11.066Z info: Successfully retrieved 2 proxies from host pro2-win1.lab.ptarmiganlabs.net
+</span></span><span style="display:flex;"><span>2024-03-12T11:03:11.066Z info: Available Proxy services.
+</span></span><span style="display:flex;"><span>┌───────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+</span></span><span style="display:flex;"><span>│ Available proxy services.                                                                                 │
+</span></span><span style="display:flex;"><span>│                                                                                                           │
+</span></span><span style="display:flex;"><span>│ Note: The &#34;sessions-get&#34; command will only work correctly if the correct --host parameter is used when ca │
+</span></span><span style="display:flex;"><span>│ lling Ctrl-Q.                                                                                             │
+</span></span><span style="display:flex;"><span>│ The --host parameter should be one of the host names listed below.                                        │
+</span></span><span style="display:flex;"><span>├─────────┬─────────────────────────────────┬──────────────────────────────────────┬────────────────────────┤
+</span></span><span style="display:flex;"><span>│ Name    │ Host name                       │ Id                                   │ Linked virtual proxies │
+</span></span><span style="display:flex;"><span>├─────────┼─────────────────────────────────┼──────────────────────────────────────┼────────────────────────┤
+</span></span><span style="display:flex;"><span>│ Central │ pro2-win1.lab.ptarmiganlabs.net │ 9d5d7900-3e52-4f22-b6b9-51f38a3afe86 │ 24                     │
+</span></span><span style="display:flex;"><span>├─────────┼─────────────────────────────────┼──────────────────────────────────────┼────────────────────────┤
+</span></span><span style="display:flex;"><span>│ dev1    │ pro2-win2.lab.ptarmiganlabs.net │ d0510bbe-c686-459b-b10e-713fcf3951e8 │ 5                      │
+</span></span><span style="display:flex;"><span>└─────────┴─────────────────────────────────┴──────────────────────────────────────┴────────────────────────┘
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>2024-03-12T11:03:11.269Z info:
+</span></span><span style="display:flex;"><span>┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+</span></span><span style="display:flex;"><span>│ -- Sessions per virtual proxy and proxy services --                                                                                                                                                                                                                                            │
+</span></span><span style="display:flex;"><span>│                                                                                                                                                                                                                                                                                                │
+</span></span><span style="display:flex;"><span>│ Total number of sessions: 2                                                                                                                                                                                                                                                                    │
+</span></span><span style="display:flex;"><span>│                                                                                                                                                                                                                                                                                                │
+</span></span><span style="display:flex;"><span>│ Sessions per proxy service:                                                                                                                                                                                                                                                                    │
+</span></span><span style="display:flex;"><span>│    Central: pro2-win1.lab.ptarmiganlabs.net: 2                                                                                                                                                                                                                                                 │
+</span></span><span style="display:flex;"><span>│    dev1: pro2-win2.lab.ptarmiganlabs.net: 0                                                                                                                                                                                                                                                    │
+</span></span><span style="display:flex;"><span>│                                                                                                                                                                                                                                                                                                │
+</span></span><span style="display:flex;"><span>├───────────────────────────┬──────────────────────┬─────────────────────────────────────┬─────────────────────────────────┬──────────────────────────────────────────┬────────────────────────┬─────────────────┬───────────────────┬────────────────────┬──────────────────────────────────────┤
+</span></span><span style="display:flex;"><span>│ Virtual proxy description │ Virtual proxy prefix │ Virtual proxy session cookie header │ Linked proxy service            │ Load balancing nodes                     │ Session user directory │ Session user ID │ Session user name │ Session attributes │ Session ID                           │
+</span></span><span style="display:flex;"><span>├───────────────────────────┼──────────────────────┼─────────────────────────────────────┼─────────────────────────────────┼──────────────────────────────────────────┼────────────────────────┼─────────────────┼───────────────────┼────────────────────┼──────────────────────────────────────┤
+</span></span><span style="display:flex;"><span>│ finance virtual proxy     │ finance              │ X-Qlik-Session-finance              │ Central:                        │ Central: pro2-win1.lab.ptarmiganlabs.net │ LAB                    │ testuser_2      │                   │                    │ d1b5d953-4312-4cf2-a106-1992a84dd82b │
+</span></span><span style="display:flex;"><span>│                           │                      │                                     │ pro2-win1.lab.ptarmiganlabs.net │ dev1: pro2-win2.lab.ptarmiganlabs.net    │                        │                 │                   │                    │                                      │
+</span></span><span style="display:flex;"><span>├───────────────────────────┼──────────────────────┼─────────────────────────────────────┼─────────────────────────────────┼──────────────────────────────────────────┼────────────────────────┼─────────────────┼───────────────────┼────────────────────┼──────────────────────────────────────┤
+</span></span><span style="display:flex;"><span>│ finance virtual proxy     │ finance              │ X-Qlik-Session-finance              │ Central:                        │ Central: pro2-win1.lab.ptarmiganlabs.net │ LAB                    │ testuser_1      │                   │                    │ 55142b14-8d2d-43b3-a522-4b2fb46b2798 │
+</span></span><span style="display:flex;"><span>│                           │                      │                                     │ pro2-win1.lab.ptarmiganlabs.net │ dev1: pro2-win2.lab.ptarmiganlabs.net    │                        │                 │                   │                    │                                      │
+</span></span></code></pre></div><p>Similarly, it is possible to filter to only show sessions for a specific proxy service by specifying one or more proxy hosts in the <code>--host-proxy</code> option.</p>
+<h2 id="delete-proxy-sessions">Delete proxy sessions</h2>
+<p>Deleting proxy sessions it is only possible for one virtual proxy and proxy service at a time.</p>
+<p>If one or more session IDs are provided to Ctrl-Q, those sessions will be deleted.<br>
+If no session IDs are provided, all sessions for the specified virtual proxy and proxy service will be deleted.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">The</span> <span style="color:#000;font-weight:bold">`</span><span style="color:#204a87">session-delete</span><span style="color:#000;font-weight:bold">`</span> <span style="color:#000">command</span> <span style="color:#000">has</span> <span style="color:#000">the</span> <span style="color:#000">following</span> <span style="color:#000">options</span><span style="color:#a40000">:</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">```</span><span style="color:#000">powershell</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">session-delete</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-help</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Usage: ctrl-q session-delete [options]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>delete proxy session(s) on a specific virtual proxy and proxy service
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Options:
+</span></span><span style="display:flex;"><span>  --log-level &lt;level&gt;               log level (choices: &#34;error&#34;, &#34;warn&#34;, &#34;info&#34;, &#34;verbose&#34;, &#34;debug&#34;, &#34;silly&#34;, default: &#34;info&#34;)
+</span></span><span style="display:flex;"><span>  --host &lt;host&gt;                     Qlik Sense host (IP/FQDN) where Qlik Repository Service (QRS) is running
+</span></span><span style="display:flex;"><span>  --qrs-port &lt;port&gt;                 Qlik Sense repository service (QRS) port (usually 4242) (default: &#34;4242&#34;)
+</span></span><span style="display:flex;"><span>  --virtual-proxy &lt;prefix&gt;          Qlik Sense virtual proxy prefix to access QRS via (default: &#34;&#34;)
+</span></span><span style="display:flex;"><span>  --secure &lt;true|false&gt;             https connection to Qlik Sense must use correct certificate. Invalid certificates will result in rejected/failed connection. (default: true)
+</span></span><span style="display:flex;"><span>  --session-id &lt;id...&gt;              session IDs to delete
+</span></span><span style="display:flex;"><span>  --session-virtual-proxy &lt;prefix&gt;  Qlik Sense virtual proxy (prefix) to delete proxy session(s) on (default: &#34;&#34;)
+</span></span><span style="display:flex;"><span>  --host-proxy &lt;host&gt;               Qlik Sense proxy (IP/FQDN) where sessions should be deleted. Must match the host name of a Sense node
+</span></span><span style="display:flex;"><span>  --qps-port &lt;port&gt;                 Qlik Sense proxy service (QPS) port (usually 4243) (default: &#34;4243&#34;)
+</span></span><span style="display:flex;"><span>  --auth-user-dir &lt;directory&gt;       user directory for user to connect with
+</span></span><span style="display:flex;"><span>  --auth-user-id &lt;userid&gt;           user ID for user to connect with
+</span></span><span style="display:flex;"><span>  -a, --auth-type &lt;type&gt;            authentication type (choices: &#34;cert&#34;, default: &#34;cert&#34;)
+</span></span><span style="display:flex;"><span>  --auth-cert-file &lt;file&gt;           Qlik Sense certificate file (exported from QMC) (default: &#34;./cert/client.pem&#34;)
+</span></span><span style="display:flex;"><span>  --auth-cert-key-file &lt;file&gt;       Qlik Sense certificate key file (exported from QMC) (default: &#34;./cert/client_key.pem&#34;)
+</span></span><span style="display:flex;"><span>  --auth-root-cert-file &lt;file&gt;      Qlik Sense root certificate file (exported from QMC) (default: &#34;./cert/root.pem&#34;)
+</span></span><span style="display:flex;"><span>  -h, --help                        display help for command
+</span></span></code></pre></div><h3 id="delete-specific-sessions">Delete specific sessions</h3>
+<p>Let&rsquo;s delete two specific sessions, using the session IDs from the previous example, for the <code>win</code> virtual proxy on the <code>pro2-win1.lab.ptarmiganlabs.net</code> host.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">session-delete</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#204a87">pro2-win1</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">lab</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ptarmiganlabs</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">net</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host-proxy</span> <span style="color:#204a87">pro2-win1</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">lab</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ptarmiganlabs</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">net</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-session-virtual-proxy</span> <span style="color:#4e9a06">&#34;win&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-session-id</span> <span style="color:#000">e9a9c1d3</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">2d75</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">4559</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">9a68</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">48d1180b3859</span> <span style="color:#000">6ac3b0ea</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">7d87</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">41d6-bede</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">89eb43c63e38</span>
+</span></span></code></pre></div><p>The output shows that the sessions were deleted:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2024-03-12T11:10:04.861Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T11:10:04.861Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2024-03-12T11:10:04.861Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T11:10:04.861Z info: | Version      : 3.16.0
+</span></span><span style="display:flex;"><span>2024-03-12T11:10:04.861Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2024-03-12T11:10:04.861Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T11:10:04.861Z info: | Command      : session-delete
+</span></span><span style="display:flex;"><span>2024-03-12T11:10:04.861Z info: |              : delete proxy session(s) on a specific virtual proxy and proxy service
+</span></span><span style="display:flex;"><span>2024-03-12T11:10:04.861Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T11:10:04.861Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2024-03-12T11:10:04.877Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T11:10:04.877Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2024-03-12T11:10:04.877Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T11:10:04.877Z info:
+</span></span><span style="display:flex;"><span>2024-03-12T11:10:04.877Z info: Delete Qlik Sense proxy sessions
+</span></span><span style="display:flex;"><span>2024-03-12T11:10:04.877Z info: Deleting sessions on proxy &#34;pro2-win1.lab.ptarmiganlabs.net&#34;, virtual proxy &#34;win&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T11:10:05.017Z info: Successfully retrieved 1 virtual proxies from host pro2-win1.lab.ptarmiganlabs.net
+</span></span><span style="display:flex;"><span>2024-03-12T11:10:05.345Z info: Successfully retrieved 2 proxies from host pro2-win1.lab.ptarmiganlabs.net
+</span></span><span style="display:flex;"><span>2024-03-12T11:10:05.345Z info: Available Proxy services.
+</span></span><span style="display:flex;"><span>┌───────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+</span></span><span style="display:flex;"><span>│ Available proxy services.                                                                                 │
+</span></span><span style="display:flex;"><span>│                                                                                                           │
+</span></span><span style="display:flex;"><span>│ Note: The &#34;sessions-get&#34; command will only work correctly if the correct --host parameter is used when ca │
+</span></span><span style="display:flex;"><span>│ lling Ctrl-Q.                                                                                             │
+</span></span><span style="display:flex;"><span>│ The --host parameter should be one of the host names listed below.                                        │
+</span></span><span style="display:flex;"><span>├─────────┬─────────────────────────────────┬──────────────────────────────────────┬────────────────────────┤
+</span></span><span style="display:flex;"><span>│ Name    │ Host name                       │ Id                                   │ Linked virtual proxies │
+</span></span><span style="display:flex;"><span>├─────────┼─────────────────────────────────┼──────────────────────────────────────┼────────────────────────┤
+</span></span><span style="display:flex;"><span>│ Central │ pro2-win1.lab.ptarmiganlabs.net │ 9d5d7900-3e52-4f22-b6b9-51f38a3afe86 │ 24                     │
+</span></span><span style="display:flex;"><span>├─────────┼─────────────────────────────────┼──────────────────────────────────────┼────────────────────────┤
+</span></span><span style="display:flex;"><span>│ dev1    │ pro2-win2.lab.ptarmiganlabs.net │ d0510bbe-c686-459b-b10e-713fcf3951e8 │ 5                      │
+</span></span><span style="display:flex;"><span>└─────────┴─────────────────────────────────┴──────────────────────────────────────┴────────────────────────┘
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>2024-03-12T11:10:05.345Z info: ✅ All host names specified in the --host-proxy parameter are valid.
+</span></span><span style="display:flex;"><span>2024-03-12T11:10:05.564Z info: Session ID &#34;e9a9c1d3-2d75-4559-9a68-48d1180b3859&#34; successfully deleted. User: LAB\testuser_3
+</span></span><span style="display:flex;"><span>2024-03-12T11:10:05.658Z info: Session ID &#34;6ac3b0ea-7d87-41d6-bede-89eb43c63e38&#34; successfully deleted. User: LAB\testuser_4
+</span></span><span style="display:flex;"><span>2024-03-12T11:10:05.658Z info:
+</span></span><span style="display:flex;"><span>2024-03-12T11:10:05.658Z info: Deleted 2 sessions
+</span></span></code></pre></div><h3 id="delete-all-sessions-connected-to-a-virtual-proxy">Delete all sessions connected to a virtual proxy</h3>
+<p>To delete all sessions connected to a specific virtual proxy via its linked proxy service, simply omit the <code>--session-id</code> option.<br>
+This will prompt for confirmation before deleting the sessions.</p>
+<p>Let&rsquo;s delete all sessions connected to the <code>finance</code> virtual proxy on the <code>pro2-win1.lab.ptarmiganlabs.net</code> host:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">session-delete</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#204a87">pro2-win1</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">lab</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ptarmiganlabs</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">net</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host-proxy</span> <span style="color:#204a87">pro2-win1</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">lab</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ptarmiganlabs</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">net</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-session-virtual-proxy</span> <span style="color:#4e9a06">&#34;finance&#34;</span>
+</span></span></code></pre></div><p>The output shows that the sessions were deleted:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2024-03-12T11:13:20.260Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T11:13:20.260Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2024-03-12T11:13:20.260Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T11:13:20.260Z info: | Version      : 3.16.0
+</span></span><span style="display:flex;"><span>2024-03-12T11:13:20.260Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2024-03-12T11:13:20.260Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T11:13:20.260Z info: | Command      : session-delete
+</span></span><span style="display:flex;"><span>2024-03-12T11:13:20.260Z info: |              : delete proxy session(s) on a specific virtual proxy and proxy service
+</span></span><span style="display:flex;"><span>2024-03-12T11:13:20.260Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T11:13:20.260Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2024-03-12T11:13:20.260Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T11:13:20.260Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2024-03-12T11:13:20.260Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T11:13:20.260Z info:
+</span></span><span style="display:flex;"><span>2024-03-12T11:13:20.275Z info: Delete Qlik Sense proxy sessions
+</span></span><span style="display:flex;"><span>2024-03-12T11:13:20.275Z info: Deleting sessions on proxy &#34;pro2-win1.lab.ptarmiganlabs.net&#34;, virtual proxy &#34;finance&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T11:13:20.416Z info: Successfully retrieved 1 virtual proxies from host pro2-win1.lab.ptarmiganlabs.net
+</span></span><span style="display:flex;"><span>2024-03-12T11:13:20.728Z info: Successfully retrieved 2 proxies from host pro2-win1.lab.ptarmiganlabs.net
+</span></span><span style="display:flex;"><span>2024-03-12T11:13:20.728Z info: Available Proxy services.
+</span></span><span style="display:flex;"><span>┌───────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+</span></span><span style="display:flex;"><span>│ Available proxy services.                                                                                 │
+</span></span><span style="display:flex;"><span>│                                                                                                           │
+</span></span><span style="display:flex;"><span>│ Note: The &#34;sessions-get&#34; command will only work correctly if the correct --host parameter is used when ca │
+</span></span><span style="display:flex;"><span>│ lling Ctrl-Q.                                                                                             │
+</span></span><span style="display:flex;"><span>│ The --host parameter should be one of the host names listed below.                                        │
+</span></span><span style="display:flex;"><span>├─────────┬─────────────────────────────────┬──────────────────────────────────────┬────────────────────────┤
+</span></span><span style="display:flex;"><span>│ Name    │ Host name                       │ Id                                   │ Linked virtual proxies │
+</span></span><span style="display:flex;"><span>├─────────┼─────────────────────────────────┼──────────────────────────────────────┼────────────────────────┤
+</span></span><span style="display:flex;"><span>│ Central │ pro2-win1.lab.ptarmiganlabs.net │ 9d5d7900-3e52-4f22-b6b9-51f38a3afe86 │ 24                     │
+</span></span><span style="display:flex;"><span>├─────────┼─────────────────────────────────┼──────────────────────────────────────┼────────────────────────┤
+</span></span><span style="display:flex;"><span>│ dev1    │ pro2-win2.lab.ptarmiganlabs.net │ d0510bbe-c686-459b-b10e-713fcf3951e8 │ 5                      │
+</span></span><span style="display:flex;"><span>└─────────┴─────────────────────────────────┴──────────────────────────────────────┴────────────────────────┘
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>2024-03-12T11:13:20.728Z info: ✅ All host names specified in the --host-proxy parameter are valid.
+</span></span><span style="display:flex;"><span>2024-03-12T11:13:21.400Z info:
+</span></span><span style="display:flex;"><span>                                  No session IDs specified, meaning that all existing sessions will be deleted for proxy &#34;pro2-win1.lab.ptarmiganlabs.net&#34; and virtual proxy &#34;finance&#34;.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                                  Are you sure you want to continue? (y/n) y
+</span></span><span style="display:flex;"><span>2024-03-12T11:13:26.871Z info:
+</span></span><span style="display:flex;"><span>2024-03-12T11:13:26.871Z info: Deleting sessions...
+</span></span><span style="display:flex;"><span>2024-03-12T11:13:26.981Z info: Session ID &#34;d1b5d953-4312-4cf2-a106-1992a84dd82b&#34; successfully deleted. User: LAB\testuser_2
+</span></span><span style="display:flex;"><span>2024-03-12T11:13:27.075Z info: Session ID &#34;55142b14-8d2d-43b3-a522-4b2fb46b2798&#34; successfully deleted. User: LAB\testuser_1
+</span></span><span style="display:flex;"><span>2024-03-12T11:13:27.090Z info:
+</span></span><span style="display:flex;"><span>2024-03-12T11:13:27.090Z info: Deleted 2 sessions
+</span></span></code></pre></div><p>At this point there is only one session left, the one for the <code>LAB\goran</code> user.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2024-03-12T11:14:55.678Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T11:14:55.678Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2024-03-12T11:14:55.678Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T11:14:55.678Z info: | Version      : 3.16.0
+</span></span><span style="display:flex;"><span>2024-03-12T11:14:55.678Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2024-03-12T11:14:55.678Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T11:14:55.678Z info: | Command      : session-get
+</span></span><span style="display:flex;"><span>2024-03-12T11:14:55.678Z info: |              : get info about proxy sessions on one or more virtual proxies
+</span></span><span style="display:flex;"><span>2024-03-12T11:14:55.678Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T11:14:55.678Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2024-03-12T11:14:55.678Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T11:14:55.678Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2024-03-12T11:14:55.678Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T11:14:55.678Z info:
+</span></span><span style="display:flex;"><span>2024-03-12T11:14:55.693Z info: Get Qlik Sense proxy sessions
+</span></span><span style="display:flex;"><span>2024-03-12T11:14:56.005Z info: Successfully retrieved 29 virtual proxies from host pro2-win1.lab.ptarmiganlabs.net
+</span></span><span style="display:flex;"><span>2024-03-12T11:14:56.288Z info: Successfully retrieved 2 proxies from host pro2-win1.lab.ptarmiganlabs.net
+</span></span><span style="display:flex;"><span>2024-03-12T11:14:56.302Z info: Available Proxy services.
+</span></span><span style="display:flex;"><span>┌───────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+</span></span><span style="display:flex;"><span>│ Available proxy services.                                                                                 │
+</span></span><span style="display:flex;"><span>│                                                                                                           │
+</span></span><span style="display:flex;"><span>│ Note: The &#34;sessions-get&#34; command will only work correctly if the correct --host parameter is used when ca │
+</span></span><span style="display:flex;"><span>│ lling Ctrl-Q.                                                                                             │
+</span></span><span style="display:flex;"><span>│ The --host parameter should be one of the host names listed below.                                        │
+</span></span><span style="display:flex;"><span>├─────────┬─────────────────────────────────┬──────────────────────────────────────┬────────────────────────┤
+</span></span><span style="display:flex;"><span>│ Name    │ Host name                       │ Id                                   │ Linked virtual proxies │
+</span></span><span style="display:flex;"><span>├─────────┼─────────────────────────────────┼──────────────────────────────────────┼────────────────────────┤
+</span></span><span style="display:flex;"><span>│ Central │ pro2-win1.lab.ptarmiganlabs.net │ 9d5d7900-3e52-4f22-b6b9-51f38a3afe86 │ 24                     │
+</span></span><span style="display:flex;"><span>├─────────┼─────────────────────────────────┼──────────────────────────────────────┼────────────────────────┤
+</span></span><span style="display:flex;"><span>│ dev1    │ pro2-win2.lab.ptarmiganlabs.net │ d0510bbe-c686-459b-b10e-713fcf3951e8 │ 5                      │
+</span></span><span style="display:flex;"><span>└─────────┴─────────────────────────────────┴──────────────────────────────────────┴────────────────────────┘
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>2024-03-12T11:14:56.412Z warn: Virtual proxy is not linked to any proxy. Prefix=&#34;mobile&#34;, Session cookie header name=&#34;X-Qlik-Session-mob&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T11:14:56.771Z warn: Virtual proxy is not linked to any proxy. Prefix=&#34;hdr&#34;, Session cookie header name=&#34;X-Qlik-Session-hdr-dev&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T11:14:57.693Z warn: Virtual proxy is not linked to any proxy. Prefix=&#34;hdr-access1&#34;, Session cookie header name=&#34;X-Qlik-Session-hdr-access1&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T11:14:58.896Z info:
+</span></span><span style="display:flex;"><span>┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+</span></span><span style="display:flex;"><span>│ -- Sessions per virtual proxy and proxy services --                                                                                                                                                                                                                                            │
+</span></span><span style="display:flex;"><span>│                                                                                                                                                                                                                                                                                                │
+</span></span><span style="display:flex;"><span>│ Total number of sessions: 1                                                                                                                                                                                                                                                                    │
+</span></span><span style="display:flex;"><span>│                                                                                                                                                                                                                                                                                                │
+</span></span><span style="display:flex;"><span>│ Sessions per proxy service:                                                                                                                                                                                                                                                                    │
+</span></span><span style="display:flex;"><span>│    Central: pro2-win1.lab.ptarmiganlabs.net: 1                                                                                                                                                                                                                                                 │
+</span></span><span style="display:flex;"><span>│    dev1: pro2-win2.lab.ptarmiganlabs.net: 0                                                                                                                                                                                                                                                    │
+</span></span><span style="display:flex;"><span>│                                                                                                                                                                                                                                                                                                │
+</span></span><span style="display:flex;"><span>├───────────────────────────┬──────────────────────┬─────────────────────────────────────┬─────────────────────────────────┬──────────────────────────────────────────┬────────────────────────┬─────────────────┬───────────────────┬────────────────────┬──────────────────────────────────────┤
+</span></span><span style="display:flex;"><span>│ Virtual proxy description │ Virtual proxy prefix │ Virtual proxy session cookie header │ Linked proxy service            │ Load balancing nodes                     │ Session user directory │ Session user ID │ Session user name │ Session attributes │ Session ID                           │
+</span></span><span style="display:flex;"><span>├───────────────────────────┼──────────────────────┼─────────────────────────────────────┼─────────────────────────────────┼──────────────────────────────────────────┼────────────────────────┼─────────────────┼───────────────────┼────────────────────┼──────────────────────────────────────┤
+</span></span><span style="display:flex;"><span>│ Central Proxy (Default)   │                      │ X-Qlik-Session                      │ Central:                        │ Central: pro2-win1.lab.ptarmiganlabs.net │ LAB                    │ goran           │                   │                    │ a906ee6b-a8da-4c66-9700-48036c96de7b │
+</span></span><span style="display:flex;"><span>│                           │                      │                                     │ pro2-win1.lab.ptarmiganlabs.net │                                          │                        │                 │                   │                    │                                      │
+</span></span><span style="display:flex;"><span>└───────────────────────────┴──────────────────────┴─────────────────────────────────────┴─────────────────────────────────┴──────────────────────────────────────────┴────────────────────────┴─────────────────┴───────────────────┴────────────────────┴──────────────────────────────────────┘
+</span></span></code></pre></div>
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Ptarmigan Labs Newsletter" aria-label="Ptarmigan Labs Newsletter">
+    <a target="_blank" rel="noopener" href="https://ptarmiganlabs.com/#/portal/signup" aria-label="Ptarmigan Labs Newsletter">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="LinkedIn" aria-label="LinkedIn">
+    <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/gorsan/" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-end text-xs-center order-sm-3">
+        
+        
+        
+<ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="GitHub" aria-label="GitHub">
+    <a target="_blank" rel="noopener" href="https://github.com/ptarmiganlabs/ctrl-q" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Get in touch with Ptarmigan Labs" aria-label="Get in touch with Ptarmigan Labs">
+    <a target="_blank" rel="noopener" href="mailto://info@ptarmiganlabs.com" aria-label="Get in touch with Ptarmigan Labs">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="td-footer__copyright-etc col-12 col-sm-4 text-center py-2 order-sm-2">
+        <span>&copy; 2024 Ptarmigan Labs AB All Rights Reserved</span>
+        <span class="ms-1"><a href="https://ptarmiganlabs.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></span>
+        <p class="td-footer__about mt-2"><a href="/about/">About Ctrl-Q</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <script src="/js/main.min.00b0947702f6bf9c86afe620f44bfda788662ef0ca688315732ee7b00e408279.js" integrity="sha256-ALCUdwL2v5yGr&#43;Yg9Ev9p4hmLvDKaIMVcy7nsA5Agnk=" crossorigin="anonymous"></script>
+<script src='/js/prism.js'></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

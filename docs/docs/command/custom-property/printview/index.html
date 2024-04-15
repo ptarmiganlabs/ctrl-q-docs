@@ -1,0 +1,285 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="canonical" type="text/html" href="https://ctrl-q.ptarmiganlabs.com/docs/command/custom-property/">
+<link rel="alternate" type="application/rss&#43;xml" href="https://ctrl-q.ptarmiganlabs.com/docs/command/custom-property/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Custom properties | Ctrl-Q</title>
+<meta name="description" content="Commands to retrieve and manipulate custom properties.
+">
+<meta property="og:title" content="Custom properties" />
+<meta property="og:description" content="Commands to retrieve and manipulate custom properties.
+" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ctrl-q.ptarmiganlabs.com/docs/command/custom-property/" /><meta property="og:site_name" content="Ctrl-Q" />
+
+<meta itemprop="name" content="Custom properties">
+<meta itemprop="description" content="Commands to retrieve and manipulate custom properties.
+"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Custom properties"/>
+<meta name="twitter:description" content="Commands to retrieve and manipulate custom properties.
+"/>
+
+
+
+
+<link rel="preload" href="/scss/main.min.6a0cd268a007b5169ed43ee5cd2ba18e4df3ce4a8befa58f30b0fe7149728fb4.css" as="style">
+<link href="/scss/main.min.6a0cd268a007b5169ed43ee5cd2ba18e4df3ce4a8befa58f30b0fe7149728fb4.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/css/prism.css"/>
+<script defer data-domain="ctrl-q.ptarmiganlabs.com" src="https://plausible.io/js/script.js"></script>
+
+<link rel="canonical" href="https://ctrl-q.ptarmiganlabs.com/docs/command/custom-property/" />
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar navbar-dark js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"></span><span class="navbar-brand__name">Ctrl-Q</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/about/"><span>About</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/docs/"><span>Docs</span></a>
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+This is the multi-page printable view of this section.
+<a href="#" onclick="print();return false;">Click here to print</a>.
+</p><p>
+<a href="/docs/command/custom-property/">Return to the regular view of this page</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">Custom properties</h1>
+<div class="lead">Commands to retrieve and manipulate custom properties.</div>
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+
+    </ul>
+
+
+<div class="content">
+      <!-- 
+
+<div class="pageinfo pageinfo-primary">
+<p>This is a placeholder page that shows you how to use this template site.</p>
+
+</div>
+ -->
+<p><em>Page contents:</em></p>
+<ul>
+<li><a href="#set-custom-property-of-reload-task">Set custom property of reload task</a></li>
+</ul>
+<hr>
+<h2 id="set-custom-property-of-reload-task">Set custom property of reload task</h2>
+<p>Setting custom properties of reload tasks can be very time consuming if there are lots of tasks and/or custom propertis.<br>
+Ctrl-Q makes it possible to update many takes at once with a single command.</p>
+<p>Note:</p>
+<ol>
+<li>ONE custom property can be updated each time Ctrl-Q is executed.<br>
+If several custom properties should be updated Ctrl-Q must be started several times.</li>
+<li>The custom property to be updated must exist before Ctrl-Q is executed. Create the custom property in the QMC first.</li>
+<li>The custom property values to be set must exist before Ctrl-Q is executed. Create the custom property in the QMC first.</li>
+<li>Task IDs and task tags can be useed to specifiy which tasks&rsquo; custom properties should be updated.
+<ol>
+<li>The <code>--task-id</code> and <code>--task-tag</code> options are additive, i.e. the union of tasks matching the task IDs and tags will be updated.</li>
+</ol>
+</li>
+<li>The <code>--update-mode</code> option controls how custom properties are updated.
+<ol>
+<li>Setting the option to <code>append</code> will add the specified values to any other values already set for the custom property.</li>
+<li>Setting the option to <code>replace</code> will delete any already set values for the custom property and then add the specified values.</li>
+</ol>
+</li>
+</ol>
+<p>In the example below 5 tasks will be updated: 3 based on task IDs and 2 based on the task tag &ldquo;apiCreated&rdquo;.<br>
+The values &ldquo;Finance&rdquo; and &ldquo;Sales&rdquo; will be added to the custom property &ldquo;Department&rdquo;.<br>
+Existing custom property values are preserved (i.e. the new values are appended to any already existing values) by appending new values rather than replacing (<code>--update-mode append</code> option).<br>
+If a task already has values for this custom property new values will be added without asking first (<code>--overwrite</code> option)</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">task-custom</span><span style="color:#000">-property-set</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#204a87">pro2-win1</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">lab</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ptarmiganlabs</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">net</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-task-id</span> <span style="color:#000">82bc3e66-c899</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">4e44</span><span style="color:#000">-b52f</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">552145da5ee0</span> <span style="color:#000">5748afa9</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">3abe</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">43ab-bb1f</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">127c48ced075</span> <span style="color:#0000cf;font-weight:bold">5520e710</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">91ad</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">41d2-aeb6</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">434cafbf366b</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-task-tag</span> <span style="color:#4e9a06">&#39;apiCreated&#39;</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-custom-property-name</span> <span style="color:#000">Department</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-custom-property-value</span> <span style="color:#000">Finance</span> <span style="color:#000">Sales</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-overwrite</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-update-mode</span> <span style="color:#000">append</span>
+</span></span></code></pre></div><pre tabindex="0"><code>2024-03-12T08:36:20.324Z info: -----------------------------------------------------------
+2024-03-12T08:36:20.324Z info: | Ctrl-Q
+2024-03-12T08:36:20.324Z info: |
+2024-03-12T08:36:20.324Z info: | Version      : 3.16.0
+2024-03-12T08:36:20.324Z info: | Log level    : info
+2024-03-12T08:36:20.324Z info: |
+2024-03-12T08:36:20.324Z info: | Command      : task-custom-property-set
+2024-03-12T08:36:20.324Z info: |              : update a custom property of one or more tasks
+2024-03-12T08:36:20.324Z info: |
+2024-03-12T08:36:20.324Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+2024-03-12T08:36:20.324Z info: |
+2024-03-12T08:36:20.324Z info: | https://github.com/ptarmiganlabs/ctrl-q
+2024-03-12T08:36:20.324Z info: ----------------------------------------------------------
+2024-03-12T08:36:20.324Z info:
+2024-03-12T08:36:20.699Z info: Number of tasks that will be updated: 5
+2024-03-12T08:36:20.699Z info:
+2024-03-12T08:36:20.699Z info: -----------------------------------------------------------
+2024-03-12T08:36:20.699Z info: Processing task &#34;Reload of Test data - Seattle checkouts by title3&#34; with ID=82bc3e66-c899-4e44-b52f-552145da5ee0
+2024-03-12T08:36:20.699Z info: Starting updating custom property &#34;Department&#34; of task &#34;Reload of Test data - Seattle checkouts by title3&#34; with ID=82bc3e66-c899-4e44-b52f-552145da5ee0
+2024-03-12T08:36:21.013Z info:    ...Custom property &#34;Department&#34; on task &#34;Reload of Test data - Seattle checkouts by title3&#34; successfully updated.
+2024-03-12T08:36:21.013Z info:
+2024-03-12T08:36:21.013Z info: -----------------------------------------------------------
+2024-03-12T08:36:21.013Z info: Processing task &#34;Reload task of Lab 1_1&#34; with ID=5748afa9-3abe-43ab-bb1f-127c48ced075
+2024-03-12T08:36:21.013Z info: Starting updating custom property &#34;Department&#34; of task &#34;Reload task of Lab 1_1&#34; with ID=5748afa9-3abe-43ab-bb1f-127c48ced075
+2024-03-12T08:36:21.235Z info:    ...Custom property &#34;Department&#34; on task &#34;Reload task of Lab 1_1&#34; successfully updated.
+2024-03-12T08:36:21.235Z info:
+2024-03-12T08:36:21.235Z info: -----------------------------------------------------------
+2024-03-12T08:36:21.235Z info: Processing task &#34;Reload of Test data - Seattle library checkouts &amp; collection inventory&#34; with ID=5520e710-91ad-41d2-aeb6-434cafbf366b
+2024-03-12T08:36:21.235Z info: Starting updating custom property &#34;Department&#34; of task &#34;Reload of Test data - Seattle library checkouts &amp; collection inventory&#34; with ID=5520e710-91ad-41d2-aeb6-434cafbf366b
+2024-03-12T08:36:21.427Z info:    ...Custom property &#34;Department&#34; on task &#34;Reload of Test data - Seattle library checkouts &amp; collection inventory&#34; successfully updated.
+2024-03-12T08:36:21.427Z info:
+2024-03-12T08:36:21.427Z info: -----------------------------------------------------------
+2024-03-12T08:36:21.427Z info: Processing task &#34;Reload Operations Monitor&#34; with ID=fbf645f0-0c92-40a4-af9a-6e3eb1d3c35c
+2024-03-12T08:36:21.427Z info: Starting updating custom property &#34;Department&#34; of task &#34;Reload Operations Monitor&#34; with ID=fbf645f0-0c92-40a4-af9a-6e3eb1d3c35c
+2024-03-12T08:36:21.629Z info:    ...Custom property &#34;Department&#34; on task &#34;Reload Operations Monitor&#34; successfully updated.
+2024-03-12T08:36:21.629Z info:
+2024-03-12T08:36:21.629Z info: -----------------------------------------------------------
+2024-03-12T08:36:21.629Z info: Processing task &#34;Reload task of App ageing&#34; with ID=5217e6b2-65ce-4535-ad2a-37b62e66d12c
+2024-03-12T08:36:21.629Z info: Starting updating custom property &#34;Department&#34; of task &#34;Reload task of App ageing&#34; with ID=5217e6b2-65ce-4535-ad2a-37b62e66d12c
+2024-03-12T08:36:21.832Z info:    ...Custom property &#34;Department&#34; on task &#34;Reload task of App ageing&#34; successfully updated.
+</code></pre>
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Ptarmigan Labs Newsletter" aria-label="Ptarmigan Labs Newsletter">
+    <a target="_blank" rel="noopener" href="https://ptarmiganlabs.com/#/portal/signup" aria-label="Ptarmigan Labs Newsletter">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="LinkedIn" aria-label="LinkedIn">
+    <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/gorsan/" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-end text-xs-center order-sm-3">
+        
+        
+        
+<ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="GitHub" aria-label="GitHub">
+    <a target="_blank" rel="noopener" href="https://github.com/ptarmiganlabs/ctrl-q" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Get in touch with Ptarmigan Labs" aria-label="Get in touch with Ptarmigan Labs">
+    <a target="_blank" rel="noopener" href="mailto://info@ptarmiganlabs.com" aria-label="Get in touch with Ptarmigan Labs">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="td-footer__copyright-etc col-12 col-sm-4 text-center py-2 order-sm-2">
+        <span>&copy; 2024 Ptarmigan Labs AB All Rights Reserved</span>
+        <span class="ms-1"><a href="https://ptarmiganlabs.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></span>
+        <p class="td-footer__about mt-2"><a href="/about/">About Ctrl-Q</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <script src="/js/main.min.00b0947702f6bf9c86afe620f44bfda788662ef0ca688315732ee7b00e408279.js" integrity="sha256-ALCUdwL2v5yGr&#43;Yg9Ev9p4hmLvDKaIMVcy7nsA5Agnk=" crossorigin="anonymous"></script>
+<script src='/js/prism.js'></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

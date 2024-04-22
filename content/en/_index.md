@@ -50,13 +50,8 @@ Works with client-managed Qlik Sense Enterprise on Windows.
 
 {{% blocks/section color="dark" type="row" %}}
 
-{{% blocks/feature icon="fa-lightbulb" title="Latest release: 3.16" %}}
-🥳 View task dependencies as network diagrams.  
-Network diagrams are a great way to visualize task dependencies, and Ctrl-Q now officially supports this.
-
-🥳 Manage user sessions.  
-Ctrl-Q can list and delete user sessions for some or all virtual proxies and proxies.
-
+{{% blocks/feature icon="fa-lightbulb" title="Latest release: 3.17" %}}
+Improved handling of getting app scripts for large number of apps.  
 
 Available on [GitHub](https://github.com/ptarmiganlabs/ctrl-q/releases).
 {{% /blocks/feature %}}

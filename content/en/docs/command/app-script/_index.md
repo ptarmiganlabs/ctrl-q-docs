@@ -29,26 +29,25 @@ Get script and associated metadata for a Sense app.
 ```
 
 ```text
-2024-03-12T08:33:16.678Z info: -----------------------------------------------------------
-2024-03-12T08:33:16.678Z info: | Ctrl-Q
-2024-03-12T08:33:16.678Z info: |
-2024-03-12T08:33:16.678Z info: | Version      : 3.16.0
-2024-03-12T08:33:16.678Z info: | Log level    : info
-2024-03-12T08:33:16.678Z info: |
-2024-03-12T08:33:16.678Z info: | Command      : script-get
-2024-03-12T08:33:16.678Z info: |              : get script from Qlik Sense app
-2024-03-12T08:33:16.678Z info: |
-2024-03-12T08:33:16.678Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
-2024-03-12T08:33:16.678Z info: |
-2024-03-12T08:33:16.678Z info: | https://github.com/ptarmiganlabs/ctrl-q
-2024-03-12T08:33:16.678Z info: ----------------------------------------------------------
-2024-03-12T08:33:16.678Z info:
-2024-03-12T08:33:17.897Z info: ----- Script metadata -----
-2024-03-12T08:33:17.897Z info: App id: a3e0f5d2-000a-464f-998d-33d333b175d7
-2024-03-12T08:33:17.897Z info: Created date: 2021-06-03T22:04:52.283Z
-2024-03-12T08:33:17.897Z info: Modified date: 2023-05-05T06:17:05.456Z
-2024-03-12T08:33:17.897Z info: ----- End script metadata -----
-2024-03-12T08:33:17.897Z info:
+2024-04-22T19:01:50.098Z info: -----------------------------------------------------------
+2024-04-22T19:01:50.099Z info: | Ctrl-Q
+2024-04-22T19:01:50.099Z info: |
+2024-04-22T19:01:50.099Z info: | Version      : 3.17.0
+2024-04-22T19:01:50.099Z info: | Log level    : info
+2024-04-22T19:01:50.100Z info: |
+2024-04-22T19:01:50.100Z info: | Command      : script-get
+2024-04-22T19:01:50.100Z info: |              : get script from Qlik Sense app
+2024-04-22T19:01:50.100Z info: |
+2024-04-22T19:01:50.100Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
+2024-04-22T19:01:50.101Z info: |
+2024-04-22T19:01:50.101Z info: | https://github.com/ptarmiganlabs/ctrl-q
+2024-04-22T19:01:50.101Z info: ----------------------------------------------------------
+2024-04-22T19:01:50.101Z info:
+2024-04-22T19:01:51.496Z info: ----- Script metadata -----
+2024-04-22T19:01:51.496Z info: App id: a3e0f5d2-000a-464f-998d-33d333b175d7
+2024-04-22T19:01:51.496Z info: Created date: 2021-06-03T22:04:52.283Z
+2024-04-22T19:01:51.497Z info: Modified date: 2024-03-20T08:02:25.153Z
+2024-04-22T19:01:51.497Z info: ----- End script metadata -----
 ///$tab Main
 SET ThousandSep=',';
 SET DecimalSep='.';

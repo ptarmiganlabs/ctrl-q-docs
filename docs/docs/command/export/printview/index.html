@@ -142,7 +142,8 @@ It is thus possible to first export apps and get a metadata Excel file, then imp
 </span></span><span style="display:flex;"><span>  --port &lt;port&gt;                      Qlik Sense repository service (QRS) port (usually 4242 for cert auth, 443 for jwt auth) (default: &#34;4242&#34;)
 </span></span><span style="display:flex;"><span>  --schema-version &lt;string&gt;          Qlik Sense engine schema version (default: &#34;12.612.0&#34;)
 </span></span><span style="display:flex;"><span>  --virtual-proxy &lt;prefix&gt;           Qlik Sense virtual proxy prefix (default: &#34;&#34;)
-</span></span><span style="display:flex;"><span>  --secure &lt;true|false&gt;              https connection to Qlik Sense must use correct certificate. Invalid certificates will result in rejected/failed connection. (default: true)
+</span></span><span style="display:flex;"><span>  --secure &lt;true|false&gt;              https connection to Qlik Sense must use correct certificate. Invalid certificates will result in
+</span></span><span style="display:flex;"><span>                                     rejected/failed connection. (default: true)
 </span></span><span style="display:flex;"><span>  --auth-user-dir &lt;directory&gt;        user directory for user to connect with
 </span></span><span style="display:flex;"><span>  --auth-user-id &lt;userid&gt;            user ID for user to connect with
 </span></span><span style="display:flex;"><span>  -a, --auth-type &lt;type&gt;             authentication type (choices: &#34;cert&#34;, &#34;jwt&#34;, default: &#34;cert&#34;)
@@ -152,13 +153,16 @@ It is thus possible to first export apps and get a metadata Excel file, then imp
 </span></span><span style="display:flex;"><span>  --auth-jwt &lt;jwt&gt;                   JSON Web Token (JWT) to use for authentication with Qlik Sense server
 </span></span><span style="display:flex;"><span>  --app-id &lt;ids...&gt;                  use app IDs to select which apps to export
 </span></span><span style="display:flex;"><span>  --app-tag &lt;tags...&gt;                use app tags to select which apps to export
+</span></span><span style="display:flex;"><span>  --app-published                    export all published apps  (default: false)
 </span></span><span style="display:flex;"><span>  --output-dir &lt;directory&gt;           relative or absolut path in which QVF files should be stored. (default: &#34;qvf-export&#34;)
-</span></span><span style="display:flex;"><span>  --qvf-name-format &lt;format...&gt;      structure of QVF file name format (choices: &#34;app-id&#34;, &#34;app-name&#34;, &#34;export-date&#34;, &#34;export-time&#34;, default: [&#34;app-name&#34;])
+</span></span><span style="display:flex;"><span>  --qvf-name-format &lt;format...&gt;      structure of QVF file name format (choices: &#34;app-id&#34;, &#34;app-name&#34;, &#34;export-date&#34;, &#34;export-time&#34;, default:
+</span></span><span style="display:flex;"><span>                                     [&#34;app-name&#34;])
 </span></span><span style="display:flex;"><span>  --qvf-name-separator &lt;separator&gt;   character used to separate parts of the QVF file name (choices: &#34;-&#34;, &#34;--&#34;, &#34;_&#34;, &#34;__&#34;, default: &#34;_&#34;)
 </span></span><span style="display:flex;"><span>  --qvf-overwrite                    overwrite existing QVF files without asking
 </span></span><span style="display:flex;"><span>  --exclude-app-data &lt;true|false&gt;    exclude or include app data in QVF file (default: true)
 </span></span><span style="display:flex;"><span>  --limit-export-count &lt;number&gt;      export at most x number of apps. Defaults to 0 = no limit (default: 0)
-</span></span><span style="display:flex;"><span>  --sleep-app-export &lt;milliseconds&gt;  Wait this long before continuing after each app has been exported. Defaults to 1000 = 1 second (default: 1000)
+</span></span><span style="display:flex;"><span>  --sleep-app-export &lt;milliseconds&gt;  Wait this long before continuing after each app has been exported. Defaults to 1000 = 1 second (default:
+</span></span><span style="display:flex;"><span>                                     1000)
 </span></span><span style="display:flex;"><span>  --metadata-file-create             create a separate file with information about all exported apps
 </span></span><span style="display:flex;"><span>  --metadata-file-name &lt;name&gt;        file name to store app metadata in (default: &#34;app_export.xlsx&#34;)
 </span></span><span style="display:flex;"><span>  --metadata-file-format &lt;format&gt;    file type/format (choices: &#34;excel&#34;, default: &#34;excel&#34;)
@@ -173,6 +177,7 @@ It is thus possible to first export apps and get a metadata Excel file, then imp
 <li>QVF files will be stored in a subdirectory <code>qvf-export</code>.</li>
 <li>An Excel file will be created, containing select metadata about the apps.</li>
 <li>The certificate files are specifically named in the command, and are stored in a subdirectory <code>cert</code>.</li>
+<li>Some of the apps are already present in the <code>qvf-export</code> directory, so the command will ask for confirmation before overwriting them.</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">app-export</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
@@ -189,54 +194,57 @@ It is thus possible to first export apps and get a metadata Excel file, then imp
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-qvf-name-format</span> <span style="color:#204a87">app-name</span> <span style="color:#204a87">export-date</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-qvf-name-separator</span> <span style="color:#000">_</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-metadata</span><span style="color:#ce5c00;font-weight:bold">-file</span><span style="color:#000">-create</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2024-03-12T09:26:45.165Z info: -----------------------------------------------------------
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:45.165Z info: | Ctrl-Q
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:45.165Z info: |
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:45.165Z info: | Version      : 3.16.0
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:45.165Z info: | Log level    : info
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:45.165Z info: |
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:45.165Z info: | Command      : app-export
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:45.165Z info: |              : export Qlik Sense apps to QVF files on disk.
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:45.165Z info: |
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:45.165Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:45.165Z info: |
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:45.165Z info: | https://github.com/ptarmiganlabs/ctrl-q
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:45.165Z info: ----------------------------------------------------------
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:45.165Z info:
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:45.180Z info: Export apps to directory &#34;C:/tools/ctrl-q/qvf-export&#34;
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:45.352Z info: Number of apps to export: 8
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:45.930Z info: ------------------------------------
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:45.930Z info: App [eb3ab049-d007-43d3-93da-5962f9208c65] &#34;User retention.qvf&#34;, download starting
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:47.118Z info: ✅ App [eb3ab049-d007-43d3-93da-5962f9208c65] &#34;User retention.qvf&#34;, download complete. Size=360448 bytes
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:48.946Z info: ------------------------------------
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:48.946Z info: App [2933711d-6638-41d4-a2d2-6dd2d965208b] &#34;Ctrl-Q CLI.qvf&#34;, download starting
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:49.430Z info: ✅ App [2933711d-6638-41d4-a2d2-6dd2d965208b] &#34;Ctrl-Q CLI.qvf&#34;, download complete. Size=720896 bytes
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:51.002Z info: ------------------------------------
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:51.002Z info: App [e9d2f9b2-b598-480e-b84f-4c5d34467f6f] &#34;Performance review_2022-03-28.qvf&#34;, download starting
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:51.268Z info: ✅ App [e9d2f9b2-b598-480e-b84f-4c5d34467f6f] &#34;Performance review_2022-03-28.qvf&#34;, download complete. Size=327680 bytes
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:52.867Z info: ------------------------------------
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:52.867Z info: App [5733046b-df34-4989-bd33-56cde5ff779d] &#34;App 2.qvf&#34;, download starting
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:53.351Z info: ✅ App [5733046b-df34-4989-bd33-56cde5ff779d] &#34;App 2.qvf&#34;, download complete. Size=245760 bytes
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:54.882Z info: ------------------------------------
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:54.882Z info: App [deba4bcf-47e4-472e-97b2-4fe8d6498e11] &#34;Always failing reload (no delay).qvf&#34;, download starting
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:55.101Z info: ✅ App [deba4bcf-47e4-472e-97b2-4fe8d6498e11] &#34;Always failing reload (no delay).qvf&#34;, download complete. Size=180224 bytes
-</span></span><span style="display:flex;"><span>2024-03-12T09:26:56.695Z info:
-</span></span><span style="display:flex;"><span>                                  Destination file &#34;C:\tools\ctrl-q\qvf-export\App 2_2024-03-12.qvf&#34; exists. Do you want to overwrite it? (y/n) y
-</span></span><span style="display:flex;"><span>2024-03-12T09:27:09.320Z info:
-</span></span><span style="display:flex;"><span>2024-03-12T09:27:09.320Z info: ------------------------------------
-</span></span><span style="display:flex;"><span>2024-03-12T09:27:09.320Z info: App [4e96965a-ebc9-4572-ad71-35d6cc7dbb23] &#34;App 2.qvf&#34;, download starting
-</span></span><span style="display:flex;"><span>2024-03-12T09:27:09.554Z info: ✅ App [4e96965a-ebc9-4572-ad71-35d6cc7dbb23] &#34;App 2.qvf&#34;, download complete. Size=245760 bytes
-</span></span><span style="display:flex;"><span>2024-03-12T09:27:11.133Z info: ------------------------------------
-</span></span><span style="display:flex;"><span>2024-03-12T09:27:11.133Z info: App [8272af5f-2677-459a-8d50-ee45a1c5a775] &#34;App 1.qvf&#34;, download starting
-</span></span><span style="display:flex;"><span>2024-03-12T09:27:11.339Z info: ✅ App [8272af5f-2677-459a-8d50-ee45a1c5a775] &#34;App 1.qvf&#34;, download complete. Size=245760 bytes
-</span></span><span style="display:flex;"><span>2024-03-12T09:27:12.898Z info:
-</span></span><span style="display:flex;"><span>                                  Destination file &#34;C:\tools\ctrl-q\qvf-export\App 1_2024-03-12.qvf&#34; exists. Do you want to overwrite it? (y/n) y
-</span></span><span style="display:flex;"><span>2024-03-12T09:27:13.835Z info:
-</span></span><span style="display:flex;"><span>2024-03-12T09:27:13.835Z info: ------------------------------------
-</span></span><span style="display:flex;"><span>2024-03-12T09:27:13.835Z info: App [6bf8f41f-31d0-40b0-9e59-95ec8839eb57] &#34;App 1.qvf&#34;, download starting
-</span></span><span style="display:flex;"><span>2024-03-12T09:27:14.054Z info: ✅ App [6bf8f41f-31d0-40b0-9e59-95ec8839eb57] &#34;App 1.qvf&#34;, download complete. Size=245760 bytes
-</span></span><span style="display:flex;"><span>2024-03-12T09:27:15.070Z info: ------------------------------------
-</span></span><span style="display:flex;"><span>2024-03-12T09:27:15.085Z info: ✅ Done writing app metadata file &#34;app_export.xlsx&#34; to disk
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2024-04-30T06:30:22.361Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:22.362Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:22.362Z info: |
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:22.362Z info: | Version      : 3.18.0
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:22.362Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:22.363Z info: |
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:22.363Z info: | Command      : app-export
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:22.363Z info: |              : export Qlik Sense apps to QVF files on disk.
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:22.363Z info: |
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:22.363Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:22.364Z info: |
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:22.364Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:22.364Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:22.364Z info:
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:22.367Z info: Export apps to directory &#34;/Users/goran/tools/ctrl-q demo/qvf-export&#34;
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:22.974Z info: Number of apps to export: 8
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:23.707Z info: ------------------------------------
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:23.707Z info: App [eb3ab049-d007-43d3-93da-5962f9208c65] &#34;User retention.qvf&#34;, download starting
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:24.571Z info: ✅ App [eb3ab049-d007-43d3-93da-5962f9208c65] &#34;User retention.qvf&#34;, download complete. Size=360448 bytes
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:26.676Z info: ------------------------------------
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:26.677Z info: App [2933711d-6638-41d4-a2d2-6dd2d965208b] &#34;Ctrl-Q CLI.qvf&#34;, download starting
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:27.448Z info: ✅ App [2933711d-6638-41d4-a2d2-6dd2d965208b] &#34;Ctrl-Q CLI.qvf&#34;, download complete. Size=720896 bytes
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:29.261Z info: ------------------------------------
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:29.261Z info: App [e9d2f9b2-b598-480e-b84f-4c5d34467f6f] &#34;Performance review_2022-03-28.qvf&#34;, download starting
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:30.177Z info: ✅ App [e9d2f9b2-b598-480e-b84f-4c5d34467f6f] &#34;Performance review_2022-03-28.qvf&#34;, download complete. Size=327680 bytes
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:32.234Z info: ------------------------------------
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:32.234Z info: App [5733046b-df34-4989-bd33-56cde5ff779d] &#34;App 2.qvf&#34;, download starting
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:33.066Z info: ✅ App [5733046b-df34-4989-bd33-56cde5ff779d] &#34;App 2.qvf&#34;, download complete. Size=245760 bytes
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:34.565Z info: ------------------------------------
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:34.565Z info: App [deba4bcf-47e4-472e-97b2-4fe8d6498e11] &#34;Always failing reload (no delay).qvf&#34;, download starting
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:34.810Z info: ✅ App [deba4bcf-47e4-472e-97b2-4fe8d6498e11] &#34;Always failing reload (no delay).qvf&#34;, download complete. Size=180224 bytes
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:36.431Z info:
+</span></span><span style="display:flex;"><span>                                  Destination file &#34;/Users/goran/tools/ctrl-q demo/qvf-export/App 2_2024-04-30.qvf&#34; exists. Do you want to overwrite it? (y/n) y
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:40.286Z info:
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:40.286Z info: ------------------------------------
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:40.286Z info: App [4e96965a-ebc9-4572-ad71-35d6cc7dbb23] &#34;App 2.qvf&#34;, download starting
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:41.324Z info: ✅ App [4e96965a-ebc9-4572-ad71-35d6cc7dbb23] &#34;App 2.qvf&#34;, download complete. Size=245760 bytes
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:42.988Z info: ------------------------------------
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:42.988Z info: App [8272af5f-2677-459a-8d50-ee45a1c5a775] &#34;App 1.qvf&#34;, download starting
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:43.394Z info: ✅ App [8272af5f-2677-459a-8d50-ee45a1c5a775] &#34;App 1.qvf&#34;, download complete. Size=245760 bytes
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:45.138Z info:
+</span></span><span style="display:flex;"><span>                                  Destination file &#34;/Users/goran/tools/ctrl-q demo/qvf-export/App 1_2024-04-30.qvf&#34; exists. Do you want to overwrite it? (y/n) y
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:49.529Z info:
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:49.531Z info: ------------------------------------
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:49.531Z info: App [6bf8f41f-31d0-40b0-9e59-95ec8839eb57] &#34;App 1.qvf&#34;, download starting
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:49.973Z info: ✅ App [6bf8f41f-31d0-40b0-9e59-95ec8839eb57] &#34;App 1.qvf&#34;, download complete. Size=245760 bytes
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:50.984Z info: ------------------------------------
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:50.984Z info:
+</span></span><span style="display:flex;"><span>                                  App metadata file &#34;/Users/goran/tools/ctrl-q demo/qvf-export/app_export.xlsx&#34; exists. Do you want to overwrite it? (y/n) y
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:52.867Z info:
+</span></span><span style="display:flex;"><span>2024-04-30T06:30:52.869Z info: ✅ Done writing app metadata file &#34;app_export.xlsx&#34; to disk
 </span></span></code></pre></div><p>The <code>qvf-export</code> directory now contains these files:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#204a87">dir </span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">qvf-export</span><span style="color:#000;font-weight:bold">\</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>

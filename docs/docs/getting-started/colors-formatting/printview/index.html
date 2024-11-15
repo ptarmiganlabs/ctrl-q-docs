@@ -20,29 +20,27 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Colors &amp; formatting | Ctrl-Q</title>
-<meta name="description" content="Colors &amp; formatting: Windows vs Windows Server vs macOS/Linux
-">
-<meta property="og:title" content="Colors &amp; formatting" />
-<meta property="og:description" content="Colors &amp; formatting: Windows vs Windows Server vs macOS/Linux
-" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ctrl-q.ptarmiganlabs.com/docs/getting-started/colors-formatting/" /><meta property="og:site_name" content="Ctrl-Q" />
+<meta name="description" content="Colors &amp; formatting: Windows vs Windows Server vs macOS/Linux">
+<meta property="og:url" content="https://ctrl-q.ptarmiganlabs.com/docs/getting-started/colors-formatting/">
+  <meta property="og:site_name" content="Ctrl-Q">
+  <meta property="og:title" content="Colors & formatting">
+  <meta property="og:description" content="Colors &amp; formatting: Windows vs Windows Server vs macOS/Linux">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
 
-<meta itemprop="name" content="Colors &amp; formatting">
-<meta itemprop="description" content="Colors &amp; formatting: Windows vs Windows Server vs macOS/Linux
-"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Colors &amp; formatting"/>
-<meta name="twitter:description" content="Colors &amp; formatting: Windows vs Windows Server vs macOS/Linux
-"/>
-
-
-
-
-<link rel="preload" href="/scss/main.min.6a0cd268a007b5169ed43ee5cd2ba18e4df3ce4a8befa58f30b0fe7149728fb4.css" as="style">
-<link href="/scss/main.min.6a0cd268a007b5169ed43ee5cd2ba18e4df3ce4a8befa58f30b0fe7149728fb4.css" rel="stylesheet" integrity="">
-
+  <meta itemprop="name" content="Colors & formatting">
+  <meta itemprop="description" content="Colors &amp; formatting: Windows vs Windows Server vs macOS/Linux">
+  <meta itemprop="dateModified" content="2024-03-12T10:39:27+01:00">
+  <meta itemprop="wordCount" content="446">
+  <meta itemprop="keywords" content="Colors,Formatting">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Colors & formatting">
+  <meta name="twitter:description" content="Colors &amp; formatting: Windows vs Windows Server vs macOS/Linux">
+<link rel="preload" href="/scss/main.min.abae8d77a318db1f7dc3e48a2c40326c72fe9d164313d815da846b0968944efc.css" as="style" integrity="sha256-q66Nd6MY2x99w&#43;SKLEAybHL&#43;nRZDE9gV2oRrCWiUTvw=" crossorigin="anonymous">
+<link href="/scss/main.min.abae8d77a318db1f7dc3e48a2c40326c72fe9d164313d815da846b0968944efc.css" rel="stylesheet" integrity="sha256-q66Nd6MY2x99w&#43;SKLEAybHL&#43;nRZDE9gV2oRrCWiUTvw=" crossorigin="anonymous">
 <script
-  src="https://code.jquery.com/jquery-3.6.3.min.js"
-  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
   crossorigin="anonymous"></script>
 <link rel="stylesheet" href="/css/prism.css"/>
 <script defer data-domain="ctrl-q.ptarmiganlabs.com" src="https://plausible.io/js/script.js"></script>
@@ -51,7 +49,7 @@
   </head>
   <body class="td-section">
     <header>
-      <nav class="td-navbar navbar-dark js-navbar-scroll">
+      <nav class="td-navbar js-navbar-scroll" data-bs-theme="dark">
 <div class="container-fluid flex-column flex-md-row">
   <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"></span><span class="navbar-brand__name">Ctrl-Q</span></a>
   <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
@@ -111,35 +109,47 @@ This is the multi-page printable view of this section.
 
 <div class="content">
       <ul>
-<li><a href="#all-oss-plain-text">All OSs: plain text</a></li>
-<li><a href="#windows-10-using-windows-terminal">Windows 10 using Windows Terminal</a></li>
-<li><a href="#macos-and-linux">macOS and Linux</a></li>
+<li><a href="/docs/getting-started/colors-formatting/#all-oss-plain-text">All OSs: plain text</a></li>
+<li><a href="/docs/getting-started/colors-formatting/#windows-10-using-windows-terminal">Windows 10 using Windows Terminal</a></li>
+<li><a href="/docs/getting-started/colors-formatting/#macos-and-linux">macOS and Linux</a></li>
 </ul>
 <hr>
+
+
+<div class="alert alert-warning" role="alert">
+<h4 class="alert-heading">A note on screenshots and commands</h4>
+
+    <p>The screenshots in this page may be from older versions of Ctrl-Q.</p>
+<p>The commands shown together with the screenshots are however updated for the latest version of Ctrl-Q.</p>
+
+
+</div>
+
 <p>Some of the Ctrl-Q commands use colors and emojis to better communicate the information retrieved from Qlik Sense.<br>
 The task tree view is an example, but more commands may use colors in the future.</p>
 <p>The use of colors in console/command line applications has been around since at least the 80s.<br>
 MS-DOS supported it, as did early Windows versions.</p>
 <p>Today this feature is quite fragmented.</p>
-<p>Console applications using colors are natively supported on macOS and Linux.<br>
-On Windows Server 2016 and earlier it&rsquo;s <em>very</em> hard to get this working, later versions may be easier.<br>
-On Windows 10 and later it&rsquo;s possible to use Microsoft&rsquo;s excellent new command line shell, <a href="https://github.com/microsoft/terminal">Windows Terminal</a>.<br>
-Highly recommended if you use a desktop Windows operating system!</p>
+<ul>
+<li>Console applications using colors are natively supported on macOS and Linux.</li>
+<li>On Windows Server 2016 and earlier it&rsquo;s <em>very</em> hard to get this working, later versions may be easier.</li>
+<li>On Windows 10 and later it&rsquo;s possible to use Microsoft&rsquo;s excellent new command line shell, <a href="https://github.com/microsoft/terminal">Windows Terminal</a>. Highly recommended if you use a desktop Windows operating system!</li>
+</ul>
 <p>Ctrl-Q tries to offer plain text visuals unless extra features, flare and color is enabled via command line parameters.</p>
 <p>Some examples follow, showing different views of reload task trees.</p>
 <h2 id="all-oss-plain-text">All OSs: plain text</h2>
 <p>The command for the most basic task tree is</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">task-get</span> <span style="color:#000;font-weight:bold">`</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#000">qseow</span> <span style="color:#204a87">task-get</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#204a87">pro2-win1</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">lab</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ptarmiganlabs</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">net</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-output-format</span> <span style="color:#000">tree</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-output-dest</span> <span style="color:#000">screen</span>
-</span></span></code></pre></div><p><img src="/img/task-tree-no-color-1.png" alt="Qlik Sense task tree 1" title="Qlik Sense task tree with no colors or task details"></p>
+</span></span></code></pre></div><p><img alt="Qlik Sense task tree 1" src="/img/task-tree-no-color-1.png" title="Qlik Sense task tree with no colors or task details"></p>
 <p>Add the <code>--tree-details</code> option and the result contains a lot more details for each task. Not very easy to read though.<br>
 Note: the <code>task-get</code> command has lots of options, these are described in more detail on <a href="/docs/command/task/#list-tasks-as-tree">this page</a>.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">task-get</span> <span style="color:#000;font-weight:bold">`</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#000">qseow</span> <span style="color:#204a87">task-get</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#204a87">pro2-win1</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">lab</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ptarmiganlabs</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">net</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
@@ -147,14 +157,14 @@ Note: the <code>task-get</code> command has lots of options, these are described
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-output-format</span> <span style="color:#000">tree</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-output-dest</span> <span style="color:#000">screen</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-tree-details</span>
-</span></span></code></pre></div><p><img src="/img/task-tree-no-color-details-1.png" alt="Qlik Sense task tree 2" title="Qlik Sense task tree with task details but no colors"></p>
+</span></span></code></pre></div><p><img alt="Qlik Sense task tree 2" src="/img/task-tree-no-color-details-1.png" title="Qlik Sense task tree with task details but no colors"></p>
 <h2 id="windows-10-using-windows-terminal">Windows 10 using Windows Terminal</h2>
 <p>Thanks to Windows Terminal handling text coloring and emojis we can add a couple of options:</p>
 <ul>
 <li><code>--tree-icons</code> to get emojis showing the result from each task&rsquo;s last execution (success, fail etc)</li>
 <li><code>--text-color yes</code> to get nicely colored text in the task tree</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">task-get</span> <span style="color:#000;font-weight:bold">`</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#000">qseow</span> <span style="color:#204a87">task-get</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#204a87">pro2-win1</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">lab</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ptarmiganlabs</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">net</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
@@ -163,9 +173,9 @@ Note: the <code>task-get</code> command has lots of options, these are described
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-output-dest</span> <span style="color:#000">screen</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-tree-icons</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-text-color</span> <span style="color:#000">yes</span>
-</span></span></code></pre></div><p><img src="/img/task-tree-color-1.png" alt="Qlik Sense task tree 3" title="Qlik Sense task tree with colors but no task details"></p>
+</span></span></code></pre></div><p><img alt="Qlik Sense task tree 3" src="/img/task-tree-color-1.png" title="Qlik Sense task tree with colors but no task details"></p>
 <p>Adding <code>--tree-details</code> gives us a tree that&rsquo;s a lot easier to read compared to previous, uncolored version.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">task-get</span> <span style="color:#000;font-weight:bold">`</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#000">qseow</span> <span style="color:#204a87">task-get</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#204a87">pro2-win1</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">lab</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ptarmiganlabs</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">net</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
@@ -175,7 +185,7 @@ Note: the <code>task-get</code> command has lots of options, these are described
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-tree-icons</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-text-color</span> <span style="color:#000">yes</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-tree-details</span>
-</span></span></code></pre></div><p><img src="/img/task-tree-color-details-1.png" alt="Qlik Sense task tree 4" title="Qlik Sense task tree with task details and colors"></p>
+</span></span></code></pre></div><p><img alt="Qlik Sense task tree 4" src="/img/task-tree-color-details-1.png" title="Qlik Sense task tree with task details and colors"></p>
 <h2 id="macos-and-linux">macOS and Linux</h2>
 <p>A task tree with colors on macOS and Linux versions of Ctrl-Q looks exactly like same as in Windows Terminal.<br>
 The only difference is that you don&rsquo;t have to install a new command line shell.</p>
@@ -202,11 +212,8 @@ The only difference is that you don&rsquo;t have to install a new command line s
       <footer class="td-footer row d-print-none">
   <div class="container-fluid">
     <div class="row mx-md-2">
-      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
-        
-        
-        
-<ul class="td-footer__links-list">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
   
   <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Ptarmigan Labs Newsletter" aria-label="Ptarmigan Labs Newsletter">
     <a target="_blank" rel="noopener" href="https://ptarmiganlabs.com/#/portal/signup" aria-label="Ptarmigan Labs Newsletter">
@@ -222,14 +229,8 @@ The only difference is that you don&rsquo;t have to install a new command line s
   
 </ul>
 
-        
-        
-      </div>
-      <div class="col-6 col-sm-4 text-end text-xs-center order-sm-3">
-        
-        
-        
-<ul class="td-footer__links-list">
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        <ul class="td-footer__links-list">
   
   <li class="td-footer__links-item" data-bs-toggle="tooltip" title="GitHub" aria-label="GitHub">
     <a target="_blank" rel="noopener" href="https://github.com/ptarmiganlabs/ctrl-q" aria-label="GitHub">
@@ -245,20 +246,17 @@ The only difference is that you don&rsquo;t have to install a new command line s
   
 </ul>
 
-        
-        
-      </div>
-      <div class="td-footer__copyright-etc col-12 col-sm-4 text-center py-2 order-sm-2">
-        <span>&copy; 2024 Ptarmigan Labs AB All Rights Reserved</span>
-        <span class="ms-1"><a href="https://ptarmiganlabs.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></span>
-        <p class="td-footer__about mt-2"><a href="/about/">About Ctrl-Q</a></p>
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">Ptarmigan Labs AB</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span><span class="ms-2"><a href="https://ptarmiganlabs.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></span><p class="td-footer__about mt-2"><a href="/about/">About Ctrl-Q</a></p>
       </div>
     </div>
   </div>
 </footer>
+
     </div>
-    
-  <script src="/js/main.min.00b0947702f6bf9c86afe620f44bfda788662ef0ca688315732ee7b00e408279.js" integrity="sha256-ALCUdwL2v5yGr&#43;Yg9Ev9p4hmLvDKaIMVcy7nsA5Agnk=" crossorigin="anonymous"></script>
+    <script src="/js/main.min.9bb04dc6a6b4b104e1da6f6d5a885a4092b9a942c466820b75d34697477404c9.js" integrity="sha256-m7BNxqa0sQTh2m9tWohaQJK5qULEZoILddNGl0d0BMk=" crossorigin="anonymous"></script>
 <script src='/js/prism.js'></script>
 <script src='/js/tabpane-persist.js'></script>
 

@@ -14,7 +14,8 @@ weight: 10
 
 Ctrl-Q is open source and you have access to all source code.
 
-It is **_your responsibility_** to determine if Ctrl-Q is suitable for **your** use case.  
+It is **_your responsibility_** to determine if Ctrl-Q is suitable for **your** use case.
+
 The creators of Ctrl-Q, including Ptarmigan Labs, Göran Sander or any other contributor, can and must never be held liable to past or future security issues of Ctrl-Q.
 If you have security concerns or ideas around Ctrl-Q, please get involved in the project and contribute to making it better!
 
@@ -58,4 +59,4 @@ A scan where a single security vendor reports an issue can look like this:
 The macOS executable binary is signed and notarized by Apple's standard process.  
 A warning may still be shown first time the app is started. This is expected and normal.
 
-The Windows executable binary is signed by "Ptarmigan Labs AB".
+The Windows executable binary is signed by "Open Source Developer, Göran Sander".  

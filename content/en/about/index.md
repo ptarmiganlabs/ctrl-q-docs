@@ -17,7 +17,7 @@ Ctrl-Q makes life easier for Qlik Sense admins and developers.
 
 {{% blocks/lead %}}
 
-It is a cross platform, command line tool for interacting with client-managed Qlik Sense Enterprise on Windows.
+It is a cross platform, command line tool for interacting with both client-managed Qlik Sense Enterprise on Windows and Qlik Sense Cloud.
 
 It automates tedious, repetetive and error prone tasks related to Qlik Sense administration and development.
 {{% /blocks/lead %}}

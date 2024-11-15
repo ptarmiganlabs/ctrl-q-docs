@@ -1,0 +1,428 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="alternate" type="text/html" href="//localhost:1313/docs/command/import-copy/app/printview/">
+<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/docs/command/import-copy/app/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Apps | Ctrl-Q</title>
+<meta name="description" content="Import apps into Qlik Sense">
+<meta property="og:url" content="//localhost:1313/docs/command/import-copy/app/">
+  <meta property="og:site_name" content="Ctrl-Q">
+  <meta property="og:title" content="Apps">
+  <meta property="og:description" content="Import apps into Qlik Sense">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="Apps">
+  <meta itemprop="description" content="Import apps into Qlik Sense">
+  <meta itemprop="wordCount" content="736">
+  <meta itemprop="keywords" content="App">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Apps">
+  <meta name="twitter:description" content="Import apps into Qlik Sense">
+<link href="/scss/main.css" rel="stylesheet">
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/css/prism.css"/>
+<script defer data-domain="ctrl-q.ptarmiganlabs.com" src="https://plausible.io/js/script.js"></script>
+
+<link rel="canonical" href="//localhost:1313/docs/command/import-copy/app/" />
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar js-navbar-scroll" data-bs-theme="dark">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"></span><span class="navbar-brand__name">Ctrl-Q</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/about/"><span>About</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/docs/"><span>Docs</span></a>
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            <div id="td-sidebar-menu" class="td-sidebar__inner">
+  <div id="content-mobile">
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  </div>
+  <div id="content-desktop"></div>
+  <nav class="td-sidebar-nav collapse td-sidebar-nav--search-disabled" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pe-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
+  <a href="/docs/" title="Documentation" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Docs</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsoverview-li">
+  <a href="/docs/overview/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsoverview"><span class="">Overview</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsgetting-started-li">
+  <a href="/docs/getting-started/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsgetting-started"><span class="">Getting Started</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgetting-startedsecurity-li">
+  <a href="/docs/getting-started/security/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsgetting-startedsecurity"><span class="">Security</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgetting-startedqseow-auth-li">
+  <a href="/docs/getting-started/qseow-auth/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsgetting-startedqseow-auth"><span class="">Authenticating with Sense</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgetting-startedcolors-formatting-li">
+  <a href="/docs/getting-started/colors-formatting/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsgetting-startedcolors-formatting"><span class="">Colors &amp; formatting</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgetting-starteddry-runs-li">
+  <a href="/docs/getting-started/dry-runs/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsgetting-starteddry-runs"><span class="">Dry runs</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docscommand-li">
+  <a href="/docs/command/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommand"><span class="">Commands</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandapp-script-li">
+  <a href="/docs/command/app-script/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandapp-script"><span class="">App scripts</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandbookmark-li">
+  <a href="/docs/command/bookmark/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandbookmark"><span class="">Bookmarks</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandconnection-test-li">
+  <a href="/docs/command/connection-test/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandconnection-test"><span class="">Connection test</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandcustom-property-li">
+  <a href="/docs/command/custom-property/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandcustom-property"><span class="">Custom properties</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommanddimension-li">
+  <a href="/docs/command/dimension/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommanddimension"><span class="">Dimensions</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandmeasure-li">
+  <a href="/docs/command/measure/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandmeasure"><span class="">Measures</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandscramble-field-li">
+  <a href="/docs/command/scramble-field/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandscramble-field"><span class="">Scramble fields</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandsession-li">
+  <a href="/docs/command/session/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandsession"><span class="">Sessions</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandtask-li">
+  <a href="/docs/command/task/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandtask"><span class="">Tasks</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandvariable-li">
+  <a href="/docs/command/variable/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandvariable"><span class="">Variables</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandexport-li">
+  <a href="/docs/command/export/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandexport"><span class="">Export</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docscommandimport-copy-li">
+  <a href="/docs/command/import-copy/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandimport-copy"><span class="">Import</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docscommandimport-copyapp-li">
+  <a href="/docs/command/import-copy/app/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__section" id="m-docscommandimport-copyapp"><span class="td-sidebar-nav-active-item">Apps</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandimport-copymaster-item-li">
+  <a href="/docs/command/import-copy/master-item/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandimport-copymaster-item"><span class="">Master items</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandimport-copytask-li">
+  <a href="/docs/command/import-copy/task/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandimport-copytask"><span class="">Tasks</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docscommandimport-li">
+  <a href="/docs/command/import/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandimport"><span class="">Import</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docscommandimportapp-li">
+  <a href="/docs/command/import/app/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandimportapp"><span class="">Apps</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docscommandimportmaster-item-li">
+  <a href="/docs/command/import/master-item/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandimportmaster-item"><span class="">Master items</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docscommandimporttask-li">
+  <a href="/docs/command/import/task/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandimporttask"><span class="">Tasks</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsexample-li">
+  <a href="/docs/example/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsexample"><span class="">Examples</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsexampledissecting-task-definition-file-li">
+  <a href="/docs/example/dissecting-task-definition-file/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsexampledissecting-task-definition-file"><span class="">Dissecting the task definition file</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
+<a href="https://github.com/ptarmiganlabs/ctrl-q-docs/tree/main/content/en/docs/command/import%20copy/app/_index.md" class="td-page-meta--view td-page-meta__view" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines fa-fw"></i> View page source</a>
+  <a href="https://github.com/ptarmiganlabs/ctrl-q-docs/edit/main/content/en/docs/command/import%20copy/app/_index.md" class="td-page-meta--edit td-page-meta__edit" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Edit this page</a>
+  <a href="https://github.com/ptarmiganlabs/ctrl-q-docs/new/main/content/en/docs/command/import%20copy/app?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" class="td-page-meta--child td-page-meta__child" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Create child page</a>
+  <a href="https://github.com/ptarmiganlabs/ctrl-q-docs/issues/new?title=Apps" class="td-page-meta--issue td-page-meta__issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create documentation issue</a>
+  <a href="https://github.com/ptarmiganlabs/ctrl-q/issues/new" class="td-page-meta--project td-page-meta__project-issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create project issue</a>
+  <a id="print" href="/docs/command/import-copy/app/printview/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
+
+</div>
+
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#import-apps-from-qvf-files">Import apps from QVF files</a></li>
+  </ul>
+</nav>
+      </div>
+    
+            <div class="taxonomy taxonomy-terms-cloud taxo-tags">
+      <h5 class="taxonomy-title">Tags</h5>
+      <ul class="taxonomy-terms">
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/app/" data-taxonomy-term="app"><span class="taxonomy-label">App</span><span class="taxonomy-count">5</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/bookmark/" data-taxonomy-term="bookmark"><span class="taxonomy-label">Bookmark</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/colors/" data-taxonomy-term="colors"><span class="taxonomy-label">Colors</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/custom-property/" data-taxonomy-term="custom-property"><span class="taxonomy-label">Custom-Property</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/formatting/" data-taxonomy-term="formatting"><span class="taxonomy-label">Formatting</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/master-item/" data-taxonomy-term="master-item"><span class="taxonomy-label">Master-Item</span><span class="taxonomy-count">6</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/script/" data-taxonomy-term="script"><span class="taxonomy-label">Script</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/security/" data-taxonomy-term="security"><span class="taxonomy-label">Security</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/task/" data-taxonomy-term="task"><span class="taxonomy-label">Task</span><span class="taxonomy-count">6</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/variable/" data-taxonomy-term="variable"><span class="taxonomy-label">Variable</span><span class="taxonomy-count">1</span></a></li>
+        </ul>
+    </div>
+  
+	
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/docs/">Docs</a></li>
+  <li class="breadcrumb-item">
+    <a href="/docs/command/">Commands</a></li>
+  <li class="breadcrumb-item">
+    <a href="/docs/command/import-copy/">Import</a></li>
+  <li class="breadcrumb-item active" aria-current="page">
+    Apps</li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>Apps</h1>
+  <div class="lead">Import apps into Qlik Sense</div>
+	<header class="article-meta">
+		<div class="taxonomy taxonomy-terms-article taxo-tags">
+  <h5 class="taxonomy-title">Tags:</h5>
+  <ul class="taxonomy-terms">
+    <li><a class="taxonomy-term" href="//localhost:1313/tags/app/" data-taxonomy-term="app"><span class="taxonomy-label">App</span></a></li>
+    </ul>
+</div>
+
+  </header>
+	<!-- 
+
+<div class="pageinfo pageinfo-primary">
+<p>This is a placeholder page that shows you how to use this template site.</p>
+
+</div>
+ -->
+<p><em>Page contents:</em></p>
+<ul>
+<li><a href="/docs/command/import-copy/app/#import-apps-from-qvf-files">Import apps from QVF files</a></li>
+</ul>
+<hr>
+<p>All example below use Windows Terminal/PowerShell.</p>
+<h2 id="import-apps-from-qvf-files">Import apps from QVF files</h2>
+<p>.QVF files are Sense apps stored on disk.<br>
+Ctrl-Q&rsquo;s <code>app-import</code> command does bulk import of such QVF files, as well as setting tags and custom properties on the created apps.</p>
+<p>Importing apps defined on the <code>App import</code> sheet of the <code>tasks.xlsx</code> Excel file can be done with a command like this:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">app-import</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#204a87">pro2-win1</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">lab</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ptarmiganlabs</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">net</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-cert</span><span style="color:#ce5c00;font-weight:bold">-file</span> <span style="color:#000;font-weight:bold">./</span><span style="color:#000">cert</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">client</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-cert-key</span><span style="color:#ce5c00;font-weight:bold">-file</span> <span style="color:#000;font-weight:bold">./</span><span style="color:#000">cert</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">client_key</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#ce5c00;font-weight:bold">-file</span><span style="color:#000">-name</span> <span style="color:#000">tasks</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">xlsx</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-sheet-name</span> <span style="color:#4e9a06">&#34;App import&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info: | Version      : 3.16.0
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info: | Command      : app-import
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info: |              : import apps/upload QVF files on disk to Sense based on definitions in Excel file.
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.250Z info:
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.265Z info: Import apps from definitions in file &#34;tasks.xlsx&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.406Z info: Successfully retrieved 28 tags from QSEoW
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.515Z info: Successfully retrieved 31 custom properties from QSEoW
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.547Z info: -------------------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.547Z info: Importing apps...
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:28.547Z info: (1) Importing app &#34;App 3&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 3.qvf&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:33.079Z info: (1, delete-publish) App &#34;App 3&#34; published to stream &#34;Ctrl-Q demo apps&#34;, the existing app (if one exists) with the same name in this stream has been deleted. Id of published app: 6668310c-19e8-416c-94b0-e32505e4de78
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:33.079Z info: (2) Importing app &#34;App 3&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 3.qvf&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:39.055Z info: (2, publish-replace) App &#34;App 3&#34; published to stream &#34;Ctrl-Q demo apps&#34;, replacing the existing app with the same name. Id of published app: 6668310c-19e8-416c-94b0-e32505e4de78
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:39.055Z info: (3) Importing app &#34;App 1&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 1.qvf&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:43.024Z warn: (3) PUBLISH APP publish-replace: More than one app with the same name &#34;App 1&#34; in the target stream &#34;Ctrl-Q demo apps&#34;. Impossible to know which one to replace. Skipping publishing for this app. The uploaded app is still present in the QMC (id=bcda9997-1a6c-42bb-b5aa-ff75fcad3f09).
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:43.024Z error: (3) Failed publishing app &#34;App 1&#34; to stream &#34;Ctrl-Q demo apps&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:43.024Z info: (4) Importing app &#34;App 1&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 1.qvf&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:47.243Z info: (4, publish-another) App &#34;App 1&#34; published to stream &#34;Ctrl-Q demo apps&#34;. Id of published app: dda304b5-792e-4241-9bd8-b5e2e8ca21af
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:47.243Z info: (5) Importing app &#34;App 1&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 1.qvf&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:51.117Z warn: (5) PUBLISH APP publish-replace: More than one app with the same name &#34;App 1&#34; in the target stream &#34;Ctrl-Q demo apps&#34;. Impossible to know which one to replace. Skipping publishing for this app. The uploaded app is still present in the QMC (id=06d9f5d6-53a2-449c-ae7b-7033597cf88b).
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:51.117Z error: (5) Failed publishing app &#34;App 1&#34; to stream &#34;Ctrl-Q demo apps&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:51.117Z info: (6) Importing app &#34;App 2&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 2.qvf&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:54.610Z warn: Stream &#34;Stream does not exist&#34; does not exist.
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:54.610Z error: (6) Failed publishing app &#34;App 2&#34; to stream &#34;Stream does not exist&#34;. The uploaded app is still present in the QMC (id=3a7812fe-7d8c-467e-8fd0-62f4ee42a116).
+</span></span><span style="display:flex;"><span>2024-03-12T09:28:54.610Z info: (7) Importing app &#34;App 3&#34; from file &#34;C:/tools/ctrl-q/testdata/App import 3.qvf&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:29:00.011Z info: (7, publish-replace) App &#34;App 3&#34; published to stream &#34;Ctrl-Q demo apps&#34;, replacing the existing app with the same name. Id of published app: 6668310c-19e8-416c-94b0-e32505e4de78
+</span></span></code></pre></div><blockquote>
+<p>NOTE 1: Qlik Sense implements rate limiting for QVF uploads. This means that if you plan to upload more than 60 QVF files you may be affected by this rate limiting.<br>
+Ctrl-Q detects that it&rsquo;s being rate limited and implements a backoff strategy for retries, waiting longer and longer until it tries again.<br>
+Such retries are clearly shown in the Ctrl-Q logs.</p>
+</blockquote>
+<p>The QMC now shows three new apps:</p>
+<p><img alt="Sense apps imported from QVF files" src="/img/ctrl-q-app-import-2.png" title="Sense apps imported from QVF files"></p>
+<p>The Excel file with definitions on what QVF files should be imported, what the apps should be named etc looks like this:</p>
+<p><img alt="QVF app files that should be imported into Qlik Sense" src="/img/ctrl-q-app-import-1.png" title="QVF app files that should be imported into Qlik Sense"></p>
+<p>The available columns in the Excel file are the same as when importing apps as part of task import.<br>
+The columns are described on the <a href="http://localhost:1313/docs/command/import/task/#source-file-columns-for-app-import-definitions">page describing app importing as part of task imports</a>.</p>
+<blockquote>
+<p>NOTE: A sample defintions Excel file is <a href="https://github.com/ptarmiganlabs/ctrl-q/blob/main/testdata/tasks.xlsx?raw=true">available in the GitHub repository</a>.</p>
+</blockquote>
+<p>If a valid app owner is specified in the Excel file it will be applied to the new app.<br>
+Similarly, if an already existing stream name (or ID of an existing stream) is specified in the Excel file, the new app will be published to that stream.</p>
+
+  <div class="section-index">
+    
+    
+    </div>
+<style>
+  .feedback--answer {
+    display: inline-block;
+  }
+  .feedback--answer-no {
+    margin-left: 1em;
+  }
+  .feedback--response {
+    display: none;
+    margin-top: 1em;
+  }
+  .feedback--response__visible {
+    display: block;
+  }
+</style>
+<div class="d-print-none">
+<h2 class="feedback--title">Feedback</h2>
+<p class="feedback--question">Was this page helpful?</p>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
+<p class="feedback--response feedback--response-yes">
+  
+</p>
+<p class="feedback--response feedback--response-no">
+  
+</p>
+</div>
+<script>
+  const yesButton = document.querySelector('.feedback--answer-yes');
+  const noButton = document.querySelector('.feedback--answer-no');
+  const yesResponse = document.querySelector('.feedback--response-yes');
+  const noResponse = document.querySelector('.feedback--response-no');
+  const disableButtons = () => {
+    yesButton.disabled = true;
+    noButton.disabled = true;
+  };
+  const sendFeedback = (value) => {
+    if (typeof gtag !== 'function') return;
+    gtag('event', 'page_helpful', {
+      'event_category': 'Helpful',
+      'event_label': window.location.pathname,
+      'value': value
+    });
+  };
+  yesButton.addEventListener('click', () => {
+    yesResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback( 100 );
+  });
+  noButton.addEventListener('click', () => {
+    noResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(0);
+  });
+</script>
+<br />
+</div>
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Ptarmigan Labs Newsletter" aria-label="Ptarmigan Labs Newsletter">
+    <a target="_blank" rel="noopener" href="https://ptarmiganlabs.com/#/portal/signup" aria-label="Ptarmigan Labs Newsletter">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="LinkedIn" aria-label="LinkedIn">
+    <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/gorsan/" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="GitHub" aria-label="GitHub">
+    <a target="_blank" rel="noopener" href="https://github.com/ptarmiganlabs/ctrl-q" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Get in touch with Ptarmigan Labs" aria-label="Get in touch with Ptarmigan Labs">
+    <a target="_blank" rel="noopener" href="mailto://info@ptarmiganlabs.com" aria-label="Get in touch with Ptarmigan Labs">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">Ptarmigan Labs AB</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span><span class="ms-2"><a href="https://ptarmiganlabs.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></span><p class="td-footer__about mt-2"><a href="/about/">About Ctrl-Q</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.js"></script>
+<script src='/js/prism.js'></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

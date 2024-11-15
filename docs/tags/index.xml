@@ -1,18 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ctrl-Q – Tags</title>
+    <title>Tags on Ctrl-Q</title>
     <link>https://ctrl-q.ptarmiganlabs.com/tags/</link>
     <description>Recent content in Tags on Ctrl-Q</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
-    
-	  <atom:link href="https://ctrl-q.ptarmiganlabs.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-      
-        
-      
-    
-    
+    <atom:link href="https://ctrl-q.ptarmiganlabs.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>App</title>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/app/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bookmark</title>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/bookmark/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/bookmark/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Colors</title>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/colors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/colors/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Custom-Property</title>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/custom-property/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/custom-property/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Export</title>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/export/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/export/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Formatting</title>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/formatting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/formatting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Import</title>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/import/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/import/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>License</title>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/license/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/license/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Master-Item</title>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/master-item/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/master-item/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Qvf</title>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/qvf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/qvf/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Script</title>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/script/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/script/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/security/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Task</title>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/task/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/task/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>User</title>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/user/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/user/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Variable</title>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/variable/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/variable/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

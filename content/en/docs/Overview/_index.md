@@ -1,6 +1,6 @@
 ---
 title: Overview
-description: What's Ctrl-Q and how can I use it?
+description: What is Ctrl-Q and how can I use it?
 weight: 10
 ---
 
@@ -14,11 +14,18 @@ The focus of Ctrl-Q is on slightly more complex use cases that are not handled o
 
 Both are exceptional tools and extremely useful, but especially when it comes to interactions with the Qlik Sense engine they fall a bit short.
 
-Ctrl-Q also tries to fill niches that are not covered by the various members of the Butler family of open source SenseOps tools.
+Ctrl-Q also tries to fill niches that are not covered by the various members of the [Butler family](https://ptarmiganlabs.com/the-butler-family/) of open source SenseOps tools.
 
 The Butler tools each focus on a specific feature (or features in the case of [the original Butler tool](https://github.com/ptarmiganlabs/butler)) and goes fairly deep in those areas.  
 For example, [Butler SOS](https://github.com/ptarmiganlabs/butler-sos) focus on getting real-time metrics and events out of Sense and into a wide range of target databases and monitoring tools.  
 [Butler Sheet Icons](https://github.com/ptarmiganlabs/butler-sheet-icons) creates sheet thumbnails for Sense apps - but offers lots of flexibility and power around that use case.
+
+## Cloud and client-managed Sense
+
+Ctrl-Q works with both client-managed Qlik Sense Enterprise on Windows and Qlik Sense Cloud.
+
+Given Ctrl-Q's background in the client-managed world, most commands focus on that environment.  
+Still, new use cases are added to Ctrl-Q with the cloud in mind, and over time it is expected that the number of cloud-specific features will grow.
 
 ## What can Ctrl-Q do for me?
 
@@ -44,6 +51,7 @@ The list of features include:
 - Show complete definition of all bookmarks in a Sense app.
 - Scramble fields in Sense apps.
 - Get load script from Sense app.
+- Create a custom property on all users and insert a value indicating how long it has been since the user last logged in. I.e. user activity buckets in a custom property.
 
 As Ctrl-Q is completely command line driven it is very suitable to be used in CI/CD pipelines, with time savings, increased reusability and higher app quality as a result.
 

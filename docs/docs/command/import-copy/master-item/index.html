@@ -1,0 +1,596 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="alternate" type="text/html" href="//localhost:1313/docs/command/import-copy/master-item/printview/">
+<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/docs/command/import-copy/master-item/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Master items | Ctrl-Q</title>
+<meta name="description" content="Import master items into Qlik Sense">
+<meta property="og:url" content="//localhost:1313/docs/command/import-copy/master-item/">
+  <meta property="og:site_name" content="Ctrl-Q">
+  <meta property="og:title" content="Master items">
+  <meta property="og:description" content="Import master items into Qlik Sense">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="Master items">
+  <meta itemprop="description" content="Import master items into Qlik Sense">
+  <meta itemprop="wordCount" content="1702">
+  <meta itemprop="keywords" content="Master-Item">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Master items">
+  <meta name="twitter:description" content="Import master items into Qlik Sense">
+<link href="/scss/main.css" rel="stylesheet">
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/css/prism.css"/>
+<script defer data-domain="ctrl-q.ptarmiganlabs.com" src="https://plausible.io/js/script.js"></script>
+
+<link rel="canonical" href="//localhost:1313/docs/command/import-copy/master-item/" />
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar js-navbar-scroll" data-bs-theme="dark">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"></span><span class="navbar-brand__name">Ctrl-Q</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/about/"><span>About</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/docs/"><span>Docs</span></a>
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            <div id="td-sidebar-menu" class="td-sidebar__inner">
+  <div id="content-mobile">
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  </div>
+  <div id="content-desktop"></div>
+  <nav class="td-sidebar-nav collapse td-sidebar-nav--search-disabled" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pe-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
+  <a href="/docs/" title="Documentation" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Docs</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsoverview-li">
+  <a href="/docs/overview/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsoverview"><span class="">Overview</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsgetting-started-li">
+  <a href="/docs/getting-started/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsgetting-started"><span class="">Getting Started</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgetting-startedsecurity-li">
+  <a href="/docs/getting-started/security/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsgetting-startedsecurity"><span class="">Security</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgetting-startedqseow-auth-li">
+  <a href="/docs/getting-started/qseow-auth/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsgetting-startedqseow-auth"><span class="">Authenticating with Sense</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgetting-startedcolors-formatting-li">
+  <a href="/docs/getting-started/colors-formatting/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsgetting-startedcolors-formatting"><span class="">Colors &amp; formatting</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgetting-starteddry-runs-li">
+  <a href="/docs/getting-started/dry-runs/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsgetting-starteddry-runs"><span class="">Dry runs</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docscommand-li">
+  <a href="/docs/command/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommand"><span class="">Commands</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandapp-script-li">
+  <a href="/docs/command/app-script/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandapp-script"><span class="">App scripts</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandbookmark-li">
+  <a href="/docs/command/bookmark/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandbookmark"><span class="">Bookmarks</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandconnection-test-li">
+  <a href="/docs/command/connection-test/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandconnection-test"><span class="">Connection test</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandcustom-property-li">
+  <a href="/docs/command/custom-property/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandcustom-property"><span class="">Custom properties</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommanddimension-li">
+  <a href="/docs/command/dimension/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommanddimension"><span class="">Dimensions</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandmeasure-li">
+  <a href="/docs/command/measure/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandmeasure"><span class="">Measures</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandscramble-field-li">
+  <a href="/docs/command/scramble-field/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandscramble-field"><span class="">Scramble fields</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandsession-li">
+  <a href="/docs/command/session/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandsession"><span class="">Sessions</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandtask-li">
+  <a href="/docs/command/task/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandtask"><span class="">Tasks</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandvariable-li">
+  <a href="/docs/command/variable/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandvariable"><span class="">Variables</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandexport-li">
+  <a href="/docs/command/export/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandexport"><span class="">Export</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docscommandimport-copy-li">
+  <a href="/docs/command/import-copy/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandimport-copy"><span class="">Import</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandimport-copyapp-li">
+  <a href="/docs/command/import-copy/app/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandimport-copyapp"><span class="">Apps</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docscommandimport-copymaster-item-li">
+  <a href="/docs/command/import-copy/master-item/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__section" id="m-docscommandimport-copymaster-item"><span class="td-sidebar-nav-active-item">Master items</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommandimport-copytask-li">
+  <a href="/docs/command/import-copy/task/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandimport-copytask"><span class="">Tasks</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docscommandimport-li">
+  <a href="/docs/command/import/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandimport"><span class="">Import</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docscommandimportapp-li">
+  <a href="/docs/command/import/app/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandimportapp"><span class="">Apps</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docscommandimportmaster-item-li">
+  <a href="/docs/command/import/master-item/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandimportmaster-item"><span class="">Master items</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docscommandimporttask-li">
+  <a href="/docs/command/import/task/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscommandimporttask"><span class="">Tasks</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsexample-li">
+  <a href="/docs/example/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsexample"><span class="">Examples</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsexampledissecting-task-definition-file-li">
+  <a href="/docs/example/dissecting-task-definition-file/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsexampledissecting-task-definition-file"><span class="">Dissecting the task definition file</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
+<a href="https://github.com/ptarmiganlabs/ctrl-q-docs/tree/main/content/en/docs/command/import%20copy/master-item/_index.md" class="td-page-meta--view td-page-meta__view" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines fa-fw"></i> View page source</a>
+  <a href="https://github.com/ptarmiganlabs/ctrl-q-docs/edit/main/content/en/docs/command/import%20copy/master-item/_index.md" class="td-page-meta--edit td-page-meta__edit" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Edit this page</a>
+  <a href="https://github.com/ptarmiganlabs/ctrl-q-docs/new/main/content/en/docs/command/import%20copy/master-item?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" class="td-page-meta--child td-page-meta__child" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Create child page</a>
+  <a href="https://github.com/ptarmiganlabs/ctrl-q-docs/issues/new?title=Master%20items" class="td-page-meta--issue td-page-meta__issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create documentation issue</a>
+  <a href="https://github.com/ptarmiganlabs/ctrl-q/issues/new" class="td-page-meta--project td-page-meta__project-issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create project issue</a>
+  <a id="print" href="/docs/command/import-copy/master-item/printview/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
+
+</div>
+
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#import-master-items-from-excel-file">Import master items from Excel file</a>
+      <ul>
+        <li><a href="#how-to-get-correct-color-jsons">How to get correct color JSONs</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
+            <div class="taxonomy taxonomy-terms-cloud taxo-tags">
+      <h5 class="taxonomy-title">Tags</h5>
+      <ul class="taxonomy-terms">
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/app/" data-taxonomy-term="app"><span class="taxonomy-label">App</span><span class="taxonomy-count">5</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/bookmark/" data-taxonomy-term="bookmark"><span class="taxonomy-label">Bookmark</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/colors/" data-taxonomy-term="colors"><span class="taxonomy-label">Colors</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/custom-property/" data-taxonomy-term="custom-property"><span class="taxonomy-label">Custom-Property</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/formatting/" data-taxonomy-term="formatting"><span class="taxonomy-label">Formatting</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/master-item/" data-taxonomy-term="master-item"><span class="taxonomy-label">Master-Item</span><span class="taxonomy-count">6</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/script/" data-taxonomy-term="script"><span class="taxonomy-label">Script</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/security/" data-taxonomy-term="security"><span class="taxonomy-label">Security</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/task/" data-taxonomy-term="task"><span class="taxonomy-label">Task</span><span class="taxonomy-count">6</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/variable/" data-taxonomy-term="variable"><span class="taxonomy-label">Variable</span><span class="taxonomy-count">1</span></a></li>
+        </ul>
+    </div>
+  
+	
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/docs/">Docs</a></li>
+  <li class="breadcrumb-item">
+    <a href="/docs/command/">Commands</a></li>
+  <li class="breadcrumb-item">
+    <a href="/docs/command/import-copy/">Import</a></li>
+  <li class="breadcrumb-item active" aria-current="page">
+    Master items</li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>Master items</h1>
+  <div class="lead">Import master items into Qlik Sense</div>
+	<header class="article-meta">
+		<div class="taxonomy taxonomy-terms-article taxo-tags">
+  <h5 class="taxonomy-title">Tags:</h5>
+  <ul class="taxonomy-terms">
+    <li><a class="taxonomy-term" href="//localhost:1313/tags/master-item/" data-taxonomy-term="master-item"><span class="taxonomy-label">Master-Item</span></a></li>
+    </ul>
+</div>
+
+  </header>
+	<!-- 
+
+<div class="pageinfo pageinfo-primary">
+<p>This is a placeholder page that shows you how to use this template site.</p>
+
+</div>
+ -->
+<p><em>Page contents:</em></p>
+<ul>
+<li><a href="/docs/command/import-copy/master-item/#import-master-items-from-excel-file">Import master items from Excel file</a>
+<ul>
+<li><a href="/docs/command/import-copy/master-item/#how-to-get-correct-color-jsons">How to get correct color JSONs</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>All example below use Windows Terminal/PowerShell.</p>
+<h2 id="import-master-items-from-excel-file">Import master items from Excel file</h2>
+<p>This command imports dimensions and measures defined in an Excel file into master items in a Sense app.</p>
+<p>Both single and drill-down dimensions can be created (i.e. the same types that can be created using the Sense web UI), as well as measures.<br>
+The same coloring options are available as in the web UI for both dimensions and measures.</p>
+<p>First let&rsquo;s take a look at the command options:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">master-item</span><span style="color:#000">-import</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#000">-help</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Usage: ctrl-q master-item-import [options]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>create master items based on definitions in a file on disk
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Options:
+</span></span><span style="display:flex;"><span>  --log-level &lt;level&gt;                                          log level (choices: &#34;error&#34;, &#34;warn&#34;, &#34;info&#34;, &#34;verbose&#34;, &#34;debug&#34;, &#34;silly&#34;, default: &#34;info&#34;)
+</span></span><span style="display:flex;"><span>  --host &lt;host&gt;                                                Qlik Sense server IP/FQDN
+</span></span><span style="display:flex;"><span>  --port &lt;port&gt;                                                Qlik Sense server engine port (usually 4747 for cert auth, 443 for jwt auth) (default: &#34;4747&#34;)
+</span></span><span style="display:flex;"><span>  --schema-version &lt;string&gt;                                    Qlik Sense engine schema version (default: &#34;12.612.0&#34;)
+</span></span><span style="display:flex;"><span>  --app-id &lt;id&gt;                                                Qlik Sense app ID
+</span></span><span style="display:flex;"><span>  --virtual-proxy &lt;prefix&gt;                                     Qlik Sense virtual proxy prefix (default: &#34;&#34;)
+</span></span><span style="display:flex;"><span>  --secure &lt;true|false&gt;                                        https connection to Qlik Sense must use correct certificate. Invalid certificates will result in rejected/failed connection. (default: true)
+</span></span><span style="display:flex;"><span>  --auth-user-dir &lt;directory&gt;                                  user directory for user to connect with
+</span></span><span style="display:flex;"><span>  --auth-user-id &lt;userid&gt;                                      user ID for user to connect with
+</span></span><span style="display:flex;"><span>  -a, --auth-type &lt;type&gt;                                       authentication type (choices: &#34;cert&#34;, &#34;jwt&#34;, default: &#34;cert&#34;)
+</span></span><span style="display:flex;"><span>  --auth-cert-file &lt;file&gt;                                      Qlik Sense certificate file (exported from QMC) (default: &#34;./cert/client.pem&#34;)
+</span></span><span style="display:flex;"><span>  --auth-cert-key-file &lt;file&gt;                                  Qlik Sense certificate key file (exported from QMC) (default: &#34;./cert/client_key.pem&#34;)
+</span></span><span style="display:flex;"><span>  --auth-root-cert-file &lt;file&gt;                                 Qlik Sense root certificate file (exported from QMC) (default: &#34;./cert/root.pem&#34;)
+</span></span><span style="display:flex;"><span>  --auth-jwt &lt;jwt&gt;                                             JSON Web Token (JWT) to use for authentication with Qlik Sense server
+</span></span><span style="display:flex;"><span>  -t, --file-type &lt;type&gt;                                       source file type (choices: &#34;excel&#34;, default: &#34;excel&#34;)
+</span></span><span style="display:flex;"><span>  --file &lt;filename&gt;                                            file containing master item definitions
+</span></span><span style="display:flex;"><span>  --sheet &lt;name&gt;                                               name of Excel sheet where dim/measure flag column is found
+</span></span><span style="display:flex;"><span>  --col-ref-by &lt;reftype&gt;                                       how to refer to columns in the source file. Options are by name or by position (zero based) (choices: &#34;name&#34;, &#34;position&#34;, default: &#34;name&#34;)
+</span></span><span style="display:flex;"><span>  --col-item-type &lt;column position or name&gt;                    column where dim/measure flag is found. Use &#34;dim-single&#34; in that column to create dimension, &#34;dim-drilldown&#34; for drill-down dimension, &#34;measure&#34; for measure (default: &#34;Master item type&#34;)
+</span></span><span style="display:flex;"><span>  --col-master-item-name &lt;column position or name&gt;             column number (zero based) or name to use as master item name (default: &#34;Master item name&#34;)
+</span></span><span style="display:flex;"><span>  --col-master-item-descr &lt;column position or name&gt;            column number (zero based) or name to use as master item description (default: &#34;Description&#34;)
+</span></span><span style="display:flex;"><span>  --col-master-item-label &lt;column position or name&gt;            column number (zero based) or name to use as master item label (default: &#34;Label&#34;)
+</span></span><span style="display:flex;"><span>  --col-master-item-expr &lt;column position or name&gt;             column number (zero based) or name to use as master item expression (default: &#34;Expression&#34;)
+</span></span><span style="display:flex;"><span>  --col-master-item-tag &lt;column position or name&gt;              column number (zero based) or name to use as master item tags (default: &#34;Tag&#34;)
+</span></span><span style="display:flex;"><span>  --col-master-item-color &lt;column position or name&gt;            column number (zero based) or name to use as color for dimensions/measures (default: &#34;Color&#34;)
+</span></span><span style="display:flex;"><span>  --col-master-item-per-value-color &lt;column position or name&gt;  column number (zero based) or name to use as per-value/segment color for dimensions/measures (default: &#34;Per value color&#34;)
+</span></span><span style="display:flex;"><span>  --sleep-between-imports &lt;milliseconds&gt;                       sleep this many milliseconds between imports. Set to 0 to disable (default: 1000)
+</span></span><span style="display:flex;"><span>  --limit-import-count &lt;number&gt;                                import at most x number of master items from the Excel file. Defaults to 0 = no limit (default: 0)
+</span></span><span style="display:flex;"><span>  --dry-run                                                    do a dry run, i.e. do not create or update anything - just show what would be done
+</span></span><span style="display:flex;"><span>  -h, --help                                                   display help for command
+</span></span></code></pre></div><p>There are several options that allow for a great deal of flexibility.<br>
+For example, the <code>--col-ref-by</code> option determines whether the <code>--col-master-item-...</code> options refer to columns by position or name.
+Column names will in most cases be easier to read and understand, but sometimes a zero-based column position might be preferred.</p>
+<p>Similarly those <code>--col-master-item-...</code> options let you use your own column names in the source file.</p>
+<p>By adding the <code>--help</code> option when running Ctrl-Q you get a list of all available options for the <code>master-item-import</code> command.<br>
+<code>--help</code> can be added to any Ctrl-Q command, even if there are already other options on the command line.</p>
+<p>Some other options that might be useful:</p>
+<ul>
+<li><code>--dry-run</code>- Don&rsquo;t actually create or update any master items, just show what would have been done.</li>
+<li><code>--limit-import-count</code> - Only import the first N master items from the file. Useful for testing.</li>
+<li><code>--sleep-between-imports</code> - Pause for N milliseconds between each imported master item. Useful for decreasing the load on the Sense server.</li>
+</ul>
+<p>Notes on using the <code>master-item-import</code> command:</p>
+<ul>
+<li>
+<p>Master items are referred to by name. This means that if a master item in the source file already exists in the target Sense app, the app&rsquo;s master item will be updated.</p>
+</li>
+<li>
+<p>If a master item <em>does not</em> exist in the target app the master item will be created.</p>
+</li>
+<li>
+<p>If a master item <em>does</em>_* exist in the target app its content will be overwritten with the info in the source Excel file.</p>
+</li>
+<li>
+<p>The structure of the Excel file is fairly flexible, but some restrictions apply:</p>
+<ul>
+<li>The columns can be named anything. Use the <code>--col-item-type</code> and <code>--col-master-item-...</code> columns to tell Ctrl-Q which columns contains what data.</li>
+<li>The first row in the Excel sheet must contain column headers if columns are referenced by name.</li>
+</ul>
+</li>
+<li>
+<p>Master item names, descriptions and labels can contain <em>almost</em> any characters and there are some restrictions on the length of these strings.</p>
+<ul>
+<li>See the <a href="https://help.qlik.com/en-US/sense/May2023/Subsystems/Hub/Content/Sense_Hub/Introduction/guidelines-visualizations-fields-naming.htm">Qlik Sense help</a> for details.</li>
+<li>If a master item name or description is too long a warning will be shown and the text will be truncated to the max length allowed by Sense (see the link above).</li>
+<li>If a master item has more than 30 tags a warning will be shown and only the first 30 tags will be used.</li>
+<li>If a master item tag is longer than 31 characters a warning will be shown and the tag will be truncated to 31 characters.</li>
+<li>If a master item expression is too long an error will be shown and Ctrl-Q will exit.
+Notes on the example below:</li>
+</ul>
+</li>
+<li>
+<p>The (intentional) warning for the incorrectly spelled master item type &ldquo;measur&rdquo; (which should have been &ldquo;measure&rdquo;, of course).</p>
+</li>
+</ul>
+<p>Now let&rsquo;s run the command.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">master-item</span><span style="color:#000">-import</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#204a87">pro2-win1</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">lab</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ptarmiganlabs</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">net</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-type</span> <span style="color:#000">cert</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-app-id</span> <span style="color:#000">a3e0f5d2</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">000a</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">464f</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">998d</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">33d333b175d7</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#ce5c00;font-weight:bold">-file</span><span style="color:#000">-type</span> <span style="color:#000">excel</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#ce5c00;font-weight:bold">-file</span> <span style="color:#000;font-weight:bold">./</span><span style="color:#204a87">ctrl-q</span><span style="color:#000">-master-items</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">xlsx</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-sheet</span> <span style="color:#000">Sales</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-col-ref-by</span> <span style="color:#000">name</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-col-item-type</span> <span style="color:#4e9a06">&#34;Master item type&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-col-master-item-name</span> <span style="color:#4e9a06">&#34;Master Item Name&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-col-master-item-descr</span> <span style="color:#000">Description</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-col-master-item-label</span> <span style="color:#000">Label</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-col-master-item-expr</span> <span style="color:#000">Expression</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-col-master-item-tag</span> <span style="color:#000">Tag</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-col-master-item-color</span> <span style="color:#000">Color</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-col-master-item-per-value-color</span> <span style="color:#4e9a06">&#39;Per value color&#39;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info: | Version      : 3.16.0
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info: | Command      : master-item-import
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info: |              : create master items based on definitions in a file on disk
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info: |
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.416Z info:
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.430Z info: Import master items from definitions in Excel file &#34;./ctrl-q-master-items.xlsx&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:47.993Z info: (1/12) Updated existing measure &#34;No. of sold units&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:49.009Z info: (2/12) Updated existing measure &#34;No. of sold units (LY)&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:50.041Z info: (3/12) Created new measure &#34;Revenue EUR&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:51.071Z info: (4/12) Updated existing measure &#34;Revenue EUR (LY)&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:52.087Z info: (5/12) Updated existing measure &#34;Profit EUR&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:53.102Z warn: (6/12) Found an unknown master item type: &#34;measur&#34;. Ignoring this line in the imported file.
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:54.119Z info: (7/12) Created new measure &#34;Profit EUR (LY)&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:55.165Z info: (8/12) Created new dimension &#34;Country&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:56.181Z info: (9/12) Created new dimension &#34;Sales month&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:57.227Z info: (10/12) Updated existing dimension &#34;Salesperson&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:58.258Z info: (11/12) Updated existing dimension &#34;Color&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:30:59.292Z info: (12/12) Updated existing drill-down dimension &#34;DimDrill&#34;
+</span></span><span style="display:flex;"><span>2024-03-12T09:31:00.308Z info: Imported 12 master items from Excel file ./ctrl-q-master-items.xlsx
+</span></span></code></pre></div><blockquote>
+<p>NOTE: A sample defintions Excel file is <a href="https://github.com/ptarmiganlabs/ctrl-q/blob/main/testdata/ctrl-q-master-items.xlsx?raw=true">available in the GitHub repository</a>. That file contains examples of most combinations of master item types and properties.</p>
+</blockquote>
+<h3 id="how-to-get-correct-color-jsons">How to get correct color JSONs</h3>
+<p>If colors are to be associated with master items, the colors must be specified in JSON format, in the correct columns in the Excel file.</p>
+<p>The easiest way to get the correct JSONs is to create a master item in the Sense web UI, set the master item&rsquo;s color, and then use Ctrl-Q&rsquo;s <code>master-item-dim-get</code> and <code>master-item-measure-get</code> commands to view the master item(s), either as a table or as JSON.<br>
+This will show you what the structure of the JSON looks like, or even provide you with the correct JSON if you entered the desired color info in the Sense web UI.</p>
+<p>Different master item types have different coloring options:</p>
+<ul>
+<li>Drill-down dimensions
+<ul>
+<li>A general dimension color set in the Excel file&rsquo;s column specified by the <code>--col-master-item-color</code> option.</li>
+</ul>
+</li>
+<li>Single dimensions
+<ul>
+<li>A general dimension color set in the Excel file&rsquo;s column specified by the <code>--col-master-item-color</code> option.</li>
+<li>A per-value color that can be used to assign different colors to different values of the dimension. Set in the Excel file&rsquo;s column specified by the <code>--col-master-item-per-value-color</code> option.</li>
+</ul>
+</li>
+<li>Measures
+<ul>
+<li>A general measure color set in the Excel file&rsquo;s column specified by the <code>--col-master-item-color</code> option.</li>
+<li>Segment colors that can be used to assign colors to value ranges of the measure. Set in the Excel file&rsquo;s column specified by the <code>--col-master-item-per-value-color</code> option.</li>
+</ul>
+</li>
+</ul>
+<p>Let&rsquo;s look at some examples.</p>
+<p>Here we want to get the JSON for the color of the master dimension &ldquo;Country&rdquo;.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#204a87">ctrl-q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exe</span> <span style="color:#204a87">master-item</span><span style="color:#000">-dim-get</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-host</span> <span style="color:#204a87">pro2-win1</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">lab</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ptarmiganlabs</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">net</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-dir</span> <span style="color:#000">LAB</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-auth-user-id</span> <span style="color:#000">goran</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-app-id</span> <span style="color:#000">a3e0f5d2</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">000a</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">464f</span><span style="color:#000;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">998d</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">33d333b175d7</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">-output-format</span> <span style="color:#000">table</span>
+</span></span></code></pre></div><p>The result will be a rather wide table, where the column named <code>Coloring</code> contains the color JSONs.<br>
+The color data for the &ldquo;Country&rdquo; dimension looks like this:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Dimension color:
+</span></span><span style="display:flex;"><span>{&#34;color&#34;:&#34;#bbbbbb&#34;,&#34;index&#34;:-1}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Value colors:
+</span></span><span style="display:flex;"><span>{&#34;colors&#34;:[{&#34;value&#34;:&#34;Afghanistan&#34;,&#34;baseColor&#34;:{&#34;color&#34;:&#34;#8a85c6&#34;,&#34;index&#34;:-1}},{&#34;value&#34;:&#34;Albania&#34;,&#34;ba
+</span></span><span style="display:flex;"><span>seColor&#34;:{&#34;color&#34;:&#34;#aaaaaa&#34;,&#34;index&#34;:-1}},{&#34;value&#34;:&#34;Algeria&#34;,&#34;baseColor&#34;:{&#34;color&#34;:&#34;#a16090&#34;,&#34;index&#34;:9
+</span></span><span style="display:flex;"><span>}}],&#34;nul&#34;:{&#34;color&#34;:&#34;#c8c7a9&#34;,&#34;index&#34;:16},&#34;oth&#34;:{&#34;color&#34;:&#34;#ffec6e&#34;,&#34;index&#34;:-1},&#34;pal&#34;:null,&#34;single&#34;:nu
+</span></span><span style="display:flex;"><span>ll,&#34;usePal&#34;:true,&#34;autoFill&#34;:true}
+</span></span></code></pre></div><p>Let&rsquo;s format those as proper JSONs to make them more readable.<br>
+These JSONs are what would go into the Excel file&rsquo;s <code>Color</code> and <code>Per-value color</code> columns.</p>
+<blockquote>
+<p>NOTE 1: If unsure about what data to put in some field, just use the ones returned by the <code>master-item-dim-get</code> command.<br>
+NOTE 2: The same concept works for drill-down dimensions and measures.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;color&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;#bbbbbb&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">-1</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;colors&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Afghanistan&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;baseColor&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;color&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;#8a85c6&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">-1</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Albania&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;baseColor&#34;</span><span style="color:#000;font-weight:bold">:{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;color&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;#aaaaaa&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;index&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">-1</span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;value&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;Algeria&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;baseColor&#34;</span><span style="color:#000;font-weight:bold">:{</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#204a87;font-weight:bold">&#34;color&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;#a16090&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#204a87;font-weight:bold">&#34;index&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">9</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;nul&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;color&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;#c8c7a9&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">16</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;oth&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;color&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;#ffec6e&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">-1</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;pal&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;single&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#a40000">nu</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">ll</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;usePal&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;autoFill&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div>
+  <div class="section-index">
+    
+    
+    </div>
+<style>
+  .feedback--answer {
+    display: inline-block;
+  }
+  .feedback--answer-no {
+    margin-left: 1em;
+  }
+  .feedback--response {
+    display: none;
+    margin-top: 1em;
+  }
+  .feedback--response__visible {
+    display: block;
+  }
+</style>
+<div class="d-print-none">
+<h2 class="feedback--title">Feedback</h2>
+<p class="feedback--question">Was this page helpful?</p>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
+<p class="feedback--response feedback--response-yes">
+  
+</p>
+<p class="feedback--response feedback--response-no">
+  
+</p>
+</div>
+<script>
+  const yesButton = document.querySelector('.feedback--answer-yes');
+  const noButton = document.querySelector('.feedback--answer-no');
+  const yesResponse = document.querySelector('.feedback--response-yes');
+  const noResponse = document.querySelector('.feedback--response-no');
+  const disableButtons = () => {
+    yesButton.disabled = true;
+    noButton.disabled = true;
+  };
+  const sendFeedback = (value) => {
+    if (typeof gtag !== 'function') return;
+    gtag('event', 'page_helpful', {
+      'event_category': 'Helpful',
+      'event_label': window.location.pathname,
+      'value': value
+    });
+  };
+  yesButton.addEventListener('click', () => {
+    yesResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback( 100 );
+  });
+  noButton.addEventListener('click', () => {
+    noResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(0);
+  });
+</script>
+<br />
+</div>
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Ptarmigan Labs Newsletter" aria-label="Ptarmigan Labs Newsletter">
+    <a target="_blank" rel="noopener" href="https://ptarmiganlabs.com/#/portal/signup" aria-label="Ptarmigan Labs Newsletter">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="LinkedIn" aria-label="LinkedIn">
+    <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/gorsan/" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="GitHub" aria-label="GitHub">
+    <a target="_blank" rel="noopener" href="https://github.com/ptarmiganlabs/ctrl-q" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Get in touch with Ptarmigan Labs" aria-label="Get in touch with Ptarmigan Labs">
+    <a target="_blank" rel="noopener" href="mailto://info@ptarmiganlabs.com" aria-label="Get in touch with Ptarmigan Labs">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">Ptarmigan Labs AB</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span><span class="ms-2"><a href="https://ptarmiganlabs.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></span><p class="td-footer__about mt-2"><a href="/about/">About Ctrl-Q</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.js"></script>
+<script src='/js/prism.js'></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

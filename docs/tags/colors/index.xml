@@ -1,100 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ctrl-Q – colors</title>
+    <title>Colors on Ctrl-Q</title>
     <link>https://ctrl-q.ptarmiganlabs.com/tags/colors/</link>
-    <description>Recent content in colors on Ctrl-Q</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Colors on Ctrl-Q</description>
+    <generator>Hugo</generator>
     <language>en</language>
-    
-	  <atom:link href="https://ctrl-q.ptarmiganlabs.com/tags/colors/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-      
-        
-      
-    
-    
+    <atom:link href="https://ctrl-q.ptarmiganlabs.com/tags/colors/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Docs: Colors &amp; formatting</title>
+      <title>Colors &amp; formatting</title>
       <link>https://ctrl-q.ptarmiganlabs.com/docs/getting-started/colors-formatting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://ctrl-q.ptarmiganlabs.com/docs/getting-started/colors-formatting/</guid>
-      <description>
-        
-        
-        &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#all-oss-plain-text&#34;&gt;All OSs: plain text&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#windows-10-using-windows-terminal&#34;&gt;Windows 10 using Windows Terminal&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#macos-and-linux&#34;&gt;macOS and Linux&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;Some of the Ctrl-Q commands use colors and emojis to better communicate the information retrieved from Qlik Sense.&lt;br&gt;
-The task tree view is an example, but more commands may use colors in the future.&lt;/p&gt;
-&lt;p&gt;The use of colors in console/command line applications has been around since at least the 80s.&lt;br&gt;
-MS-DOS supported it, as did early Windows versions.&lt;/p&gt;
-&lt;p&gt;Today this feature is quite fragmented.&lt;/p&gt;
-&lt;p&gt;Console applications using colors are natively supported on macOS and Linux.&lt;br&gt;
-On Windows Server 2016 and earlier it&amp;rsquo;s &lt;em&gt;very&lt;/em&gt; hard to get this working, later versions may be easier.&lt;br&gt;
-On Windows 10 and later it&amp;rsquo;s possible to use Microsoft&amp;rsquo;s excellent new command line shell, &lt;a href=&#34;https://github.com/microsoft/terminal&#34;&gt;Windows Terminal&lt;/a&gt;.&lt;br&gt;
-Highly recommended if you use a desktop Windows operating system!&lt;/p&gt;
-&lt;p&gt;Ctrl-Q tries to offer plain text visuals unless extra features, flare and color is enabled via command line parameters.&lt;/p&gt;
-&lt;p&gt;Some examples follow, showing different views of reload task trees.&lt;/p&gt;
-&lt;h2 id=&#34;all-oss-plain-text&#34;&gt;All OSs: plain text&lt;/h2&gt;
-&lt;p&gt;The command for the most basic task tree is&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.\&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;ctrl-q&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;exe&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;task-get&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-type&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;cert&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-host&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;pro2-win1&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;lab&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;ptarmiganlabs&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;net&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-dir&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;LAB&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-id&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;goran&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-output-format&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;tree&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-output-dest&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;screen&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://ctrl-q.ptarmiganlabs.com/img/task-tree-no-color-1.png&#34; alt=&#34;Qlik Sense task tree 1&#34; title=&#34;Qlik Sense task tree with no colors or task details&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Add the &lt;code&gt;--tree-details&lt;/code&gt; option and the result contains a lot more details for each task. Not very easy to read though.&lt;br&gt;
-Note: the &lt;code&gt;task-get&lt;/code&gt; command has lots of options, these are described in more detail on &lt;a href=&#34;https://ctrl-q.ptarmiganlabs.com/docs/command/task/#list-tasks-as-tree&#34;&gt;this page&lt;/a&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.\&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;ctrl-q&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;exe&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;task-get&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-type&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;cert&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-host&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;pro2-win1&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;lab&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;ptarmiganlabs&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;net&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-dir&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;LAB&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-id&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;goran&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-output-format&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;tree&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-output-dest&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;screen&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-tree-details&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://ctrl-q.ptarmiganlabs.com/img/task-tree-no-color-details-1.png&#34; alt=&#34;Qlik Sense task tree 2&#34; title=&#34;Qlik Sense task tree with task details but no colors&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;windows-10-using-windows-terminal&#34;&gt;Windows 10 using Windows Terminal&lt;/h2&gt;
-&lt;p&gt;Thanks to Windows Terminal handling text coloring and emojis we can add a couple of options:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;--tree-icons&lt;/code&gt; to get emojis showing the result from each task&amp;rsquo;s last execution (success, fail etc)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;--text-color yes&lt;/code&gt; to get nicely colored text in the task tree&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.\&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;ctrl-q&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;exe&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;task-get&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-type&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;cert&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-host&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;pro2-win1&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;lab&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;ptarmiganlabs&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;net&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-dir&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;LAB&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-id&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;goran&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-output-format&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;tree&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-output-dest&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;screen&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-tree-icons&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-text-color&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;yes&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://ctrl-q.ptarmiganlabs.com/img/task-tree-color-1.png&#34; alt=&#34;Qlik Sense task tree 3&#34; title=&#34;Qlik Sense task tree with colors but no task details&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Adding &lt;code&gt;--tree-details&lt;/code&gt; gives us a tree that&amp;rsquo;s a lot easier to read compared to previous, uncolored version.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.\&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;ctrl-q&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;exe&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;task-get&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-type&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;cert&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-host&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;pro2-win1&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;lab&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;ptarmiganlabs&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;net&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-dir&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;LAB&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-auth-user-id&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;goran&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-output-format&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;tree&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-output-dest&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;screen&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-tree-icons&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-text-color&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;yes&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-tree-details&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://ctrl-q.ptarmiganlabs.com/img/task-tree-color-details-1.png&#34; alt=&#34;Qlik Sense task tree 4&#34; title=&#34;Qlik Sense task tree with task details and colors&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;macos-and-linux&#34;&gt;macOS and Linux&lt;/h2&gt;
-&lt;p&gt;A task tree with colors on macOS and Linux versions of Ctrl-Q looks exactly like same as in Windows Terminal.&lt;br&gt;
-The only difference is that you don&amp;rsquo;t have to install a new command line shell.&lt;/p&gt;
-
-      </description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ctrl-q.ptarmiganlabs.com/docs/getting-started/colors-formatting/#all-oss-plain-text&#34;&gt;All OSs: plain text&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ctrl-q.ptarmiganlabs.com/docs/getting-started/colors-formatting/#windows-10-using-windows-terminal&#34;&gt;Windows 10 using Windows Terminal&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ctrl-q.ptarmiganlabs.com/docs/getting-started/colors-formatting/#macos-and-linux&#34;&gt;macOS and Linux&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&#xA;&#xA;&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;&#xA;&lt;h4 class=&#34;alert-heading&#34;&gt;A note on screenshots and commands&lt;/h4&gt;&#xA;&#xA;    &lt;p&gt;The screenshots in this page may be from older versions of Ctrl-Q.&lt;/p&gt;&#xA;&lt;p&gt;The commands shown together with the screenshots are however updated for the latest version of Ctrl-Q.&lt;/p&gt;&#xA;&#xA;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;Some of the Ctrl-Q commands use colors and emojis to better communicate the information retrieved from Qlik Sense.&lt;br&gt;&#xA;The task tree view is an example, but more commands may use colors in the future.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

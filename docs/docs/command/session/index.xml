@@ -1,18 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ctrl-Q – Sessions</title>
-    <link>https://ctrl-q.ptarmiganlabs.com/docs/command/session/</link>
+    <title>Sessions on Ctrl-Q</title>
+    <link>//localhost:1313/docs/command/session/</link>
     <description>Recent content in Sessions on Ctrl-Q</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
-    
-	  <atom:link href="https://ctrl-q.ptarmiganlabs.com/docs/command/session/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-      
-        
-      
-    
-    
+    <atom:link href="//localhost:1313/docs/command/session/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

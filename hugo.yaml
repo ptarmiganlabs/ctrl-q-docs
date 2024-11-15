@@ -1,0 +1,153 @@
+baseURL: "/"
+title: "Ctrl-Q"
+
+# Language settings
+contentDir: "content/en"
+defaultContentLanguage: "en"
+defaultContentLanguageInSubdir: false
+# Useful when translating.
+enableMissingTranslationPlaceholders: true
+
+enableRobotsTXT: true
+
+# Will give values to .Lastmod etc.
+enableGitInfo: true
+
+# Added to support publishing to GitHub Pages
+publishDir: "docs"
+
+# Comment out to enable taxonomies in Docsy
+# disableKinds: ["taxonomy", "taxonomyTerm"]
+
+taxonomies:
+  tag: "tags"
+  # category: "categories"
+
+params:
+  taxonomy:
+    taxonomyCloud: ["tags"]
+    taxonomyCloudTitle: ["Tags"]
+    taxonomyPageHeader: ["tags"]
+  
+  copyright: "Ptarmigan Labs AB"
+  privacy_policy: "https://ptarmiganlabs.com/privacy-policy/"
+  version_menu: "Releases"
+  archived_version: false
+  version: "0.0"
+  url_latest_version: "https://ctrl-q.ptarmiganlabs.com"
+  github_repo: "https://github.com/ptarmiganlabs/ctrl-q-docs"
+  github_project_repo: "https://github.com/ptarmiganlabs/ctrl-q"
+  github_branch: "main"
+  offlineSearch: false
+  prism_syntax_highlighting: true
+  
+  ui:
+    breadcrumb_disable: false
+    footer_about_enable: true
+    navbar_logo: false
+    navbar_translucent_over_cover_disable: false
+    sidebar_menu_compact: true
+    sidebar_search_disable: true
+    feedback:
+      enable: true
+      yes: 'Glad to hear it! Please <a href="https://github.com/ptarmiganlabs/ctrl-q/issues/new/choose">tell us how we can improve</a>.'
+      no: 'Sorry to hear that. Please <a href="https://github.com/ptarmiganlabs/ctrl-q/issues/new/choose">tell us how we can improve</a>.'
+    readingtime:
+      enable: false
+  
+  links:
+    user:
+      - name: "Ptarmigan Labs Newsletter"
+        url: "https://ptarmiganlabs.com/#/portal/signup"
+        icon: "fa fa-envelope"
+        desc: "Qlik Sense tips straight to your inbox."
+      - name: "LinkedIn"
+        url: "https://www.linkedin.com/in/gorsan/"
+        icon: "fab fa-linkedin"
+        desc: "Reach out to Ptarmigan Labs via LinkedIn"
+    
+    developer:
+      - name: "GitHub"
+        url: "https://github.com/ptarmiganlabs/ctrl-q"
+        icon: "fab fa-github"
+        desc: "Development takes place here!"
+      - name: "Get in touch with Ptarmigan Labs"
+        url: "mailto://info@ptarmiganlabs.com"
+        icon: "fa fa-envelope"
+        desc: "Get in touch with Ptarmigan Labs around Ctrl-Q"
+
+# Highlighting config
+pygmentsCodeFences: true
+pygmentsUseClasses: false
+pygmentsUseClassic: false
+pygmentsStyle: "tango"
+
+permalinks:
+  blog: "/:section/:year/:month/:day/:slug/"
+
+imaging:
+  resampleFilter: "CatmullRom"
+  quality: 75
+  anchor: "smart"
+
+services:
+  googleAnalytics:
+    # id: "UA-00000000-0"
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    params:
+      title: "Ctrl-Q"
+      description: "Ctrl-Q documentation"
+
+markup:
+  goldmark:
+    parser:
+      attribute:
+        block: true
+    renderer:
+      unsafe: true
+  highlight:
+    style: "tango"
+
+outputs:
+  section: ["HTML", "print", "RSS"]
+
+outputFormats:
+  PRINT:
+    baseName: "index"
+    isHTML: true
+    mediaType: "text/html"
+    path: "printview"
+    permalinkable: false
+
+module:
+  hugoVersion:
+    extended: true
+    min: "0.110.0"
+  imports:
+    - path: "github.com/google/docsy"
+      disable: false
+    - path: "github.com/google/docsy/dependencies"
+      disable: false
+
+privacy:
+  disqus:
+    disable: true
+  googleAnalytics:
+    anonymizeIP: false
+    disable: false
+    respectDoNotTrack: false
+    useSessionStorage: false
+  instagram:
+    disable: true
+  vimeo:
+    disable: true
+  youtube:
+    disable: false
+
+sitemap:
+  changefreq: "monthly"
+  filename: "sitemap.xml"

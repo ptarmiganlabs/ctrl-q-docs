@@ -13,7 +13,7 @@ title: Ctrl-Q
   Download <i class="fab fa-github ms-2 "></i>
 </a>
 	<p class="lead mt-5">Importing 50 apps?<br>Creating 200 reload tasks?<br>Deleting old master items from 25 apps?<br>Ouch 👎</p>
-	<p class="lead mt-2">Automate tedious, repetetive and error prone tasks with Ctrl-Q!</p>
+	<p class="lead mt-2">Automate tedious, repetetive and error prone tasks with Ctrl-Q!<br>Supports both client-managed and Qlik Sense Cloud</p>
 
 {{< blocks/link-down color="info" >}}
 {{< /blocks/cover >}}
@@ -40,6 +40,7 @@ Show (and optionally store to disk) definitions for all variables in Sense apps
 Scramble fields in Sense apps  
 Get load script for Sense apps  
 List and delete user sessions for some or all virtual proxies and proxies
+Use custom properties to visualise in QMC how long it's been since users were active
 <br>
 <br>
 It runs on Windows, Linux and macOS.  
@@ -50,8 +51,9 @@ Works with client-managed Qlik Sense Enterprise on Windows.
 
 {{% blocks/section color="dark" type="row" %}}
 
-{{% blocks/feature icon="fa-lightbulb" title="Latest release: 3.17" %}}
-Improved handling of getting app scripts for large number of apps.  
+{{% blocks/feature icon="fa-lightbulb" title="Latest release: 4.0" %}}
+Added support for Qlik Sense Cloud.  
+Add command to create user activity custom properties.
 
 Available on [GitHub](https://github.com/ptarmiganlabs/ctrl-q/releases).
 {{% /blocks/feature %}}

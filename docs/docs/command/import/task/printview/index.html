@@ -1,10 +1,10 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="https://ctrl-q.ptarmiganlabs.com/docs/command/import/task/">
-<link rel="alternate" type="application/rss&#43;xml" href="https://ctrl-q.ptarmiganlabs.com/docs/command/import/task/index.xml">
+<link rel="canonical" type="text/html" href="//localhost:1313/docs/command/import/task/">
+<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/docs/command/import/task/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -20,38 +20,35 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Tasks | Ctrl-Q</title>
-<meta name="description" content="Import tasks into Qlik Sense
-">
-<meta property="og:title" content="Tasks" />
-<meta property="og:description" content="Import tasks into Qlik Sense
-" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ctrl-q.ptarmiganlabs.com/docs/command/import/task/" /><meta property="og:site_name" content="Ctrl-Q" />
+<meta name="description" content="Import tasks into Qlik Sense">
+<meta property="og:url" content="//localhost:1313/docs/command/import/task/">
+  <meta property="og:site_name" content="Ctrl-Q">
+  <meta property="og:title" content="Tasks">
+  <meta property="og:description" content="Import tasks into Qlik Sense">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
 
-<meta itemprop="name" content="Tasks">
-<meta itemprop="description" content="Import tasks into Qlik Sense
-"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Tasks"/>
-<meta name="twitter:description" content="Import tasks into Qlik Sense
-"/>
-
-
-
-
-<link rel="preload" href="/scss/main.min.6a0cd268a007b5169ed43ee5cd2ba18e4df3ce4a8befa58f30b0fe7149728fb4.css" as="style">
-<link href="/scss/main.min.6a0cd268a007b5169ed43ee5cd2ba18e4df3ce4a8befa58f30b0fe7149728fb4.css" rel="stylesheet" integrity="">
-
+  <meta itemprop="name" content="Tasks">
+  <meta itemprop="description" content="Import tasks into Qlik Sense">
+  <meta itemprop="dateModified" content="2024-03-12T10:39:27+01:00">
+  <meta itemprop="wordCount" content="3771">
+  <meta itemprop="keywords" content="Task">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tasks">
+  <meta name="twitter:description" content="Import tasks into Qlik Sense">
+<link href="/scss/main.css" rel="stylesheet">
 <script
-  src="https://code.jquery.com/jquery-3.6.3.min.js"
-  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
   crossorigin="anonymous"></script>
 <link rel="stylesheet" href="/css/prism.css"/>
 <script defer data-domain="ctrl-q.ptarmiganlabs.com" src="https://plausible.io/js/script.js"></script>
 
-<link rel="canonical" href="https://ctrl-q.ptarmiganlabs.com/docs/command/import/task/" />
+<link rel="canonical" href="//localhost:1313/docs/command/import/task/" />
   </head>
   <body class="td-section">
     <header>
-      <nav class="td-navbar navbar-dark js-navbar-scroll">
+      <nav class="td-navbar js-navbar-scroll" data-bs-theme="dark">
 <div class="container-fluid flex-column flex-md-row">
   <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"></span><span class="navbar-brand__name">Ctrl-Q</span></a>
   <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
@@ -119,15 +116,15 @@ This is the multi-page printable view of this section.
  -->
 <p><em>Page contents:</em></p>
 <ul>
-<li><a href="#import-tasks-from-file">Import tasks from file</a>
+<li><a href="/docs/command/import/task/#import-tasks-from-file">Import tasks from file</a>
 <ul>
-<li><a href="#source-file-columns-for-task-defintions">Source file columns for task defintions</a></li>
-<li><a href="#source-file-columns-for-app-import-definitions">Source file columns for app import definitions</a></li>
-<li><a href="#example-export-tasks-to-csv-then-import-tasks-from-same-csv">Example: Export tasks to CSV, then import tasks from same CSV</a></li>
-<li><a href="#example-import-apps-from-qvf-files-and-create-associated-reload-tasks">Example: Import apps from QVF files and create associated reload tasks</a>
+<li><a href="/docs/command/import/task/#source-file-columns-for-task-defintions">Source file columns for task defintions</a></li>
+<li><a href="/docs/command/import/task/#source-file-columns-for-app-import-definitions">Source file columns for app import definitions</a></li>
+<li><a href="/docs/command/import/task/#example-export-tasks-to-csv-then-import-tasks-from-same-csv">Example: Export tasks to CSV, then import tasks from same CSV</a></li>
+<li><a href="/docs/command/import/task/#example-import-apps-from-qvf-files-and-create-associated-reload-tasks">Example: Import apps from QVF files and create associated reload tasks</a>
 <ul>
-<li><a href="#defining-tasks-to-be-created">Defining tasks to be created</a></li>
-<li><a href="#associating-new-tasks-with-imported-and-existing-apps">Associating new tasks with imported and existing apps</a></li>
+<li><a href="/docs/command/import/task/#defining-tasks-to-be-created">Defining tasks to be created</a></li>
+<li><a href="/docs/command/import/task/#associating-new-tasks-with-imported-and-existing-apps">Associating new tasks with imported and existing apps</a></li>
 </ul>
 </li>
 </ul>
@@ -198,202 +195,202 @@ It&rsquo;s thus a good idea to first do a task export, look at the file format a
 </ul>
 <p>The <em>mandatory</em> columns in the task definition file are:</p>
 <table>
-<thead>
-<tr>
-<th>Column name</th>
-<th>Comment</th>
-<th>Description</th>
-<th>Valid values</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Task counter</td>
-<td>1</td>
-<td>Counter starting at 1. Increments one step for each task. All rows associated with a specific task should have the same value in this column.</td>
-<td>Integer &gt; 0</td>
-</tr>
-<tr>
-<td>Task type</td>
-<td>1</td>
-<td>Type of task. In the future Ctrl-Q may support more task types.</td>
-<td>Reload / External program</td>
-</tr>
-<tr>
-<td>Task name</td>
-<td>1</td>
-<td>Name of the task that will be created.</td>
-<td>Any string. Emojis allowed 🤪.</td>
-</tr>
-<tr>
-<td>Task id</td>
-<td>1</td>
-<td>When creating new tasks a new task ID will always be created. This column is instead used to create task chains: it links a composite trigger in a downstream task with an upstream task via this column&rsquo;s value.</td>
-<td>Any string, but to make it easier to verify task chains it&rsquo;s recommended to use integers or an easy to understand format in this column. <br>For example &ldquo;3&rdquo; or &ldquo;new-task-3&rdquo;. <br> If no downstream task will link to the task being defined, this column can be left empty.</td>
-</tr>
-<tr>
-<td>Task enabled</td>
-<td>1</td>
-<td>Should the created task be enabled or not.</td>
-<td>1 / 0 / blank. 1=enabled, 0 or blank=disabled</td>
-</tr>
-<tr>
-<td>Task timeout</td>
-<td>1</td>
-<td>Timeout for the created task, i.e. number of seconds the task is allowed to run before it&rsquo;s aborted.</td>
-<td>Seconds</td>
-</tr>
-<tr>
-<td>Task retries</td>
-<td>1</td>
-<td>Number of retries to make if the task execution fails.</td>
-<td>Integer &gt;= 0</td>
-</tr>
-<tr>
-<td>App id</td>
-<td>1</td>
-<td>The Sense app the task should be associated with.</td>
-<td>If a valid GUID is specified it&rsquo;s assumed to be an app id. The task will be associated with that app. If the app id starts with <code>newapp-</code> it is a reference to an app that is imported during the current Ctrl-Q execution. The integer following <code>newapp-</code> is the value in the <code>App counter</code> column in the Excel definitions file.</td>
-</tr>
-<tr>
-<td>Partial reload</td>
-<td>1</td>
-<td>Should the task do a partial or full reload of the app?</td>
-<td>1 / 0 / blank. 1=true, 0 or blank=false</td>
-</tr>
-<tr>
-<td>Manually triggered</td>
-<td>1</td>
-<td>Is the task manually triggered or not?</td>
-<td>1 / 0 / blank. 1=true, 0 or blank=false</td>
-</tr>
-<tr>
-<td>Tags</td>
-<td>1</td>
-<td>Tags to set on the created task.</td>
-<td>Format is &ldquo;tag1 / tag2 / tag with spaces in it&rdquo;, i.e. separate tag names by &ldquo;space-forward slash-space&rdquo;.</td>
-</tr>
-<tr>
-<td>Custom properties</td>
-<td>1</td>
-<td>Custom properties to set on the created task.</td>
-<td>Format is &ldquo;CustPropName1=Value1 / CustPropName2=Value2&rdquo;</td>
-</tr>
-<tr>
-<td>Event counter</td>
-<td>2</td>
-<td>Counter identifying events associated with the task defined in the previous line. One task can have zero or more events associated with it.</td>
-<td>Integer &gt; 0</td>
-</tr>
-<tr>
-<td>Event type</td>
-<td>2</td>
-<td>Which event type does this line specify? Schema events deal with time-based execution of the task. Composite events are used to build task chains.</td>
-<td>Schema / Composite</td>
-</tr>
-<tr>
-<td>Event name</td>
-<td>2</td>
-<td>Name of the event.</td>
-<td>Any string</td>
-</tr>
-<tr>
-<td>Event enabled</td>
-<td>2</td>
-<td>Is event enabled.</td>
-<td>1 / 0 / blank. 1=enabled, 0 or blank=disabled</td>
-</tr>
-<tr>
-<td>Schema increment option</td>
-<td>3</td>
-<td>Type of schema event. For reference only, not used when Sense evaluates schema events.</td>
-<td>once / hourly / daily / weekly / monthly / custom</td>
-</tr>
-<tr>
-<td>Schema increment description</td>
-<td>3</td>
-<td>Structured description of the schema increment option. For reference only, not used when Sense evaluates schema events.</td>
-<td>Integers separated by space, e.g. &ldquo;0 0 1 0&rdquo; for weekly</td>
-</tr>
-<tr>
-<td>Daylight savings time</td>
-<td>3</td>
-<td>Control how the schema event should deal with dayligt savings time.</td>
-<td>ObserveDaylightSavingTime / PermanentStandardTime / PermanentDaylightSavingTime</td>
-</tr>
-<tr>
-<td>Schema start</td>
-<td>3</td>
-<td>First valid time for the schema event. The event will not fire before this moment.</td>
-<td>A valid timestamp string, e.g. 2022-10-19T10:19:30.000</td>
-</tr>
-<tr>
-<td>Schema expiration</td>
-<td>3</td>
-<td>Last valid time for the schema event. The event will not fire after this moment.</td>
-<td>A valid timestamp string or 9999-01-01T00:00:00.000 to signify &ldquo;never&rdquo;</td>
-</tr>
-<tr>
-<td>Schema filter description</td>
-<td>3</td>
-<td>Used to control when a schema event is allower to trigger. More info <a href="https://community.qlik.com/t5/Integration-Extension-APIs/Interval-and-time-explanation-for-creating-a-new-SchemaEvent/m-p/1784892/highlight/true#M13886">here</a>.</td>
-<td>Default: &ldquo;* _ - _ * * *&rdquo;</td>
-</tr>
-<tr>
-<td>Schema time zone</td>
-<td>3</td>
-<td>Time zone the schema event is evaluated in</td>
-<td>E.g. &ldquo;Europe/Paris&rdquo;</td>
-</tr>
-<tr>
-<td>Time contstraint seconds</td>
-<td>4</td>
-<td>Used for composite events. Defines a window in which all dependent tasks have to complete.</td>
-<td>Integer &gt;= 0</td>
-</tr>
-<tr>
-<td>Time contstraint minutes</td>
-<td>4</td>
-<td>Used for composite events. Defines a window in which all dependent tasks have to complete.</td>
-<td>Integer &gt;= 0</td>
-</tr>
-<tr>
-<td>Time contstraint hours</td>
-<td>4</td>
-<td>Used for composite events. Defines a window in which all dependent tasks have to complete.</td>
-<td>Integer &gt;= 0</td>
-</tr>
-<tr>
-<td>Time contstraint days</td>
-<td>4</td>
-<td>Used for composite events. Defines a window in which all dependent tasks have to complete.</td>
-<td>Integer &gt;= 0</td>
-</tr>
-<tr>
-<td>Rule counter</td>
-<td>4</td>
-<td>Counter identifying rules that define upstream task executions the current task is depending on.</td>
-<td>Integer &gt; 0</td>
-</tr>
-<tr>
-<td>Rule state</td>
-<td>4</td>
-<td>Is the rule waiting for success or failure of upstream task?</td>
-<td>TaskSuccessful / TaskFail</td>
-</tr>
-<tr>
-<td>Rule task name</td>
-<td></td>
-<td>Name of the rule</td>
-<td>Any string</td>
-</tr>
-<tr>
-<td>Rule task id</td>
-<td>4</td>
-<td>Reference to the upstream task.</td>
-<td>Any string (if referring to a task within the same file), <strong>or</strong> a valid id of a task that already exists in Sense.<br>Two options exist: If the &ldquo;Rule task id&rdquo; has the same value as the &ldquo;Task id&rdquo; of another task in the source file, those two tasks will be linked via this rule. If the &ldquo;Rule task id&rdquo; refers to an existing task id in Sense, the new rule will link to that existing task.</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>Column name</th>
+          <th>Comment</th>
+          <th>Description</th>
+          <th>Valid values</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Task counter</td>
+          <td>1</td>
+          <td>Counter starting at 1. Increments one step for each task. All rows associated with a specific task should have the same value in this column.</td>
+          <td>Integer &gt; 0</td>
+      </tr>
+      <tr>
+          <td>Task type</td>
+          <td>1</td>
+          <td>Type of task. In the future Ctrl-Q may support more task types.</td>
+          <td>Reload / External program</td>
+      </tr>
+      <tr>
+          <td>Task name</td>
+          <td>1</td>
+          <td>Name of the task that will be created.</td>
+          <td>Any string. Emojis allowed 🤪.</td>
+      </tr>
+      <tr>
+          <td>Task id</td>
+          <td>1</td>
+          <td>When creating new tasks a new task ID will always be created. This column is instead used to create task chains: it links a composite trigger in a downstream task with an upstream task via this column&rsquo;s value.</td>
+          <td>Any string, but to make it easier to verify task chains it&rsquo;s recommended to use integers or an easy to understand format in this column. <br>For example &ldquo;3&rdquo; or &ldquo;new-task-3&rdquo;. <br> If no downstream task will link to the task being defined, this column can be left empty.</td>
+      </tr>
+      <tr>
+          <td>Task enabled</td>
+          <td>1</td>
+          <td>Should the created task be enabled or not.</td>
+          <td>1 / 0 / blank. 1=enabled, 0 or blank=disabled</td>
+      </tr>
+      <tr>
+          <td>Task timeout</td>
+          <td>1</td>
+          <td>Timeout for the created task, i.e. number of seconds the task is allowed to run before it&rsquo;s aborted.</td>
+          <td>Seconds</td>
+      </tr>
+      <tr>
+          <td>Task retries</td>
+          <td>1</td>
+          <td>Number of retries to make if the task execution fails.</td>
+          <td>Integer &gt;= 0</td>
+      </tr>
+      <tr>
+          <td>App id</td>
+          <td>1</td>
+          <td>The Sense app the task should be associated with.</td>
+          <td>If a valid GUID is specified it&rsquo;s assumed to be an app id. The task will be associated with that app. If the app id starts with <code>newapp-</code> it is a reference to an app that is imported during the current Ctrl-Q execution. The integer following <code>newapp-</code> is the value in the <code>App counter</code> column in the Excel definitions file.</td>
+      </tr>
+      <tr>
+          <td>Partial reload</td>
+          <td>1</td>
+          <td>Should the task do a partial or full reload of the app?</td>
+          <td>1 / 0 / blank. 1=true, 0 or blank=false</td>
+      </tr>
+      <tr>
+          <td>Manually triggered</td>
+          <td>1</td>
+          <td>Is the task manually triggered or not?</td>
+          <td>1 / 0 / blank. 1=true, 0 or blank=false</td>
+      </tr>
+      <tr>
+          <td>Tags</td>
+          <td>1</td>
+          <td>Tags to set on the created task.</td>
+          <td>Format is &ldquo;tag1 / tag2 / tag with spaces in it&rdquo;, i.e. separate tag names by &ldquo;space-forward slash-space&rdquo;.</td>
+      </tr>
+      <tr>
+          <td>Custom properties</td>
+          <td>1</td>
+          <td>Custom properties to set on the created task.</td>
+          <td>Format is &ldquo;CustPropName1=Value1 / CustPropName2=Value2&rdquo;</td>
+      </tr>
+      <tr>
+          <td>Event counter</td>
+          <td>2</td>
+          <td>Counter identifying events associated with the task defined in the previous line. One task can have zero or more events associated with it.</td>
+          <td>Integer &gt; 0</td>
+      </tr>
+      <tr>
+          <td>Event type</td>
+          <td>2</td>
+          <td>Which event type does this line specify? Schema events deal with time-based execution of the task. Composite events are used to build task chains.</td>
+          <td>Schema / Composite</td>
+      </tr>
+      <tr>
+          <td>Event name</td>
+          <td>2</td>
+          <td>Name of the event.</td>
+          <td>Any string</td>
+      </tr>
+      <tr>
+          <td>Event enabled</td>
+          <td>2</td>
+          <td>Is event enabled.</td>
+          <td>1 / 0 / blank. 1=enabled, 0 or blank=disabled</td>
+      </tr>
+      <tr>
+          <td>Schema increment option</td>
+          <td>3</td>
+          <td>Type of schema event. For reference only, not used when Sense evaluates schema events.</td>
+          <td>once / hourly / daily / weekly / monthly / custom</td>
+      </tr>
+      <tr>
+          <td>Schema increment description</td>
+          <td>3</td>
+          <td>Structured description of the schema increment option. For reference only, not used when Sense evaluates schema events.</td>
+          <td>Integers separated by space, e.g. &ldquo;0 0 1 0&rdquo; for weekly</td>
+      </tr>
+      <tr>
+          <td>Daylight savings time</td>
+          <td>3</td>
+          <td>Control how the schema event should deal with dayligt savings time.</td>
+          <td>ObserveDaylightSavingTime / PermanentStandardTime / PermanentDaylightSavingTime</td>
+      </tr>
+      <tr>
+          <td>Schema start</td>
+          <td>3</td>
+          <td>First valid time for the schema event. The event will not fire before this moment.</td>
+          <td>A valid timestamp string, e.g. 2022-10-19T10:19:30.000</td>
+      </tr>
+      <tr>
+          <td>Schema expiration</td>
+          <td>3</td>
+          <td>Last valid time for the schema event. The event will not fire after this moment.</td>
+          <td>A valid timestamp string or 9999-01-01T00:00:00.000 to signify &ldquo;never&rdquo;</td>
+      </tr>
+      <tr>
+          <td>Schema filter description</td>
+          <td>3</td>
+          <td>Used to control when a schema event is allower to trigger. More info <a href="https://community.qlik.com/t5/Integration-Extension-APIs/Interval-and-time-explanation-for-creating-a-new-SchemaEvent/m-p/1784892/highlight/true#M13886">here</a>.</td>
+          <td>Default: &ldquo;* _ - _ * * *&rdquo;</td>
+      </tr>
+      <tr>
+          <td>Schema time zone</td>
+          <td>3</td>
+          <td>Time zone the schema event is evaluated in</td>
+          <td>E.g. &ldquo;Europe/Paris&rdquo;</td>
+      </tr>
+      <tr>
+          <td>Time contstraint seconds</td>
+          <td>4</td>
+          <td>Used for composite events. Defines a window in which all dependent tasks have to complete.</td>
+          <td>Integer &gt;= 0</td>
+      </tr>
+      <tr>
+          <td>Time contstraint minutes</td>
+          <td>4</td>
+          <td>Used for composite events. Defines a window in which all dependent tasks have to complete.</td>
+          <td>Integer &gt;= 0</td>
+      </tr>
+      <tr>
+          <td>Time contstraint hours</td>
+          <td>4</td>
+          <td>Used for composite events. Defines a window in which all dependent tasks have to complete.</td>
+          <td>Integer &gt;= 0</td>
+      </tr>
+      <tr>
+          <td>Time contstraint days</td>
+          <td>4</td>
+          <td>Used for composite events. Defines a window in which all dependent tasks have to complete.</td>
+          <td>Integer &gt;= 0</td>
+      </tr>
+      <tr>
+          <td>Rule counter</td>
+          <td>4</td>
+          <td>Counter identifying rules that define upstream task executions the current task is depending on.</td>
+          <td>Integer &gt; 0</td>
+      </tr>
+      <tr>
+          <td>Rule state</td>
+          <td>4</td>
+          <td>Is the rule waiting for success or failure of upstream task?</td>
+          <td>TaskSuccessful / TaskFail</td>
+      </tr>
+      <tr>
+          <td>Rule task name</td>
+          <td></td>
+          <td>Name of the rule</td>
+          <td>Any string</td>
+      </tr>
+      <tr>
+          <td>Rule task id</td>
+          <td>4</td>
+          <td>Reference to the upstream task.</td>
+          <td>Any string (if referring to a task within the same file), <strong>or</strong> a valid id of a task that already exists in Sense.<br>Two options exist: If the &ldquo;Rule task id&rdquo; has the same value as the &ldquo;Task id&rdquo; of another task in the source file, those two tasks will be linked via this rule. If the &ldquo;Rule task id&rdquo; refers to an existing task id in Sense, the new rule will link to that existing task.</td>
+      </tr>
+  </tbody>
 </table>
 <p>Meaning of &ldquo;Comment&rdquo; column above:</p>
 <p>1: These columns are required for all lines where top-level task information is defined.<br>
@@ -414,70 +411,70 @@ It&rsquo;s thus a good idea to first do a task export, look at the file format a
 A sheet name (where the app details are found) in the Excel file must also be specified using the <code>--import-app-sheet-name</code> option.</p>
 <p>The columns (case sensitive!) in the app import definition file are:</p>
 <table>
-<thead>
-<tr>
-<th>Column name</th>
-<th>Description</th>
-<th>Valid values</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>App counter</td>
-<td>Counter starting at 1. Increments one step for each app.</td>
-<td>Integer &gt; 0</td>
-</tr>
-<tr>
-<td>App name</td>
-<td>Name of the app that will be created based on the specified QVF file.</td>
-<td>Any string. Emojis allowed.</td>
-</tr>
-<tr>
-<td>QVF directory</td>
-<td>Directory where app QVF files are stored</td>
-<td>Any valid path, absolute or relative.</td>
-</tr>
-<tr>
-<td>QVF name</td>
-<td>Name of QVD file, including extension.</td>
-<td>Any valid file name.</td>
-</tr>
-<tr>
-<td>Exclude data connections</td>
-<td>Should data connections stored in the QVF file be excluded during app import or not.</td>
-<td>true / false</td>
-</tr>
-<tr>
-<td>App tags</td>
-<td>Tags to set on the imported app.</td>
-<td>Format is &ldquo;tag1 / tag2 / tag with spaces in it&rdquo;, i.e. separate tag names by &ldquo;space-forward slash-space&rdquo;.</td>
-</tr>
-<tr>
-<td>App custom properties</td>
-<td>Custom properties to set on the imported app.</td>
-<td>Format is &ldquo;CustPropName1=Value1 / CustPropName2=Value2&rdquo;</td>
-</tr>
-<tr>
-<td>Owner user directory</td>
-<td>If app owner should be set for this app, specify the user directory name here. Both user directory and user id must be correctly defined for the app owner to be updated.</td>
-<td>Any user directory currently defined in the QMC, or <code>Internal</code> for Sense internal accounts.</td>
-</tr>
-<tr>
-<td>Owner user id</td>
-<td>If app owner should be set for this app, specify the user id here. Both user directory and user id must be correctly defined for the app owner to be updated.</td>
-<td>Any user ID defined in the user directory defined in <code>Owner user directory</code> column (above).</td>
-</tr>
-<tr>
-<td>Publish to stream</td>
-<td>If this app should be published, specify stream id or name here. If the id is not associated with a stream or the specified stream name does not exist the app will not be published</td>
-<td>Any existing stream name or id associated with an existing stream.</td>
-</tr>
-<tr>
-<td>Publish options <br>(optional)</td>
-<td>Specify publish options here, for example if an already published app with the same name should be overwritten or not. <br>The default behaviour is <code>publish-replace</code>, which will be used when no &ldquo;Publish options&rdquo; column is present in the Excel sheet or that column exists but is empty.</td>
-<td><code>publish-replace</code>: If there already exists a published app with the same name in the specified stream, replace that app with the new one. <br> <code>publish-another</code>: If there already exists a published app with the same name in the specified stream, publish tnother one. <br><code>delete-publish</code>: First delete an already existing app (if there is one), then publish the new app.</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>Column name</th>
+          <th>Description</th>
+          <th>Valid values</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>App counter</td>
+          <td>Counter starting at 1. Increments one step for each app.</td>
+          <td>Integer &gt; 0</td>
+      </tr>
+      <tr>
+          <td>App name</td>
+          <td>Name of the app that will be created based on the specified QVF file.</td>
+          <td>Any string. Emojis allowed.</td>
+      </tr>
+      <tr>
+          <td>QVF directory</td>
+          <td>Directory where app QVF files are stored</td>
+          <td>Any valid path, absolute or relative.</td>
+      </tr>
+      <tr>
+          <td>QVF name</td>
+          <td>Name of QVD file, including extension.</td>
+          <td>Any valid file name.</td>
+      </tr>
+      <tr>
+          <td>Exclude data connections</td>
+          <td>Should data connections stored in the QVF file be excluded during app import or not.</td>
+          <td>true / false</td>
+      </tr>
+      <tr>
+          <td>App tags</td>
+          <td>Tags to set on the imported app.</td>
+          <td>Format is &ldquo;tag1 / tag2 / tag with spaces in it&rdquo;, i.e. separate tag names by &ldquo;space-forward slash-space&rdquo;.</td>
+      </tr>
+      <tr>
+          <td>App custom properties</td>
+          <td>Custom properties to set on the imported app.</td>
+          <td>Format is &ldquo;CustPropName1=Value1 / CustPropName2=Value2&rdquo;</td>
+      </tr>
+      <tr>
+          <td>Owner user directory</td>
+          <td>If app owner should be set for this app, specify the user directory name here. Both user directory and user id must be correctly defined for the app owner to be updated.</td>
+          <td>Any user directory currently defined in the QMC, or <code>Internal</code> for Sense internal accounts.</td>
+      </tr>
+      <tr>
+          <td>Owner user id</td>
+          <td>If app owner should be set for this app, specify the user id here. Both user directory and user id must be correctly defined for the app owner to be updated.</td>
+          <td>Any user ID defined in the user directory defined in <code>Owner user directory</code> column (above).</td>
+      </tr>
+      <tr>
+          <td>Publish to stream</td>
+          <td>If this app should be published, specify stream id or name here. If the id is not associated with a stream or the specified stream name does not exist the app will not be published</td>
+          <td>Any existing stream name or id associated with an existing stream.</td>
+      </tr>
+      <tr>
+          <td>Publish options <br>(optional)</td>
+          <td>Specify publish options here, for example if an already published app with the same name should be overwritten or not. <br>The default behaviour is <code>publish-replace</code>, which will be used when no &ldquo;Publish options&rdquo; column is present in the Excel sheet or that column exists but is empty.</td>
+          <td><code>publish-replace</code>: If there already exists a published app with the same name in the specified stream, replace that app with the new one. <br> <code>publish-another</code>: If there already exists a published app with the same name in the specified stream, publish tnother one. <br><code>delete-publish</code>: First delete an already existing app (if there is one), then publish the new app.</td>
+      </tr>
+  </tbody>
 </table>
 <p>The publish options are described in more detail <a href="https://github.com/ptarmiganlabs/ctrl-q/discussions/234#discussioncomment-6173760">here</a>.</p>
 <h3 id="example-export-tasks-to-csv-then-import-tasks-from-same-csv">Example: Export tasks to CSV, then import tasks from same CSV</h3>
@@ -624,23 +621,23 @@ That&rsquo;s the default locataion, meaning that the options <code>--auth-cert-f
 </ul>
 <blockquote>
 <p>NOTE 1: A sample defintions Excel file is <a href="https://github.com/ptarmiganlabs/ctrl-q/blob/main/testdata/tasks.xlsx?raw=true">available in the GitHub repository</a>.
-NOTE 2: The structure of the Excel sheet specified by the <code>--import-app-sheet-name</code> is described <a href="#source-file-columns-for-app-import-definitions">above</a>.</p>
+NOTE 2: The structure of the Excel sheet specified by the <code>--import-app-sheet-name</code> is described <a href="/docs/command/import/task/#source-file-columns-for-app-import-definitions">above</a>.</p>
 </blockquote>
 <h4 id="defining-tasks-to-be-created">Defining tasks to be created</h4>
 <p>The format is the same as when importing tasks only (and no apps).<br>
-More info <a href="#source-file-columns-for-task-defintions">here</a>.</p>
+More info <a href="/docs/command/import/task/#source-file-columns-for-task-defintions">here</a>.</p>
 <h4 id="associating-new-tasks-with-imported-and-existing-apps">Associating new tasks with imported and existing apps</h4>
 <p>A few special cases apply when tasks are created <strong>and</strong> apps also imported.</p>
 <p>In this situation it&rsquo;s important that tasks can be associated with either the newly imported apps <em>or</em> already existing apps.<br>
 Similarly, for composite task triggers (used to create task chains) it&rsquo;s important that either newly created tasks <em>or</em> already existing tasks can be referenced.</p>
 <p>Let&rsquo;s say the following three QVF files should be imported into Sense.<br>
 Note the <code>App counter</code> column, with values 1, 2 and 3.</p>
-<p><img src="/img/ctrl-q-app-import-1.png" alt="QVF app files that should be imported into Qlik Sense" title="QVF app files that should be imported into Qlik Sense"></p>
+<p><img alt="QVF app files that should be imported into Qlik Sense" src="/img/ctrl-q-app-import-1.png" title="QVF app files that should be imported into Qlik Sense"></p>
 <p>Now let&rsquo;s look at the tasks to be created.
 In the image below the main info (task name etc) for each of the four tasks is shown.<br>
 Note that the <code>Task id</code> column has both proper GUIDs and simple integers in it.<br>
 This will be important when defining composite triggers.</p>
-<p><img src="/img/ctrl-q-task-import-1.png" alt="Reload tasks should be created in Qlik Sense" title="Reload tasks should be created in Qlik Sense"></p>
+<p><img alt="Reload tasks should be created in Qlik Sense" src="/img/ctrl-q-task-import-1.png" title="Reload tasks should be created in Qlik Sense"></p>
 <p>Finally let&rsquo;s look at the composite triggers associated with the last of the four tasks.<br>
 That composite trigger relies on two tasks, one that should fail (<code>TaskFail</code>) to trigger the composite trigger and one that should succeed (<code>TaskSuccessful</code>).</p>
 <p>The important part here is the last column, <code>Rule task id</code>:</p>
@@ -650,7 +647,7 @@ That composite trigger relies on two tasks, one that should fail (<code>TaskFail
 Which task? The one with the same integer number in the <code>Task id</code> column (see previous paragraph).</li>
 </ul>
 <p>This way it&rsquo;s possible to chain new reload tasks to both already existing tasks and new ones.</p>
-<p><img src="/img/ctrl-q-task-import-2.png" alt="Reload tasks should be created in Qlik Sense" title="Reload tasks should be created in Qlik Sense"></p>
+<p><img alt="Reload tasks should be created in Qlik Sense" src="/img/ctrl-q-task-import-2.png" title="Reload tasks should be created in Qlik Sense"></p>
 
 </div>
 </div>
@@ -674,11 +671,8 @@ Which task? The one with the same integer number in the <code>Task id</code> col
       <footer class="td-footer row d-print-none">
   <div class="container-fluid">
     <div class="row mx-md-2">
-      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
-        
-        
-        
-<ul class="td-footer__links-list">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
   
   <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Ptarmigan Labs Newsletter" aria-label="Ptarmigan Labs Newsletter">
     <a target="_blank" rel="noopener" href="https://ptarmiganlabs.com/#/portal/signup" aria-label="Ptarmigan Labs Newsletter">
@@ -694,14 +688,8 @@ Which task? The one with the same integer number in the <code>Task id</code> col
   
 </ul>
 
-        
-        
-      </div>
-      <div class="col-6 col-sm-4 text-end text-xs-center order-sm-3">
-        
-        
-        
-<ul class="td-footer__links-list">
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        <ul class="td-footer__links-list">
   
   <li class="td-footer__links-item" data-bs-toggle="tooltip" title="GitHub" aria-label="GitHub">
     <a target="_blank" rel="noopener" href="https://github.com/ptarmiganlabs/ctrl-q" aria-label="GitHub">
@@ -717,20 +705,17 @@ Which task? The one with the same integer number in the <code>Task id</code> col
   
 </ul>
 
-        
-        
-      </div>
-      <div class="td-footer__copyright-etc col-12 col-sm-4 text-center py-2 order-sm-2">
-        <span>&copy; 2024 Ptarmigan Labs AB All Rights Reserved</span>
-        <span class="ms-1"><a href="https://ptarmiganlabs.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></span>
-        <p class="td-footer__about mt-2"><a href="/about/">About Ctrl-Q</a></p>
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">Ptarmigan Labs AB</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span><span class="ms-2"><a href="https://ptarmiganlabs.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></span><p class="td-footer__about mt-2"><a href="/about/">About Ctrl-Q</a></p>
       </div>
     </div>
   </div>
 </footer>
+
     </div>
-    
-  <script src="/js/main.min.00b0947702f6bf9c86afe620f44bfda788662ef0ca688315732ee7b00e408279.js" integrity="sha256-ALCUdwL2v5yGr&#43;Yg9Ev9p4hmLvDKaIMVcy7nsA5Agnk=" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
 <script src='/js/prism.js'></script>
 <script src='/js/tabpane-persist.js'></script>
 

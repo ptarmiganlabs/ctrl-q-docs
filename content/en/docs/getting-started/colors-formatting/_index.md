@@ -13,6 +13,12 @@ tags: [colors, formatting]
 
 ---
 
+{{% alert title="A note on screenshots and commands" color="warning" %}}
+The screenshots in this page may be from older versions of Ctrl-Q.
+
+The commands shown together with the screenshots are however updated for the latest version of Ctrl-Q.
+{{% /alert %}}
+
 Some of the Ctrl-Q commands use colors and emojis to better communicate the information retrieved from Qlik Sense.  
 The task tree view is an example, but more commands may use colors in the future.
 
@@ -21,10 +27,9 @@ MS-DOS supported it, as did early Windows versions.
 
 Today this feature is quite fragmented.
 
-Console applications using colors are natively supported on macOS and Linux.  
-On Windows Server 2016 and earlier it's _very_ hard to get this working, later versions may be easier.  
-On Windows 10 and later it's possible to use Microsoft's excellent new command line shell, [Windows Terminal](https://github.com/microsoft/terminal).  
-Highly recommended if you use a desktop Windows operating system!
+- Console applications using colors are natively supported on macOS and Linux.  
+- On Windows Server 2016 and earlier it's _very_ hard to get this working, later versions may be easier.  
+- On Windows 10 and later it's possible to use Microsoft's excellent new command line shell, [Windows Terminal](https://github.com/microsoft/terminal). Highly recommended if you use a desktop Windows operating system!
 
 Ctrl-Q tries to offer plain text visuals unless extra features, flare and color is enabled via command line parameters.
 
@@ -35,7 +40,7 @@ Some examples follow, showing different views of reload task trees.
 The command for the most basic task tree is
 
 ```powershell
-.\ctrl-q.exe task-get `
+.\ctrl-q.exe qseow task-get `
 --auth-type cert `
 --host pro2-win1.lab.ptarmiganlabs.net `
 --auth-user-dir LAB `
@@ -50,7 +55,7 @@ Add the `--tree-details` option and the result contains a lot more details for e
 Note: the `task-get` command has lots of options, these are described in more detail on [this page](/docs/command/task/#list-tasks-as-tree).
 
 ```powershell
-.\ctrl-q.exe task-get `
+.\ctrl-q.exe qseow task-get `
 --auth-type cert `
 --host pro2-win1.lab.ptarmiganlabs.net `
 --auth-user-dir LAB `
@@ -70,7 +75,7 @@ Thanks to Windows Terminal handling text coloring and emojis we can add a couple
 - `--text-color yes` to get nicely colored text in the task tree
 
 ```powershell
-.\ctrl-q.exe task-get `
+.\ctrl-q.exe qseow task-get `
 --auth-type cert `
 --host pro2-win1.lab.ptarmiganlabs.net `
 --auth-user-dir LAB `
@@ -86,7 +91,7 @@ Thanks to Windows Terminal handling text coloring and emojis we can add a couple
 Adding `--tree-details` gives us a tree that's a lot easier to read compared to previous, uncolored version.
 
 ```powershell
-.\ctrl-q.exe task-get `
+.\ctrl-q.exe qseow task-get `
 --auth-type cert `
 --host pro2-win1.lab.ptarmiganlabs.net `
 --auth-user-dir LAB `

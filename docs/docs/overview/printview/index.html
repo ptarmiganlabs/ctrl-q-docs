@@ -20,25 +20,25 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Overview | Ctrl-Q</title>
-<meta name="description" content="What&#39;s Ctrl-Q and how can I use it?">
-<meta property="og:title" content="Overview" />
-<meta property="og:description" content="What&#39;s Ctrl-Q and how can I use it?" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ctrl-q.ptarmiganlabs.com/docs/overview/" /><meta property="og:site_name" content="Ctrl-Q" />
+<meta name="description" content="What is Ctrl-Q and how can I use it?">
+<meta property="og:url" content="https://ctrl-q.ptarmiganlabs.com/docs/overview/">
+  <meta property="og:site_name" content="Ctrl-Q">
+  <meta property="og:title" content="Overview">
+  <meta property="og:description" content="What is Ctrl-Q and how can I use it?">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
 
-<meta itemprop="name" content="Overview">
-<meta itemprop="description" content="What&#39;s Ctrl-Q and how can I use it?"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Overview"/>
-<meta name="twitter:description" content="What&#39;s Ctrl-Q and how can I use it?"/>
-
-
-
-
-<link rel="preload" href="/scss/main.min.6a0cd268a007b5169ed43ee5cd2ba18e4df3ce4a8befa58f30b0fe7149728fb4.css" as="style">
-<link href="/scss/main.min.6a0cd268a007b5169ed43ee5cd2ba18e4df3ce4a8befa58f30b0fe7149728fb4.css" rel="stylesheet" integrity="">
-
+  <meta itemprop="name" content="Overview">
+  <meta itemprop="description" content="What is Ctrl-Q and how can I use it?">
+  <meta itemprop="wordCount" content="603">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Overview">
+  <meta name="twitter:description" content="What is Ctrl-Q and how can I use it?">
+<link rel="preload" href="/scss/main.min.abae8d77a318db1f7dc3e48a2c40326c72fe9d164313d815da846b0968944efc.css" as="style" integrity="sha256-q66Nd6MY2x99w&#43;SKLEAybHL&#43;nRZDE9gV2oRrCWiUTvw=" crossorigin="anonymous">
+<link href="/scss/main.min.abae8d77a318db1f7dc3e48a2c40326c72fe9d164313d815da846b0968944efc.css" rel="stylesheet" integrity="sha256-q66Nd6MY2x99w&#43;SKLEAybHL&#43;nRZDE9gV2oRrCWiUTvw=" crossorigin="anonymous">
 <script
-  src="https://code.jquery.com/jquery-3.6.3.min.js"
-  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
   crossorigin="anonymous"></script>
 <link rel="stylesheet" href="/css/prism.css"/>
 <script defer data-domain="ctrl-q.ptarmiganlabs.com" src="https://plausible.io/js/script.js"></script>
@@ -47,7 +47,7 @@
   </head>
   <body class="td-section">
     <header>
-      <nav class="td-navbar navbar-dark js-navbar-scroll">
+      <nav class="td-navbar js-navbar-scroll" data-bs-theme="dark">
 <div class="container-fluid flex-column flex-md-row">
   <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"></span><span class="navbar-brand__name">Ctrl-Q</span></a>
   <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
@@ -88,7 +88,7 @@ This is the multi-page printable view of this section.
 
 
 <h1 class="title">Overview</h1>
-<div class="lead">What&rsquo;s Ctrl-Q and how can I use it?</div>
+<div class="lead">What is Ctrl-Q and how can I use it?</div>
 
 
 
@@ -116,10 +116,14 @@ This is the multi-page printable view of this section.
 <h2 id="what-is-ctrl-q">What is Ctrl-Q?</h2>
 <p>The focus of Ctrl-Q is on slightly more complex use cases that are not handled out of the box by other tools such as <a href="https://qlik.dev/libraries-and-tools/qlik-cli">Qlik&rsquo;s official Qlik CLI tool</a> or <a href="https://github.com/ahaydon/Qlik-Cli-Windows">Adam Haydon&rsquo;s Qlik CLI Windows</a> tool.</p>
 <p>Both are exceptional tools and extremely useful, but especially when it comes to interactions with the Qlik Sense engine they fall a bit short.</p>
-<p>Ctrl-Q also tries to fill niches that are not covered by the various members of the Butler family of open source SenseOps tools.</p>
+<p>Ctrl-Q also tries to fill niches that are not covered by the various members of the <a href="https://ptarmiganlabs.com/the-butler-family/">Butler family</a> of open source SenseOps tools.</p>
 <p>The Butler tools each focus on a specific feature (or features in the case of <a href="https://github.com/ptarmiganlabs/butler">the original Butler tool</a>) and goes fairly deep in those areas.<br>
 For example, <a href="https://github.com/ptarmiganlabs/butler-sos">Butler SOS</a> focus on getting real-time metrics and events out of Sense and into a wide range of target databases and monitoring tools.<br>
 <a href="https://github.com/ptarmiganlabs/butler-sheet-icons">Butler Sheet Icons</a> creates sheet thumbnails for Sense apps - but offers lots of flexibility and power around that use case.</p>
+<h2 id="cloud-and-client-managed-sense">Cloud and client-managed Sense</h2>
+<p>Ctrl-Q works with both client-managed Qlik Sense Enterprise on Windows and Qlik Sense Cloud.</p>
+<p>Given Ctrl-Q&rsquo;s background in the client-managed world, most commands focus on that environment.<br>
+Still, new use cases are added to Ctrl-Q with the cloud in mind, and over time it is expected that the number of cloud-specific features will grow.</p>
 <h2 id="what-can-ctrl-q-do-for-me">What can Ctrl-Q do for me?</h2>
 <p>Ctrl-Q focus on specific, high-value uses cases that tend to be very time consuming and/or error prone to do manually.</p>
 <p>The list of features include:</p>
@@ -142,6 +146,7 @@ For example, <a href="https://github.com/ptarmiganlabs/butler-sos">Butler SOS</a
 <li>Show complete definition of all bookmarks in a Sense app.</li>
 <li>Scramble fields in Sense apps.</li>
 <li>Get load script from Sense app.</li>
+<li>Create a custom property on all users and insert a value indicating how long it has been since the user last logged in. I.e. user activity buckets in a custom property.</li>
 </ul>
 <p>As Ctrl-Q is completely command line driven it is very suitable to be used in CI/CD pipelines, with time savings, increased reusability and higher app quality as a result.</p>
 <p>Maybe Qlik&rsquo;s CLI tool will evolve to include more of these use cases and engine-focused features too - great if so.<br>
@@ -176,11 +181,8 @@ Everything from short overviews of new features to very thorough, step-by-step i
       <footer class="td-footer row d-print-none">
   <div class="container-fluid">
     <div class="row mx-md-2">
-      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
-        
-        
-        
-<ul class="td-footer__links-list">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
   
   <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Ptarmigan Labs Newsletter" aria-label="Ptarmigan Labs Newsletter">
     <a target="_blank" rel="noopener" href="https://ptarmiganlabs.com/#/portal/signup" aria-label="Ptarmigan Labs Newsletter">
@@ -196,14 +198,8 @@ Everything from short overviews of new features to very thorough, step-by-step i
   
 </ul>
 
-        
-        
-      </div>
-      <div class="col-6 col-sm-4 text-end text-xs-center order-sm-3">
-        
-        
-        
-<ul class="td-footer__links-list">
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        <ul class="td-footer__links-list">
   
   <li class="td-footer__links-item" data-bs-toggle="tooltip" title="GitHub" aria-label="GitHub">
     <a target="_blank" rel="noopener" href="https://github.com/ptarmiganlabs/ctrl-q" aria-label="GitHub">
@@ -219,20 +215,17 @@ Everything from short overviews of new features to very thorough, step-by-step i
   
 </ul>
 
-        
-        
-      </div>
-      <div class="td-footer__copyright-etc col-12 col-sm-4 text-center py-2 order-sm-2">
-        <span>&copy; 2024 Ptarmigan Labs AB All Rights Reserved</span>
-        <span class="ms-1"><a href="https://ptarmiganlabs.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></span>
-        <p class="td-footer__about mt-2"><a href="/about/">About Ctrl-Q</a></p>
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">Ptarmigan Labs AB</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span><span class="ms-2"><a href="https://ptarmiganlabs.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></span><p class="td-footer__about mt-2"><a href="/about/">About Ctrl-Q</a></p>
       </div>
     </div>
   </div>
 </footer>
+
     </div>
-    
-  <script src="/js/main.min.00b0947702f6bf9c86afe620f44bfda788662ef0ca688315732ee7b00e408279.js" integrity="sha256-ALCUdwL2v5yGr&#43;Yg9Ev9p4hmLvDKaIMVcy7nsA5Agnk=" crossorigin="anonymous"></script>
+    <script src="/js/main.min.9bb04dc6a6b4b104e1da6f6d5a885a4092b9a942c466820b75d34697477404c9.js" integrity="sha256-m7BNxqa0sQTh2m9tWohaQJK5qULEZoILddNGl0d0BMk=" crossorigin="anonymous"></script>
 <script src='/js/prism.js'></script>
 <script src='/js/tabpane-persist.js'></script>
 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bookmarks on Ctrl-Q</title>
+    <link>https://ctrl-q.ptarmiganlabs.com/docs/command/qseow/bookmark/</link>
+    <description>Recent content in Bookmarks on Ctrl-Q</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://ctrl-q.ptarmiganlabs.com/docs/command/qseow/bookmark/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -45,7 +45,7 @@ Use custom properties to visualise in QMC how long it's been since users were ac
 <br>
 It runs on Windows, Linux and macOS.  
 
-Works with client-managed Qlik Sense Enterprise on Windows.
+Works with both client-managed Qlik Sense and Qlik Sense Cloud.
 {{% /blocks/lead %}}
 
 

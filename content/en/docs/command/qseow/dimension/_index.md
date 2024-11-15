@@ -171,7 +171,7 @@ Options:
     --host pro2-win1.lab.ptarmiganlabs.net `
     --auth-user-dir LAB `
     --auth-user-id goran `
-    --app-id a3e0f5d2-000a-464f-998d-33d333b175d7 `
+    --app-id 2933711d-6638-41d4-a2d2-6dd2d965208b `
     --id-type name `
     --master-item 'Country' 'Sales month'
 ```

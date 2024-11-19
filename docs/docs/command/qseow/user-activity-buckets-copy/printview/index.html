@@ -1,0 +1,361 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="canonical" type="text/html" href="//localhost:1313/docs/command/qseow/user-activity-buckets-copy/">
+<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/docs/command/qseow/user-activity-buckets-copy/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>User activity buckets | Ctrl-Q</title>
+<meta name="description" content="User activity buckets are custom properties that indicate how long ago users last logged into Qlik Sense.">
+<meta property="og:url" content="//localhost:1313/docs/command/qseow/user-activity-buckets-copy/">
+  <meta property="og:site_name" content="Ctrl-Q">
+  <meta property="og:title" content="User activity buckets">
+  <meta property="og:description" content="User activity buckets are custom properties that indicate how long ago users last logged into Qlik Sense.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="User activity buckets">
+  <meta itemprop="description" content="User activity buckets are custom properties that indicate how long ago users last logged into Qlik Sense.">
+  <meta itemprop="wordCount" content="1880">
+  <meta itemprop="keywords" content="User,License,Custom-Property">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="User activity buckets">
+  <meta name="twitter:description" content="User activity buckets are custom properties that indicate how long ago users last logged into Qlik Sense.">
+<link href="/scss/main.css" rel="stylesheet">
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/css/prism.css"/>
+<script defer data-domain="ctrl-q.ptarmiganlabs.com" src="https://plausible.io/js/script.js"></script>
+
+<link rel="canonical" href="//localhost:1313/docs/command/qseow/user-activity-buckets-copy/" />
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar js-navbar-scroll" data-bs-theme="dark">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"></span><span class="navbar-brand__name">Ctrl-Q</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/about/"><span>About</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/docs/"><span>Docs</span></a>
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+This is the multi-page printable view of this section.
+<a href="#" onclick="print();return false;">Click here to print</a>.
+</p><p>
+<a href="/docs/command/qseow/user-activity-buckets-copy/">Return to the regular view of this page</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">User activity buckets</h1>
+<div class="lead">User activity buckets are custom properties that indicate how long ago users last logged into Qlik Sense.</div>
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+
+    </ul>
+
+
+<div class="content">
+      <p><em>Page contents:</em></p>
+<ul>
+<li><a href="/docs/command/qseow/user-activity-buckets-copy/#overview">Overview</a>
+<ul>
+<li><a href="/docs/command/qseow/user-activity-buckets-copy/#the-different-steps-of-the-command">The different steps of the command</a></li>
+</ul>
+</li>
+<li><a href="/docs/command/qseow/user-activity-buckets-copy/#syntax">Syntax</a></li>
+<li><a href="/docs/command/qseow/user-activity-buckets-copy/#example">Example</a></li>
+</ul>
+<hr>
+<h2 id="overview">Overview</h2>
+<p>User activity buckets are custom properties that indicate how long ago users last logged into Qlik Sense. The <code>qseow user-activity-bucket-cp-create</code> command creates a custom property if it doesn&rsquo;t already exists and populates it with values (&ldquo;activity buckets&rdquo;) indicating how long ago users last logged into Sense.</p>
+<p>There are several options available to customize the behavior of the command, such as the name of the custom property, the activity buckets to be defined, the user directories whose users will be updated with activity info, and the license types to consider when calculating user activity.</p>
+<p>The command can be run in dry-run mode to see what would be done without actually creating or updating anything.</p>
+<p>The command has default values for most options, making it easy to run without specifying any options. The default values can be overridden by specifying the desired values as command line options.</p>
+<h3 id="the-different-steps-of-the-command">The different steps of the command</h3>
+<ul>
+<li><strong>Step 1: Create custom property for tracking user activity in QMC</strong>
+<ul>
+<li>Retrieve all custom properties from QSEoW.</li>
+<li>Create the custom property if it doesn&rsquo;t already exist.</li>
+<li>The <code>--force</code> option can be used to forcibly overwrite and replace the custom property and its values if the custom property already exists. Only needed if the custom property already exists and has choice values that differ from the ones passed in via the command line.</li>
+</ul>
+</li>
+<li><strong>Step 2: Getting user activity for each license type enabled via the command line</strong>
+<ul>
+<li>Retrieve user activity records for each license type enabled via the command line.</li>
+<li>The command supports the following license types: <code>analyzer</code>, <code>analyzer-time</code>, <code>login</code>, <code>professional</code>, <code>user</code></li>
+</ul>
+</li>
+<li><strong>Step 3: Calculate days since last activity for each user</strong></li>
+<li><strong>Step 4: Get user data from Sense, one batch at a time</strong>
+<ul>
+<li>Batching is done to avoid overloading the Sense repository API.</li>
+<li>The <code>--update-batch-size</code> option can be used to specify batch size. Valid values are 1-25.</li>
+<li>The <code>--update-batch-sleep</code> option can be used to specify how long to wait before continuing after each batch of users has been updated in Sense. 0 = no wait.</li>
+</ul>
+</li>
+<li><strong>Step 5: Update user activity custom property in Qlik Sense</strong>
+<ul>
+<li>Write activity data for each user back into Sense.</li>
+<li>The command will update the custom property in batches of 25 users (default batch size).</li>
+<li>The <code>--update-user-sleep</code> option can be used to specify how long to wait after updating each user in the Qlik Sense repository, i.e. within the batch. 0 = no wait.</li>
+</ul>
+</li>
+</ul>
+<p>Note that step 5 may take a while to complete on a large system with many users.</p>
+<h2 id="syntax">Syntax</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>PS C:\tools\ctrl-q&gt; .\ctrl-q.exe qseow user-activity-bucket-cp-create --help
+</span></span><span style="display:flex;"><span>Usage: ctrl-q qseow user-activity-bucket-cp-create [options]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>create custom property and populate it with values (&#34;activity buckets&#34;) indicating how long ago users last logged into Sense
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Options:
+</span></span><span style="display:flex;"><span>  --log-level &lt;level&gt;                    log level (choices: &#34;error&#34;, &#34;warn&#34;, &#34;info&#34;, &#34;verbose&#34;, &#34;debug&#34;, &#34;silly&#34;, default: &#34;info&#34;)
+</span></span><span style="display:flex;"><span>  --host &lt;host&gt;                          Qlik Sense server IP/FQDN
+</span></span><span style="display:flex;"><span>  --port &lt;port&gt;                          Qlik Sense repository API port (default: &#34;4242&#34;)
+</span></span><span style="display:flex;"><span>  --virtual-proxy &lt;prefix&gt;               Qlik Sense virtual proxy prefix (default: &#34;&#34;)
+</span></span><span style="display:flex;"><span>  --secure &lt;true|false&gt;                  https connection to Qlik Sense must use correct certificate. Invalid certificates will result in rejected/failed connection. (default: true)
+</span></span><span style="display:flex;"><span>  --auth-user-dir &lt;directory&gt;            user directory for user to connect with (default: &#34;Internal&#34;)
+</span></span><span style="display:flex;"><span>  --auth-user-id &lt;userid&gt;                user ID for user to connect with (default: &#34;sa_repository&#34;)
+</span></span><span style="display:flex;"><span>  -a, --auth-type &lt;type&gt;                 authentication type (choices: &#34;cert&#34;, &#34;jwt&#34;, default: &#34;cert&#34;)
+</span></span><span style="display:flex;"><span>  --auth-cert-file &lt;file&gt;                Qlik Sense certificate file (exported from QMC) (default: &#34;./cert/client.pem&#34;)
+</span></span><span style="display:flex;"><span>  --auth-cert-key-file &lt;file&gt;            Qlik Sense certificate key file (exported from QMC) (default: &#34;./cert/client_key.pem&#34;)
+</span></span><span style="display:flex;"><span>  --auth-root-cert-file &lt;file&gt;           Qlik Sense root certificate file (exported from QMC) (default: &#34;./cert/root.pem&#34;)
+</span></span><span style="display:flex;"><span>  --jwt &lt;JWT&gt;                            JSON Web Token (JWT) to use for authenticating with Qlik Sense (default: &#34;&#34;)
+</span></span><span style="display:flex;"><span>  --user-directory &lt;name...&gt;             name of user directories whose users will be updated with activity info (default: &#34;&#34;)
+</span></span><span style="display:flex;"><span>  --license-type &lt;name...&gt;               license type(s) to consider when calculating user activity. Default is all license types. (choices: &#34;analyzer&#34;, &#34;analyzer-time&#34;, &#34;login&#34;, &#34;professional&#34;, &#34;user&#34;, default:
+</span></span><span style="display:flex;"><span>                                         [&#34;analyzer&#34;,&#34;analyzer-time&#34;,&#34;login&#34;,&#34;professional&#34;,&#34;user&#34;])
+</span></span><span style="display:flex;"><span>  --custom-property-name &lt;name&gt;          name of custom property that will hold user activity buckets
+</span></span><span style="display:flex;"><span>  --force                                forcibly overwrite and replace custom property and its values if the custom property already exists
+</span></span><span style="display:flex;"><span>  --activity-buckets &lt;buckets...&gt;        custom property values/user activity buckets to be defined. A comma or space separated list of numbers, representing days since last login. (default:
+</span></span><span style="display:flex;"><span>                                         [&#34;1&#34;,&#34;7&#34;,&#34;14&#34;,&#34;30&#34;,&#34;90&#34;,&#34;180&#34;,&#34;365&#34;])
+</span></span><span style="display:flex;"><span>  --update-batch-size &lt;number of users&gt;  number of users to update in each batch when writing user activity info back into Sense. Valid values are 1-25. (default: 25)
+</span></span><span style="display:flex;"><span>  --update-batch-sleep &lt;seconds&gt;         Wait this long before continuing after each batch of users has been updated in Sense. 0 = no wait. (default: 3)
+</span></span><span style="display:flex;"><span>  --update-user-sleep &lt;milliseconds&gt;     Wait this long after updating each user in the Qlik Sense repository. 0 = no wait. (default: 500)
+</span></span><span style="display:flex;"><span>  --dry-run                              do a dry run, i.e. do not create or update anything - just show what would be done
+</span></span><span style="display:flex;"><span>  -h, --help                             display help for command
+</span></span></code></pre></div><h2 id="example">Example</h2>
+<p>In this example the largest bucket is set to 14 days, meaning that users who have logged in more than 14 days ago will be placed in a bucket called <code>14+</code>.</p>
+<p>The command will create a custom property named <code>User_Activity_Bucket</code> and populate it with values indicating how long ago users last logged into Sense.</p>
+<p>The <code>--force</code> option is used to forcibly overwrite and replace the custom property and its values if the custom property already exists. This is only needed if the custom property already exists and has choice values that differ from the ones passed in via the command line.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>.\ctrl-q.exe qseow user-activity-bucket-cp-create `
+</span></span><span style="display:flex;"><span>  --host pro2-win1.lab.ptarmiganlabs.net `
+</span></span><span style="display:flex;"><span>  --custom-property-name User_Activity_Bucket `
+</span></span><span style="display:flex;"><span>  --activity-buckets 1 7 14 `
+</span></span><span style="display:flex;"><span>  --force
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2024-11-19T06:11:52.344Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:52.344Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:52.344Z info: |
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:52.344Z info: | Version      : 4.1.0
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:52.344Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:52.344Z info: |
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:52.344Z info: | Command      : user-activity-bucket-cp-create
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:52.344Z info: |              : create custom property and populate it with values (&#34;activity buckets&#34;) indicating how long ago users last logged into Sense
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:52.344Z info: |
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:52.344Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:52.344Z info: |
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:52.344Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:52.344Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:52.344Z info:
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:52.359Z info: == Step 1: Create custom property for tracking user activity in QMC
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:52.719Z info:   Successfully retrieved 38 custom properties from QSEoW
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:54.032Z info: Successfully updated custom property &#34;User_Activity_Bucket&#34;
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:54.188Z info:
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:54.188Z info: == Step 2 : Getting user activity for each license type enabled via the command line...
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:54.344Z info:   Successfully retrieved 20 user activity records for license type &#34;Analyzer&#34; from QSEoW
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:54.485Z info:   Successfully retrieved 0 user activity records for license type &#34;Analyzer Time&#34; from QSEoW
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:54.641Z info:   Successfully retrieved 0 user activity records for license type &#34;Login&#34; from QSEoW
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:54.797Z info:   Successfully retrieved 20 user activity records for license type &#34;Professional&#34; from QSEoW
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:54.969Z info:   Successfully retrieved 0 user activity records for license type &#34;User&#34; from QSEoW
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:54.969Z info:
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:54.969Z info: == Step 3 : Calculate days since last activity for each user...
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:54.969Z info:
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:54.969Z info: == Step 4 : Get user data from Sense, one batch at a time (each batch is 25 users)...
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:54.969Z info:   Total number of users to process: 40
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:54.969Z info:   Total number of batches: 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:54.969Z info:
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:54.969Z info:   &gt;&gt; Batch 1 of 2 (users 1 to 25)
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:54.969Z info:      Calculating activity buckets
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:55.266Z info:      Preparing user activity custom property
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:55.266Z info:      Pausing 3 seconds before next batch...
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:58.292Z info:
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:58.292Z info:   &gt;&gt; Batch 2 of 2 (users 26 to 50)
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:58.292Z info:      Calculating activity buckets
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:58.558Z info:      Preparing user activity custom property
+</span></span><span style="display:flex;"><span>2024-11-19T06:11:58.558Z info:      Pausing 3 seconds before next batch...
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:01.584Z info:
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:01.584Z info: Done calculating activity buckets for all users. Proceeding to update user activity custom property in Qlik Sense.
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:01.584Z info:
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:01.584Z info: == Step 5 : Update user activity custom property in Qlik Sense.
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:01.584Z info:   Number of batches to process: 2 of 25 users each.
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:01.584Z info:   Storing activity buckets for batch 1 of 2 in Sense repository.
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:01.896Z info:     Updated user 1 of 40, &#34;LAB\testuser_40&#34; in batch 1 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:03.334Z info:     Updated user 2 of 40, &#34;LAB\testuser_34&#34; in batch 1 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:04.147Z info:     Updated user 3 of 40, &#34;LAB\testuser_25&#34; in batch 1 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:04.943Z info:     Updated user 4 of 40, &#34;LAB\testuser_38&#34; in batch 1 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:05.772Z info:     Updated user 5 of 40, &#34;LAB\testuser_29&#34; in batch 1 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:06.569Z info:     Updated user 6 of 40, &#34;LAB\testuser_30&#34; in batch 1 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:07.443Z info:     Updated user 7 of 40, &#34;LAB\testuser_24&#34; in batch 1 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:08.241Z info:     Updated user 8 of 40, &#34;LAB\testuser_31&#34; in batch 1 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:09.053Z info:     Updated user 9 of 40, &#34;LAB\testuser_32&#34; in batch 1 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:09.943Z info:     Updated user 10 of 40, &#34;LAB\testuser_8&#34; in batch 1 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:10.819Z info:     Updated user 11 of 40, &#34;LAB\testuser_17&#34; in batch 1 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:11.787Z info:     Updated user 12 of 40, &#34;LAB\testuser_10&#34; in batch 1 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:12.740Z info:     Updated user 13 of 40, &#34;LAB\testuser_7&#34; in batch 1 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:13.865Z info:     Updated user 14 of 40, &#34;LAB\testuser_19&#34; in batch 1 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:14.803Z info:     Updated user 15 of 40, &#34;LAB\testuser_28&#34; in batch 1 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:15.771Z info:     Updated user 16 of 40, &#34;LAB\testuser_23&#34; in batch 1 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:16.715Z info:     Updated user 17 of 40, &#34;LAB\testuser_33&#34; in batch 1 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:17.663Z info:     Updated user 18 of 40, &#34;LAB\testuser_37&#34; in batch 1 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:18.665Z info:     Updated user 19 of 40, &#34;LAB\testuser_21&#34; in batch 1 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:19.665Z info:     Updated user 20 of 40, &#34;LAB\testuser_39&#34; in batch 1 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:20.664Z info:     Updated user 21 of 40, &#34;LAB\testuser_35&#34; in batch 1 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:21.765Z info:     Updated user 22 of 40, &#34;LAB\testuser_36&#34; in batch 1 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:22.757Z info:     Updated user 23 of 40, &#34;LAB\testuser_22&#34; in batch 1 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:23.710Z info:     Updated user 24 of 40, &#34;LAB\testuser_26&#34; in batch 1 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:24.641Z info:     Updated user 25 of 40, &#34;LAB\testuser_27&#34; in batch 1 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:25.158Z info:   Storing activity buckets for batch 2 of 2 in Sense repository.
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:25.610Z info:     Updated user 26 of 40, &#34;LAB\testuser_11&#34; in batch 2 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:26.516Z info:     Updated user 27 of 40, &#34;LAB\testuser_2&#34; in batch 2 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:27.532Z info:     Updated user 28 of 40, &#34;LAB\testuser_20&#34; in batch 2 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:28.815Z info:     Updated user 29 of 40, &#34;LAB\goran&#34; in batch 2 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:29.938Z info:     Updated user 30 of 40, &#34;LAB\testuser_12&#34; in batch 2 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:31.032Z info:     Updated user 31 of 40, &#34;LAB\testuser_1&#34; in batch 2 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:32.115Z info:     Updated user 32 of 40, &#34;LAB\testuser_4&#34; in batch 2 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:33.079Z info:     Updated user 33 of 40, &#34;LAB\testuser_15&#34; in batch 2 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:34.017Z info:     Updated user 34 of 40, &#34;LAB\testuser_16&#34; in batch 2 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:35.063Z info:     Updated user 35 of 40, &#34;LAB\testuser_3&#34; in batch 2 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:36.094Z info:     Updated user 36 of 40, &#34;LAB\testuser_18&#34; in batch 2 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:37.236Z info:     Updated user 37 of 40, &#34;LAB\testuser_9&#34; in batch 2 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:38.266Z info:     Updated user 38 of 40, &#34;LAB\testuser_6&#34; in batch 2 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:39.267Z info:     Updated user 39 of 40, &#34;LAB\testuser_14&#34; in batch 2 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:40.282Z info:     Updated user 40 of 40, &#34;LAB\testuser_13&#34; in batch 2 of 2
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:40.798Z info:
+</span></span><span style="display:flex;"><span>2024-11-19T06:12:40.798Z info: Done updating user activity custom property in Qlik Sense.
+</span></span></code></pre></div><p>In this screeshot from the QMC we can see the custom property <code>User_Activity_Bucket</code> for some users.<br>
+A couple of the users have been active during the last day, while have been inactive for more than 14 days.</p>
+<p><img alt="User activity buckets in QMC" src="/img/ctrl-q_user-activity-bucket_qmc-1.png"></p>
+
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Ptarmigan Labs Newsletter" aria-label="Ptarmigan Labs Newsletter">
+    <a target="_blank" rel="noopener" href="https://ptarmiganlabs.com/#/portal/signup" aria-label="Ptarmigan Labs Newsletter">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="LinkedIn" aria-label="LinkedIn">
+    <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/gorsan/" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="GitHub" aria-label="GitHub">
+    <a target="_blank" rel="noopener" href="https://github.com/ptarmiganlabs/ctrl-q" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Get in touch with Ptarmigan Labs" aria-label="Get in touch with Ptarmigan Labs">
+    <a target="_blank" rel="noopener" href="mailto://info@ptarmiganlabs.com" aria-label="Get in touch with Ptarmigan Labs">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">Ptarmigan Labs AB</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span><span class="ms-2"><a href="https://ptarmiganlabs.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></span><p class="td-footer__about mt-2"><a href="/about/">About Ctrl-Q</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.js"></script>
+<script src='/js/prism.js'></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

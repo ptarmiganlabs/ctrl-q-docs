@@ -141,7 +141,8 @@ Options:
 PS C:\tools\ctrl-q> .\ctrl-q.exe qseow master-item-dim-delete --help
 Usage: ctrl-q qseow master-item-dim-delete [options]
 
-delete master dimension(s)                                                                                                                                                                                           
+delete master dimension(s)
+
 Options:
   --log-level <level>           log level (choices: "error", "warn", "info", "verbose", "debug", "silly", default: "info")
   --host <host>                 Qlik Sense server IP/FQDN
@@ -177,21 +178,44 @@ Options:
 ```
 
 ```text
-2024-03-12T08:37:39.057Z info: -----------------------------------------------------------
-2024-03-12T08:37:39.057Z info: | Ctrl-Q
-2024-03-12T08:37:39.057Z info: |
-2024-03-12T08:37:39.057Z info: | Version      : 3.16.0
-2024-03-12T08:37:39.057Z info: | Log level    : info
-2024-03-12T08:37:39.057Z info: |
-2024-03-12T08:37:39.057Z info: | Command      : master-item-dim-delete
-2024-03-12T08:37:39.057Z info: |              : delete master dimension(s)
-2024-03-12T08:37:39.057Z info: |
-2024-03-12T08:37:39.057Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
-2024-03-12T08:37:39.057Z info: |
-2024-03-12T08:37:39.057Z info: | https://github.com/ptarmiganlabs/ctrl-q
-2024-03-12T08:37:39.057Z info: ----------------------------------------------------------
-2024-03-12T08:37:39.057Z info:
-2024-03-12T08:37:39.057Z info: Delete master dimensions
-2024-03-12T08:37:39.542Z info: (1/2) Deleted master item dimension "Country", id=d404a273-01d4-4ca4-975e-2dea2cce89ee in app "a3e0f5d2-000a-464f-998d-33d333b175d7"
-2024-03-12T08:37:39.542Z info: (2/2) Deleted master item dimension "Sales month", id=0e85b6af-1ddb-4c2d-bd2e-b0e80464e8cf in app "a3e0f5d2-000a-464f-998d-33d333b175d7"
+2024-11-19T06:50:04.566Z info: -----------------------------------------------------------
+2024-11-19T06:50:04.582Z info: | Ctrl-Q
+2024-11-19T06:50:04.582Z info: |
+2024-11-19T06:50:04.582Z info: | Version      : 4.1.0
+2024-11-19T06:50:04.582Z info: | Log level    : info
+2024-11-19T06:50:04.582Z info: |
+2024-11-19T06:50:04.582Z info: | Command      : master-item-dim-delete
+2024-11-19T06:50:04.582Z info: |              : delete master dimension(s)
+2024-11-19T06:50:04.582Z info: |
+2024-11-19T06:50:04.582Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
+2024-11-19T06:50:04.582Z info: |
+2024-11-19T06:50:04.582Z info: | https://github.com/ptarmiganlabs/ctrl-q
+2024-11-19T06:50:04.582Z info: ----------------------------------------------------------
+2024-11-19T06:50:04.582Z info:
+2024-11-19T06:50:04.582Z info: Delete master dimensions
+2024-11-19T06:50:05.644Z info: (1/2) Deleted master item dimension "Country", id=638d026b-27a1-49ea-9ba0-6faa18eb21a6 in app "2933711d-6638-41d4-a2d2-6dd2d965208b"
+2024-11-19T06:50:05.657Z info: (2/2) Deleted master item dimension "Sales month", id=29aab459-f548-4dbc-ad54-f658d701e8dc in app "2933711d-6638-41d4-a2d2-6dd2d965208b"
+```
+
+Running the same command again and nothing will be deleted:
+
+```text
+2024-11-19T06:50:25.475Z info: -----------------------------------------------------------
+2024-11-19T06:50:25.475Z info: | Ctrl-Q
+2024-11-19T06:50:25.475Z info: |
+2024-11-19T06:50:25.475Z info: | Version      : 4.1.0
+2024-11-19T06:50:25.475Z info: | Log level    : info
+2024-11-19T06:50:25.475Z info: |
+2024-11-19T06:50:25.475Z info: | Command      : master-item-dim-delete
+2024-11-19T06:50:25.475Z info: |              : delete master dimension(s)
+2024-11-19T06:50:25.475Z info: |
+2024-11-19T06:50:25.475Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
+2024-11-19T06:50:25.475Z info: |
+2024-11-19T06:50:25.475Z info: | https://github.com/ptarmiganlabs/ctrl-q
+2024-11-19T06:50:25.475Z info: ----------------------------------------------------------
+2024-11-19T06:50:25.475Z info:
+2024-11-19T06:50:25.475Z info: Delete master dimensions
+2024-11-19T06:50:26.115Z warn: Master item dimension "Country" not found
+2024-11-19T06:50:26.115Z warn: Master item dimension "Sales month" not found
+2024-11-19T06:50:26.115Z warn: No matching master item dimensions found
 ```

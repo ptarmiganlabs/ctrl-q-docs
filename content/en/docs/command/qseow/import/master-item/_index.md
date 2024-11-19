@@ -130,34 +130,34 @@ Now let's run the command.
 ```
 
 ```text
-2024-03-12T09:30:47.416Z info: -----------------------------------------------------------
-2024-03-12T09:30:47.416Z info: | Ctrl-Q
-2024-03-12T09:30:47.416Z info: |
-2024-03-12T09:30:47.416Z info: | Version      : 3.16.0
-2024-03-12T09:30:47.416Z info: | Log level    : info
-2024-03-12T09:30:47.416Z info: |
-2024-03-12T09:30:47.416Z info: | Command      : master-item-import
-2024-03-12T09:30:47.416Z info: |              : create master items based on definitions in a file on disk
-2024-03-12T09:30:47.416Z info: |
-2024-03-12T09:30:47.416Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
-2024-03-12T09:30:47.416Z info: |
-2024-03-12T09:30:47.416Z info: | https://github.com/ptarmiganlabs/ctrl-q
-2024-03-12T09:30:47.416Z info: ----------------------------------------------------------
-2024-03-12T09:30:47.416Z info:
-2024-03-12T09:30:47.430Z info: Import master items from definitions in Excel file "./ctrl-q-master-items.xlsx"
-2024-03-12T09:30:47.993Z info: (1/12) Updated existing measure "No. of sold units"
-2024-03-12T09:30:49.009Z info: (2/12) Updated existing measure "No. of sold units (LY)"
-2024-03-12T09:30:50.041Z info: (3/12) Created new measure "Revenue EUR"
-2024-03-12T09:30:51.071Z info: (4/12) Updated existing measure "Revenue EUR (LY)"
-2024-03-12T09:30:52.087Z info: (5/12) Updated existing measure "Profit EUR"
-2024-03-12T09:30:53.102Z warn: (6/12) Found an unknown master item type: "measur". Ignoring this line in the imported file.
-2024-03-12T09:30:54.119Z info: (7/12) Created new measure "Profit EUR (LY)"
-2024-03-12T09:30:55.165Z info: (8/12) Created new dimension "Country"
-2024-03-12T09:30:56.181Z info: (9/12) Created new dimension "Sales month"
-2024-03-12T09:30:57.227Z info: (10/12) Updated existing dimension "Salesperson"
-2024-03-12T09:30:58.258Z info: (11/12) Updated existing dimension "Color"
-2024-03-12T09:30:59.292Z info: (12/12) Updated existing drill-down dimension "DimDrill"
-2024-03-12T09:31:00.308Z info: Imported 12 master items from Excel file ./ctrl-q-master-items.xlsx
+2024-11-19T07:07:31.858Z info: -----------------------------------------------------------
+2024-11-19T07:07:31.873Z info: | Ctrl-Q
+2024-11-19T07:07:31.873Z info: |
+2024-11-19T07:07:31.873Z info: | Version      : 4.1.0
+2024-11-19T07:07:31.873Z info: | Log level    : info
+2024-11-19T07:07:31.873Z info: |
+2024-11-19T07:07:31.873Z info: | Command      : master-item-import
+2024-11-19T07:07:31.873Z info: |              : create master items based on definitions in a file on disk
+2024-11-19T07:07:31.873Z info: |
+2024-11-19T07:07:31.873Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
+2024-11-19T07:07:31.873Z info: |
+2024-11-19T07:07:31.873Z info: | https://github.com/ptarmiganlabs/ctrl-q
+2024-11-19T07:07:31.873Z info: ----------------------------------------------------------
+2024-11-19T07:07:31.873Z info:
+2024-11-19T07:07:31.873Z info: Import master items from definitions in Excel file "./ctrl-q-master-items.xlsx"
+2024-11-19T07:07:32.936Z info: (1/12) Updated existing measure "No. of sold units"
+2024-11-19T07:07:33.983Z info: (2/12) Updated existing measure "No. of sold units (LY)"
+2024-11-19T07:07:34.998Z info: (3/12) Updated existing measure "Revenue EUR"
+2024-11-19T07:07:36.024Z info: (4/12) Updated existing measure "Revenue EUR (LY)"
+2024-11-19T07:07:37.040Z info: (5/12) Updated existing measure "Profit EUR"
+2024-11-19T07:07:38.068Z warn: (6/12) Found an unknown master item type: "measur". Ignoring this line in the imported file.
+2024-11-19T07:07:39.083Z info: (7/12) Updated existing measure "Profit EUR (LY)"
+2024-11-19T07:07:40.114Z info: (8/12) Updated existing dimension "Country"
+2024-11-19T07:07:41.162Z info: (9/12) Updated existing dimension "Sales month"
+2024-11-19T07:07:42.239Z info: (10/12) Updated existing dimension "Salesperson"
+2024-11-19T07:07:43.271Z info: (11/12) Updated existing dimension "Color"
+2024-11-19T07:07:44.318Z info: (12/12) Updated existing drill-down dimension "DimDrill"
+2024-11-19T07:07:45.334Z info: Imported 12 master items from Excel file ./ctrl-q-master-items.xlsx
 ```
 
 > NOTE: A sample defintions Excel file is [available in the GitHub repository](https://github.com/ptarmiganlabs/ctrl-q/blob/main/testdata/ctrl-q-master-items.xlsx?raw=true). That file contains examples of most combinations of master item types and properties.

@@ -505,24 +505,24 @@ On Windows using PowerShell it can look like this:
 ```
 
 ```text
-2024-03-12T08:44:24.637Z info: -----------------------------------------------------------
-2024-03-12T08:44:24.637Z info: | Ctrl-Q
-2024-03-12T08:44:24.637Z info: |
-2024-03-12T08:44:24.637Z info: | Version      : 3.16.0
-2024-03-12T08:44:24.637Z info: | Log level    : info
-2024-03-12T08:44:24.637Z info: |
-2024-03-12T08:44:24.637Z info: | Command      : task-vis
-2024-03-12T08:44:24.637Z info: |              : visualise task network
-2024-03-12T08:44:24.637Z info: |
-2024-03-12T08:44:24.637Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
-2024-03-12T08:44:24.637Z info: |
-2024-03-12T08:44:24.637Z info: | https://github.com/ptarmiganlabs/ctrl-q
-2024-03-12T08:44:24.637Z info: ----------------------------------------------------------
-2024-03-12T08:44:24.637Z info:
-2024-03-12T08:44:26.684Z info: Using vis.js to visualize tasks, more info at https://github.com/visjs/vis-network
-2024-03-12T08:44:26.684Z info:
-2024-03-12T08:44:26.684Z info: Task visualization server listening on http://localhost:3000
-2024-03-12T08:44:26.684Z info: Press Ctrl-C to quit.
+2024-11-19T07:10:20.307Z info: -----------------------------------------------------------
+2024-11-19T07:10:20.307Z info: | Ctrl-Q
+2024-11-19T07:10:20.307Z info: |
+2024-11-19T07:10:20.307Z info: | Version      : 4.1.0
+2024-11-19T07:10:20.307Z info: | Log level    : info
+2024-11-19T07:10:20.307Z info: |
+2024-11-19T07:10:20.307Z info: | Command      : task-vis
+2024-11-19T07:10:20.307Z info: |              : visualise task network
+2024-11-19T07:10:20.307Z info: |
+2024-11-19T07:10:20.307Z info: | Run Ctrl-Q with the '--help' option to see a list of all available options for this command.
+2024-11-19T07:10:20.307Z info: |
+2024-11-19T07:10:20.307Z info: | https://github.com/ptarmiganlabs/ctrl-q
+2024-11-19T07:10:20.307Z info: ----------------------------------------------------------
+2024-11-19T07:10:20.307Z info:
+2024-11-19T07:10:22.439Z info: Using vis.js to visualize tasks, more info at https://github.com/visjs/vis-network
+2024-11-19T07:10:22.439Z info:
+2024-11-19T07:10:22.439Z info: Task visualization server listening on http://localhost:3000
+2024-11-19T07:10:22.439Z info: Press Ctrl-C to quit.
 ```
 
 Ctrl-clicking (on Windows. Use Cmd-Clik on macOS) on the link will open the network graph in a browser:

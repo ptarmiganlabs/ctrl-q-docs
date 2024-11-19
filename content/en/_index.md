@@ -51,7 +51,7 @@ Works with both client-managed Qlik Sense and Qlik Sense Cloud.
 
 {{% blocks/section color="dark" type="row" %}}
 
-{{% blocks/feature icon="fa-lightbulb" title="Latest release: 4.0" %}}
+{{% blocks/feature icon="fa-lightbulb" title="Latest release: 4.1" %}}
 Added support for Qlik Sense Cloud.  
 Add command to create user activity custom properties.
 

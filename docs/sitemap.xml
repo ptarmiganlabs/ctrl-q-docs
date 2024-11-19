@@ -42,7 +42,7 @@
     <changefreq>monthly</changefreq>
   </url><url>
     <loc>https://ctrl-q.ptarmiganlabs.com/docs/command/qseow/import/master-item/</loc>
-    <lastmod>2024-11-15T18:40:25+01:00</lastmod>
+    <lastmod>2024-11-19T08:22:33+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
     <loc>https://ctrl-q.ptarmiganlabs.com/docs/command/</loc>
@@ -66,7 +66,7 @@
     <changefreq>monthly</changefreq>
   </url><url>
     <loc>https://ctrl-q.ptarmiganlabs.com/docs/command/qseow/dimension/</loc>
-    <lastmod>2024-11-15T21:07:13+01:00</lastmod>
+    <lastmod>2024-11-19T08:22:33+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
     <loc>https://ctrl-q.ptarmiganlabs.com/docs/example/</loc>
@@ -86,11 +86,11 @@
     <changefreq>monthly</changefreq>
   </url><url>
     <loc>https://ctrl-q.ptarmiganlabs.com/docs/command/qseow/session/</loc>
-    <lastmod>2024-11-15T18:40:25+01:00</lastmod>
+    <lastmod>2024-11-19T08:22:33+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
     <loc>https://ctrl-q.ptarmiganlabs.com/docs/command/qseow/task/</loc>
-    <lastmod>2024-11-15T18:40:25+01:00</lastmod>
+    <lastmod>2024-11-19T08:22:33+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
     <loc>https://ctrl-q.ptarmiganlabs.com/docs/command/qseow/variable/</loc>
@@ -106,7 +106,7 @@
     <changefreq>monthly</changefreq>
   </url><url>
     <loc>https://ctrl-q.ptarmiganlabs.com/docs/command/qseow/export/</loc>
-    <lastmod>2024-11-15T18:40:25+01:00</lastmod>
+    <lastmod>2024-11-19T08:22:33+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
     <loc>https://ctrl-q.ptarmiganlabs.com/docs/command/qseow/import/</loc>
@@ -114,10 +114,11 @@
     <changefreq>monthly</changefreq>
   </url><url>
     <loc>https://ctrl-q.ptarmiganlabs.com/docs/command/qseow/user-activity-buckets/</loc>
-    <lastmod>2024-11-15T18:40:25+01:00</lastmod>
+    <lastmod>2024-11-19T08:22:33+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
     <loc>https://ctrl-q.ptarmiganlabs.com/docs/command/qseow/version/</loc>
+    <lastmod>2024-11-19T08:22:33+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
     <loc>https://ctrl-q.ptarmiganlabs.com/about/</loc>
@@ -125,7 +126,7 @@
     <changefreq>monthly</changefreq>
   </url><url>
     <loc>https://ctrl-q.ptarmiganlabs.com/tags/app/</loc>
-    <lastmod>2024-11-15T18:40:25+01:00</lastmod>
+    <lastmod>2024-11-19T08:22:33+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
     <loc>https://ctrl-q.ptarmiganlabs.com/tags/bookmark/</loc>
@@ -145,11 +146,11 @@
     <changefreq>monthly</changefreq>
   </url><url>
     <loc>https://ctrl-q.ptarmiganlabs.com/tags/custom-property/</loc>
-    <lastmod>2024-11-15T18:40:25+01:00</lastmod>
+    <lastmod>2024-11-19T08:22:33+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
     <loc>https://ctrl-q.ptarmiganlabs.com/tags/export/</loc>
-    <lastmod>2024-11-15T18:40:25+01:00</lastmod>
+    <lastmod>2024-11-19T08:22:33+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
     <loc>https://ctrl-q.ptarmiganlabs.com/tags/formatting/</loc>
@@ -161,15 +162,15 @@
     <changefreq>monthly</changefreq>
   </url><url>
     <loc>https://ctrl-q.ptarmiganlabs.com/tags/license/</loc>
-    <lastmod>2024-11-15T18:40:25+01:00</lastmod>
+    <lastmod>2024-11-19T08:22:33+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
     <loc>https://ctrl-q.ptarmiganlabs.com/tags/master-item/</loc>
-    <lastmod>2024-11-15T21:07:13+01:00</lastmod>
+    <lastmod>2024-11-19T08:22:33+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
     <loc>https://ctrl-q.ptarmiganlabs.com/tags/qvf/</loc>
-    <lastmod>2024-11-15T18:40:25+01:00</lastmod>
+    <lastmod>2024-11-19T08:22:33+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
     <loc>https://ctrl-q.ptarmiganlabs.com/tags/script/</loc>
@@ -185,15 +186,15 @@
     <changefreq>monthly</changefreq>
   </url><url>
     <loc>https://ctrl-q.ptarmiganlabs.com/tags/</loc>
-    <lastmod>2024-11-15T21:07:13+01:00</lastmod>
+    <lastmod>2024-11-19T08:22:33+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
     <loc>https://ctrl-q.ptarmiganlabs.com/tags/task/</loc>
-    <lastmod>2024-11-15T18:40:25+01:00</lastmod>
+    <lastmod>2024-11-19T08:22:33+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
     <loc>https://ctrl-q.ptarmiganlabs.com/tags/user/</loc>
-    <lastmod>2024-11-15T18:40:25+01:00</lastmod>
+    <lastmod>2024-11-19T08:22:33+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url><url>
     <loc>https://ctrl-q.ptarmiganlabs.com/tags/variable/</loc>
@@ -201,6 +202,7 @@
     <changefreq>monthly</changefreq>
   </url><url>
     <loc>https://ctrl-q.ptarmiganlabs.com/tags/version/</loc>
+    <lastmod>2024-11-19T08:22:33+01:00</lastmod>
     <changefreq>monthly</changefreq>
   </url>
 </urlset>

@@ -2,121 +2,121 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Ctrl-Q</title>
-    <link>//localhost:1313/tags/</link>
+    <link>https://ctrl-q.ptarmiganlabs.com/tags/</link>
     <description>Recent content in Tags on Ctrl-Q</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ctrl-q.ptarmiganlabs.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>App</title>
-      <link>//localhost:1313/tags/app/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/app/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/app/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/app/</guid>
       <description></description>
     </item>
     <item>
       <title>Bookmark</title>
-      <link>//localhost:1313/tags/bookmark/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/bookmark/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/bookmark/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/bookmark/</guid>
       <description></description>
     </item>
     <item>
       <title>Colors</title>
-      <link>//localhost:1313/tags/colors/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/colors/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/colors/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/colors/</guid>
       <description></description>
     </item>
     <item>
       <title>Custom-Property</title>
-      <link>//localhost:1313/tags/custom-property/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/custom-property/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/custom-property/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/custom-property/</guid>
       <description></description>
     </item>
     <item>
       <title>Export</title>
-      <link>//localhost:1313/tags/export/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/export/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/export/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/export/</guid>
       <description></description>
     </item>
     <item>
       <title>Formatting</title>
-      <link>//localhost:1313/tags/formatting/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/formatting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/formatting/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/formatting/</guid>
       <description></description>
     </item>
     <item>
       <title>Import</title>
-      <link>//localhost:1313/tags/import/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/import/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/import/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/import/</guid>
       <description></description>
     </item>
     <item>
       <title>License</title>
-      <link>//localhost:1313/tags/license/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/license/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/license/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/license/</guid>
       <description></description>
     </item>
     <item>
       <title>Master-Item</title>
-      <link>//localhost:1313/tags/master-item/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/master-item/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/master-item/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/master-item/</guid>
       <description></description>
     </item>
     <item>
       <title>Qvf</title>
-      <link>//localhost:1313/tags/qvf/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/qvf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/qvf/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/qvf/</guid>
       <description></description>
     </item>
     <item>
       <title>Script</title>
-      <link>//localhost:1313/tags/script/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/script/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/script/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/script/</guid>
       <description></description>
     </item>
     <item>
       <title>Security</title>
-      <link>//localhost:1313/tags/security/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/security/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/security/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/security/</guid>
       <description></description>
     </item>
     <item>
       <title>Task</title>
-      <link>//localhost:1313/tags/task/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/task/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/task/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/task/</guid>
       <description></description>
     </item>
     <item>
       <title>User</title>
-      <link>//localhost:1313/tags/user/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/user/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/user/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/user/</guid>
       <description></description>
     </item>
     <item>
       <title>Variable</title>
-      <link>//localhost:1313/tags/variable/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/variable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/variable/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/variable/</guid>
       <description></description>
     </item>
     <item>
       <title>Version</title>
-      <link>//localhost:1313/tags/version/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/tags/version/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/version/</guid>
+      <guid>https://ctrl-q.ptarmiganlabs.com/tags/version/</guid>
       <description></description>
     </item>
   </channel>

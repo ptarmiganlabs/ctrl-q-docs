@@ -51,9 +51,9 @@ Works with both client-managed Qlik Sense and Qlik Sense Cloud.
 
 {{% blocks/section color="dark" type="row" %}}
 
-{{% blocks/feature icon="fa-lightbulb" title="Latest release: 4.1" %}}
-Added support for Qlik Sense Cloud.  
-Add command to create user activity custom properties.
+{{% blocks/feature icon="fa-lightbulb" title="Latest release: 4.3" %}}
+Publish and replace scrambled apps.  
+Enables super easy creation of anonymised demo apps as part of QMC load chains!
 
 Available on [GitHub](https://github.com/ptarmiganlabs/ctrl-q/releases).
 {{% /blocks/feature %}}

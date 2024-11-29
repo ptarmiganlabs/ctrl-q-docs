@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Export on Ctrl-Q</title>
-    <link>//localhost:1313/tags/export/</link>
+    <link>https://ctrl-q.ptarmiganlabs.com/tags/export/</link>
     <description>Recent content in Export on Ctrl-Q</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="//localhost:1313/tags/export/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ctrl-q.ptarmiganlabs.com/tags/export/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Export</title>
-      <link>//localhost:1313/docs/command/qseow/export/</link>
+      <link>https://ctrl-q.ptarmiganlabs.com/docs/command/qseow/export/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/command/qseow/export/</guid>
-      <description>&lt;!-- &#xA;&#xA;&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;&#xA;&lt;p&gt;This is a placeholder page that shows you how to use this template site.&lt;/p&gt;&#xA;&#xA;&lt;/div&gt;&#xA; --&gt;&#xA;&lt;p&gt;&lt;em&gt;Page contents:&lt;/em&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/command/qseow/export/#export-tasks-to-excel-file&#34;&gt;Export tasks to Excel file&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/command/qseow/export/#export-apps-to-qvf-files&#34;&gt;Export apps to QVF files&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/command/qseow/export/#syntax&#34;&gt;Syntax&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/command/qseow/export/#example&#34;&gt;Example&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;export-tasks-to-excel-file&#34;&gt;Export tasks to Excel file&lt;/h2&gt;&#xA;&lt;p&gt;See this page for details on how to export task definitions to a disk file:&lt;br&gt;&#xA;&lt;a href=&#34;//localhost:1313/docs/command/task/#save-task-to-disk-file-in-tabular-format&#34;&gt;Save task to disk in tabular format&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;export-apps-to-qvf-files&#34;&gt;Export apps to QVF files&lt;/h2&gt;&#xA;&lt;p&gt;This command exports Sense apps to QVF files, with or without data.&lt;/p&gt;</description>
+      <guid>https://ctrl-q.ptarmiganlabs.com/docs/command/qseow/export/</guid>
+      <description>&lt;!-- &#xA;&#xA;&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;&#xA;&lt;p&gt;This is a placeholder page that shows you how to use this template site.&lt;/p&gt;&#xA;&#xA;&lt;/div&gt;&#xA; --&gt;&#xA;&lt;p&gt;&lt;em&gt;Page contents:&lt;/em&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ctrl-q.ptarmiganlabs.com/docs/command/qseow/export/#export-tasks-to-excel-file&#34;&gt;Export tasks to Excel file&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ctrl-q.ptarmiganlabs.com/docs/command/qseow/export/#export-apps-to-qvf-files&#34;&gt;Export apps to QVF files&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ctrl-q.ptarmiganlabs.com/docs/command/qseow/export/#syntax&#34;&gt;Syntax&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ctrl-q.ptarmiganlabs.com/docs/command/qseow/export/#example&#34;&gt;Example&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;export-tasks-to-excel-file&#34;&gt;Export tasks to Excel file&lt;/h2&gt;&#xA;&lt;p&gt;See this page for details on how to export task definitions to a disk file:&lt;br&gt;&#xA;&lt;a href=&#34;https://ctrl-q.ptarmiganlabs.com/docs/command/task/#save-task-to-disk-file-in-tabular-format&#34;&gt;Save task to disk in tabular format&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;export-apps-to-qvf-files&#34;&gt;Export apps to QVF files&lt;/h2&gt;&#xA;&lt;p&gt;This command exports Sense apps to QVF files, with or without data.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

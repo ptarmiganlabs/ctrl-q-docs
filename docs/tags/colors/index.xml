@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Colors on Ctrl-Q</title>
-    <link>https://ctrl-q.ptarmiganlabs.com/tags/colors/</link>
+    <link>//localhost:1313/tags/colors/</link>
     <description>Recent content in Colors on Ctrl-Q</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="https://ctrl-q.ptarmiganlabs.com/tags/colors/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/colors/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Colors &amp; formatting</title>
-      <link>https://ctrl-q.ptarmiganlabs.com/docs/getting-started/colors-formatting/</link>
+      <link>//localhost:1313/docs/getting-started/colors-formatting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ctrl-q.ptarmiganlabs.com/docs/getting-started/colors-formatting/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ctrl-q.ptarmiganlabs.com/docs/getting-started/colors-formatting/#all-oss-plain-text&#34;&gt;All OSs: plain text&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ctrl-q.ptarmiganlabs.com/docs/getting-started/colors-formatting/#windows-10-using-windows-terminal&#34;&gt;Windows 10 using Windows Terminal&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ctrl-q.ptarmiganlabs.com/docs/getting-started/colors-formatting/#macos-and-linux&#34;&gt;macOS and Linux&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&#xA;&#xA;&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;&#xA;&lt;h4 class=&#34;alert-heading&#34;&gt;A note on screenshots and commands&lt;/h4&gt;&#xA;&#xA;    &lt;p&gt;The screenshots in this page may be from older versions of Ctrl-Q.&lt;/p&gt;&#xA;&lt;p&gt;The commands shown together with the screenshots are however updated for the latest version of Ctrl-Q.&lt;/p&gt;&#xA;&#xA;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;Some of the Ctrl-Q commands use colors and emojis to better communicate the information retrieved from Qlik Sense.&lt;br&gt;&#xA;The task tree view is an example, but more commands may use colors in the future.&lt;/p&gt;</description>
+      <guid>//localhost:1313/docs/getting-started/colors-formatting/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/getting-started/colors-formatting/#all-oss-plain-text&#34;&gt;All OSs: plain text&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/getting-started/colors-formatting/#windows-10-using-windows-terminal&#34;&gt;Windows 10 using Windows Terminal&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/getting-started/colors-formatting/#macos-and-linux&#34;&gt;macOS and Linux&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&#xA;&#xA;&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;&#xA;&lt;h4 class=&#34;alert-heading&#34;&gt;A note on screenshots and commands&lt;/h4&gt;&#xA;&#xA;    &lt;p&gt;The screenshots in this page may be from older versions of Ctrl-Q.&lt;/p&gt;&#xA;&lt;p&gt;The commands shown together with the screenshots are however updated for the latest version of Ctrl-Q.&lt;/p&gt;&#xA;&#xA;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;Some of the Ctrl-Q commands use colors and emojis to better communicate the information retrieved from Qlik Sense.&lt;br&gt;&#xA;The task tree view is an example, but more commands may use colors in the future.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

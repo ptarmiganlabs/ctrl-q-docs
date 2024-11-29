@@ -1,11 +1,11 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="alternate" type="text/html" href="https://ctrl-q.ptarmiganlabs.com/docs/command/qseow/scramble-field/printview/">
-<link rel="alternate" type="application/rss&#43;xml" href="https://ctrl-q.ptarmiganlabs.com/docs/command/qseow/scramble-field/index.xml">
-<meta name="robots" content="index, follow">
+<link rel="alternate" type="text/html" href="//localhost:1313/docs/command/qseow/scramble-field/printview/">
+<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/docs/command/qseow/scramble-field/index.xml">
+<meta name="robots" content="noindex, nofollow">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -21,7 +21,7 @@
 
 <title>Scramble fields | Ctrl-Q</title>
 <meta name="description" content="Scramble fields in Sense apps.">
-<meta property="og:url" content="https://ctrl-q.ptarmiganlabs.com/docs/command/qseow/scramble-field/">
+<meta property="og:url" content="//localhost:1313/docs/command/qseow/scramble-field/">
   <meta property="og:site_name" content="Ctrl-Q">
   <meta property="og:title" content="Scramble fields">
   <meta property="og:description" content="Scramble fields in Sense apps.">
@@ -31,12 +31,11 @@
   <meta itemprop="name" content="Scramble fields">
   <meta itemprop="description" content="Scramble fields in Sense apps.">
   <meta itemprop="dateModified" content="2024-11-15T18:40:25+01:00">
-  <meta itemprop="wordCount" content="444">
+  <meta itemprop="wordCount" content="1437">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Scramble fields">
   <meta name="twitter:description" content="Scramble fields in Sense apps.">
-<link rel="preload" href="/scss/main.min.abae8d77a318db1f7dc3e48a2c40326c72fe9d164313d815da846b0968944efc.css" as="style" integrity="sha256-q66Nd6MY2x99w&#43;SKLEAybHL&#43;nRZDE9gV2oRrCWiUTvw=" crossorigin="anonymous">
-<link href="/scss/main.min.abae8d77a318db1f7dc3e48a2c40326c72fe9d164313d815da846b0968944efc.css" rel="stylesheet" integrity="sha256-q66Nd6MY2x99w&#43;SKLEAybHL&#43;nRZDE9gV2oRrCWiUTvw=" crossorigin="anonymous">
+<link href="/scss/main.css" rel="stylesheet">
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -44,7 +43,7 @@
 <link rel="stylesheet" href="/css/prism.css"/>
 <script defer data-domain="ctrl-q.ptarmiganlabs.com" src="https://plausible.io/js/script.js"></script>
 
-<link rel="canonical" href="https://ctrl-q.ptarmiganlabs.com/docs/command/qseow/scramble-field/" />
+<link rel="canonical" href="//localhost:1313/docs/command/qseow/scramble-field/" />
   </head>
   <body class="td-section">
     <header>
@@ -185,8 +184,11 @@
   <ul>
     <li><a href="#scramble-fields-in-sense-app">Scramble fields in Sense app</a>
       <ul>
+        <li><a href="#use-cases">Use cases</a></li>
         <li><a href="#syntax">Syntax</a></li>
-        <li><a href="#example">Example</a></li>
+        <li><a href="#example-scramble-fields-keep-new-app-in-my-work">Example: Scramble fields, keep new app in My Work</a></li>
+        <li><a href="#example-scramble-fields-publish-new-app-to-stream">Example: Scramble fields, publish new app to stream</a></li>
+        <li><a href="#example-scramble-fields-replace-existing-published-app">Example: Scramble fields, replace existing published app</a></li>
       </ul>
     </li>
   </ul>
@@ -196,22 +198,22 @@
             <div class="taxonomy taxonomy-terms-cloud taxo-tags">
       <h5 class="taxonomy-title">Tags</h5>
       <ul class="taxonomy-terms">
-        <li><a class="taxonomy-term" href="https://ctrl-q.ptarmiganlabs.com/tags/app/" data-taxonomy-term="app"><span class="taxonomy-label">App</span><span class="taxonomy-count">3</span></a></li>
-        <li><a class="taxonomy-term" href="https://ctrl-q.ptarmiganlabs.com/tags/bookmark/" data-taxonomy-term="bookmark"><span class="taxonomy-label">Bookmark</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="https://ctrl-q.ptarmiganlabs.com/tags/colors/" data-taxonomy-term="colors"><span class="taxonomy-label">Colors</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="https://ctrl-q.ptarmiganlabs.com/tags/custom-property/" data-taxonomy-term="custom-property"><span class="taxonomy-label">Custom-Property</span><span class="taxonomy-count">2</span></a></li>
-        <li><a class="taxonomy-term" href="https://ctrl-q.ptarmiganlabs.com/tags/export/" data-taxonomy-term="export"><span class="taxonomy-label">Export</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="https://ctrl-q.ptarmiganlabs.com/tags/formatting/" data-taxonomy-term="formatting"><span class="taxonomy-label">Formatting</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="https://ctrl-q.ptarmiganlabs.com/tags/import/" data-taxonomy-term="import"><span class="taxonomy-label">Import</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="https://ctrl-q.ptarmiganlabs.com/tags/license/" data-taxonomy-term="license"><span class="taxonomy-label">License</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="https://ctrl-q.ptarmiganlabs.com/tags/master-item/" data-taxonomy-term="master-item"><span class="taxonomy-label">Master-Item</span><span class="taxonomy-count">4</span></a></li>
-        <li><a class="taxonomy-term" href="https://ctrl-q.ptarmiganlabs.com/tags/qvf/" data-taxonomy-term="qvf"><span class="taxonomy-label">Qvf</span><span class="taxonomy-count">2</span></a></li>
-        <li><a class="taxonomy-term" href="https://ctrl-q.ptarmiganlabs.com/tags/script/" data-taxonomy-term="script"><span class="taxonomy-label">Script</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="https://ctrl-q.ptarmiganlabs.com/tags/security/" data-taxonomy-term="security"><span class="taxonomy-label">Security</span><span class="taxonomy-count">2</span></a></li>
-        <li><a class="taxonomy-term" href="https://ctrl-q.ptarmiganlabs.com/tags/task/" data-taxonomy-term="task"><span class="taxonomy-label">Task</span><span class="taxonomy-count">5</span></a></li>
-        <li><a class="taxonomy-term" href="https://ctrl-q.ptarmiganlabs.com/tags/user/" data-taxonomy-term="user"><span class="taxonomy-label">User</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="https://ctrl-q.ptarmiganlabs.com/tags/variable/" data-taxonomy-term="variable"><span class="taxonomy-label">Variable</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="https://ctrl-q.ptarmiganlabs.com/tags/version/" data-taxonomy-term="version"><span class="taxonomy-label">Version</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/app/" data-taxonomy-term="app"><span class="taxonomy-label">App</span><span class="taxonomy-count">3</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/bookmark/" data-taxonomy-term="bookmark"><span class="taxonomy-label">Bookmark</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/colors/" data-taxonomy-term="colors"><span class="taxonomy-label">Colors</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/custom-property/" data-taxonomy-term="custom-property"><span class="taxonomy-label">Custom-Property</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/export/" data-taxonomy-term="export"><span class="taxonomy-label">Export</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/formatting/" data-taxonomy-term="formatting"><span class="taxonomy-label">Formatting</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/import/" data-taxonomy-term="import"><span class="taxonomy-label">Import</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/license/" data-taxonomy-term="license"><span class="taxonomy-label">License</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/master-item/" data-taxonomy-term="master-item"><span class="taxonomy-label">Master-Item</span><span class="taxonomy-count">4</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/qvf/" data-taxonomy-term="qvf"><span class="taxonomy-label">Qvf</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/script/" data-taxonomy-term="script"><span class="taxonomy-label">Script</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/security/" data-taxonomy-term="security"><span class="taxonomy-label">Security</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/task/" data-taxonomy-term="task"><span class="taxonomy-label">Task</span><span class="taxonomy-count">5</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/user/" data-taxonomy-term="user"><span class="taxonomy-label">User</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/variable/" data-taxonomy-term="variable"><span class="taxonomy-label">Variable</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/version/" data-taxonomy-term="version"><span class="taxonomy-label">Version</span><span class="taxonomy-count">1</span></a></li>
         </ul>
     </div>
   
@@ -251,31 +253,60 @@
 <ul>
 <li><a href="/docs/command/qseow/scramble-field/#scramble-fields-in-sense-app">Scramble fields in Sense app</a>
 <ul>
+<li><a href="/docs/command/qseow/scramble-field/#use-cases">Use cases</a></li>
 <li><a href="/docs/command/qseow/scramble-field/#syntax">Syntax</a></li>
-<li><a href="/docs/command/qseow/scramble-field/#example">Example</a></li>
+<li><a href="/docs/command/qseow/scramble-field/#example-scramble-fields-keep-new-app-in-my-work">Example: Scramble fields, keep new app in My Work</a></li>
+<li><a href="/docs/command/qseow/scramble-field/#example-scramble-fields-publish-new-app-to-stream">Example: Scramble fields, publish new app to stream</a></li>
+<li><a href="/docs/command/qseow/scramble-field/#example-scramble-fields-replace-existing-published-app">Example: Scramble fields, replace existing published app</a></li>
 </ul>
 </li>
 </ul>
 <hr>
 <h2 id="scramble-fields-in-sense-app">Scramble fields in Sense app</h2>
-<p>Scramble one or more fields in an app using Qlik Sense&rsquo;s internal scrambling feature.</p>
+<p>Scramble one or more fields in an app using Qlik Sense&rsquo;s internal scrambling feature.<br>
+Store the scrambled data in a new app. Optionally publish this new app, or overwrite an existing app with it.</p>
 <p>Note:</p>
 <ul>
-<li>If more than one field is to be scrambled, the indidivudal field names should be separated by the character or string specified in the <code>--separator</code> option.</li>
-<li>The entire list of field names (the <code>--fieldname</code> option) should be surrounded by double quotes.</li>
-<li>A new app with the scrambled data will be created. Specify its name in the <code>--newappname</code> option.</li>
+<li>If more than one field is to be scrambled, the indidivudal field names should be separated by the space.</li>
+<li>The entire list of field names (the <code>--field-name</code> option) should be surrounded by double quotes.</li>
+<li>A new app with the scrambled data will be created. Specify its name in the <code>--new-app-name</code> option.</li>
+<li>Qlik Sense&rsquo;s <a href="https://help.qlik.com/en-US/sense-developer/November2024/Subsystems/NetSDKAPIref/Content/Qlik.Engine.App.Scramble.htm">internal scrambling feature</a> is used. It does a good job at scrambling the data, but it is (probably) not what you need if best possible security is needed. For example
+<ul>
+<li>Small numbers are replaced by other (random) small numbers.</li>
+<li>Characters are (usually?) replaced by other characters.</li>
+<li>Spaces are never (?) scrambled.</li>
+<li>String lengths are (usually?) preserved.</li>
 </ul>
+</li>
+</ul>
+<p>Regarding the last point above (security), Sense&rsquo;s scrambling feature strikes a good balance beetween obscurity and leaving the data in a somewhat recognisable state.<br>
+For example, &ldquo;Los Angeles&rdquo; might become &ldquo;jYP jmNxhgw&rdquo;.</p>
+<h3 id="use-cases">Use cases</h3>
+<p>All cases below starts with an existing app, in which some fields are scrambled.<br>
+A new app is created with the scrambled data in it (as well as unscrambled fields from the source app).</p>
+<ol>
+<li>Do a one-off scrambling, the new app is saved in the My Work area in the hub.</li>
+<li>Publish the new, scrambled app to a stream. Could be an easy way to create a demo app based on an app with real, possibly sensitve data.</li>
+<li>Replace an existing, unpublished or published app.
+<ul>
+<li>If the target app is published, only the sheets that were originally published with the app are replaced.</li>
+<li>If the replaced app is not published, the entire app is replaced.</li>
+<li>Replacing a published app can be useful as part of a QMC reload chain. Create an external program task (running field scrambling using Ctrl-Q) that runs after the main app has finished reloading. Replace an already published demo/scrambled app.</li>
+</ul>
+</li>
+</ol>
 <h3 id="syntax">Syntax</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>PS C:\tools\ctrl-q&gt; .\ctrl-q.exe qseow field-scramble --help
 </span></span><span style="display:flex;"><span>Usage: ctrl-q qseow field-scramble [options]
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>scramble one or more fields in an app. A new app with the scrambled data is created.                                                                                                                                 
+</span></span><span style="display:flex;"><span>scramble one or more fields in an app. A new app with the scrambled data is created.
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Options:
 </span></span><span style="display:flex;"><span>  --log-level &lt;level&gt;           log level (choices: &#34;error&#34;, &#34;warn&#34;, &#34;info&#34;, &#34;verbose&#34;, &#34;debug&#34;, &#34;silly&#34;, default: &#34;info&#34;)
 </span></span><span style="display:flex;"><span>  --host &lt;host&gt;                 Qlik Sense server IP/FQDN
-</span></span><span style="display:flex;"><span>  --port &lt;port&gt;                 Qlik Sense server engine port (usually 4747 for cert auth, 443 for jwt auth) (default: &#34;4747&#34;)
+</span></span><span style="display:flex;"><span>  --engine-port &lt;port&gt;          Qlik Sense server engine port (usually 4747 for cert auth, 443 for jwt auth) (default: &#34;4747&#34;)
+</span></span><span style="display:flex;"><span>  --qrs-port &lt;port&gt;             Qlik Sense server QRS port (usually 4242 for cert auth, 443 for jwt auth) (default: &#34;4242&#34;)
 </span></span><span style="display:flex;"><span>  --schema-version &lt;string&gt;     Qlik Sense engine schema version (default: &#34;12.612.0&#34;)
-</span></span><span style="display:flex;"><span>  --app-id &lt;id&gt;                 Qlik Sense app ID
 </span></span><span style="display:flex;"><span>  --virtual-proxy &lt;prefix&gt;      Qlik Sense virtual proxy prefix (default: &#34;&#34;)
 </span></span><span style="display:flex;"><span>  --secure &lt;true|false&gt;         https connection to Qlik Sense must use correct certificate. Invalid certificates will result in rejected/failed connection. (default: true)
 </span></span><span style="display:flex;"><span>  --auth-user-dir &lt;directory&gt;   user directory for user to connect with
@@ -285,10 +316,19 @@
 </span></span><span style="display:flex;"><span>  --auth-cert-key-file &lt;file&gt;   Qlik Sense certificate key file (exported from QMC) (default: &#34;./cert/client_key.pem&#34;)
 </span></span><span style="display:flex;"><span>  --auth-root-cert-file &lt;file&gt;  Qlik Sense root certificate file (exported from QMC) (default: &#34;./cert/root.pem&#34;)
 </span></span><span style="display:flex;"><span>  --auth-jwt &lt;jwt&gt;              JSON Web Token (JWT) to use for authentication with Qlik Sense server
+</span></span><span style="display:flex;"><span>  --app-id &lt;id&gt;                 Qlik Sense app ID to be scrambled
 </span></span><span style="display:flex;"><span>  --field-name &lt;names...&gt;       name of field(s) to be scrambled
-</span></span><span style="display:flex;"><span>  --new-app-name &lt;name&gt;         name of new app that will contain scrambled data
+</span></span><span style="display:flex;"><span>  --new-app-name &lt;name&gt;         name of new app that will contain scrambled data. Not used if --new-app-cmd=replace
+</span></span><span style="display:flex;"><span>  --new-app-delete              should the new scrambled app be deleted after the operation is complete? If not, the new app will be placed in the My Work stream
+</span></span><span style="display:flex;"><span>  --new-app-cmd &lt;command&gt;       what to do with the new app. If nothing is specified in this option the new app will be placed in My Work.
+</span></span><span style="display:flex;"><span>                                &#34;publish&#34;: publish the new app to the stream specified by --new-app-cmd-id or --new-app-cmd-name. The new app will NOT remain in My Work.
+</span></span><span style="display:flex;"><span>                                &#34;replace&#34;: Replace an existing published or unpublished app. If the app is published, only the sheets that were originally published with the app are replaced. If the
+</span></span><span style="display:flex;"><span>                                replaced app is not published, the entire app is replaced. (choices: &#34;&#34;, &#34;publish&#34;, &#34;replace&#34;, default: &#34;&#34;)
+</span></span><span style="display:flex;"><span>  --new-app-cmd-id &lt;id&gt;         stream/app ID that --new-app-cmd acts on. Cannot be used with --new-app-cmd-name (default: &#34;&#34;)
+</span></span><span style="display:flex;"><span>  --new-app-cmd-name &lt;name&gt;     stream/app name that --new-app-cmd acts on. Cannot be used with --new-app-cmd-id (default: &#34;&#34;)
+</span></span><span style="display:flex;"><span>  --force                       force delete and replace operations to proceed without asking for confirmation
 </span></span><span style="display:flex;"><span>  -h, --help                    display help for command
-</span></span></code></pre></div><h3 id="example">Example</h3>
+</span></span></code></pre></div><h3 id="example-scramble-fields-keep-new-app-in-my-work">Example: Scramble fields, keep new app in My Work</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>.\ctrl-q.exe qseow field-scramble `
 </span></span><span style="display:flex;"><span>--host pro2-win1.lab.ptarmiganlabs.net `
 </span></span><span style="display:flex;"><span>--app-id a3e0f5d2-000a-464f-998d-33d333b175d7 `
@@ -296,25 +336,98 @@
 </span></span><span style="display:flex;"><span>--auth-user-id goran `
 </span></span><span style="display:flex;"><span>--field-name Expression1 Dim1 AsciiAlpha `
 </span></span><span style="display:flex;"><span>--new-app-name __ScrambledTest1
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2024-11-15T15:37:59.296Z info: -----------------------------------------------------------
-</span></span><span style="display:flex;"><span>2024-11-15T15:37:59.301Z info: | Ctrl-Q
-</span></span><span style="display:flex;"><span>2024-11-15T15:37:59.302Z info: |
-</span></span><span style="display:flex;"><span>2024-11-15T15:37:59.302Z info: | Version      : 4.0.0
-</span></span><span style="display:flex;"><span>2024-11-15T15:37:59.302Z info: | Log level    : info
-</span></span><span style="display:flex;"><span>2024-11-15T15:37:59.302Z info: |
-</span></span><span style="display:flex;"><span>2024-11-15T15:37:59.304Z info: | Command      : field-scramble
-</span></span><span style="display:flex;"><span>2024-11-15T15:37:59.304Z info: |              : scramble one or more fields in an app. A new app with the scrambled data is created.
-</span></span><span style="display:flex;"><span>2024-11-15T15:37:59.304Z info: |
-</span></span><span style="display:flex;"><span>2024-11-15T15:37:59.304Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
-</span></span><span style="display:flex;"><span>2024-11-15T15:37:59.304Z info: |
-</span></span><span style="display:flex;"><span>2024-11-15T15:37:59.304Z info: | https://github.com/ptarmiganlabs/ctrl-q
-</span></span><span style="display:flex;"><span>2024-11-15T15:37:59.304Z info: ----------------------------------------------------------
-</span></span><span style="display:flex;"><span>2024-11-15T15:37:59.305Z info:
-</span></span><span style="display:flex;"><span>2024-11-15T15:37:59.308Z info: Scramble field
-</span></span><span style="display:flex;"><span>2024-11-15T15:38:00.174Z info: Scrambled field &#34;Expression1&#34;
-</span></span><span style="display:flex;"><span>2024-11-15T15:38:00.181Z info: Scrambled field &#34;Dim1&#34;
-</span></span><span style="display:flex;"><span>2024-11-15T15:38:00.189Z info: Scrambled field &#34;AsciiAlpha&#34;
-</span></span><span style="display:flex;"><span>2024-11-15T15:38:01.238Z info: Scrambled data written to new app &#34;__ScrambledTest1&#34; with app ID: 9f377cd6-ce5b-4756-aa7c-2eb0fa4c7494
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2024-11-29T07:05:33.564Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-11-29T07:05:33.567Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2024-11-29T07:05:33.567Z info: |
+</span></span><span style="display:flex;"><span>2024-11-29T07:05:33.568Z info: | Version      : 4.3.0
+</span></span><span style="display:flex;"><span>2024-11-29T07:05:33.568Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2024-11-29T07:05:33.569Z info: |
+</span></span><span style="display:flex;"><span>2024-11-29T07:05:33.569Z info: | Command      : field-scramble
+</span></span><span style="display:flex;"><span>2024-11-29T07:05:33.570Z info: |              : scramble one or more fields in an app. A new app with the scrambled data is created.
+</span></span><span style="display:flex;"><span>2024-11-29T07:05:33.570Z info: |
+</span></span><span style="display:flex;"><span>2024-11-29T07:05:33.570Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2024-11-29T07:05:33.573Z info: |
+</span></span><span style="display:flex;"><span>2024-11-29T07:05:33.573Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2024-11-29T07:05:33.573Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-11-29T07:05:33.573Z info:
+</span></span><span style="display:flex;"><span>2024-11-29T07:05:34.697Z info: Scrambled field &#34;Expression1&#34;
+</span></span><span style="display:flex;"><span>2024-11-29T07:05:34.709Z info: Scrambled field &#34;Dim1&#34;
+</span></span><span style="display:flex;"><span>2024-11-29T07:05:34.717Z info: Scrambled field &#34;AsciiAlpha&#34;
+</span></span><span style="display:flex;"><span>2024-11-29T07:05:35.231Z info: Scrambled data written to new app &#34;__ScrambledTest1&#34; with app ID: eb4a2985-316a-4490-b27e-06eaf3bdf229
+</span></span></code></pre></div><h3 id="example-scramble-fields-publish-new-app-to-stream">Example: Scramble fields, publish new app to stream</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>.\ctrl-q.exe qseow field-scramble `
+</span></span><span style="display:flex;"><span>--host pro2-win1.lab.ptarmiganlabs.net `
+</span></span><span style="display:flex;"><span>--app-id a3e0f5d2-000a-464f-998d-33d333b175d7 `
+</span></span><span style="display:flex;"><span>--auth-user-dir LAB `
+</span></span><span style="display:flex;"><span>--auth-user-id goran `
+</span></span><span style="display:flex;"><span>--field-name Expression1 Dim1 AsciiAlpha `
+</span></span><span style="display:flex;"><span>--new-app-name __ScrambledTest1 `
+</span></span><span style="display:flex;"><span>--new-app-cmd publish `
+</span></span><span style="display:flex;"><span>--new-app-cmd-name &#34;Ctrl-Q demo apps&#34;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2024-11-29T07:08:59.931Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-11-29T07:08:59.934Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2024-11-29T07:08:59.934Z info: |
+</span></span><span style="display:flex;"><span>2024-11-29T07:08:59.935Z info: | Version      : 4.3.0
+</span></span><span style="display:flex;"><span>2024-11-29T07:08:59.935Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2024-11-29T07:08:59.936Z info: |
+</span></span><span style="display:flex;"><span>2024-11-29T07:08:59.936Z info: | Command      : field-scramble
+</span></span><span style="display:flex;"><span>2024-11-29T07:08:59.937Z info: |              : scramble one or more fields in an app. A new app with the scrambled data is created.
+</span></span><span style="display:flex;"><span>2024-11-29T07:08:59.937Z info: |
+</span></span><span style="display:flex;"><span>2024-11-29T07:08:59.937Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2024-11-29T07:08:59.940Z info: |
+</span></span><span style="display:flex;"><span>2024-11-29T07:08:59.940Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2024-11-29T07:08:59.940Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-11-29T07:08:59.940Z info:
+</span></span><span style="display:flex;"><span>2024-11-29T07:09:00.667Z info: Scrambled field &#34;Expression1&#34;
+</span></span><span style="display:flex;"><span>2024-11-29T07:09:00.674Z info: Scrambled field &#34;Dim1&#34;
+</span></span><span style="display:flex;"><span>2024-11-29T07:09:00.681Z info: Scrambled field &#34;AsciiAlpha&#34;
+</span></span><span style="display:flex;"><span>2024-11-29T07:09:02.731Z info: Scrambled data written to new app &#34;__ScrambledTest1&#34; with app ID: 23baa119-c9ad-4e2c-974e-7318b111ff1d
+</span></span><span style="display:flex;"><span>2024-11-29T07:09:03.954Z info: Published new app &#34;__ScrambledTest1&#34; with app ID: 23baa119-c9ad-4e2c-974e-7318b111ff1d to stream &#34;Ctrl-Q demo apps&#34;
+</span></span></code></pre></div><h3 id="example-scramble-fields-replace-existing-published-app">Example: Scramble fields, replace existing published app</h3>
+<p>Note:</p>
+<ul>
+<li>Just as in the QMC when doing a publish-replace, the source app of the replace (=the new, scrambled app in this case) will not be deleted. To avoid having a dangling app in My Work the <code>--new-app-delete</code> option is used to delete the newly created, scrambled after after the replace is done.</li>
+<li>Here <code>--new-app-cmd-id</code> is used to uniquely specify which app should be replaced. The app ID is the same as reported by previous Ctrl-Q example above.</li>
+<li>If some kind of destructive operation is done, Ctrl-Q will ask for confirmation first. In this example there are two:
+<ul>
+<li>Replacing the existing, already published app.</li>
+<li>Deleting the newly created, scrambled app.</li>
+</ul>
+</li>
+<li>To avoid confirmation prompts (e.g. when running unattended in an external program task or Powershell script) there is a <code>--force</code> option. Specifying it will remove the confirmation prompts.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>.\ctrl-q.exe qseow field-scramble `
+</span></span><span style="display:flex;"><span>--host pro2-win1.lab.ptarmiganlabs.net `
+</span></span><span style="display:flex;"><span>--app-id a3e0f5d2-000a-464f-998d-33d333b175d7 `
+</span></span><span style="display:flex;"><span>--auth-user-dir LAB `
+</span></span><span style="display:flex;"><span>--auth-user-id goran `
+</span></span><span style="display:flex;"><span>--field-name Expression1 Dim1 AsciiAlpha `
+</span></span><span style="display:flex;"><span>--new-app-name __ScrambledTest1 `
+</span></span><span style="display:flex;"><span>--new-app-cmd replace `
+</span></span><span style="display:flex;"><span>--new-app-cmd-id &#34;23baa119-c9ad-4e2c-974e-7318b111ff1d&#34; `
+</span></span><span style="display:flex;"><span>--new-app-delete
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2024-11-29T07:15:28.881Z info: -----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-11-29T07:15:28.884Z info: | Ctrl-Q
+</span></span><span style="display:flex;"><span>2024-11-29T07:15:28.884Z info: |
+</span></span><span style="display:flex;"><span>2024-11-29T07:15:28.885Z info: | Version      : 4.3.0
+</span></span><span style="display:flex;"><span>2024-11-29T07:15:28.885Z info: | Log level    : info
+</span></span><span style="display:flex;"><span>2024-11-29T07:15:28.886Z info: |
+</span></span><span style="display:flex;"><span>2024-11-29T07:15:28.887Z info: | Command      : field-scramble
+</span></span><span style="display:flex;"><span>2024-11-29T07:15:28.887Z info: |              : scramble one or more fields in an app. A new app with the scrambled data is created.
+</span></span><span style="display:flex;"><span>2024-11-29T07:15:28.887Z info: |
+</span></span><span style="display:flex;"><span>2024-11-29T07:15:28.888Z info: | Run Ctrl-Q with the &#39;--help&#39; option to see a list of all available options for this command.
+</span></span><span style="display:flex;"><span>2024-11-29T07:15:28.890Z info: |
+</span></span><span style="display:flex;"><span>2024-11-29T07:15:28.890Z info: | https://github.com/ptarmiganlabs/ctrl-q
+</span></span><span style="display:flex;"><span>2024-11-29T07:15:28.890Z info: ----------------------------------------------------------
+</span></span><span style="display:flex;"><span>2024-11-29T07:15:28.891Z info:
+</span></span><span style="display:flex;"><span>2024-11-29T07:15:29.665Z info: Scrambled field &#34;Expression1&#34;
+</span></span><span style="display:flex;"><span>2024-11-29T07:15:29.673Z info: Scrambled field &#34;Dim1&#34;
+</span></span><span style="display:flex;"><span>2024-11-29T07:15:29.680Z info: Scrambled field &#34;AsciiAlpha&#34;
+</span></span><span style="display:flex;"><span>2024-11-29T07:15:30.160Z info: Scrambled data written to new app &#34;__ScrambledTest1&#34; with app ID: dbfa9c53-56c0-4645-af2f-e7665d902469
+</span></span><span style="display:flex;"><span>Do you want to replace the existing app with app ID 23baa119-c9ad-4e2c-974e-7318b111ff1d with the new, scrambled app? (y/n) y
+</span></span><span style="display:flex;"><span>2024-11-29T07:15:33.598Z info: Replaced existing app &#34;23baa119-c9ad-4e2c-974e-7318b111ff1d&#34; with new, scrambled app &#34;__ScrambledTest1&#34; (app ID: dbfa9c53-56c0-4645-af2f-e7665d902469)
+</span></span><span style="display:flex;"><span>Do you want to delete the new, scrambled app &#34;__ScrambledTest1&#34; with app ID dbfa9c53-56c0-4645-af2f-e7665d902469? (y/n) y
+</span></span><span style="display:flex;"><span>2024-11-29T07:15:38.604Z info: Deleted new, scrambled app &#34;__ScrambledTest1&#34; with app ID dbfa9c53-56c0-4645-af2f-e7665d902469
 </span></span></code></pre></div>
   <div class="section-index">
     
@@ -431,7 +544,7 @@
 </footer>
 
     </div>
-    <script src="/js/main.min.9bb04dc6a6b4b104e1da6f6d5a885a4092b9a942c466820b75d34697477404c9.js" integrity="sha256-m7BNxqa0sQTh2m9tWohaQJK5qULEZoILddNGl0d0BMk=" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
 <script src='/js/prism.js'></script>
 <script src='/js/tabpane-persist.js'></script>
 

@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Colors &amp; formatting on Ctrl-Q</title>
-    <link>https://ctrl-q.ptarmiganlabs.com/docs/getting-started/colors-formatting/</link>
+    <link>//localhost:1313/docs/getting-started/colors-formatting/</link>
     <description>Recent content in Colors &amp; formatting on Ctrl-Q</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="https://ctrl-q.ptarmiganlabs.com/docs/getting-started/colors-formatting/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/docs/getting-started/colors-formatting/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

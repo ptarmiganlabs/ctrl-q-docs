@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>License on Ctrl-Q</title>
-    <link>https://ctrl-q.ptarmiganlabs.com/tags/license/</link>
+    <link>//localhost:1313/tags/license/</link>
     <description>Recent content in License on Ctrl-Q</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="https://ctrl-q.ptarmiganlabs.com/tags/license/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/license/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>User activity buckets</title>
-      <link>https://ctrl-q.ptarmiganlabs.com/docs/command/qseow/user-activity-buckets/</link>
+      <link>//localhost:1313/docs/command/qseow/user-activity-buckets/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ctrl-q.ptarmiganlabs.com/docs/command/qseow/user-activity-buckets/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Page contents:&lt;/em&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ctrl-q.ptarmiganlabs.com/docs/command/qseow/user-activity-buckets/#overview&#34;&gt;Overview&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ctrl-q.ptarmiganlabs.com/docs/command/qseow/user-activity-buckets/#the-different-steps-of-the-command&#34;&gt;The different steps of the command&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ctrl-q.ptarmiganlabs.com/docs/command/qseow/user-activity-buckets/#syntax&#34;&gt;Syntax&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ctrl-q.ptarmiganlabs.com/docs/command/qseow/user-activity-buckets/#example&#34;&gt;Example&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;User activity buckets are custom properties that indicate how long ago users last logged into Qlik Sense. The &lt;code&gt;qseow user-activity-bucket-cp-create&lt;/code&gt; command creates a custom property if it doesn&amp;rsquo;t already exists and populates it with values (&amp;ldquo;activity buckets&amp;rdquo;) indicating how long ago users last logged into Sense.&lt;/p&gt;&#xA;&lt;p&gt;There are several options available to customize the behavior of the command, such as the name of the custom property, the activity buckets to be defined, the user directories whose users will be updated with activity info, and the license types to consider when calculating user activity.&lt;/p&gt;</description>
+      <guid>//localhost:1313/docs/command/qseow/user-activity-buckets/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Page contents:&lt;/em&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/command/qseow/user-activity-buckets/#overview&#34;&gt;Overview&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/command/qseow/user-activity-buckets/#the-different-steps-of-the-command&#34;&gt;The different steps of the command&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/command/qseow/user-activity-buckets/#syntax&#34;&gt;Syntax&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/command/qseow/user-activity-buckets/#example&#34;&gt;Example&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;User activity buckets are custom properties that indicate how long ago users last logged into Qlik Sense. The &lt;code&gt;qseow user-activity-bucket-cp-create&lt;/code&gt; command creates a custom property if it doesn&amp;rsquo;t already exists and populates it with values (&amp;ldquo;activity buckets&amp;rdquo;) indicating how long ago users last logged into Sense.&lt;/p&gt;&#xA;&lt;p&gt;There are several options available to customize the behavior of the command, such as the name of the custom property, the activity buckets to be defined, the user directories whose users will be updated with activity info, and the license types to consider when calculating user activity.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Security on Ctrl-Q</title>
-    <link>https://ctrl-q.ptarmiganlabs.com/tags/security/</link>
+    <link>//localhost:1313/tags/security/</link>
     <description>Recent content in Security on Ctrl-Q</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="https://ctrl-q.ptarmiganlabs.com/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Security</title>
-      <link>https://ctrl-q.ptarmiganlabs.com/docs/getting-started/security/</link>
+      <link>//localhost:1313/docs/getting-started/security/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ctrl-q.ptarmiganlabs.com/docs/getting-started/security/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ctrl-q.ptarmiganlabs.com/docs/getting-started/security/#virus-scanning&#34;&gt;Virus scanning&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ctrl-q.ptarmiganlabs.com/docs/getting-started/security/#positive-scan-vs-false-positives&#34;&gt;Positive scan vs false positives&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ctrl-q.ptarmiganlabs.com/docs/getting-started/security/#signed-binaries&#34;&gt;Signed binaries&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Ctrl-Q is open source and you have access to all source code.&lt;/p&gt;&#xA;&lt;p&gt;It is &lt;strong&gt;&lt;em&gt;your responsibility&lt;/em&gt;&lt;/strong&gt; to determine if Ctrl-Q is suitable for &lt;strong&gt;your&lt;/strong&gt; use case.&lt;/p&gt;&#xA;&lt;p&gt;The creators of Ctrl-Q, including Ptarmigan Labs, Göran Sander or any other contributor, can and must never be held liable to past or future security issues of Ctrl-Q.&#xA;If you have security concerns or ideas around Ctrl-Q, please get involved in the project and contribute to making it better!&lt;/p&gt;</description>
+      <guid>//localhost:1313/docs/getting-started/security/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/getting-started/security/#virus-scanning&#34;&gt;Virus scanning&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/getting-started/security/#positive-scan-vs-false-positives&#34;&gt;Positive scan vs false positives&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/getting-started/security/#signed-binaries&#34;&gt;Signed binaries&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Ctrl-Q is open source and you have access to all source code.&lt;/p&gt;&#xA;&lt;p&gt;It is &lt;strong&gt;&lt;em&gt;your responsibility&lt;/em&gt;&lt;/strong&gt; to determine if Ctrl-Q is suitable for &lt;strong&gt;your&lt;/strong&gt; use case.&lt;/p&gt;&#xA;&lt;p&gt;The creators of Ctrl-Q, including Ptarmigan Labs, Göran Sander or any other contributor, can and must never be held liable to past or future security issues of Ctrl-Q.&#xA;If you have security concerns or ideas around Ctrl-Q, please get involved in the project and contribute to making it better!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Authenticating with Sense</title>
-      <link>https://ctrl-q.ptarmiganlabs.com/docs/getting-started/qseow-auth/</link>
+      <link>//localhost:1313/docs/getting-started/qseow-auth/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ctrl-q.ptarmiganlabs.com/docs/getting-started/qseow-auth/</guid>
+      <guid>//localhost:1313/docs/getting-started/qseow-auth/</guid>
       <description>&lt;h2 id=&#34;client-managed-qlik-sense-on-windows&#34;&gt;Client-managed Qlik Sense on Windows&lt;/h2&gt;&#xA;&lt;p&gt;When connecting to a client-managed Qlik Sense Enterprise on Windows (QSEoW) instance, the following auth options are available:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Certificates&lt;/li&gt;&#xA;&lt;li&gt;JWTs&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Both are described below.&lt;/p&gt;&#xA;&lt;h3 id=&#34;certificates&#34;&gt;Certificates&lt;/h3&gt;&#xA;&lt;p&gt;If the &lt;code&gt;--auth-type&lt;/code&gt; option is set to &lt;code&gt;cert&lt;/code&gt;, Ctrl-Q will authenticate with Qlik Sense Enterprise using certificates.&lt;br&gt;&#xA;This is the default authentication method that will be used if no &lt;code&gt;--auth-type&lt;/code&gt; option is specified.&lt;/p&gt;&#xA;&lt;p&gt;These certificates are &lt;a href=&#34;https://help.qlik.com/en-US/sense-admin/May2023/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Administer_QSEoW/Managing_QSEoW/export-certificates.htm&#34;&gt;exported from the QMC&lt;/a&gt; and stored on disk in PEM format.&lt;/p&gt;</description>
     </item>
   </channel>

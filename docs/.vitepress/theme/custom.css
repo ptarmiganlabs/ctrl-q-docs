@@ -1,0 +1,67 @@
+/* Ctrl-Q VitePress theme adjustments */
+
+:root {
+  --vp-c-brand-1: #2f6f73;
+  --vp-c-brand-2: #3f8589;
+  --vp-c-brand-3: #55a2a6;
+  --vp-layout-max-width: 1440px;
+}
+
+.VPDoc:not(.has-sidebar) .container {
+  max-width: min(1440px, 100%) !important;
+}
+
+.VPDoc:not(.has-sidebar) .content {
+  max-width: min(1200px, 100%) !important;
+}
+
+.VPDoc.has-aside .content-container {
+  max-width: min(1120px, 100%) !important;
+}
+
+.vp-doc img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  cursor: zoom-in;
+}
+
+.vp-doc p > img {
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 960px;
+}
+
+.vp-doc .about-logo {
+  max-width: 220px;
+  margin: 0 0 1.5rem;
+  box-shadow: none;
+}
+
+.VPHero .image-src {
+  max-width: min(280px, 60vw);
+}
+
+.medium-zoom-overlay {
+  z-index: 100;
+}
+
+.medium-zoom-image--opened {
+  z-index: 101;
+  cursor: zoom-out;
+}
+
+.dark .vp-doc img {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 768px) {
+  .vp-doc img {
+    border-radius: 4px;
+  }
+
+  .vp-doc p > img {
+    margin: 1rem auto;
+  }
+}

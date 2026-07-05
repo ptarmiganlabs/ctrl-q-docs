@@ -41,6 +41,13 @@ export default withMermaid(
         },
       ],
       [
+        "meta",
+        {
+          property: "og:image",
+          content: "https://ctrl-q.ptarmiganlabs.com/og-banner.png",
+        },
+      ],
+      [
         "script",
         {
           defer: "",
@@ -204,7 +211,14 @@ export default withMermaid(
       },
       footer: {
         message: "Released under the Apache-2.0 License.",
-        copyright: "Copyright Ptarmigan Labs AB",
+        copyright: `Copyright © 2023–${new Date().getFullYear()} Ptarmigan Labs AB`,
+      },
+      lastUpdated: {
+        text: "Updated at",
+        formatOptions: {
+          dateStyle: "long",
+          timeStyle: "short",
+        },
       },
     },
   })

@@ -12,7 +12,7 @@ The focus of Ctrl-Q is on slightly more complex use cases that are not handled o
 
 Both are exceptional tools and extremely useful, but especially when it comes to interactions with the Qlik Sense engine they fall a bit short.
 
-Ctrl-Q also tries to fill niches that are not covered by the various members of the [Butler family](https://ptarmiganlabs.com/the-butler-family/) of open source SenseOps tools.
+Ctrl-Q also tries to fill niches that are not covered by the various members of the [Butler family](https://ptarmiganlabs.com/products/#butler) of open source SenseOps tools.
 
 The Butler tools each focus on a specific feature (or features in the case of [the original Butler tool](https://github.com/ptarmiganlabs/butler)) and goes fairly deep in those areas.  
 For example, [Butler SOS](https://github.com/ptarmiganlabs/butler-sos) focus on getting real-time metrics and events out of Sense and into a wide range of target databases and monitoring tools.  
@@ -58,7 +58,7 @@ Until then Ctrl-Q can hopefully make life a bit easier for Sense developers and 
 
 ## Where can I find out more?
 
-There are several blog posts on [ptarmiganlabs.com](https://ptarmiganlabs.com/) where various Ctrl-Q features are examined in detail.  
+There are several blog posts on [ptarmiganlabs.com](https://ptarmiganlabs.com/tag/ctrl-q/) where various Ctrl-Q features are examined in detail.  
 Everything from short overviews of new features to very thorough, step-by-step instructions for how to use Ctrl-Q to solve some challenging Qlik Sense related task.
 
 ## Where should I go next?

@@ -93,6 +93,10 @@ export default withMermaid(
               link: "https://github.com/ptarmiganlabs/ctrl-q/discussions",
             },
             {
+              text: "Ctrl-Q at ptarmiganlabs.com",
+              link: "https://ptarmiganlabs.com/products/ctrl-q/",
+            },
+            {
               text: "Ptarmigan Labs",
               link: "https://ptarmiganlabs.com",
             },
